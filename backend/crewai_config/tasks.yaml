@@ -1,0 +1,36 @@
+#backend/crewai_config/tasks.yaml
+find_jobs:
+  description: >
+    The user wants to find or filter job postings based on a query. 
+    Use the find_jobs_tool to produce relevant job listing summaries.
+  expected_output: >
+    Up to 3 relevant jobs as a small listing. 
+    Summaries in bullet points are preferred.
+  agent: job_researcher
+
+store_user_input:
+  description: >
+    Store the user's text so it can be retrieved by subsequent tasks. 
+    Use store_text_tool.
+  expected_output: >
+    A message confirming that the text was stored in local memory.
+  agent: resume_strategist
+
+tailor_resume:
+  description: >
+    Based on the user’s text and job info, 
+    produce updated resume bullet points or paragraphs 
+    that highlight alignment with the found job requirements.
+  expected_output: >
+    A short, revised resume snippet that includes relevant keywords. 
+    Return as plain text or bullet points.
+  agent: resume_strategist
+
+generate_interview_qa:
+  description: >
+    Generate a short Q&A set (3-5 questions) with recommended answers 
+    based on the job context and user’s updated resume text.
+  expected_output: >
+    3-5 question-answer pairs. Each answer should be 2-3 sentences, 
+    referencing relevant experience or knowledge.
+  agent: interview_coach

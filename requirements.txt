@@ -1,0 +1,10 @@
+django
+crewai
+langchain
+langchain-community
+langchain-openai   # so we can do from langchain_openai import AzureOpenAIEmbeddings
+chromadb
+requests
+python-dotenv
+gunicorn
+uvicorn

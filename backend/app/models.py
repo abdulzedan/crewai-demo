@@ -1,0 +1,9 @@
+#backend/app/models.py
+from django.db import models
+
+class UserText(models.Model):
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"UserText #{self.id} - {self.content[:30]}"

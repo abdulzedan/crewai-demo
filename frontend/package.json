@@ -1,0 +1,36 @@
+{
+  "name": "collaborative-writing-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ai-sdk/azure": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.0.6",
+    "@radix-ui/react-slot": "^1.0.4",
+    "axios": "^1.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.264.0",
+    "next": "13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.12.0",
+    "tailwindcss-animate": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.16",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.10",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
+  }
+}

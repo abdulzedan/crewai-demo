@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+.env
+frontnd/node_modules/
+# Node
+node_modules/
+build/
+dist/
+frontnd/node_modules
+# OS
+.DS_Store
+
+# Others
+.idea/
+.vscode/
+# Chroma
+chroma/
+
+
+# Next.js build
+.next/
+
+.cache/
