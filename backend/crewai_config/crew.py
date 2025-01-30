@@ -1,22 +1,63 @@
-#backend/crewai_config/crew.py
-"""
-Defines the 3-agent pipeline:
-1) find_jobs
-2) store_user_input (optionally storing user text)
-3) tailor_resume
-4) generate_interview_qa
-"""
+# backend/crewai_config/crew.py
 
+from typing import List
+from pydantic import BaseModel, Field
 from crewai import Agent, Crew, Task, Process
 from crewai.project import CrewBase, agent, task, crew
-# Right approach:
-from app.services.tools import FindJobsTool, StoreTextTool, RetrieveTextTool
+from crewai.tools import BaseTool
 
+# Import the Tools you already created
+from app.services.tools import (
+    FindJobsTool,
+    StoreTextTool,
+    RetrieveTextTool
+)
+
+# Import your knowledge source
+from .knowledge_sources import job_postings_source
+
+# Define a pydantic model for the final Q&A output
+class InterviewQA(BaseModel):
+    questions: List[str] = Field(..., description="Interview questions.")
+    answers: List[str] = Field(..., description="Corresponding recommended answers.")
+
+# A simple guardrail function: must produce valid JSON that matches InterviewQA
+def interview_qa_guardrail(output_str: str):
+    """Return (success, data). If success=False, agent will retry."""
+    import json
+    from json import JSONDecodeError
+
+    try:
+        data = json.loads(output_str)
+        # The following check is optional if you want to ensure certain fields
+        if not isinstance(data.get("questions"), list):
+            return (False, "Output JSON has no 'questions' list.")
+        if not isinstance(data.get("answers"), list):
+            return (False, "Output JSON has no 'answers' list.")
+        return (True, data)
+    except JSONDecodeError:
+        return (False, "Output must be valid JSON with questions/answers.")
 
 @CrewBase
-class JobApplicationCrew:
+class EnhancedJobApplicationCrew:
+    """
+    An enhanced version of your JobApplicationCrew with concurrency,
+    knowledge usage, memory, guardrails, and optional manager agent.
+    """
     agents_config = "crewai_config/agents.yaml"
     tasks_config = "crewai_config/tasks.yaml"
+
+    # Optional: a "manager" agent for hierarchical or planned approach
+    @agent
+    def manager_agent(self) -> Agent:
+        return Agent(
+            role="Application Pipeline Manager",
+            goal="Coordinate other agents to handle job application tasks.",
+            backstory="You oversee the entire process, delegating tasks as needed.",
+            llm="gpt-4",  # or any other
+            allow_delegation=True,
+            verbose=True
+        )
 
     @agent
     def job_researcher(self) -> Agent:
@@ -24,7 +65,7 @@ class JobApplicationCrew:
         return Agent(
             config=self.agents_config["job_researcher"],
             tools=[FindJobsTool(), StoreTextTool(), RetrieveTextTool()],
-            llm="gpt-4",  # Note: Will use Azure behind the scenes if env is set properly
+            llm="gpt-4",
             allow_code_execution=False,
             verbose=True,
             memory=True
@@ -57,11 +98,17 @@ class JobApplicationCrew:
     # tasks
     @task
     def find_jobs(self) -> Task:
-        return Task(config=self.tasks_config["find_jobs"])
+        return Task(
+            config=self.tasks_config["find_jobs"],
+            async_execution=True  # let it run concurrently
+        )
 
     @task
     def store_user_input(self) -> Task:
-        return Task(config=self.tasks_config["store_user_input"])
+        return Task(
+            config=self.tasks_config["store_user_input"],
+            async_execution=True  # let it run concurrently
+        )
 
     @task
     def tailor_resume(self) -> Task:
@@ -75,13 +122,22 @@ class JobApplicationCrew:
     def generate_interview_qa(self) -> Task:
         return Task(
             config=self.tasks_config["generate_interview_qa"],
-            context=[self.find_jobs(), self.tailor_resume()]
+            context=[self.find_jobs(), self.tailor_resume()],
+            guardrail=interview_qa_guardrail,          # ensure valid JSON Q&A
+            output_pydantic=InterviewQA                # parse final Q&A to pydantic
         )
 
+    # Finally define the crew
     @crew
     def crew(self) -> Crew:
+        """
+        If you want a hierarchical approach with a manager agent,
+        set `process=Process.hierarchical` and `manager_agent=...`.
+        Otherwise keep it sequential + concurrency.
+        """
         return Crew(
             agents=[
+                self.manager_agent(),     # optional manager
                 self.job_researcher(),
                 self.resume_strategist(),
                 self.interview_coach(),
@@ -93,14 +149,19 @@ class JobApplicationCrew:
                 self.generate_interview_qa(),
             ],
             process=Process.sequential,
+            # For hierarchical flow:
+            # process=Process.hierarchical,
+            # manager_agent=self.manager_agent(),
             verbose=True,
-            memory=True,
+            memory=True,  # Turn on memory for the entire pipeline
+            # Add domain knowledge so agents can consult the stored postings
+            knowledge_sources=[job_postings_source],
+            # Use an Azure embedder or default OpenAI for storing knowledge
             embedder={
-                "provider": "openai",  # We'll rely on Azure environment
+                "provider": "openai",
                 "config": {
                     "model": "text-embedding-ada-002",
-                    "api_key": "",
-                    # The other envs are read from environment variables
                 }
-            }
+            },
+            planning=False  # set True if you want dynamic planning
         )

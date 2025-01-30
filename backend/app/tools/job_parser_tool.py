@@ -1,24 +1,28 @@
 """
 backend/app/tools/job_parser_tool.py
 
-Add model_config, ClassVar[...] for Pydantic 2.x compatibility
+Removes `_default_args_schema`, uses ClassVar[...] with model_config
+to avoid "None is not a callable object" in Pydantic 2.
 """
 
-from typing import ClassVar, Type, Any
+from typing import ClassVar, Type
 from pydantic import BaseModel, Field, ConfigDict
 from crewai.tools import BaseTool
+
 
 class JobParserInput(BaseModel):
     job_posting: str = Field(..., description="Raw text of a job posting")
 
 
 class JobParserTool(BaseTool):
+    """
+    A tool that extracts or highlights required lines from a job posting.
+    """
     model_config = ConfigDict(
         check_fields=False,
         extra="allow",
         arbitrary_types_allowed=True,
     )
-    _default_args_schema: ClassVar[Any] = None
 
     name: ClassVar[str] = "job_parser_tool"
     description: ClassVar[str] = (
