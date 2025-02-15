@@ -1,9 +1,33 @@
-from typing import List
-import json
+from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+# Load .env from project root (one level above crewai_config)
+BASE_DIR = Path(__file__).resolve().parent.parent
+env_path = BASE_DIR / ".env"
+load_dotenv(dotenv_path=env_path, override=True)
+
+# Use new variable names per documentation with fallbacks.
+AZURE_API_KEY = os.getenv("AZURE_API_KEY", os.getenv("AZURE_OPENAI_API_KEY", ""))
+AZURE_API_BASE = os.getenv("AZURE_API_BASE", os.getenv("AZURE_OPENAI_ENDPOINT", ""))
+AZURE_API_VERSION = os.getenv("AZURE_API_VERSION", os.getenv("AZURE_OPENAI_API_VERSION", "2024-06-01"))
+
+# According to documentation, the model should be "azure/gpt-4"
+LLM_MODEL = "azure/gpt-4o"  # Change to "azure/gpt-4o" if you need that variant
+
+# Build embedder configuration using documented keys.
+EMBEDDER_CONFIG = {
+    "provider": "openai",
+    "config": {
+         "api_key": AZURE_API_KEY,
+         "api_base": AZURE_API_BASE,
+         "api_version": AZURE_API_VERSION,
+         "model_name": os.getenv("AZURE_EMBEDDING_MODEL", os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-ada-002"))
+    }
+}
 
 from crewai import Agent, Crew, Task, Process
 from crewai.project import CrewBase, agent, task, crew
-
 from app.tools.document_analysis_tool import DocumentAnalysisTool
 from app.tools.image_analysis_tool import ImageAnalysisTool
 from app.tools.web_search_tool import WebSearchTool
@@ -21,7 +45,7 @@ class RAGCrew:
             role="Document Analyzer",
             goal="Extract and summarize key insights from documents.",
             backstory="Expert in textual analysis and summarization.",
-            llm="gpt-4",
+            llm=LLM_MODEL,
             tools=[DocumentAnalysisTool(), StoreTextTool(), RetrieveTextTool()],
             memory=True,
             verbose=True
@@ -33,7 +57,7 @@ class RAGCrew:
             role="Image Analyzer",
             goal="Analyze images and extract descriptive information.",
             backstory="Expert in computer vision and OCR.",
-            llm="gpt-4",
+            llm=LLM_MODEL,
             tools=[ImageAnalysisTool()],
             memory=True,
             verbose=True
@@ -45,7 +69,7 @@ class RAGCrew:
             role="Web Searcher",
             goal="Fetch and analyze web content based on queries.",
             backstory="Experienced in web scraping and real-time information retrieval.",
-            llm="gpt-4",
+            llm=LLM_MODEL,
             tools=[WebSearchTool()],
             memory=True,
             verbose=True
@@ -104,4 +128,5 @@ class RAGCrew:
             process=Process.sequential,
             verbose=True,
             memory=True,
+            embedder=EMBEDDER_CONFIG
         )
