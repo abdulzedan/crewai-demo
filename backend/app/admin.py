@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import CustomUser, UserText  # Import from models.py
+from app.models import CustomUser, UserText  # Note: StoredResume removed
 
 @admin.register(UserText)
 class UserTextAdmin(admin.ModelAdmin):

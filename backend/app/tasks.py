@@ -1,41 +1,25 @@
 from celery import shared_task
-from crewai_config.crew import JobApplicationCrew  # or EnhancedJobApplicationCrew
-from app.models import UserText, CustomUser  # consolidated models
+from app.models import UserText, CustomUser
 
 @shared_task
-def process_crewai_task(user_input: str, user_id: int = None):
+def process_chat_task(user_input: str, user_id: int = None):
     try:
         user = None
         if user_id is not None:
             user = CustomUser.objects.filter(id=user_id).first()
 
-        # Store initial input in DB
+        # Store initial chat message in DB
         UserText.objects.create(
             user=user,
             content=f"User input: {user_input}"
         )
-
-        # Kick off the CrewAI pipeline
-        crew = JobApplicationCrew().crew()
-        result = crew.kickoff(inputs={
-            "job_posting": user_input,
-            "resume_text": user_input,
-            "interview_query": user_input
-        })
-
-        # Store final output
+        # In this re-designed use-case, task orchestration is handled by CrewAI.
+        # This simple task is kept for generic chat messages.
+        response_message = f"Received: {user_input}"
         UserText.objects.create(
             user=user,
-            content=f"CrewAI result: {result.raw[:500]}..."
+            content=f"System response: {response_message}"
         )
-
-        return {
-            "status": "completed",
-            "result": result.raw[:1000],
-        }
-
+        return {"status": "completed", "result": response_message}
     except Exception as e:
-        return {
-            "status": "failed",
-            "error": str(e),
-        }
+        return {"status": "failed", "error": str(e)}

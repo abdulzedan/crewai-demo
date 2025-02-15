@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import os
+# Ensure the OpenAI API key is set early in the process
+os.environ.setdefault("AZURE_OPENAI_API_KEY", "9f16cc35170841e593c799f5595ef351")
+
 import sys
 
 def main():

@@ -4,117 +4,102 @@ import json
 from crewai import Agent, Crew, Task, Process
 from crewai.project import CrewBase, agent, task, crew
 
-from app.tools.crewai_tools import FindJobsTool, StoreTextTool, RetrieveTextTool
+from app.tools.document_analysis_tool import DocumentAnalysisTool
+from app.tools.image_analysis_tool import ImageAnalysisTool
+from app.tools.web_search_tool import WebSearchTool
+from app.tools.crewai_tools import StoreTextTool, RetrieveTextTool
 from pydantic import BaseModel, Field
 
-class InterviewQA(BaseModel):
-    questions: List[str] = Field(..., description="List of interview questions.")
-    answers: List[str] = Field(..., description="Suggested answers.")
-
-def interview_qa_guardrail(output_str: str):
-    try:
-        parsed = json.loads(output_str)
-        if not isinstance(parsed.get("questions"), list):
-            return (False, "Missing or invalid 'questions' in output JSON.")
-        if not isinstance(parsed.get("answers"), list):
-            return (False, "Missing or invalid 'answers' in output JSON.")
-        return (True, parsed)
-    except json.JSONDecodeError:
-        return (False, "Must return valid JSON with 'questions'/'answers'.")
+class AggregatedReport(BaseModel):
+    report: str = Field(..., description="Aggregated report combining document, image, and web search analyses.")
 
 @CrewBase
-class JobApplicationCrew:
+class RAGCrew:
     @agent
-    def job_researcher(self) -> Agent:
+    def document_analyzer(self) -> Agent:
         return Agent(
-            role="Job Researcher",
-            goal="Find relevant job postings and store them or retrieve memory if needed.",
-            backstory="Has HR/recruiting background, scanning job boards quickly.",
+            role="Document Analyzer",
+            goal="Extract and summarize key insights from documents.",
+            backstory="Expert in textual analysis and summarization.",
             llm="gpt-4",
-            tools=[FindJobsTool(), StoreTextTool(), RetrieveTextTool()],
+            tools=[DocumentAnalysisTool(), StoreTextTool(), RetrieveTextTool()],
             memory=True,
             verbose=True
         )
 
     @agent
-    def resume_strategist(self) -> Agent:
+    def image_analyzer(self) -> Agent:
         return Agent(
-            role="Resume Strategist",
-            goal="Rewrite or adapt user resumes to match job requirements.",
-            backstory="Expert in ATS systems and resume optimization.",
+            role="Image Analyzer",
+            goal="Analyze images and extract descriptive information.",
+            backstory="Expert in computer vision and OCR.",
             llm="gpt-4",
-            tools=[StoreTextTool(), RetrieveTextTool()],
+            tools=[ImageAnalysisTool()],
             memory=True,
             verbose=True
         )
 
     @agent
-    def interview_coach(self) -> Agent:
+    def web_searcher(self) -> Agent:
         return Agent(
-            role="Interview Coach",
-            goal="Generate interview Q&A based on job context.",
-            backstory="20 years experience in interview coaching.",
+            role="Web Searcher",
+            goal="Fetch and analyze web content based on queries.",
+            backstory="Experienced in web scraping and real-time information retrieval.",
             llm="gpt-4",
-            tools=[RetrieveTextTool()],
+            tools=[WebSearchTool()],
             memory=True,
             verbose=True
         )
 
     @task
-    def find_jobs(self) -> Task:
+    def analyze_document(self) -> Task:
         return Task(
-            description="Task: Use the find_jobs_tool to produce a short listing of relevant job postings.",
-            expected_output="Up to 3 relevant job listings based on user's input keyword.",
-            agent=self.job_researcher(),
+            description="Analyze the provided document text and summarize key insights.",
+            expected_output="A detailed summary of the document with key points highlighted.",
+            agent=self.document_analyzer(),
             async_execution=True,
         )
 
     @task
-    def store_user_input(self) -> Task:
+    def analyze_image(self) -> Task:
         return Task(
-            description="Task: Store the user's input for future reference, using store_text_tool.",
-            expected_output="Confirmation that text was stored in local memory.",
-            agent=self.resume_strategist(),
+            description="Analyze the image provided via URL and generate a description using OCR and analysis.",
+            expected_output="A descriptive summary of the image content.",
+            agent=self.image_analyzer(),
             async_execution=True,
         )
 
     @task
-    def tailor_resume(self) -> Task:
+    def web_search(self) -> Task:
         return Task(
-            description="Task: Rewrite or tailor the user's resume to match the found jobs.",
-            expected_output="A short, revised resume snippet with relevant keywords.",
-            agent=self.resume_strategist(),
-            context=[self.find_jobs(), self.store_user_input()]
+            description="Perform a web search based on user query and provide relevant summaries.",
+            expected_output="A summary of web search results and relevant information.",
+            agent=self.web_searcher(),
+            async_execution=True,
         )
 
     @task
-    def generate_interview_qa(self) -> Task:
+    def aggregate_information(self) -> Task:
         return Task(
-            description=(
-                "Task: Generate a short Q&A set (3-5 questions) with recommended answers "
-                "based on the job context and user’s updated resume text. Must return "
-                "valid JSON with 'questions' and 'answers' arrays."
-            ),
-            expected_output="JSON with 'questions' and 'answers' arrays",
-            agent=self.interview_coach(),
-            context=[self.find_jobs(), self.tailor_resume()],
-            guardrail=interview_qa_guardrail,
-            output_pydantic=InterviewQA,
+            description="Aggregate outputs from document analysis, image analysis, and web search into a comprehensive report.",
+            expected_output="A consolidated report combining insights from the document, image, and web search.",
+            agent=self.document_analyzer(),
+            context=[self.analyze_document(), self.analyze_image(), self.web_search()]
         )
 
     @crew
     def crew(self) -> Crew:
         return Crew(
             agents=[
-                self.job_researcher(),
-                self.resume_strategist(),
-                self.interview_coach(),
+                self.document_analyzer(),
+                self.image_analyzer(),
+                self.web_searcher(),
             ],
             tasks=[
-                self.find_jobs(),
-                self.store_user_input(),
-                self.tailor_resume(),
-                self.generate_interview_qa(),
+                self.analyze_document(),
+                self.analyze_image(),
+                self.web_search(),
+                self.aggregate_information(),
             ],
             process=Process.sequential,
             verbose=True,

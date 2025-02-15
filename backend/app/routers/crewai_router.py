@@ -3,11 +3,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from app.serializers import ChatSerializer
-from app.tasks import process_crewai_task
+from app.tasks import process_chat_task
 
 class ChatView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class = ChatSerializer  # Explicitly set the serializer
 
     def post(self, request):
         serializer = ChatSerializer(data=request.data)
@@ -15,9 +14,9 @@ class ChatView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
         message = serializer.validated_data["message"]
-        user_id = request.user.id  # from JWT or session
+        user_id = request.user.id
 
-        task = process_crewai_task.delay(user_input=message, user_id=user_id)
+        task = process_chat_task.delay(user_input=message, user_id=user_id)
         
         return Response({
             "task_id": task.id,

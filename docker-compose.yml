@@ -30,7 +30,6 @@ services:
     environment:
       - CHROMA_DB_IMPL=disk
     volumes:
-      # Persist the Chroma data to local folder
       - chroma-data:/app/chroma
     ports:
       - "8002:8002"

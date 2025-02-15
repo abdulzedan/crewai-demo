@@ -8,3 +8,15 @@ requests
 python-dotenv
 gunicorn
 uvicorn
+django
+crewai
+langchain
+langchain-community
+langchain-openai
+chromadb
+requests
+python-dotenv
+gunicorn
+uvicorn
+beautifulsoup4
+pillow

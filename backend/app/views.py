@@ -1,4 +1,3 @@
-#backend/app/views/
 from django.http import JsonResponse
 
 def index(request):
