@@ -1,143 +1,111 @@
-# backend/crewai_config/crew.py
-
 from typing import List
-from pydantic import BaseModel, Field
+import json
+
 from crewai import Agent, Crew, Task, Process
 from crewai.project import CrewBase, agent, task, crew
-from crewai.tools import BaseTool
 
-# Import the Tools you already created
-from app.services.tools import (
-    FindJobsTool,
-    StoreTextTool,
-    RetrieveTextTool
-)
+from app.tools.crewai_tools import FindJobsTool, StoreTextTool, RetrieveTextTool
+from pydantic import BaseModel, Field
 
-# Import your knowledge source
-from .knowledge_sources import job_postings_source
-
-# Define a pydantic model for the final Q&A output
 class InterviewQA(BaseModel):
-    questions: List[str] = Field(..., description="Interview questions.")
-    answers: List[str] = Field(..., description="Corresponding recommended answers.")
+    questions: List[str] = Field(..., description="List of interview questions.")
+    answers: List[str] = Field(..., description="Suggested answers.")
 
-# A simple guardrail function: must produce valid JSON that matches InterviewQA
 def interview_qa_guardrail(output_str: str):
-    """Return (success, data). If success=False, agent will retry."""
-    import json
-    from json import JSONDecodeError
-
     try:
-        data = json.loads(output_str)
-        # The following check is optional if you want to ensure certain fields
-        if not isinstance(data.get("questions"), list):
-            return (False, "Output JSON has no 'questions' list.")
-        if not isinstance(data.get("answers"), list):
-            return (False, "Output JSON has no 'answers' list.")
-        return (True, data)
-    except JSONDecodeError:
-        return (False, "Output must be valid JSON with questions/answers.")
+        parsed = json.loads(output_str)
+        if not isinstance(parsed.get("questions"), list):
+            return (False, "Missing or invalid 'questions' in output JSON.")
+        if not isinstance(parsed.get("answers"), list):
+            return (False, "Missing or invalid 'answers' in output JSON.")
+        return (True, parsed)
+    except json.JSONDecodeError:
+        return (False, "Must return valid JSON with 'questions'/'answers'.")
 
 @CrewBase
-class EnhancedJobApplicationCrew:
-    """
-    An enhanced version of your JobApplicationCrew with concurrency,
-    knowledge usage, memory, guardrails, and optional manager agent.
-    """
-    agents_config = "crewai_config/agents.yaml"
-    tasks_config = "crewai_config/tasks.yaml"
-
-    # Optional: a "manager" agent for hierarchical or planned approach
+class JobApplicationCrew:
     @agent
-    def manager_agent(self) -> Agent:
+    def job_researcher(self) -> Agent:
         return Agent(
-            role="Application Pipeline Manager",
-            goal="Coordinate other agents to handle job application tasks.",
-            backstory="You oversee the entire process, delegating tasks as needed.",
-            llm="gpt-4",  # or any other
-            allow_delegation=True,
+            role="Job Researcher",
+            goal="Find relevant job postings and store them or retrieve memory if needed.",
+            backstory="Has HR/recruiting background, scanning job boards quickly.",
+            llm="gpt-4",
+            tools=[FindJobsTool(), StoreTextTool(), RetrieveTextTool()],
+            memory=True,
             verbose=True
         )
 
     @agent
-    def job_researcher(self) -> Agent:
-        # Attach the 'find_jobs_tool' plus memory store or retrieval if desired
-        return Agent(
-            config=self.agents_config["job_researcher"],
-            tools=[FindJobsTool(), StoreTextTool(), RetrieveTextTool()],
-            llm="gpt-4",
-            allow_code_execution=False,
-            verbose=True,
-            memory=True
-        )
-
-    @agent
     def resume_strategist(self) -> Agent:
-        # Tools to store or retrieve text from Chroma
         return Agent(
-            config=self.agents_config["resume_strategist"],
-            tools=[StoreTextTool(), RetrieveTextTool()],
+            role="Resume Strategist",
+            goal="Rewrite or adapt user resumes to match job requirements.",
+            backstory="Expert in ATS systems and resume optimization.",
             llm="gpt-4",
-            verbose=True,
-            allow_code_execution=False,
-            memory=True
+            tools=[StoreTextTool(), RetrieveTextTool()],
+            memory=True,
+            verbose=True
         )
 
     @agent
     def interview_coach(self) -> Agent:
-        # Tools for retrieving context if needed
         return Agent(
-            config=self.agents_config["interview_coach"],
-            tools=[RetrieveTextTool()],
+            role="Interview Coach",
+            goal="Generate interview Q&A based on job context.",
+            backstory="20 years experience in interview coaching.",
             llm="gpt-4",
-            verbose=True,
-            allow_code_execution=False,
-            memory=True
+            tools=[RetrieveTextTool()],
+            memory=True,
+            verbose=True
         )
 
-    # tasks
     @task
     def find_jobs(self) -> Task:
         return Task(
-            config=self.tasks_config["find_jobs"],
-            async_execution=True  # let it run concurrently
+            description="Task: Use the find_jobs_tool to produce a short listing of relevant job postings.",
+            expected_output="Up to 3 relevant job listings based on user's input keyword.",
+            agent=self.job_researcher(),
+            async_execution=True,
         )
 
     @task
     def store_user_input(self) -> Task:
         return Task(
-            config=self.tasks_config["store_user_input"],
-            async_execution=True  # let it run concurrently
+            description="Task: Store the user's input for future reference, using store_text_tool.",
+            expected_output="Confirmation that text was stored in local memory.",
+            agent=self.resume_strategist(),
+            async_execution=True,
         )
 
     @task
     def tailor_resume(self) -> Task:
-        # depends on user input + possibly job context
         return Task(
-            config=self.tasks_config["tailor_resume"],
+            description="Task: Rewrite or tailor the user's resume to match the found jobs.",
+            expected_output="A short, revised resume snippet with relevant keywords.",
+            agent=self.resume_strategist(),
             context=[self.find_jobs(), self.store_user_input()]
         )
 
     @task
     def generate_interview_qa(self) -> Task:
         return Task(
-            config=self.tasks_config["generate_interview_qa"],
+            description=(
+                "Task: Generate a short Q&A set (3-5 questions) with recommended answers "
+                "based on the job context and user’s updated resume text. Must return "
+                "valid JSON with 'questions' and 'answers' arrays."
+            ),
+            expected_output="JSON with 'questions' and 'answers' arrays",
+            agent=self.interview_coach(),
             context=[self.find_jobs(), self.tailor_resume()],
-            guardrail=interview_qa_guardrail,          # ensure valid JSON Q&A
-            output_pydantic=InterviewQA                # parse final Q&A to pydantic
+            guardrail=interview_qa_guardrail,
+            output_pydantic=InterviewQA,
         )
 
-    # Finally define the crew
     @crew
     def crew(self) -> Crew:
-        """
-        If you want a hierarchical approach with a manager agent,
-        set `process=Process.hierarchical` and `manager_agent=...`.
-        Otherwise keep it sequential + concurrency.
-        """
         return Crew(
             agents=[
-                self.manager_agent(),     # optional manager
                 self.job_researcher(),
                 self.resume_strategist(),
                 self.interview_coach(),
@@ -149,19 +117,6 @@ class EnhancedJobApplicationCrew:
                 self.generate_interview_qa(),
             ],
             process=Process.sequential,
-            # For hierarchical flow:
-            # process=Process.hierarchical,
-            # manager_agent=self.manager_agent(),
             verbose=True,
-            memory=True,  # Turn on memory for the entire pipeline
-            # Add domain knowledge so agents can consult the stored postings
-            knowledge_sources=[job_postings_source],
-            # Use an Azure embedder or default OpenAI for storing knowledge
-            embedder={
-                "provider": "openai",
-                "config": {
-                    "model": "text-embedding-ada-002",
-                }
-            },
-            planning=False  # set True if you want dynamic planning
+            memory=True,
         )

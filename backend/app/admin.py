@@ -1,8 +1,12 @@
-#backend/app/admin.py
 from django.contrib import admin
-from .models import UserText
+from app.models import CustomUser, UserText  # Import from models.py
 
 @admin.register(UserText)
 class UserTextAdmin(admin.ModelAdmin):
-    list_display = ("id", "timestamp")
+    list_display = ("id", "user", "timestamp")
     ordering = ("-timestamp",)
+
+@admin.register(CustomUser)
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ("id", "username", "email")
+    ordering = ("-id",)
