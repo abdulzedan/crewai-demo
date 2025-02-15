@@ -21,6 +21,8 @@ frontnd/node_modules
 # Chroma
 chroma/
 
+#docs
+docs/
 
 # Next.js build
 .next/

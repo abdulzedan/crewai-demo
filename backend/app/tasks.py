@@ -1,25 +1,38 @@
-from celery import shared_task
+# backend/app/tasks.py
+
+# Celery has been removed—this is now a plain synchronous function.
+from crewai_config.crew import LatestAIResearchCrew
 from app.models import UserText, CustomUser
 
-@shared_task
-def process_chat_task(user_input: str, user_id: int = None):
+def process_crewai_task(user_input: str, user_id: int = None):
     try:
         user = None
         if user_id is not None:
             user = CustomUser.objects.filter(id=user_id).first()
 
-        # Store initial chat message in DB
+        # Log the user query into the database.
         UserText.objects.create(
             user=user,
-            content=f"User input: {user_input}"
+            content=f"User query: {user_input}"
         )
-        # In this re-designed use-case, task orchestration is handled by CrewAI.
-        # This simple task is kept for generic chat messages.
-        response_message = f"Received: {user_input}"
+
+        # Kick off the CrewAI pipeline synchronously.
+        crew = LatestAIResearchCrew().crew()
+        result = crew.kickoff(inputs={"query": user_input})
+
+        # Log the final output into the database.
         UserText.objects.create(
             user=user,
-            content=f"System response: {response_message}"
+            content=f"CrewAI research result: {result.raw[:500]}..."
         )
-        return {"status": "completed", "result": response_message}
+
+        return {
+            "status": "completed",
+            "result": result.raw[:1000],
+        }
+
     except Exception as e:
-        return {"status": "failed", "error": str(e)}
+        return {
+            "status": "failed",
+            "error": str(e),
+        }

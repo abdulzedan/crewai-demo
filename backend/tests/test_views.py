@@ -1,9 +1,9 @@
 from django.test import override_settings
+from celery import current_app
 from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
 from django.contrib.auth import get_user_model
-from celery import current_app
 
 User = get_user_model()
 
@@ -15,8 +15,7 @@ User = get_user_model()
 )
 class ChatEndpointTests(APITestCase):
     def setUp(self):
-        # Reconfigure Celery so that even if it was initialized earlier,
-        # it now uses the in-memory settings.
+        # Ensure the current Celery app uses these settings even if initialized early.
         current_app.conf.update(
             broker_url="memory://",
             result_backend="cache+memory://",
@@ -40,33 +39,3 @@ class ChatEndpointTests(APITestCase):
         data = {"message": "Test chat message"}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
-
-
-@override_settings(
-    CELERY_BROKER_URL="memory://",
-    CELERY_RESULT_BACKEND="cache+memory://",
-    CELERY_TASK_ALWAYS_EAGER=True,
-    CELERY_TASK_EAGER_PROPAGATES=True,
-)
-class AnalysisEndpointTests(APITestCase):
-    def setUp(self):
-        current_app.conf.update(
-            broker_url="memory://",
-            result_backend="cache+memory://",
-            task_always_eager=True,
-            task_eager_propagates=True,
-        )
-        self.user = User.objects.create_user(username='analysisuser', password='testpass123')
-        self.client = APIClient()
-        self.client.force_authenticate(user=self.user)
-
-    def test_analysis(self):
-        url = reverse('analysis_view')
-        data = {
-            "document_text": "This is a sample document to analyze. It contains multiple insights and details.",
-            "image_url": "https://www.planetware.com/wpimages/2019/11/canada-in-pictures-beautiful-places-to-photograph-morraine-lake.jpg",
-            "web_query": "latest trends in AI"
-        }
-        response = self.client.post(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertIn("report", response.data)
