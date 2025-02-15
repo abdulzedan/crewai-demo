@@ -15,8 +15,8 @@ AZURE_API_BASE = os.getenv("AZURE_API_BASE", os.getenv("AZURE_OPENAI_ENDPOINT", 
 AZURE_API_VERSION = os.getenv("AZURE_API_VERSION", os.getenv("AZURE_OPENAI_API_VERSION", "2024-06-01"))
 
 EMBEDDER_CONFIG = {
-    "provider": "openai",
-    "config": {
+    "provider": "azure",
+    "config": { 
          "api_key": AZURE_API_KEY,
          "api_base": AZURE_API_BASE,
          "api_version": AZURE_API_VERSION,
@@ -38,7 +38,7 @@ class LatestAIResearchCrew:
             role="Web Researcher",
             goal="Search the web for the latest AI research and tech news.",
             backstory="An expert in scouring online sources for cutting-edge developments in AI and technology.",
-            llm="gpt-4o",
+            llm="azure/gpt-4o",
             tools=[AISearchTool(), StoreTextTool(), RetrieveTextTool()],
             memory=True,
             verbose=True,
@@ -51,7 +51,7 @@ class LatestAIResearchCrew:
             role="Content Aggregator",
             goal="Aggregate and filter search results to highlight key tech insights.",
             backstory="Skilled at synthesizing information into concise summaries.",
-            llm="gpt-4o",
+            llm="azure/gpt-4o",
             tools=[StoreTextTool(), RetrieveTextTool()],
             memory=True,
             verbose=True,
@@ -64,7 +64,7 @@ class LatestAIResearchCrew:
             role="Data Synthesizer",
             goal="Synthesize a comprehensive report from aggregated research.",
             backstory="Experienced in summarizing complex data into clear overviews.",
-            llm="gpt-4o",
+            llm="azure/gpt-4o",
             tools=[SummarizeTool(), RetrieveTextTool()],
             memory=True,
             verbose=True,
