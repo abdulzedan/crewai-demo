@@ -1,10 +1,9 @@
-# tests/test_views.py
-
 from django.test import override_settings
 from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
 from django.contrib.auth import get_user_model
+from celery import current_app
 
 User = get_user_model()
 
@@ -16,6 +15,14 @@ User = get_user_model()
 )
 class ChatEndpointTests(APITestCase):
     def setUp(self):
+        # Reconfigure Celery so that even if it was initialized earlier,
+        # it now uses the in-memory settings.
+        current_app.conf.update(
+            broker_url="memory://",
+            result_backend="cache+memory://",
+            task_always_eager=True,
+            task_eager_propagates=True,
+        )
         self.user = User.objects.create_user(username='testuser', password='testpass123')
         self.client = APIClient()
 
@@ -43,6 +50,12 @@ class ChatEndpointTests(APITestCase):
 )
 class AnalysisEndpointTests(APITestCase):
     def setUp(self):
+        current_app.conf.update(
+            broker_url="memory://",
+            result_backend="cache+memory://",
+            task_always_eager=True,
+            task_eager_propagates=True,
+        )
         self.user = User.objects.create_user(username='analysisuser', password='testpass123')
         self.client = APIClient()
         self.client.force_authenticate(user=self.user)
