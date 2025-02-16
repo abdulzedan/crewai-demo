@@ -1,12 +1,21 @@
-from typing import Dict, List
+# backend/app/services/custom_memory_manager.py
+
 from app.services.vector_store import ChromaVectorStore
 
 class CustomMemoryManager:
-    def __init__(self, persist_dir: str = "/app/chroma") -> None:
-        self.vs = ChromaVectorStore(persist_directory=persist_dir)
-
+    def __init__(self, persist_dir: str = ".chroma-local") -> None:
+        self.vector_store = ChromaVectorStore(persist_dir)
+        
     def add_memory(self, text: str) -> None:
-        self.vs.store_text(text)
+        try:
+            self.vector_store.store_text(text)
+        except Exception as e:
+            print(f"Memory storage error: {str(e)}")
+            raise
 
-    def get_relevant_memories(self, query: str, k: int = 3) -> Dict[str, List[str]]:
-        return self.vs.search_similar(query_text=query, n_results=k)
+    def search_memory(self, query: str):
+        try:
+            return self.vector_store.search_similar(query)
+        except Exception as e:
+            print(f"Memory search error: {str(e)}")
+            return []

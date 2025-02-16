@@ -9,18 +9,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env_path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=env_path, override=True)
 
-# Build the embedder configuration using environment variables.
-AZURE_API_KEY = os.getenv("AZURE_API_KEY", os.getenv("AZURE_OPENAI_API_KEY", ""))
-AZURE_API_BASE = os.getenv("AZURE_API_BASE", os.getenv("AZURE_OPENAI_ENDPOINT", ""))
-AZURE_API_VERSION = os.getenv("AZURE_API_VERSION", os.getenv("AZURE_OPENAI_API_VERSION", "2024-06-01"))
-
+AZURE_API_KEY = os.getenv("AZURE_API_KEY", "")
+AZURE_API_BASE = os.getenv("AZURE_API_BASE", "")  # This should be your Azure endpoint URL
+AZURE_API_VERSION = os.getenv("AZURE_API_VERSION", "")
+# Use azure_endpoint and add deployment_name.
 EMBEDDER_CONFIG = {
     "provider": "azure",
-    "config": { 
+    "config": {
          "api_key": AZURE_API_KEY,
-         "api_base": AZURE_API_BASE,
-         "api_version": AZURE_API_VERSION,
-         "model_name": os.getenv("AZURE_EMBEDDING_MODEL", "text-embedding-ada-002")
+         "api_base": AZURE_API_BASE.rstrip("/") if AZURE_API_BASE else "",
+         "model": os.getenv("AZURE_EMBEDDING_MODEL", "text-embedding-ada-002"),
+         "deployment_id": os.getenv("AZURE_EMBEDDING_DEPLOYMENT")
     }
 }
 
@@ -101,7 +100,6 @@ class LatestAIResearchCrew:
 
     @crew
     def crew(self) -> Crew:
-        # Disable planning by setting planning to False and providing an empty planning_prompt.
         return Crew(
             agents=[
                 self.web_researcher(),
@@ -117,6 +115,6 @@ class LatestAIResearchCrew:
             verbose=True,
             memory=True,
             planning=False,
-            planning_prompt=None,  # Explicitly override any default prompt.
-            embedder=EMBEDDER_CONFIG  # Supply the embedder config for the API key.
+            planning_prompt=None,
+            embedder=EMBEDDER_CONFIG  # Updated embedder config
         )
