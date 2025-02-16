@@ -27,4 +27,4 @@ docs/
 # Next.js build
 .next/
 
-.cache/
+.cache/docs/
