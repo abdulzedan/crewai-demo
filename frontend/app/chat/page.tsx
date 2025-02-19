@@ -1,6 +1,8 @@
 // frontend/app/chat/page.tsx
-import React from 'react'
-import ChatBot from '@/components/ChatBot'
+"use client"
+
+import React from 'react';
+import Link from "next/link";
 
 export default function ChatPage() {
   return (
@@ -17,25 +19,28 @@ export default function ChatPage() {
         <aside className="hidden w-60 flex-col bg-white p-4 shadow-sm sm:flex">
           <div className="mb-4 text-xl font-semibold text-gray-700">Tools</div>
           <nav className="flex flex-col space-y-2 text-sm">
-            <a className="rounded bg-gray-200 px-3 py-2 font-medium text-gray-800">
+            <Link href="#" className="rounded bg-gray-200 px-3 py-2 font-medium text-gray-800">
               New Document
-            </a>
-            <a className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
+            </Link>
+            <Link href="#" className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
               Saved Documents
-            </a>
-            <a className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
+            </Link>
+            <Link href="#" className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
               Past Chats
-            </a>
-            <a className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
+            </Link>
+            <Link href="#" className="rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
               Settings
-            </a>
+            </Link>
           </nav>
         </aside>
 
         <div className="flex flex-1 flex-col overflow-hidden">
-          <ChatBot />
+          {/* Chat messages and input would be rendered here */}
+          <div className="flex flex-1 items-center justify-center">
+            <p className="text-lg">This is the Chat Page. Use the main chat UI for conversation.</p>
+          </div>
         </div>
       </div>
     </main>
-  )
+  );
 }

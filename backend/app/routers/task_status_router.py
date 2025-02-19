@@ -1,13 +1,17 @@
 # backend/app/routers/task_status_router.py
 
+import os
 from django.urls import path
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from celery.result import AsyncResult
 
+ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]
+
 class TaskStatusView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    # Toggle auth: if ENABLE_AUTH is true, require authenticated access; else allow any.
+    permission_classes = [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
 
     def get(self, request, task_id):
         result = AsyncResult(task_id)

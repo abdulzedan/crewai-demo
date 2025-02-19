@@ -10,7 +10,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -22,45 +22,92 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 
-.typing-indicator {
-  display: flex;
-  align-items: center;
-}
-
-.typing-indicator span {
-  height: 8px;
-  width: 8px;
-  background-color: #333;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 4px;
-  animation: typing 1s infinite ease-in-out;
-}
-
-.typing-indicator span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.typing-indicator span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes typing {
-  0% {
-    transform: translateY(0);
+/* Futuristic Thinking Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
   }
   50% {
-    transform: translateY(-10px);
+    opacity: 1;
   }
-  100% {
-    transform: translateY(0);
+}
+
+@keyframes expand {
+  0%, 100% {
+    transform: scaleX(0.5);
   }
+  50% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-pulse-fast {
+  animation: pulse 1s infinite;
+}
+
+.animate-pulse-medium {
+  animation: pulse 1.5s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s infinite;
+}
+
+.animate-expand-fast {
+  animation: expand 1.5s infinite;
+  transform-origin: left;
+}
+
+.animate-expand-slow {
+  animation: expand 2s infinite;
+  transform-origin: left;
+}
+
+/* Prose styles for markdown content */
+.prose {
+  @apply max-w-none;
+}
+
+.prose code {
+  @apply text-primary;
+}
+
+.prose pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto;
 }

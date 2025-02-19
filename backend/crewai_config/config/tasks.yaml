@@ -1,0 +1,31 @@
+generalist_task:
+  description: "Answer simple queries directly"
+  expected_output: "Final Answer: <response>"
+  agent: "generalist"
+  async_execution: false
+  output_file: "generalist_output.txt"
+
+research_task:
+  description: "Research complex queries using the Web Researcher agent"
+  expected_output: "Initial research findings"
+  agent: "web_researcher"
+  async_execution: false
+  output_file: "research_output.txt"
+
+aggregate_task:
+  description: "Aggregate research findings"
+  expected_output: "Curated summary of key points"
+  agent: "aggregator"
+  context:
+    - "research_task"
+  async_execution: false
+  output_file: "aggregate_output.txt"
+
+synthesize_task:
+  description: "Synthesize final answer from aggregated research"
+  expected_output: "Final Answer: <comprehensive response>"
+  agent: "synthesizer"
+  context:
+    - "aggregate_task"
+  async_execution: false
+  output_file: "synthesize_output.txt"
