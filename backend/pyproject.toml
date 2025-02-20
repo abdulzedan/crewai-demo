@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crewai_backend"
+version = "0.1.0"
+description = "CrewAI backend for abdulzedan-crewai-demo"
+dependencies = [
+  "django",
+  "crewai",
+  "langchain",
+  "langchain-community",
+  "langchain-openai",
+  "chromadb",
+  "requests",
+  "python-dotenv",
+  "gunicorn",
+  "uvicorn",
+  "beautifulsoup4",
+  "pillow",
+  "pyyaml"
+]

@@ -1,0 +1,1 @@
+recursive-include crewai_config/config *.yaml

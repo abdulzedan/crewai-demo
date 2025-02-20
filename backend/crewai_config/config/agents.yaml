@@ -24,7 +24,7 @@ generalist:
   verbose: true
   allow_delegation: false
   system_message: |
-    Answer directly in EXACT format:
+    Answer the following query directly: {query}
     Final Answer: <response>
     
     Example: Input 'What is 2+2?' → Output 'Final Answer: 4'
