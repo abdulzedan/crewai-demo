@@ -1,3 +1,6 @@
+# Import storage tools early to register them.
+import app.tools.crewai_tools  # This registers store_text_tool and retrieve_text_tool.
+
 import os
 import yaml
 import copy
@@ -14,7 +17,7 @@ CONFIG_DIR = Path(__file__).resolve().parent / "config"
 if not CONFIG_DIR.exists():
     raise FileNotFoundError(f"Configuration directory not found: {CONFIG_DIR}")
 
-# Load YAML configuration files for agents and tasks
+# Load YAML configuration files for agents and tasks.
 with open(CONFIG_DIR / "agents.yaml", "r", encoding="utf-8") as f:
     loaded_agents_config = yaml.safe_load(f)
 with open(CONFIG_DIR / "tasks.yaml", "r", encoding="utf-8") as f:
@@ -25,10 +28,11 @@ from crewai.project import CrewBase, agent, task, crew
 from crewai_tools import SerperDevTool
 from app.tools.summarize_tool import SummarizeTool
 from app.tools.aisearch_tool import AISearchTool
+from app.tools.crewai_tools import store_text_tool  # Import function wrapper.
 
-# Create an LLM instance using Azure OpenAI credentials
+# Create an LLM instance using Azure OpenAI credentials.
 llm = LLM(
-    model="azure/gpt-4o",  # Adjust as needed
+    model="azure/gpt-4o",  # Adjust as needed.
     api_key=os.getenv("AZURE_API_KEY"),
     base_url=os.getenv("AZURE_API_BASE"),
     api_version=os.getenv("AZURE_API_VERSION", "2024-06-01")
@@ -38,11 +42,12 @@ llm = LLM(
 class LatestAIResearchCrew:
     """
     Crew for research agents.
-    
+
     Flow:
       1. The Expert Web Researcher uses AISearchTool to fetch live research data.
       2. The Analytical Aggregator compiles and summarizes the research data.
-      3. The Innovative Synthesizer integrates the summarized insights into a final answer.
+      3. The Store Task saves the aggregated summary into the persistent Chroma vector store.
+      4. The Innovative Synthesizer integrates the aggregated insights into a final answer.
     """
     def __init__(self, inputs=None):
         self.inputs = inputs or {}
@@ -104,7 +109,7 @@ class LatestAIResearchCrew:
     def aggregate_callback(self, task_output):
         """
         Callback for the aggregator task.
-        Uses SummarizeTool to summarize the research output.
+        Uses SummarizeTool to condense the research output.
         """
         raw_text = task_output.raw
         summarized = SummarizeTool()._run(raw_text)
@@ -114,9 +119,9 @@ class LatestAIResearchCrew:
     def synthesize_callback(self, task_output):
         """
         Callback for the synthesizer task.
-        Further processes the aggregated summary if needed.
+        Processes the aggregated summary into the final answer.
         """
-        final_answer = task_output.raw  # Currently a pass-through; refine if necessary.
+        final_answer = task_output.raw  # Further refinement can be added if needed.
         print("[DEBUG][synthesize_callback] Final synthesized answer:", final_answer)
         return final_answer
 
@@ -146,7 +151,21 @@ class LatestAIResearchCrew:
             context=[self.research_task()],
             async_execution=False,
             output_file="aggregate_output.txt",
-            callback=self.aggregate_callback  # Use callback to summarize output
+            callback=self.aggregate_callback
+        )
+
+    @task
+    def store_task(self) -> Task:
+        cfg = self.tasks_config.get("store_task")
+        if cfg is None:
+            raise ValueError("Missing 'store_task' key in tasks.yaml")
+        return Task(
+            config=cfg,
+            agent=self.aggregator(),
+            context=[self.aggregate_task()],
+            async_execution=False,
+            output_file="stored_output.txt",
+            tools=[store_text_tool]  # Explicitly pass the tool function.
         )
 
     @task
@@ -160,7 +179,7 @@ class LatestAIResearchCrew:
             context=[self.aggregate_task()],
             async_execution=False,
             output_file="synthesize_output.txt",
-            callback=self.synthesize_callback  # Callback for final answer processing
+            callback=self.synthesize_callback
         )
 
     @crew
@@ -175,6 +194,7 @@ class LatestAIResearchCrew:
             tasks=[
                 self.research_task(),
                 self.aggregate_task(),
+                self.store_task(),
                 self.synthesize_task()
             ],
             process=Process.sequential,

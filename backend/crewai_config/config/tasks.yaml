@@ -10,7 +10,7 @@ research_task:
 aggregate_task:
   description: >
     Analyze and consolidate the raw research data.
-    The Analytical Aggregator will meticulously compile and organize the findings into a coherent summary that highlights key insights.
+    The Analytical Aggregator will compile and organize the findings into a coherent summary that highlights key insights.
   expected_output: "A curated summary of the research findings."
   agent: "aggregator"
   context:
@@ -18,11 +18,20 @@ aggregate_task:
   async_execution: false
   output_file: "aggregate_output.txt"
 
+store_task:
+  description: >
+    Store the aggregated research summary into the persistent Chroma vector store.
+  expected_output: "Text stored successfully"
+  agent: "aggregator"
+  context:
+    - "aggregate_task"
+  async_execution: false
+  output_file: "stored_output.txt"
+
 synthesize_task:
   description: >
-    Integrate the aggregated insights into a final, comprehensive answer.
-    The Innovative Synthesizer will transform the curated summary into an articulate and actionable response.
-  expected_output: "Final Answer: <comprehensive, detailed response>"
+    Integrate the aggregated insights into a final, comprehensive, and actionable answer.
+  expected_output: "Final synthesized answer."
   agent: "synthesizer"
   context:
     - "aggregate_task"

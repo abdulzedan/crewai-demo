@@ -1,15 +1,13 @@
-# backend/app/tools/crewai_tools.py
-
 from typing import Type
-import random
 from pydantic import BaseModel, Field, ConfigDict
-from crewai.tools import BaseTool
+from crewai.tools import BaseTool, tool
 from app.services.vector_store import ChromaVectorStore
 
-# StoreTextTool
+# Define input schema for storing text.
 class StoreTextInput(BaseModel):
     text: str = Field(..., description="User text to store in Chroma DB")
 
+# Custom tool class to store text.
 class StoreTextTool(BaseTool):
     name: str = "store_text_tool"
     description: str = "Store user-provided text into Chroma DB for semantic retrieval"
@@ -24,10 +22,21 @@ class StoreTextTool(BaseTool):
         except Exception as e:
             return f"Storage error: {str(e)}"
 
-# RetrieveTextTool
+# Function wrapper to register StoreTextTool with CrewAI.
+@tool("store_text_tool")
+def store_text_tool(text: str) -> str:
+    """
+    A function wrapper for StoreTextTool.
+    This tool stores the provided text into the Chroma vector store for semantic retrieval.
+    """
+    tool_instance = StoreTextTool()
+    return tool_instance._run(text)
+
+# Define input schema for retrieving text.
 class RetrieveTextInput(BaseModel):
     query: str = Field(..., description="Search query to find relevant text in Chroma DB")
 
+# Custom tool class to retrieve text.
 class RetrieveTextTool(BaseTool):
     name: str = "retrieve_text_tool"
     description: str = "Retrieve relevant text from Chroma DB"
@@ -43,3 +52,13 @@ class RetrieveTextTool(BaseTool):
             return "No similar text found."
         except Exception as e:
             return f"Retrieval error: {str(e)}"
+
+# Function wrapper to register RetrieveTextTool with CrewAI.
+@tool("retrieve_text_tool")
+def retrieve_text_tool(query: str) -> str:
+    """
+    A function wrapper for RetrieveTextTool.
+    This tool retrieves relevant text from the Chroma vector store based on the provided query.
+    """
+    tool_instance = RetrieveTextTool()
+    return tool_instance._run(query)

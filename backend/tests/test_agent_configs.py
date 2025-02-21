@@ -18,8 +18,7 @@ from crewai_config.crew import LatestAIResearchCrew
 def test_agent_configs():
     """
     Test the configuration of agents.
-    This function instantiates the research crew and prints out the roles and goals
-    of the manager, web_researcher, aggregator, and synthesizer agents.
+    Instantiates the research crew and prints roles and goals.
     """
     crew_instance = LatestAIResearchCrew()
     manager = crew_instance.manager()

@@ -15,7 +15,7 @@ User = get_user_model()
 )
 class ChatEndpointTests(APITestCase):
     def setUp(self):
-        # Ensure the current Celery app uses these settings even if initialized early.
+        # Ensure the current Celery app uses these settings.
         current_app.conf.update(
             broker_url="memory://",
             result_backend="cache+memory://",
@@ -39,3 +39,8 @@ class ChatEndpointTests(APITestCase):
         data = {"message": "Test chat message"}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+if __name__ == "__main__":
+    import django
+    django.setup()
+    ChatEndpointTests().run()

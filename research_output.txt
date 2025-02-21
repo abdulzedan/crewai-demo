@@ -24,400 +24,123 @@ State lawmakers are considering a diverse array of AI legislation, with hundreds
 Although the likelihood of passage for these AI bills remains unclear, any state AI legislation that does pass is likely to have significant effects on the U.S. AI regulatory landscape, especially in the absence of federal action on AI.  We will continue to monitor these and related AI developments across our [Inside Global Tech](https://www.insideglobaltech.com/), [Global Policy Watch](https://www.globalpolicywatch.com/), and [Inside Privacy](https://www.insideprivacy.com/) blogs.
 ----------------------------------------
 
-URL: https://techstartups.com/2025/02/21/10-most-searched-ai-trends-shaping-startups-in-2025/
+URL: https://www.reuters.com/markets/us/feds-jefferson-says-ai-is-speeding-investors-reactions-central-bankers-messages-2025-02-21/
 Content:
-Title: 10 Most Searched AI Trends Shaping Startups in 2025
+Title: reuters.com
 
-URL Source: https://techstartups.com/2025/02/21/10-most-searched-ai-trends-shaping-startups-in-2025/
-
-Published Time: 2025-02-21T16:10:54+00:00
-
-Markdown Content:
-Posted On February 21, 2025
-
-![Image 1](https://techstartups.com/wp-content/uploads/2019/07/Artificial-Intelligence-for-the-Enterprise.jpg)
-
-It’s February, barely two months into 2025, and artificial intelligence is already the hottest topic in tech. AI startups are all over it, racing to innovate, and people are Googling like crazy to figure out what’s next. We teamed up with Grok DeepSearch to cut through the noise and uncover the 10 AI trends dominating search bars—along with the startup companies turning curiosity into action. Think autonomous agents, ethical breakthroughs, and tech that feels straight out of sci-fi.
-
-The 10 AI Trends Dominating 2025—And the Startups Leading the Charge
---------------------------------------------------------------------
-
-![Image 2](https://techstartups.com/wp-content/uploads/2025/02/The-10-AI-Trends-Dominating-2025.jpg)
-
-### 1\. AI Agents Streamlining Operations
-
-*   **Trend**: _**Searches for “AI agents”** and **“autonomous AI”**_ are surging as businesses seek tools that go beyond conversation to execute tasks—such as scheduling, data analysis, and customer support—independently.
-
-*   **Startup Spotlight**: [DevRev](https://devrev.ai/) offers an AI-driven CRM platform that integrates developers and customers, enhancing efficiency without the usual manual oversight.
-
-*   **Why It Matters**: In a world prioritizing productivity, AI agents represent a leap forward, delivering automation that startups can’t ignore.
-
-### 2\. Generative AI Enhancing Creativity
-
-*   **Trend**: “_**Generative AI tools”** and **“AI content creation**_” are top queries as professionals look for solutions to produce high-quality videos, designs, and text quickly and cost-effectively.
-
-*   **Startup Spotlight**: [Writer](https://writer.com/) provides a generative AI platform that empowers enterprises to create polished content—from marketing materials to reports—with remarkable speed.
-
-### 3\. Ethical AI and Transparency
-
-*   **Trend**: Searches for “_**AI ethics”** and **“transparent AI**_” are climbing as stricter regulations and public scrutiny demand trustworthy, unbiased systems.
-
-*   Startup Spotlight: [Anthropic](https://www.anthropic.com/) develops Claude, a generative AI model designed with safety and fairness at its core, appealing to companies valuing accountability.
-
-*   Why It Matters: As AI-related controversies grow, ethical solutions like Anthropic’s build trust and set a new standard.
-
-### 4\. Edge AI for Real-Time Performance
-
-*   **Trend**: “**_Edge AI”_** _and_ **_“on-device AI_**” are gaining traction as users prioritize fast, secure technology that operates without cloud dependency.
-
-*   **Startup Spotlight**: [GMI Cloud](https://www.gmicloud.ai/) leverages GPU-powered edge solutions to deliver real-time AI capabilities, such as analytics, directly at the source.
-
-*   **Why It Matters**: Speed and data privacy are critical in 2025, making edge AI a game-changer for responsive applications.
-
-### 5\. AI Advancing Scientific Discovery
-
-*   **Trend**: “**_AI for science” and “AI research tools”_** are trending as researchers turn to AI to accelerate breakthroughs in complex fields.
-
-*   **Startup Spotlight**: [xAI](https://x.ai/), the creator of Grok, uses AI to explore the universe’s mysteries, supporting scientists with powerful analytical tools.
-
-*   **Why It Matters**: By amplifying human ingenuity, AI is unlocking discoveries that could redefine industries and societies.
-
-### 6\. Sustainable AI for a Greener Future
-
-*   **Trend**: “_**Green AI”** and **“sustainable AI**_” searches are rising as energy efficiency becomes a priority amid environmental goals.
-
-*   **Why It Matters**: Aligning profitability with sustainability, this trend appeals to startups aiming to meet 2025’s net-zero expectations.
-
-### 7\. AI-Powered Search Redefining Access
-
-*   Trend: “_**AI search”** and **“conversational search**_” are on the rise as users demand intuitive, real-time answers over traditional results.
-
-*   **Startup Spotlight**: [Perplexity](https://www.perplexity.ai/) offers a conversational AI search engine that delivers precise, up-to-date responses with ease.
-
-*   **Why It Matters**: This evolution in search technology enhances decision-making, a vital advantage for fast-moving startups.
-
-### 8\. AI Ensuring Safe Robotics
-
-*   **Trend**: “_**AI robotics”** and **“safe AI**_” are drawing interest as industries explore reliable robotic solutions for practical applications.
-
-*   **Startup Spotlight**: [Physical Intelligence](https://www.physicalintelligence.company/) builds AI for robots designed to operate safely in environments like warehouses or homes.
-
-### 9\. Superintelligent AI with Safeguards
-
-*   **Trend**: “_**Superintelligence”** and **“AI safety**_” searches reflect growing curiosity—and caution—about AI surpassing human intellect.
-
-*   **Startup Spotlight**: [Safe Superintelligence](https://ssi.inc/) focuses on developing advanced AI with built-in controls to ensure responsible deployment.
-
-### 10\. Spatial AI Transforming Experiences
-
-*   **Trend**: “**_Spatial AI”_** _and_ **_“3D AI”_** are buzzing as gaming, design, and AR/VR sectors chase immersive, interactive environments.
-
-*   **Startup Spotlight**: [World Labs](https://www.worldlabs.ai/) pioneers Large World Models, creating 3D spaces that enhance virtual collaboration and entertainment.
-
-*   **Why It Matters**: This technology elevates user engagement, opening new frontiers for startups in digital innovation.
-
-### Snapshot: Leaders of the AI Frontier
-
-These startups are at the forefront of 2025’s AI revolution, each is tied to a trend shaping the future. Grok DeepSearch analyzed insights from reputable sources including MIT Technology Review, Microsoft, and TechTarget to map these connections. Here’s the breakdown:
-
-Focus Area
-
-Industry Impact
-
-Ethical AI and Transparency
-
-[Anthropic](https://www.anthropic.com/)
-
-Safe and reliable generative AI models (Claude)
-
-AI industry, focusing on safety and ethics
-
-AI Agents Streamlining Operations
-
-[DevRev](https://devrev.ai/)
-
-AI-driven CRM for customer support and development
-
-Tech companies, enhancing collaboration
-
-Edge AI for Real-Time Performance
-
-[GMI Cloud](https://www.gmicloud.ai/)
-
-GPU cloud solutions for AI workloads
-
-AI computing, enabling efficient model training
-
-Sustainable AI for a Greener Future
-
-AI-powered FactoryOps for manufacturing
-
-Manufacturing, improving productivity and sustainability
-
-AI-Powered Search Redefining Access
-
-[Perplexity](https://www.perplexity.ai/)
-
-Conversational AI search engine
-
-Search and information retrieval, real-time answers
-
-AI Ensuring Safe Robotics
-
-[Physical Intelligence](https://www.physicalintelligence.company/)
-
-Safe superintelligence for robots
-
-AI safety and development, robotics applications
-
-Superintelligent AI with Safeguards
-
-[Safe Superintelligence](https://ssi.inc/)
-
-Safe development of superintelligent AI
-
-AI safety, focusing on ethical AI advancement
-
-Spatial AI Transforming Experiences
-
-[World Labs](https://www.worldlabs.ai/)
-
-Large World Models for spatial intelligence
-
-Spatial computing, impacting gaming and design
-
-Generative AI Enhancing Creativity
-
-Generative AI for enterprise content creation
-
-AI Advancing Scientific Discovery
-
-[xAI](https://x.ai/)
-
-AI for scientific discovery (Grok model)
-
-Scientific discovery, understanding the universe
-
-One striking insight from Grok DeepSearch: [Safe Superintelligence](https://ssi.inc/) reached a $30B valuation discussion just months after launching. That’s no anomaly—investors are betting big on AI’s future. [xAI](https://x.ai/) secured $6B, and [Perplexity](https://www.perplexity.ai/) hit $9B. These figures underscore the momentum behind these trends.
-
-This list is more than a snapshot—it’s a forecast. For founders, investors, or tech enthusiasts, these trends signal where opportunity lies: optimized workflows, sustainable solutions, secure AI, and immersive platforms. What’s trending in searches today often defines tomorrow’s market leaders. Which startup catches your eye? Share your thoughts in the comments—we’d love to hear your perspective.
-
-We began by exploring 2025’s key AI trends through web research, drawing on authoritative sources like [MIT Sloan Management Review](https://sloanreview.mit.edu/), [Microsoft](https://www.technologyreview.com/), and [MIT Technology Review](https://www.mit.edu/). This revealed patterns such as agentic AI, generative advancements, and sustainability. Next, we searched for “top AI-powered startups in 2025,” refining our focus with lists from CRN and TRUiC. CRN’s 2025 selection of 10 startups provided a foundation, which we validated against trend alignment and industry impact through targeted research.
-
-These 10 startups exemplify AI’s transformative potential in 2025, each leveraging a trending topic to redefine their sector. Their alignment with current search patterns positions them as frontrunners, offering actionable insights for innovators and investors navigating the AI landscape.
-
-_**Credit**: This research is powered by Grok DeepSearch, built by xAI—check it out at [grok.com](https://grok.com/)_
-
-[![Image 3](https://techstartups.com/wp-content/uploads/2025/01/Meta-GenAI-in-panic-mode-700x466.jpg)](https://techstartups.com/2025/01/24/meta-ai-in-panic-mode-as-free-open-source-deepseek-outperforms-at-a-fraction-of-the-cost/)
-
-[![Image 4](https://techstartups.com/wp-content/uploads/2025/01/DeepDeep-700x466.jpg)](https://techstartups.com/2025/01/31/deepseek-r1-reproduced-for-30-berkeley-researchers-replicate-deepseek-r1-for-30-casting-doubt-on-h100-claims-and-controversy/)
-
-[![Image 5: Apple surrenders to the UK government, removes key privacy feature, and opens backdoor access to UK iPhone users' data](https://techstartups.com/wp-content/uploads/2025/02/ADP-700x466.jpg)](https://techstartups.com/2025/02/21/apple-surrenders-to-the-uk-government-removes-key-privacy-feature-and-opens-backdoor-access-to-uk-iphone-users-data/)
+URL Source: https://www.reuters.com/markets/us/feds-jefferson-says-ai-is-speeding-investors-reactions-central-bankers-messages-2025-02-21/
 ----------------------------------------
 
-URL: https://medium.com/@sourenstepanyan/the-daily-tech-digest-21-february-2025-1b1dd8ac60c9
+URL: https://www.wbur.org/hereandnow/2025/02/21/new-york-times-ai
 Content:
-Title: The Daily Tech Digest: 21 February 2025 - Souren Stepanyan - Medium
+Title: New York Times to use artificial intelligence for some internal purposes
 
-URL Source: https://medium.com/@sourenstepanyan/the-daily-tech-digest-21-february-2025-1b1dd8ac60c9
-
-Published Time: 2025-02-21T12:42:49.618Z
+URL Source: https://www.wbur.org/hereandnow/2025/02/21/new-york-times-ai
 
 Markdown Content:
-The Daily Tech Digest: 21 February 2025 | by Souren Stepanyan | Feb, 2025 | Medium
+New York Times to use artificial intelligence for some internal purposes | Here & Now
 ===============
 
-[Open in app](https://rsci.app.link/?%24canonical_url=https%3A%2F%2Fmedium.com%2Fp%2F1b1dd8ac60c9&%7Efeature=LoOpenInAppButton&%7Echannel=ShowPostUnderUser&source=---top_nav_layout_nav-----------------------------------------)
+[Skip to main content](https://www.wbur.org/hereandnow/2025/02/21/new-york-times-ai#main)
 
-[Sign up](https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=post_page---top_nav_layout_nav-----------------------global_nav------------------)
+Advertisement
 
-[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=post_page---top_nav_layout_nav-----------------------global_nav------------------)
+New York Times to use artificial intelligence for some internal purposes
+========================================================================
 
-[](https://medium.com/search?source=---top_nav_layout_nav-----------------------------------------)
+February 21, 2025
 
-[Sign up](https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=post_page---top_nav_layout_nav-----------------------global_nav------------------)
+[](https://www.facebook.com/dialog/share?app_id=134067973330252&display=page&href=https%3A%2F%2Fwww.wbur.org%2Fhereandnow%2F2025%2F02%2F21%2Fnew-york-times-ai&redirect_uri=https%3A%2F%2Fwww.wbur.org%2Fhereandnow%2F2025%2F02%2F21%2Fnew-york-times-ai "Share on Facebook")[](mailto:?body=NewYorkTimestouseartificialintelligenceforsomeinternalpurposes%0D%0Ahttps%3A%2F%2Fwww.wbur.org%2Fhereandnow%2F2025%2F02%2F21%2Fnew-york-times-ai&subject=wbur.org:NewYorkTimestouseartificialintelligenceforsomeinternalpurposes "Share by email")
 
-[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=post_page---top_nav_layout_nav-----------------------global_nav------------------)
+_Editor's note: Due to a scheduling change, this segment did not air on Feb. 21, 2025, as planned._
 
-![Image 3](https://miro.medium.com/v2/resize:fill:64:64/1*dmbNkD5D-u45r44go_cf0g.png)
+The New York Times is set to use some artificial intelligence tools internally for some of its products and editorial staff.
 
-The Daily Tech Digest: 21 February 2025
+[**Max Tani**](https://www.semafor.com/author/m-tani), media editor at Semafor, first reported the greenlighting of AI at the news organization. Tani joins host Peter O'Dowd for more on The Times' plans and what it could mean for AI in the news industry.
 
-The Daily Tech Digest: 21 February 2025
-=======================================
+_This segment aired on February 21, 2025. Audio will be available soon._
 
-[Souren Stepanyan](https://medium.com/?source=post_page---byline--1b1dd8ac60c9---------------------------------------)
+Advertisement
 
-·[Follow](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fsubscribe%2Fuser%2F3cdb3f8a8ec7&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=post_page-3cdb3f8a8ec7--byline--1b1dd8ac60c9---------------------post_header------------------)
+More from Here & Now
+--------------------
 
-[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=---header_actions--1b1dd8ac60c9---------------------clap_footer------------------)
+Advertisement
+----------------------------------------
 
-[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=---header_actions--1b1dd8ac60c9---------------------bookmark_footer------------------)
+URL: https://www.globalxetfs.com/the-next-big-theme-february-2025/
+Content:
+Title: The Next Big Theme: February 2025
 
-[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3D1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=---header_actions--1b1dd8ac60c9---------------------post_audio_button------------------)
+URL Source: https://www.globalxetfs.com/the-next-big-theme-february-2025/
 
-Share
+Published Time: 2025-02-21T16:06:34+00:00
 
-As technology continues to evolve, we bring you the latest in artificial intelligence, cybersecurity, corporate developments, consumer technology, and startup innovations. Stay connected by following us on [Medium](https://medium.com/), [Bluesky](https://bsky.app/profile/trendsdb.bsky.social), [Twitter](https://x.com/sourenstepanyan), [Threads](https://www.threads.net/@sourenstepanyan), [LinkedIn](https://www.linkedin.com/in/sourenstepanyan/), and tuning into our [Spotify podcast](https://open.spotify.com/show/2NyKyXdaZtAptQ3beHioXg?si=fc5836d0283f4e80).
+![Image 2](https://www.globalxetfs.com/content/files/250214-US-Thematic-Jan_05.png)
 
-Artificial Intelligence and Machine Learning
-============================================
+Artificial Intelligence
+-----------------------
 
-Microsoft Advances Quantum Computing with Majorana 1
-----------------------------------------------------
+_AI Infrastructure and Startup Investments Continue to Surge_
 
-Microsoft unveils Majorana 1, a groundbreaking quantum processor that harnesses millions of potential qubits on a single chip, bringing us closer to solving complex scientific challenges. [Read more](https://msft.it/6007UxEHz).
+In a joint venture with Oracle, OpenAI, and Softbank, President Trump announced a new project called Stargate. The initiative will invest an initial $100 billion in domestic AI infrastructure and up to $500 billion over the next four years to help support U.S. re-industrialization and strengthen national security for America and its allies. Already underway is a 1 million square-foot data center construction project in Texas. Oracle and OpenAI, along with Arm, Microsoft, and Nvidia, will be the key initial tech partners of the project. Softbank Masayoshi Son will serve as the chairman.1 On fundraising, OpenAI is in talks to raise up to $40 billion, potentially valuing the company at $340 billion. This valuation would nearly double OpenAI’s October 2024 valuation and position it as the world’s second-most valuable startup after SpaceX. SoftBank is expected to lead the funding round with an investment of $15–25 billion, which would make it OpenAI’s largest investor, surpassing Microsoft.2
 
-OpenAI Remains Silent on New Developments
------------------------------------------
+Defense Tech
+------------
 
-A cryptic post from OpenAI has sparked speculation about upcoming advancements in AI, leaving the tech world eagerly anticipating further details. [Read more](https://t.co/gGhvuyz5HB).
+_U.S. Pentagon Tasked to Implement Next-Generation Missile Defense Systems_
 
-Google DeepMind Expands Gemini AI Capabilities
+Healthcare Innovation
+---------------------
+
+Lithium & Battery Technology
+----------------------------
+
+_Global Battery Energy Storage Grew Sharply in 2024_
+
+Robotics & Artificial Intelligence
+----------------------------------
+
+_The Physical AI Era Is Here_
+
+At the 2025 Consumer Electronics Show (CES), Nvidia introduced two new technologies that we believe have the potential to expedite the development of robotics and autonomous driving. First, Nvidia introduced its open model license Cosmos platform for developing physical AI systems. Cosmos uses world foundation models (WFMs) to generate photo-realistic video for training physical AI systems like self-driving cars and humanoid robots at lower costs than traditional data collection methods, such as real-world driving. The synthetic training data that these models produce allows machines to understand the physical world, like how large language models (LLMs) enable chatbots to communicate naturally.9 Nvidia also debuted its Isaac GROOT Blueprint, a software tool for training humanoid robots. Developers can record specific movements that the software synthesizes into a broader range of actions, enabling robots to learn more efficiently.10 In our view, both new technologies can help alleviate the bottleneck of limited data for robotic and self-driving applications.
+
+![Image 9](https://www.globalxetfs.com/content/files/250214-US-Thematic-Jan_01.png)
+
+![Image 10](https://www.globalxetfs.com/content/files/250214-US-Thematic-Jan_04.png)
+
+![Image 13](https://www.globalxetfs.com/content/files/250214-US-Thematic-Jan_02.png)
+
+![Image 14](https://www.globalxetfs.com/content/files/250214-US-Thematic-Jan_03.png)
+
+KEEP UP WITH THE LATEST RESEARCH FROM GLOBAL X
 ----------------------------------------------
 
-DeepMind’s Gemini AI now allows advanced research and information processing across 150 countries and in 45+ languages, positioning itself as a personal AI research assistant. [Read more](https://t.co/0EJbSCfUCX).
+*   [AI Infrastructure – Laying the Groundwork](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/ai-infrastructure-laying-the-groundwork/___.YzJ1Omdsb2JhbHg6YzpvOjQ2NzhkNDBjYTQ3M2QwODIwYjUyZDEyMmFiODY3OGJlOjY6ZGY2MTphZjEyNWViYzNiZGFiMTFiNWQxM2MyNDdiYzQ2NTAwNGQwMjM2NzQzODI2YjEyMGM1YzRkMjg2ZjE4ZDJiOThiOnA6VDpO)
+*   [CleanTech: Critical to Energy Security](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/cleantech-critical-to-energy-security/___.YzJ1Omdsb2JhbHg6YzpvOjQ2NzhkNDBjYTQ3M2QwODIwYjUyZDEyMmFiODY3OGJlOjY6NzQ0NTpjNzYxZGI4NDI0ZDA3OWMyYzFjMGE2ZWI5OGJlZGY0ZDM5MjFlZmQ3ZTMzMGU5Mjg2N2I2ZWY5NWJhMTFmNDBhOnA6VDpO)
+*   [P. Morgan Healthcare Conference 2025: Healthcare’s Roadmap for the Year Ahead](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/j-p-morgan-healthcare-conference-2025-healthcares-roadmap-for-the-year-ahead/___.YzJ1Omdsb2JhbHg6YzpvOjQ2NzhkNDBjYTQ3M2QwODIwYjUyZDEyMmFiODY3OGJlOjY6NzEzYjoyNjVmN2NhNmZiZTVjYjY3NjgyNWM5ZWEwNGM4NjJmNTUyYjM4ZTlhZmMzZDRjZjJkMGQ0MDg4N2QwMTZmMjRhOnA6VDpO)
+*   [Tech-Enabled Health: Revolutionizing the Standard of Care](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/tech-enabled-health-revolutionizing-the-standard-of-care/___.YzJ1Omdsb2JhbHg6YzpvOjQ2NzhkNDBjYTQ3M2QwODIwYjUyZDEyMmFiODY3OGJlOjY6ZGY5MTo2NmJlZmNiNGNjNjA2NjI2YjNlMDQzNTUxMjcxN2FhNDZlYTdiNTI3OGRkN2RlM2I0MzMyMGNlNTI0N2UxNTMxOnA6VDpO)
+*   [CES 2025: Physical AI Is Here](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/ces-2025-physical-ai-is-here/___.YzJ1Omdsb2JhbHg6YzpvOjQ2NzhkNDBjYTQ3M2QwODIwYjUyZDEyMmFiODY3OGJlOjY6MjFkYjo3YTdiMzg3M2UzMDA5NmI2YmViNDVmMDk4YzhiMDEzZjc1MDViNzQwY2I5NDE2MjEzNGFiOTM3NjFmNmVhMjM4OnA6VDpO)
 
-Meta Enhances Human-Robot Collaboration
----------------------------------------
+*   **Disruptive Technology:** [Artificial Intelligence & Technology ETF (AIQ)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/AIQ/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YWVjZjo4NDM3MzhkZGNmYmM3ODI5NDQwYzg1MDhkZDA0YWM5MDJiOGNhNjE3NjdlMGE4ZmIzZDM3YmE3YTlkZjRjMjkzOnA6VDpO), [Blockchain ETF (BKCH)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/bkch/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MTVmNjo5OTNmZjM1NTAwMDI3MDUyZTQ5Yjc1YTc2YjNjNDJkYTkyODBkMzQ0MjcwNmJjMmRlMGMxNWRhOGQyZGQzMmViOnA6VDpO), [Robotics & Artificial Intelligence ETF (BOTZ)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/BOTZ/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6ZTg4Mjo0YTZjYzhjNWIzOGY2ZjMzY2M0MTgxN2M0ZmFkYzgwNmExMDBhNzhkNDNkMDQ1ZmZhYjJlMzI4MzgyNTNhNWY2OnA6VDpO), [Cybersecurity ETF (BUG)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/BUG/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NTZkYzplZmU4OGQ2YWE4ZTVkZjYwMGQ0ODIzOGU0YmI3MmUxOWRlZmQyYWQzOTAwYzUyMjY2MDA0YmJlODhjYmZiN2UxOnA6VDpO), [Cloud Computing ETF (CLOU)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/CLOU/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MTE4YzplZGEyMjIzMzk2YzcxODEwZDI4MDk5NjU1ZjZmZDY2YTY2ZDc4MzJlZGJjOGZkMTUyNWE2NTBkNzExNjZhMDBiOnA6VDpO), [Autonomous & Electric Vehicles ETF (DRIV)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/DRIV/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NDZhNzphYjk1YzlmNzBjNWU3MWExOTE0Y2I3MmU1NjhhZWM4MzBmNWNjNGUyOWVmM2M0NTk2YWE0ZGQwMGU0MGNkMTcxOnA6VDpO), [Data Center & Digital Infrastructure ETF (DTCR)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/dtcr/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YTE0ODo2ZDQwZjUyNmRhN2U2ZTRkN2EzNjYyM2FmNzllYWQ2ZWFhMzlkMGUzM2ZmMDFiOGU2YmE0MzA4Mzk2MGQ5YzE5OnA6VDpO), [FinTech ETF (FINX)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/FINX/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MjUzODpkYjQzY2ZjNmEwMmFmNjIwMGFhNjE2MzJmNTQxOGE4YWI0MmY3ZDAyYWU0ZDE2MWE5NTRiNTE2NTNiOTA2ODZkOnA6VDpO), [Video Games & Esports ETF (HERO)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/HERO/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MDg1NDoyYWQ1M2VmZTU4NGM4YTQxMjE0ZWFlMjdiMzEzZTZiNmExOTZmMGUwNzU5YTczZDZhNzMyOWM1MGFhOGQwODE3OnA6VDpO), [Lithium and Battery Tech ETF (LIT)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/LIT/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MWJmODo5YzQ2NjkzYjg3ZjkzZGJlYWJhYTc4YmJmYmI0NmMzOTc1MWU5NTg5ZDY3NGMwYTE5Zjc4NWU1MmRmNTU0NjM2OnA6VDpO), [PropTech ETF (PTEC)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/ptec/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YTdlNDo4NzQyOWI2OTcwZGU1MTIwMzY2YzFkZmJhMTg3NzcyNjNiNDIzZjliOWIyNjdlMmZlZGVlZDI4M2FjYTk4Yzc1OnA6VDpO), [Defense Tech ETF (SHLD)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/shld/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YTZlNDo3MDg5MjdjMmM3MGEzMzM0YTNmNjA4NzZiNzFjOWUxNDA2OGRmNTBjN2FhNWZmZTAxNjkyNWE4NTkxZWM1ZjMwOnA6VDpO), [Internet of Things ETF (SNSR)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/SNSR/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6ZDlkNDoxZWU2MWIwMzdhNzk3ZThkN2I1NTZhYzE4MzE0MzRhOTM2NTllYTYzZTQ4ZGJhN2M2MDUzMjJmOTNlYWQ0ZGI5OnA6VDpO), [Social Media ETF (SOCL)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/SOCL/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NDRiNDo2MzIyYjIwMTUzZTczYTQxZjExMzJhNzA3ZGRhYzY1OWU4OGRiNDNmMzY3NGI3MzRiNjFlOGVjMjM1MTczYjliOnA6VDpO), [U.S. Electrification ETF (ZAP)](https://www.globalxetfs.com/funds/zap/)
+*   **Consumer Economy:** [Millennial Consumer ETF (MILN)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/MILN/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6ZmI1NTpkM2Q2MjM0MzU1MWM3YzQ4YjZkMDBjYmFlMjEyYTY1ZmU1YjU3MzJiYmJhZDFmODQ3MGY5MDMzNzRkNDdkYmMwOnA6VDpO), [E-Commerce ETF (EBIZ)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/EBIZ/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6OTdjZjphNzQxOTlmODEwZTgzNDcxZTM0OWY2OTk5NTMzMmZiN2I2ZmQxZTBhZmRiOWIzZDA1MTAyOGYwM2Q2YWYxZWJhOnA6VDpO), [Genomics & Biotechnology ETF (GNOM)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/GNOM/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NDk0ZjphNTdjMTFjYmU1Y2RlN2JhOTI5NGY4YjU0ODlmNDgxMmViNTg1NGQ4ZWVjMjQzNTA0OTVlYzQzZTVlOTQ5ZmZlOnA6VDpO), [Aging Population ETF (AGNG)](https://www.globalxetfs.com/funds/agng/), [Telemedicine & Digital Health ETF (EDOC)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/edoc/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YTZkYTo1ZTM5MWVhZmUyY2U3ZTU5Nzc4ZmU0MjQ3YTM2YjIwZDZkZWJiNTNmYjA0NmQ1OWY3N2YzNDRkODk2ZWIxYjc2OnA6VDpO)
+*   **Infrastructure & Environment:** [U.S. Infrastructure Development ETF](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/pave/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MzAyNDo1MTMwMmFlNGEzY2MxODdkYWJjMWY1NDM1Y2E3YTE2MzY4NzQ1YmFlNTczMzFiZmE1NjQ5N2RkZmM3OWMwM2EyOnA6VDpO) [(PAVE)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/pave/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MzAyNDo1MTMwMmFlNGEzY2MxODdkYWJjMWY1NDM1Y2E3YTE2MzY4NzQ1YmFlNTczMzFiZmE1NjQ5N2RkZmM3OWMwM2EyOnA6VDpO), [CleanTech ETF (CTEC)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/ctec/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MTUzZDowYjBiOTc5ZmFkN2FkNDc5M2M1ZTQ3ZTI1N2FjZWFhMjY4OWM4MDhmMGEzMDM1ZTliMzViNDZhNWU4OGIzNTA1OnA6VDpO), [Renewable Energy Producers (RNRG)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/rnrg/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NTVkYzoyNGMzMmM3Y2Q4Yzg2OWI3YjNhOTdiMWQ3MzEyODgwOTcxZTY3YTk4NGY3M2ZmNTNkYzM1NjExODI5NjRhZDgyOnA6VDpO), [Clean Water ETF (AQWA)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/AQWA/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YzE4MDowZjVkNjA3Zjg1ODJmYzY5YmY0MGRhMDQ4NGJmYzJkZDE3YWZhOWEyODVhMGJhNjA3NGUwOTAwOTNhMDJlOGFkOnA6VDpO), [Hydrogen ETF (HYDR)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/hydr/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YjdmODpmM2U1MDBhYTU4N2U2N2I3N2M1NDkwZmZhNmY0NGE0NDI2ZDJlNGQ3ZWFjODExN2ZlODUzOGFlZjQ0NDNkOTQ4OnA6VDpO), [Solar ETF (RAYS)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/rays/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6ZjM4MDowNTVkNWJiYWNkYTUxMTlhMmY0OWFkZTY3ODY1YTZhNjE0N2FlNDY5OGQzMDkwNGI4NzQwM2JiMjJhZDUzYTBmOnA6VDpO), [Wind Energy ETF (WNDY)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/wndy/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MDcxYTozNGVmNjU2NWMyOWQ2YmYxZTYxNTQzOGIwNDZiMmI3NmYxNWRkMmQ0ZDkwNjlhNTIxMDRmY2Q5MTU4YTk3NmQzOnA6VDpO), [AgTech & Food Innovation ETF (KROP)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/krop/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6NGU1Nzo5MTAyZTljZmM2MTdjMWViZDI0NzRlZWFiNTk5YzBlOGQ5ZDQ4YmIzZjA2MTVkNTk2YmRmY2U3NjIyYzIzZDcyOnA6VDpO), [Infrastructure Development ex-U.S. ETF (IPAV)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/ipav/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6YzFiMzplMmU3OWY1ZDJlMjEzMWNlMzhjNTljYmVkNmQ3NDE2ZjExOTViM2JmZDVhOWQ3OTZjMjAyY2Q1N2Q0MzY3Mzc2OnA6VDpO)
+*   **Digital Assets:** [Blockchain & Bitcoin Strategy ETF (BITS)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/bits/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6OTY3YjpiYTBlMGViYzUxMjVmZTBhYTkzZDUzYTQ1NTAxMjdkYmU5ZDU1M2E2YTk0OWY0YjI5NjIxNzE1OGYyZWViMmZhOnA6VDpO), [Bitcoin Trend Strategy ETF (BTRN)](https://protect.checkpoint.com/v2/___https:/www.globalxetfs.com/funds/btrn/___.YzJ1Omdsb2JhbHg6YzpvOjg5MDFmZTkyNmMzMTdlNmUzZjVmZmMxOTQ5NGQ4YzBkOjY6MzkyODpiMTlmYmFjNGRhNjA2Y2U0NWUzZDkyMzI3ODY3MGEyYTVmMTNhZmQ5N2FkOGFlZDEyNDc2M2Q4ZmViYTQ4MzU3OnA6VDpO)
+*   **Multi-Theme:** [Thematic Growth ETF (GXTG)](https://www.globalxetfs.com/funds/gxtg/)
 
-[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=---footer_actions--1b1dd8ac60c9---------------------clap_footer------------------)
+**AgTech & Food Innovation**: _Solactive AgTech & Food Innovation Index_
 
-[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=---footer_actions--1b1dd8ac60c9---------------------clap_footer------------------)
+**Aging Population**: _Indxx Aging Population Thematic Index_
 
-[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F1b1dd8ac60c9&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=---footer_actions--1b1dd8ac60c9---------------------bookmark_footer------------------)
+**Artificial Intelligence & Technology**: _Indxx Artificial Intelligence & Big Data Index_
 
-[Follow](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fsubscribe%2Fuser%2F3cdb3f8a8ec7&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=post_page-3cdb3f8a8ec7--post_author_info--1b1dd8ac60c9---------------------follow_profile------------------)
+**Autonomous & Electric Vehicles**: _Solactive Autonomous & Electric Vehicles Index_
 
-·[12 Following](https://medium.com/following?source=post_page---post_author_info--1b1dd8ac60c9---------------------------------------)
+**Cloud Computing**: _Indxx Global Cloud Computing Index_
 
-Sharing tech news on Medium daily.
+**Internet Of Things**: _Indxx Global Internet of Things Thematic Index_
 
-[Follow](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fsubscribe%2Fuser%2F3cdb3f8a8ec7&operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&user=Souren+Stepanyan&userId=3cdb3f8a8ec7&source=post_page-3cdb3f8a8ec7--post_author_info--1b1dd8ac60c9---------------------follow_profile------------------)
-
-[What are your thoughts?](https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fprogramming.am%2Fthe-daily-tech-digest-21-february-2025-1b1dd8ac60c9&source=---post_responses--1b1dd8ac60c9---------------------respond_sidebar------------------)
-
-[About](https://medium.com/about?autoplay=1&source=post_page-----1b1dd8ac60c9---------------------------------------)
-
-[Blog](https://blog.medium.com/?source=post_page-----1b1dd8ac60c9---------------------------------------)
-
-[Text to speech](https://speechify.com/medium?source=post_page-----1b1dd8ac60c9---------------------------------------)
-----------------------------------------
-
-URL: https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/21/disruptive-technology-trends-to-watch-in-2025/
-Content:
-Title: Disruptive Technology Trends To Watch In 2025
-
-URL Source: https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/21/disruptive-technology-trends-to-watch-in-2025/
-
-Published Time: 2025-02-21T07:45:00-05:00
-
-getty
-
-As the new year begins, the pace of innovation shows no signs of slowing down. Whether it's the rise of artificial intelligence (AI) that can make decisions autonomously or breakthroughs in sustainable computing, emerging technology trends highlight humanity's relentless pursuit of progress.
-
-While organizations brace for the next wave of disruption, understanding these technologies is crucial to adapt. With a mix of opportunity and responsibility, the technologies of 2025 will shape tomorrow's world, leaving a lasting impact on how people live, work and innovate.
-
-1\. More Companies Will Enable Automated Decision-Making Agents
----------------------------------------------------------------
-
-Smart autonomous AI systems [capable of performing](https://hbr.org/2024/12/what-is-agentic-ai-and-how-will-it-change-work) different procedures and planning those procedures based on specific goals given by the user are expected to transform multiple industries. Today, such AI is hardly being used, however, by 2028, the expectation is that [15%](https://www.gartner.com/en/newsroom/press-releases/2024-10-21-gartner-identifies-the-top-10-strategic-technology-trends-for-2025) of daily work decisions will be made by agentic AI. I expect this change to increase efficiency and improve processes in many sectors of the economy and society.
-
-2\. Stronger AI Governance Could Reduce Ethical Issues
-------------------------------------------------------
-
-While the use of AI is getting more common, I think the goal should be responsible and ethical AI usage. Each AI governance platform's purpose is to develop, implement and enforce regulations for the proper use of artificial intelligence, to explain the process and to gain public confidence.
-
-It is estimated that by 2028, comprehensive AI governance could reduce the number of times organizations experience ethical issues associated with AI by [40%](https://www.cio.com/article/3595801/cios-look-to-sharpen-ai-governance-despite-uncertainties.html) compared to firms without these measures for AI governance.
-
-3\. Multifunctional Robots To Drive Productivity In Key Areas
--------------------------------------------------------------
-
-The future of robotics is in multifunctional robots to perform different functions simultaneously in different settings. The use of smart robots in people's lives is projected to increase from less than 10% now to [80%](https://www.crn.com/news/ai/2024/gartner-s-top-10-tech-trends-of-2025-agentic-ai-robots-and-disinformation-security) by 2030. Such robots could revolutionize productivity and achievement of goals in areas like production, medical and [home care](https://www.nature.com/articles/d41586-022-00072-z).
-
-4\. Spatial Computing Will Blur Physical And Virtual Boundaries
----------------------------------------------------------------
-
-Spatial computing blurs the division between real and virtual experiences, and the interaction between people and computers. This technology could drive progress in AR and VR, which could impact [education](https://edtechmagazine.com/higher/article/2024/07/what-spatial-computings-future-higher-education) and entertainment, as well as remote collaboration.
-
-Spatial computing use will likely intensify in the coming years, and its market is expected to grow at a rate of [18.2%](https://www2.deloitte.com/us/en/insights/focus/tech-trends/2025/tech-trends-future-of-spatial-computing.html) between 2022 and 2033, offering a superior experience and functionality to the user, while increasing operational performance.
-
-6\. Neurological Enhancements Could Expand Human Capabilities
--------------------------------------------------------------
-
-Technology is now allowing neurological enhancements that could improve human cognitive and physical abilities. Applications include healthcare and improving the [performance](https://www.pewresearch.org/science/2022/03/17/ai-and-human-enhancement-americans-openness-is-tempered-by-a-range-of-concerns/) of humans in both fitness and sport, as well as other areas of human endeavor.
-
-As per the data provided by Expert Market Research forecasts, the market is expected to grow from [$156.31 billion](https://www.expertmarketresearch.com/reports/human-augmentation-market) in 2024 to $1,007.23 billion by 2034, at a CAGR of 23%. Moreover, in 2025, I anticipate increased integration of technology into human biology, raising ethical and other issues in society.
-
-7\. Energy-Efficient Computing Will Support Sustainability Goals
-----------------------------------------------------------------
-
-Energy-efficient computing is now a major concern for many business leaders, as the environment becomes a [top priority](https://action.deloitte.com/insight/3922/climate-change-climbs-to-top-business-priority-for-boards). Developments in this area often focus on the reduction of energy consumption of data centers and computing devices, contributing to more sustainable technology infrastructures. I expect major strides in the area of sustainable energy-efficient computing in 2025, as aligned with global sustainability goals.
-
-8\. Advanced Tech Will Be Used To Combat Misinformation
--------------------------------------------------------
-
-According to a Gartner study, by 2028, it's predicted that [50%](https://www.gartner.com/en/articles/disinformation-security) of enterprises will embrace solutions designed to tackle disinformation security, compared to fewer than 5% in 2024.
-
-9\. Hybrid Computing To Optimize Complex Data Tasks
----------------------------------------------------
-
-10\. Ambient Intelligence Could Anticipate Human Needs
-------------------------------------------------------
-
-Ambient invisible intelligence refers to AI systems seamlessly embedded in the environment in ways that lead to better user experience. In 2025, [ambient intelligence](https://wallstreetpublication.com/iot-tendencies-to-watch-in-2025-the-rise-of-ambient-intelligence-and-hyper-customized-ecosystems/) could stand ready to anticipate and respond to a human need without requiring interaction.
-
-The advanced technologies on the horizon represent dynamic new frontiers that will reshape society on an unprecedented scale.
-
-In 2025, I think we'll see AI, computing and other disruptive technologies have a major impact on organizations and their priorities, and also on many adjacent technology domains, such as invisible intelligence.
-
-Nonetheless, as with all great leaps in innovation, comes great responsibility. I think all the industries that approach these trends responsibly could be ahead of the curve and also contribute to creating a better connected, protective and innovative world.
-----------------------------------------
-
-URL: https://www.cooley.com/news/insight/2025/2025-02-21-gone-but-not-forgotten-federal-laws-still-apply-despite-guidance-disappearance-act
-Content:
-URL Source: https://www.cooley.com/news/insight/2025/2025-02-21-gone-but-not-forgotten-federal-laws-still-apply-despite-guidance-disappearance-act
-
-Markdown Content:
-Seemingly overnight, several key artificial intelligence (AI) guidance documents from the US Equal Employment Opportunity Commission (EEOC) and US Department of Labor (DOL) regarding the use of AI in the workplace vanished from the agencies’ websites. These documents were the result of a multiyear effort to provide employers with guidance on how to use AI tools in the employment life cycle without running afoul of employment laws. The removal of these documents followed the new administration’s rollback of President Joe Biden’s executive order and an effective halt being placed on any federal efforts seeking to prioritize “responsible AI” development and deployment. In this alert, we provide an overview of President Donald Trump’s latest executive actions on AI, note the AI-related guidance that has been removed, and outline key implications for employers for the days ahead.
-
-### Trump’s AI executive actions
-
-On inauguration day, Trump immediately [rescinded Biden’s 2023 Executive Order No. 14110 on AI](https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/) (Biden AI order), which had, among other things, directed federal agencies to use regulatory and enforcement tools to address safety, privacy and discrimination concerns related to AI use. Days later, [Trump’s Executive Order No. 14179](https://www.federalregister.gov/documents/2025/01/31/2025-02172/removing-barriers-to-american-leadership-in-artificial-intelligence) established a policy to “sustain and enhance America’s global AI dominance,” and required certain regulators to submit an “action plan” to achieve this policy. Agencies also were ordered to review any “policies, directives, regulations, orders, and other action” enacted under Biden’s AI order and suspend them if inconsistent with the new “AI dominance” policy. A [January 23, 2025, White House fact sheet](https://www.whitehouse.gov/fact-sheets/2025/01/fact-sheet-president-donald-j-trump-takes-action-to-enhance-americas-ai-leadership/) reaffirmed the country’s “leadership in AI” as the top priority, criticizing Biden’s approach as overly restrictive and harmful to innovation.
-
-*   The [May 2023 technical assistance document](https://www.cooley.com/news/insight/2023/2023-06-12-key-principles-from-eeocs-latest-guidance-on-employers-use-of-ai-tools) on AI compliance issues under Title VII, advising employers to assess AI tools for potential adverse impacts on any group protected under Title VII.
-*   The May 2022 technical assistance document (and associated “Tips for Workers” document) on potential violations of the Americans with Disabilities Act (ADA) through AI use, including improper “screen outs” of individuals with disabilities by AI decision-making tools or impermissible inquiries about such disabilities.
-*   The December 2024 fact sheet, “Wearables in the Workplace: The Use of Wearables and Other Monitoring Technology Under Federal Employment Discrimination Laws,” which warned that tracking technology embedded in wearable devices (e.g., tracking an employee’s location, heart rate, electrical brain activity or fatigue) could violate the ADA.
-
-Employers should note that the agency’s Strategic Enforcement Plan for Fiscal Years 2024 –2028, which prioritizes regulating employers’ use of technology (including AI and machine learning) through enforcement, remains in effect until a [quorum of commissioners](https://www.eeoc.gov/newsroom/removing-gender-ideology-and-restoring-eeocs-role-protecting-women-workplace) can modify or revoke it.
-
-*   An April 2024 Field Assistance Bulletin that outlined ways AI use can violate federal employment laws, such as the Fair Labor Standards Act (FLSA), Family and Medical Leave Act (FMLA), Providing Urgent Maternal Protections for Nursing Mothers Act (PUMP Act), and even the Employee Polygraph Protection Act (EPPA).
-*   An October 2024 road map of best practices for developers and employers, including AI principles for worker well-being. This document emphasized employers’ use of AI for the benefit of workers and encouraged responsible data use and job protection.
-
-Similarly, the DOL’s Office of Federal Contract Compliance (OFCCP) removed its April 2024 guidance, “Artificial Intelligence and Equal Employment Opportunity for Federal Contractors,” from its website. This guidance alerted federal contractors to compliance obligations for using AI and the need to monitor whether AI and automated systems adversely impact protected groups.
-
-Despite the removal of AI guidance, employers should keep the following in mind:
-
-1.  **Federal, state and local anti-discrimination laws still apply to AI use.**
-
-Employers must still comply with the myriad federal and state anti-discrimination laws governing the use of AI tools in the workplace, including Title VII, the Age Discrimination in Employment Act (ADEA) and the ADA. These laws prohibit discrimination, which can include not just overt discrimination, but also practices that result in disparate treatment of protected classes or in differing outcomes for protected classes (disparate impact). In addition, the FLSA and other employment laws continue to apply when AI tools are used for employee tracking or monitoring.
-
-Many states and local jurisdictions have enacted more protective anti-discrimination laws and have implemented specific AI regulations. Notably, [Colorado’s SB 24-205](https://leg.colorado.gov/bills/sb24-205) and [Illinois’ HB 3773](https://www.ilga.gov/legislation/BillStatus.asp?DocNum=3773&GAID=17&DocTypeID=HB&SessionID=112&GA=103),  effective in 2026, impose requirements for any AI technology used in the workplace. Colorado’s law (which applies to both developers of AI technologies and employers as “deployers” of such technologies) mandates that reasonable care be taken when using any high-risk AI system to make consequential decisions, which includes those that make or are a substantial factor in making employment decisions. Employers using these systems are required to conduct annual impact assessments and comply with certain transparency obligations designed to protect against algorithmic discrimination. Illinois’ law amends the state’s Human Rights Act to prohibit using AI tools in a way that results in discrimination, which can include using AI tools to exclude applicants from certain zip codes, a practice often referred to as digital redlining. Other jurisdictions, including [New York City](https://www.cooley.com/news/insight/2023/2023-05-15-nyc-issues-final-regulations-on-automated-employment-decision-tools-law) and Maryland, also have enacted AI governance laws impacting employers, which impose audit, transparency and consent requirements for AI use.
-
-The recent executive orders signal a significant policy shift from the previous administration’s focus on “responsible AI” use to the new administration’s “AI dominance” policy. This federal shift to a more pro-innovation approach leaves states and local jurisdictions to fill the regulatory gap. The legislation pipeline is filled with bills seeking to regulate employers’ use of AI tools. Several pending bills would impose audit/notice, policy, reporting and transparency requirements on employers using AI, with significant penalties for noncompliance. While most target algorithmic discrimination, some also address other anticipated impacts from using AI in the workforce, including worker displacement. For example, New York Gov. Kathy Hochul proposed a plan to “support workers displaced by AI,” which includes a directive to the state’s Department of Labor to require businesses submitting notices of worker layoffs to its Worker Adjustment and Retraining Notification system to state whether a layoff is related to the business’s use of AI.
-
-Employers must remain vigilant given the proliferation of state and local AI laws.
-
-3.  **Continue your AI compliance programs.**
-
-Given ongoing state and local efforts to regulate AI use, employers should continue to review and strengthen existing compliance programs. It is critical that employers establish processes for maintaining oversight over the AI tools that are implemented. Employees and leadership should be trained on appropriate use of AI technologies in the workplace. Maintaining human oversight of AI use will help to mitigate risk, prevent unintended consequences, and address distrust and employee morale issues stemming from use of (and possibly overreliance on) AI tools.
-
-Employers with questions regarding the use of AI tools should contact their Cooley employment lawyer or one of the lawyers listed below.
-----------------------------------------
-
-URL: https://www.reuters.com/markets/us/wall-st-week-ahead-nvidia-offer-ai-trades-reality-check-2025-02-21/
-Content:
-URL Source: https://www.reuters.com/markets/us/wall-st-week-ahead-nvidia-offer-ai-trades-reality-check-2025-02-21/
+**Robotics & Artificial Intelligence**: _Indxx Global Robotics & Artificial Intelligence Thematic Index_
 ----------------------------------------
 
 URL: https://skift.com/2025/02/21/ai-developments-in-travel-skift-timeline/
@@ -527,89 +250,205 @@ January 2025: Emergence of Deep Seek
 Tripadvisor [began a trial in January to power some travel-related answers](https://skift.com/2025/01/14/tripadvisor-exec-explains-partnership-with-chatgpt-competitor-perplexity/?utm_source=ask_skift) on the AI search engine Perplexity — a partnership that focuses on sharing Tripadvisor data that’s largely unavailable to third-party search engines, including information about its users' habits. Tripadvisor CEO Matt Goldberg and Chief Financial Officer Mike Noonan both said the following month [the partnership with Perplexity](https://skift.com/2025/02/20/tripadvisors-perplexity-deal-ai-for-customer-acquisition-is-now-a-thing-in-travel/) — [Tripadvisor's first with an AI search engine](https://skift.com/2025/01/14/tripadvisor-exec-explains-partnership-with-chatgpt-competitor-perplexity/?utm_source=ask_skift) — has been a boon for business.
 ----------------------------------------
 
-URL: https://www.forbes.com/councils/forbestechcouncil/2025/02/21/how-ai-tools-are-reshaping-the-sdlc-and-impacting-development-processes/
+URL: https://dwealth.news/2025/02/ai-intelligence-weekly-top-10-2-21-25/
 Content:
-Title: How AI Tools Are Reshaping The SDLC And Impacting Development Processes
+Title: AI INTELLIGENCE | Weekly Top 10 (2/21/25) - Dwealth.news
 
-URL Source: https://www.forbes.com/councils/forbestechcouncil/2025/02/21/how-ai-tools-are-reshaping-the-sdlc-and-impacting-development-processes/
+URL Source: https://dwealth.news/2025/02/ai-intelligence-weekly-top-10-2-21-25/
 
-Published Time: 2025-02-21T09:00:00-05:00
-
-getty
-
-We all know that artificial intelligence (AI) is pervasive in many areas of our lives. From the emergence of self-driving vehicles to voice-activated assistants such as Siri & Alexa, AI is reshaping how we lead our lives. But how is this revolution affecting the SDLC (software development life cycle) industry and the development of software, systems and applications on the market? Is AI a factor in their development, and how is it being used?
-
-Let's go back a few years. Early AI-driven coding tools focused primarily on enhancing efficiency in repetitive tasks and reducing human error. This included basic testing and straightforward code generation, focusing on making the developers’ lives easier by reducing the loa of manual labor. Machine learning (ML) and natural language processing (NLP) brought about significant change. Now, AI algorithms can understand and produce human-level text: the basis of turning natural language queries into basic functional code. This reduced the workload on seasoned developers, allowing them to accelerate the more complex elements of the code structure.
-
-Today, AI for software development permeates all aspects of the process, from the initial planning stages, where it predicts project timelines, to testing and, now, even autonomous deployment.
-
-One element that AI is making leaps and bounds in is cybersecurity. It's pretty safe to say that machine learning is the most powerful technology in cybersecurity today. Through machine learning, we can train systems to learn from the data they are exposed to, allowing the computer to make predictions or decisions autonomously. Through this “cognitive” ability, AI is used both offensively and defensively across elements of cybersecurity. In an offensive capacity, AI can detect and react to differences in network traffic, indicating a potential unauthorized access point into a system. With defense, AI can reverse engineer exploits, allowing patches to be available before the exploit becomes public knowledge.
-
-What's To Come
---------------
-
-So, what can the future of integrating AI tools in development hold? The trend of using tools to raise productivity is set to expand dramatically as the providers supply solutions for different programming languages, frameworks and environments. Final testing typically takes between [3 to 6 weeks](https://www.forbes.com/councils/forbesbusinesscouncil/2022/12/02/software-development-time-estimation-how-long-should-it-take-to-develop-a-product/)—AI tools can dramatically cut that timeframe. Testing and debugging are going to be a clear focus for the future. Furthermore, AI is more pervasive in the project planning and management stages. Here, GitHub Copilot can easily integrate with market-leading project management software, embedded directly into project workflows, allowing it to suggest interceding in the project based on scope and timelines and new developments.
-
-The consensus has been that the AI tools used in development will change the industry beyond recognition, seeing vast swathes of developers and teams with no work, in effect, replaced. If anything from the recent past, that will certainly not be the case in the short term. The tools are designed specifically to augment the development process. By allowing quicker, better lower-level code to be developed by AI, the developer can face more challenging tasks, dedicate more time to them and ultimately produce a better final product quicker.
-----------------------------------------
-
-URL: https://www.greaterrochesterchamber.com/2025/02/21/governor-hochul-announces-90-million-plan-to-extend-historic-empire-ai-consortium-and-enhance-computing-power-for-public-good-on-behalf-of-new-yorkers/
-Content:
-Title: Governor Hochul Announces $90 Million Plan to Extend Historic Empire AI Consortium and Enhance Computing Power for Public Good on Behalf of New Yorkers
-
-URL Source: https://www.greaterrochesterchamber.com/2025/02/21/governor-hochul-announces-90-million-plan-to-extend-historic-empire-ai-consortium-and-enhance-computing-power-for-public-good-on-behalf-of-new-yorkers/
-
-Published Time: 2025-02-21T19:45:33+00:00
+Published Time: 2025-02-21T02:25:17+00:00
 
 Markdown Content:
-###### **_New York’s First-in-the-Nation Consortium of Public and Private Research Institutions To Advance AI Research for the Public Good_**
+[![Image 1](https://dwealth.news/wp-content/uploads/2025/01/top-10-ai-2.jpg)](https://dwealth.news/wp-content/uploads/2025/01/top-10-ai-2.jpg)
 
-###### **_Capital Funding Will Support Increased Opportunity for SUNY Institutions To Participate in World-Class AI Computing Research_**
+Friends, the week of February 14 to February 20, 2025, brought major shifts in the world of artificial intelligence (yet again, and we suspect this will be true every week from here on out), with tech giants making bold investments, governments debating AI regulations (let’s stop debating and get to some policy), and startups facing both success and failure.  As you might imagine, all the usual suspects – a/k/a the biggest players in AI – continued to drive the headlines this past week. **Alibaba doubled down on AI spending, while Amazon and Meta cut costs to fund AI research.** Meanwhile, **DeepSeek’s influence continued to grow, prompting discussions among global business leaders.** From **major AI-driven layoffs (gulp) to new investments in robotics and cloud computing,** this week showcased the fast-paced, high-stakes world of AI—and the ongoing battle to shape its future.
 
-###### **_With More Than 200 Active Researchers, Empire AI Alpha Operating at Maximum Capacity Only Four Months After Launch_**
+**Key Highlights from the Week in AI:**
 
-![Image 1](https://growthzonecmsprodeastus.azureedge.net/sites/1932/2025/02/New_York_State_wordmark.svg_.png)Governor Kathy Hochul today announced further details of her proposal to expand New York’s first-in-the-nation Empire AI Consortium. The Governor’s FY26 Executive Budget includes $90 million in capital funding to substantially increase the computing power of Empire AI, expand access for SUNY researchers, and support the addition of new members including the University of Rochester, the Rochester Institute of Technology, and the Icahn School of Medicine at Mount Sinai. The proposal will be matched by $50 million in private funding from new members and $25 million in SUNY operating funding over ten years. This investment will make the Empire AI supercomputer more powerful, leading to more research for the public good being done faster and more efficiently compared with currently available computing power.
+*   **Alibaba’s Aggressive AI Investment:** Alibaba commits to substantial AI and cloud computing investments over the next three years, aiming to advance artificial general intelligence and enhance its technological infrastructure.
 
-“The United States is in a race with China and the rest of the world in the global AI revolution, and with our first-in-the-nation Empire AI Consortium, New York is leading the way in research and innovation,” **Governor Hochul said.** “With Empire AI, we are setting the standard for harnessing the power of AI for the public good and ultimately creating a better future for New Yorkers.”
+*   **Big Tech’s Cost-Cutting for AI Funding:** Companies like Amazon and Meta are implementing cost-cutting measures to reallocate resources toward AI development, balancing expense reduction with technological advancement.
 
-Last year, Governor Hochul reached historic agreement with the state legislature as part of the FY25 Budget to establish Empire AI, a first-of-its-kind independent consortium to secure New York’s place at the forefront of artificial intelligence research. The consortium will leverage a $275 million state investment to create and launch a state-of-the-art artificial intelligence computing center on the University at Buffalo’s campus. The center will be used by leading New York institutions to promote responsible research and development, create jobs and advance AI for the public good. The founding members of Empire AI include SUNY, CUNY, Columbia University, Cornell University, New York University, Rensselaer Polytechnic Institute, and the Flatiron Institute.
+*   **DeepSeek’s Influence on Global AI Dynamics:** DeepSeek’s cost-effective AI models prompt discussions among global CEOs, highlighting the startup’s significant impact on AI development and market strategies.
 
-In October 2024, only six months after Budget enactment, Governor Hochul launched the first phase of Empire AI thanks to a philanthropic contribution from the Simons Foundation. Housed at the University at Buffalo, the Empire AI Alpha system is operating at maximum capacity and has allowed over 200 researchers across the seven founding members to begin work aimed at addressing major societal challenges.
+**1\. Alibaba Commits to Aggressive AI Investment**
 
-Researchers are already using Empire AI to conduct groundbreaking research, from medical breakthroughs in treating cancer to making better weather predictions, which will make life better for everyday New Yorkers. Current projects include:
+Alibaba has announced plans to “aggressively” invest in artificial intelligence and cloud computing over the next three years. This initiative aims to develop artificial general intelligence and enhance the company’s technological infrastructure, positioning Alibaba as a leader in the AI sector. The company reported an 8% revenue increase in the final quarter of 2024, with significant growth in its cloud and international e-commerce businesses. This strategic investment underscores Alibaba’s commitment to advancing AI capabilities and competitiveness.
 
-*   Developing technologies that could provide adaptive speech and language therapies to children with special needs.
-*   Building models of the climate, which can help communities prepare for future impact of extreme weather events.
-*   Building models to help analyze CT scans to better diagnose and treat lung cancer.
+**2\. Big Tech Implements Cost-Cutting Measures to Fund AI Initiatives**
 
-Now, Governor Hochul’s proposed expansion will allow Empire AI to secure a future full-scale computing system that supports expanded capacity for SUNY and the addition of new members. The proposed new members of Empire AI consortium include:
+Major technology companies, including Amazon and Meta, are aggressively cutting costs to fund large investments in AI. Amazon’s retail CEO, Doug Herrington, emphasized the balancing act of reducing expenses while investing in new technologies. Despite substantial layoffs and the shutdown of unprofitable segments, Amazon continues to invest heavily in areas like AI and robotics to improve long-term efficiency and customer experience. Similarly, Meta has trimmed its workforce while boosting investment in AI talent. These efforts reflect a broader trend among tech giants to reallocate resources toward innovations like AI, despite the significant upfront costs and delayed financial returns these technologies entail.
 
-*   **University of Rochester,** a leading research university and the largest health care system in Upstate New York, will vastly improve AI-powered medical research and give consortium researchers unparalleled access to medical technologies and information.
-*   **Rochester Institute of Technology,** which announced the formation of its Artificial Intelligence Hub last August, has proven to be a nationwide leader developing AI solutions for teaching and learning. By joining the consortium, they are contributing academic and strategic power to Empire AI’s member schools and researchers.
-*   **Icahn School of Medicine at Mount Sinai,** one of the top medical schools in the country, the first medical school to establish a Department of Artificial Intelligence (the Windreich Department of AI and Human Health) and is ranked as number 1 in AI according to Nature AI Index, has expressed intent to join the Empire AI consortium. The School will work collaboratively with the other healthcare and public health partners to accelerate health AI research with a focus on translation, aimed at improving New York’s health care and public health infrastructure.
-*   **SUNY** will double its participation in Empire AI’s consortium, allowing more researchers and students from SUNY’s most research-intensive campuses to access the world-class computing power.
+**3\. DeepSeek’s AI Models Prompt Global Discussions**
 
-**Empire State Development President, CEO and Commissioner Hope Knight said,** "Thanks to Governor Hochul’s vision and commitment, New York State is a clear leader in harnessing the power of AI – one of the most revolutionary technologies of this century – to improve people’s lives and promote the public good. ESD is proud of its pioneering part in its effort, and eager to work with the expanded consortium, to not only leverage AI to tackle society’s most vexing challenges, but also cultivate New York’s AI ecosystem, which will create quality jobs, attract additional investments, and further grow the state’s economy."
+Chinese AI startup DeepSeek has become a focal point in recent earnings calls of major companies. Business leaders are frequently questioned about DeepSeek’s cost-effective AI models and their implications for the industry. CEOs from companies like Airbnb, ARM, AMD, Google, and Meta have acknowledged DeepSeek’s advancements, noting its potential to drive innovation and reshape AI development strategies. This trend underscores DeepSeek’s growing influence in the global AI landscape.
 
-**SUNY Chancellor John B. King Jr. said,** “Thanks to Governor Hochul, New York State is leading the nation in the use of artificial intelligence to advance the public good. SUNY’s world-class researchers are already accelerating groundbreaking work on climate change, curing diseases, and civic discourse thanks to Empire AI, and Governor Hochul’s budget proposal will help SUNY and other higher education institutions conduct research that strengthens our economic well-being and national security.”
+**4\. Dell Nears $5 Billion AI Server Deal with xAI**
 
-**Empire AI Interim Executive Director Robert Harrison said**, “Empire AI is advancing research in public health, environmental science, computing and countless other areas, and we’re doing it at a scale and pace that would have been unthinkable even a few short months ago. This is only possible because of Governor Hochul’s leadership and the legislature’s vision to partner with some of the state’s leading research institutions and invest in New York’s computing capabilities. And thanks to Governor Hochul, we now have the opportunity to do even more, adding new members and increasing our research capabilities to cement New York as the national leader in AI research for the public good.”
+Dell Technologies is close to finalizing a deal exceeding $5 billion to supply servers optimized for artificial intelligence to Elon Musk’s AI startup, xAI. The servers will utilize Nvidia’s GB200 semiconductors, enhancing xAI’s computational capabilities. This partnership reflects the increasing demand for AI-optimized hardware and Dell’s strategic positioning in the AI infrastructure market.
 
-**Rochester Institute of Technology Research Vice President Ryne Raffaelle said,** “Joining Empire AI would strengthen our commitment to leading the way in the higher education artificial intelligence space. Our researchers would have unique opportunities to access cutting-edge equipment, connect with other thought leaders, and engage students in work related to responsible artificial intelligence. This partnership would be valuable for our university and would escalate our state as a national leader in this area.”
+**5\. Humane AI Startup Shuts Down After Negative Reviews**
 
-**University of Rochester Research Vice President Steve Dewhurst said,** “AI is rapidly changing our lives in fundamental and profound ways. That’s why we would be so excited to join Empire AI to leverage our incredible assets and strengths in AI and supercomputing. In partnership with our state’s leading experts, we could enhance how we learn, discover, heal, and create, while harnessing our collective strengths to best position New York to lead and benefit from this technology. I am grateful to Governor Hochul for her leadership and vision in creating this innovative collaboration and look forward to working with our partners when it passes in the Budget.”
+San Francisco-based AI startup Humane has announced its closure following extremely negative reviews of its wearable AI-embedded pins. Despite raising over $230 million in funding, the company failed to deliver a viable product, leading to high return rates and widespread criticism. HP Inc. has agreed to acquire Humane’s software, patents, and employees for $116 million. This development highlights the challenges and volatility within the tech startup ecosystem, especially in the competitive AI sector.
 
-**Nash Family Professor of Neuroscience Director, The Friedman Brain Institute Dean for Academic Affairs, Icahn School of Medicine at Mount Sinai Chief Scientific Officer, Mount Sinai Health System Dr. Eric Nestler** **said,** "Joining Empire AI would ensure that we remain at the forefront of AI innovation and progress — where AI-driven insights enhance diagnosis, personalize treatments, and revolutionize research and practice. Together, we and members of this consortium would harness the power of AI technology to improve patient health, drive medical breakthroughs, and shape the future of healthcare."
+**6\. Meta Plans Investment in AI-Driven Humanoid Robots**
 
-**State Senator Jeremy Cooney said,** “The Rochester region is fortunate to have nationally renowned universities on the cutting edge of technological research like Rochester Institute of Technology and University of Rochester. Today’s announcement from Governor Hochul that these institutions will be bringing their expertise to the Empire AI consortium is a win for our universities, their students, and our area as a whole. With the inclusion of RIT and University of Rochester, area researchers will be leading the way on AI innovation and helping to establish New York on the forefront of this vital work.”
+Meta Platforms is establishing a new division within its Reality Labs unit to develop AI-powered humanoid robots capable of assisting with physical tasks. This initiative aligns with Meta’s broader strategy to integrate advanced AI technologies into practical applications, potentially transforming industries such as manufacturing and healthcare. The development of AI-driven humanoid robots signifies Meta’s commitment to expanding its AI research and development efforts.
 
-**Assemblymember Harry B. Bronson said,** “Congratulations to the Rochester Institute of Technology and the University of Rochester on their intention to join Empire AI consortium. This collaboration will connect the Rochester region to the world-class talent and cutting-edge technologies needed to prepare the workforce of today and tomorrow, and ensure these universities continue to lead the way in pioneering technological advancements. As Chair of Labor, I recognize that this initiative is critical to growing our economy by guaranteeing we have the expertise and qualified workforce required for nation-leading research and education.”
+The National Institute of Standards and Technology (NIST) is facing potential mass layoffs due to significant budget cuts directed by the Trump administration and the Department of Government Efficiency (DOGE). These layoffs could impact up to 500 recent hires and senior technical experts, particularly within AI safety institutions. The budget reduction follows the rescinding of a previous AI Safety Executive Order, raising concerns about the future of AI research and safety standards in the U.S.
 
-**Expanding Artificial Intelligence Across New York State  
-**Access to the computing resources that power AI systems is prohibitively expensive and difficult to obtain. These resources are increasingly concentrated in the hands of large technology companies and other global competitors, who maintain outsized control of the AI development ecosystem. As a result, researchers, public interest organizations, and small companies are being left behind, which has enormous implications for AI safety and society at large. Empire AI is bridging this gap and accelerating the development of AI centered in the public interest for New York State. Enabling this pioneering AI research and development is also helping educational institutions nurture the next generation of talent that will create AI-focused technology startups, driving job growth.
+**8\. AI Agents Present Opportunities Amid Business Model Uncertainty**
 
-By increasing collaboration between New York State’s world-class research institutions, Empire AI is creating efficiencies of scale not achievable by any single university, empowering and attracting top notch faculty,expanding educational opportunity, and enabling responsible innovation that will significantly strengthen our state’s economy and our national security.The initiative is currently funded by over $400 million in public and private investment, including a $250 million State capital grant investment and $25 million over ten years in SUNY operating funding. The project will also receive more than $125 million from the founding institutions and other private partners, including the Simons Foundation, whose Flatiron Institute works to advance research through computational methods, and Tom Secunda, co-founder of Bloomberg LP and the Secunda Family Foundation, which provides millions of dollars a year in grants to conservation, health care, scientific advancement and other causes.
+The development of “Agentic AI,” systems capable of independently performing tasks, has attracted significant investment from major corporations and startups. These AI agents promise enhanced customer experiences and operational efficiency. However, businesses face challenges in integrating these technologies effectively, and the concrete returns on investment remain uncertain. This situation highlights the need for evolving business models to accommodate AI capabilities.
 
-**Governor Hochul’s Innovation Agenda  
-**Governor Hochul’s commitment to advancing New York’s leadership in artificial intelligence builds on her broader agenda to expand cutting-edge technology development in the Empire State. Last year, Governor Hochul announced that IBM CEO Arvind Krishna and Girls Who Code CEO Dr. Tarika Barrett would co-chair the new Emerging Technology Advisory Board (the Board) — an independent group of industry leaders tasked with informing and accelerating New York’s transformation into a hub for growth and innovation. The Board [released their initial recommendations](https://urldefense.proofpoint.com/v2/url?u=https-3A__newsroom.ibm.com_2024-2D12-2D12-2Dnew-2Dyork-2Demerging-2Dtechnology-2Dadvisory-2Dboard-2Dpublishes-2Dfirst-2Dreport-2Doutlining-2Dvision-2Dto-2Delevate-2Dleadership-2Din-2Dai&d=DwMFAg&c=euGZstcaTDllvimEN8b7jXrwqOf-v5A_CdpgnVfiiMM&r=nqtHEFR1qUIBSeHjgalOd8wRSKRhLMeErC3w4q0d7TXax02k4DC8sis79NwGBCOb&m=CrvnEOGttea9P5lbd4OSdJ0V2eCIOPp-S2cmWgbHzjenvhc7Txcl8H7RaL0QS1GA&s=ljcpggZ6znds7VXc5lbVG60LAz4ma-_uIddgXrPqHJY&e=) in December 2024.
+**9\. Global IT Spending to Rise by 9% Driven by AI and Cloud Investments**
+
+Global IT spending is projected to increase by 9% in 2025, primarily driven by investments in artificial intelligence and cloud computing. This surge reflects the growing importance of AI and cloud technologies in modern business operations and the continuous digital transformation across industries. Companies are allocating more resources to integrate AI solutions and cloud infrastructure, aiming to enhance efficiency and competitiveness.
+
+**10\. Paris AI Summit Reveals Global Policy Divides**
+
+The Paris AI Summit highlighted a global push for AI regulation, with many nations endorsing a statement promoting inclusive and sustainable AI. However, the U.S. and the U.K. opposed the declaration, revealing differing international perspectives on AI governance. This divide emphasizes the challenges in establishing unified global AI policies and the varying approaches nations take toward AI development and regulation.
+----------------------------------------
+
+URL: https://www.forbes.com/sites/digital-assets/2025/02/21/5-trends-defining-ai-agents-in-crypto-for-your-business/
+Content:
+Title: 5 Trends Defining AI Agents In Crypto For Your Business
+
+URL Source: https://www.forbes.com/sites/digital-assets/2025/02/21/5-trends-defining-ai-agents-in-crypto-for-your-business/
+
+Published Time: 2025-02-21T12:30:31-05:00
+
+Markdown Content:
+CHINA - 2023/11/03: In this photo illustration, the cryptocurrency electronic cash Bitcoin (BTC, ... \[+\] BCH) logo seen displayed on a smartphone with an Artificial intelligence (AI) chip and symbol in the background. (Photo Illustration by Budrul Chukrut/SOPA Images/LightRocket via Getty Images)
+
+AI agents are reshaping industries, with some adopting them faster than others. The cryptocurrency sector is at the forefront, embracing automated decision-making, advanced data analysis, and greater efficiency in handling vast amounts of data. These AI technologies are becoming essential for traders, investors, and blockchain companies.
+
+The AI agent market [reached](https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html) $5 billion in 2024 and is expected to grow to $47 billion by 2030. As Jensen Huang, Nvidia’s CEO, predicted during his presentation at CES 2025, "AI agents are a multi-trillion-dollar opportunity." One platform that facilitate the creation and deployment of AI agents, Olas, for instance, is already [processing](https://www.forbes.com/sites/digital-assets/2025/02/06/three-ai-agents-built-on-blockchain-to-transform-crypto-defi-gaming/) over 700,000 transactions monthly, with adoption rates climbing 30% month over month.
+
+This growth is further accelerated by the emergence of DeFAI, a fusion of decentralized finance (DeFi) and AI agents, which is set to redefine the crypto landscape. Businesses and investors who adapt to these tools will gain an edge in a data-driven market.
+
+The Convergence Of AI And DeFi
+------------------------------
+
+DeFAI represents the integration of AI agents into DeFi platforms, automating and optimizing on-chain activities such as staking, swapping, auto-compounding, and investing across chains. DeFAI agents act as intelligent assistants equipped with wallet access, guiding users through complex DeFi operations and streamlining processes. By simplifying these tasks, DeFAI is making decentralized finance more accessible to both new users and experienced investors.
+
+Examples of such agents include Superform — a platform that leverages AI to simplify yield farming and portfolio rebalancing across multiple chains. Another example is AI-driven treasury management systems, where autonomous agents allocate funds across different DeFi protocols, optimize liquidity pools, adjust collateral ratios in lending platforms, and maximize yield strategies based on real-time market conditions.
+
+**Autonomous Trading, Mindshare, And Sentiment Analysis**
+---------------------------------------------------------
+
+AI agents enhance crypto trading through rapid trade execution in milliseconds alongside market trend analysis while reducing human involvement to minimum levels. Large language models are used by platforms like Kaito AI to aggregate and analyze crypto data from multiple sources to deliver real-time insights. Projects like AI16Z, with a [market cap of $579 million](https://coinmarketcap.com/currencies/ai16z/) as of February 2025, demonstrate how artificial intelligence is being integrated into trading solutions to enhance efficiency and decision-making.
+
+The use of both mindshare (brand awareness and prominence in the market) and sentiment analysis is becoming a crucial part of trading as well. By using social sentiment from platforms like X and Reddit, and social intelligence tools, such as LunarCrush, autonomous trading bots can predict market movements and turn data into actionable real-time trading insights.
+
+**Tokenization Of AI Agents**
+-----------------------------
+
+Decentralized platform [Virtuals Protocol](https://www.forbes.com/digital-assets/assets/virtuals-protocol-virtual/) is leading the way by enabling users to create and co-own AI agents as digital assets. This approach allows for fractional ownership and revenue sharing, paving the way for investment and engagement in the AI-crypto ecosystem. Several AI agent coins are now available, including Virtuals Protocol’s AIXBT token, which has shown steady adoption since its launch in 2024.
+
+Tokenized agents change the way users interact with AI systems by allowing them to benefit from an agent’s success or performance. This model both democratizes access to advanced technology and encourages collaboration between developers and investors.
+
+**Enhanced Risk Assessment And Security**
+-----------------------------------------
+
+AI agents analyze market data, identify fraudulent activities, and provide more accurate predictions boosting risk management protocols. As security concerns remain paramount in crypto adoption, these capabilities make AI agents a key tool for safeguarding assets. For example, [Griffin AI’s Price Analyst](https://chainwire.org/2025/01/21/new-ai-agents-transform-crypto-market-analysis/), an autonomous agent launched in January, delivers real-time insights across over 2,000 cryptocurrencies. It uses advanced machine learning algorithms to analyze vast amounts of blockchain data, identifying unusual patterns that may indicate fraud or potential market manipulation. By continuously monitoring transactions and market trends, this AI agent aims to help traders make informed decisions while mitigating risks associated with scams or hacks.
+
+Managing assets across multiple chains is one of the biggest challenges in DeFi. To solve this, AI agents are providing unified dashboards that aggregate crypto holdings from chains like Bitcoin, Solana, Ethereum, and others. These tools simplify portfolio management while offering real-time insights into asset performance across ecosystems. For example, CYBRO is an AI-powered multichain earn marketplace that offers access to top crypto investment options with automated portfolio management.
+
+The trend of integrating crypto assets into traditional portfolio management systems is also growing. In 2022, BlackRock’s Aladdin, a leading investment management platform, [teamed up](https://www.coinbase.com/en-nl/blog/coinbase-selected-by-blackrock-provide-aladdin-clients-access-to-crypto-trading-and-custody-via) with Coinbase to offer institutional clients access to crypto trading and custody services. Aladdin Copilot, an AI-powered assistant utilizing generative AI, now provides immediate insights, answers questions, and automates tasks on BlackRock’s platform.
+
+AI agents are transforming the industry by tackling key challenges in the crypto space, enhancing market efficiency through autonomous trading and risk assessment, providing easier access to tools via tokenization and natural language interfaces, and improving the overall user experience.
+
+The large valuations of pioneering projects underscore the growing demand for these technologies—and this is just the beginning. By making complex DeFi operations more accessible while improving scalability and security across blockchain ecosystems, AI agents are here to stay, reshaping companies like never before.
+----------------------------------------
+
+URL: https://onlabor.org/february-21-2025/
+Content:
+Title: News & Commentary: February 21, 2025 ✦ OnLabor
+
+URL Source: https://onlabor.org/february-21-2025/
+
+Markdown Content:
+News & Commentary: February 21, 2025 ✦ OnLabor
+===============
+
+Search
+
+![Image 2](https://onlabor.org/wp-content/uploads/2025/02/VA-2048x1365.jpg)
+
+**February** **21, 2025**
+=========================
+
+![Image 3](https://onlabor.org/wp-content/uploads/2024/02/headshot-2023-copy-300x300.jpg)
+
+*   [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fonlabor.org%2Ffebruary-21-2025%2F)
+*   [Share](https://twitter.com/intent/tweet?text=February+21%2C+2025&url=https%3A%2F%2Fonlabor.org%2Ffebruary-21-2025%2F&via=OnLaborBlog)
+*   [Print](https://onlabor.org/february-21-2025/#)
+
+In today’s News & Commentary, Trump spending cuts continue to threaten federal workers, and Google AI workers allege violations of labor rights.
+
+Alphabet Workers United filed an NLRB complaint Tuesday against GlobalLogic Inc., which manages a group off nearly 2,000 employees creating Google’s AI products. It claims that the [Google vendor prohibited discussion of wages in online internal forums](https://www.bloomberg.com/news/articles/2025-02-18/alphabet-ai-workers-were-illegally-silenced-about-pay-complaint-alleges?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTczOTg5OTQzOSwiZXhwIjoxNzQwNTA0MjM5LCJhcnRpY2xlSWQiOiJTUlcyWE5UMVVNMFcwMCIsImJjb25uZWN0SWQiOiJDQThGQ0Y4NkY1QjY0ODlCODA4ODkwNTFBNjMxRERBRCJ9.G6cHucIpOseIjF-F3jdM90XmNUtG6AlF2tUJ8d4Fu1A&leadSource=uverify%20wall). One employee alleges he was fired in retaliation for violating that policy. But federal labor law protects rights of employees to discuss and take action about working conditions.
+
+*   [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fonlabor.org%2Ffebruary-21-2025%2F)
+*   [Share](https://twitter.com/intent/tweet?text=February+21%2C+2025&url=https%3A%2F%2Fonlabor.org%2Ffebruary-21-2025%2F&via=OnLaborBlog)
+*   [Print](https://onlabor.org/february-21-2025/#)
+
+The Latest From OnLabor
+-----------------------
+
+[![Image 8](https://onlabor.org/wp-content/uploads/2024/07/SpaceX-768x383.png) ### Daily News & Commentary: February 7, 2025 February 7, 2025](https://onlabor.org/february-7-2025/)
+
+[![Image 9](https://onlabor.org/wp-content/uploads/2025/01/metin-ozer-spFYbCSF-Ec-unsplash-768x512.jpg) ### Daily News & Commentary: January 24, 2025 January 24, 2025](https://onlabor.org/january-24-2025/)
+
+[![Image 10](https://onlabor.org/wp-content/uploads/2025/01/unsplash-nurse-768x407.avif) ### Daily News & Commentary: January 10, 2025 January 10, 2025](https://onlabor.org/january-10-2025/)
+
+Daily News & Commentary
+-----------------------
+
+[![Image 11](https://onlabor.org/wp-content/uploads/2025/02/VA-768x512.jpg) ### February 21 In today’s News & Commentary, Trump spending cuts continue to threaten federal workers, and Google AI workers allege violations of labor rights. Trump’s massive federal spending cuts have put millions of workers, both inside and outside the federal government, in jeopardy. Yesterday, thousands of workers at the U.S. Department of Veterans Affairs research office were \[…\]](https://onlabor.org/february-21-2025/)
+
+[![Image 12](https://onlabor.org/wp-content/uploads/2021/07/Senatefloor-768x512.jpeg) ### February 20 President Trump's labor secretary pick retreats from some of her pro-labor stances during Senate confirmation hearing and Lynn Rhinehart discusses implications of NLRB and other agency removals.](https://onlabor.org/february-20-2025/)
+
+[![Image 14](https://onlabor.org/wp-content/uploads/2020/07/ashim-d-silva-pGcqw1ARGyg-unsplash-768x512.jpg) ### February 18 In today’s news and commentary, an air traffic union examines the impact of federal aviation worker firings, Southwest Airlines lays off 15% of its corporate workforce, and the NLRB’s General Counsel withdraws Biden-era memos Following the Trump Administration’s dismissal of hundreds of Federal Aviation Administration (FAA) employees, the National Air Traffic Controllers Association (NATCA), a \[…\]](https://onlabor.org/february-18-2025/)
+
+[![Image 15](https://onlabor.org/wp-content/uploads/2025/02/Fed-Employee-Strike-768x509.jpg) ### February 17 President Trump breaks campaign promise to support workers and Utah’s governor signs a law banning public sector collective bargaining](https://onlabor.org/february-17-2025/)
+
+[![Image 16](https://onlabor.org/wp-content/uploads/2025/02/AFGE_Rally_at_the_AFGE_Human_Rights_Training_Conference_New_Orleans_August_2022-2-768x512.jpg) ### February 16 Unions fight unlawful federal workforce purges; Amazon union push suffers setback in North Carolina.](https://onlabor.org/february-16-2025/)
+
+Copyright © 2025 OnLabor. All rights reserved.
+
+Search for:
+----------------------------------------
+
+URL: https://fticommunications.com/fti-consulting-news-bytes-21-february-2025/
+Content:
+Title: FTI Consulting News Bytes - 21 February 2025 - FTI Strategic Communications
+
+URL Source: https://fticommunications.com/fti-consulting-news-bytes-21-february-2025/
+
+Published Time: 2025-02-21T12:07:07+00:00
+
+This week, we kick off with a major technological breakthrough from Microsoft, which unveiled a new state of matter that is not solid, liquid or gas and could pave the way for powerful quantum computers. We then move onto the latest news in AI – Musk has released an updated version of his chatbot Grok-3, which he (unsurprisingly) claims is more advanced than ChatGPT and DeepSeek. A leading AI investor claims European enterprise is lagging in its adoption of AI while dating apps are adopting AI to clamp down on bad behaviour from users. Finally, a superfan subscription is rumoured to be on its way from Spotify, offering music lovers early access to concert tickets and a DJ feature. Stay tuned!
+
+![Image 1](https://fticommunications.com/wp-content/uploads/2022/01/Number-1.jpg)**Microsoft makes quantum breakthrough**
+
+This week, Microsoft announced a major breakthrough in quantum computing as it unveiled a new chip, Majorana 1, powered by the first topoconductor. The topoconductor, which can create a new state of matter that is not solid, liquid or gas, opens up the possibility of designing quantum systems that fit into a single chip, smaller than the palm of a hand. Microsoft believes the new chip has the potential to be as revolutionary as the semiconductor was for computing, reports the [Financial Times](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193751&elqTrackId=9e015b3fe49e4d4db00fc106b7c3461b&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5F56BD7D09F5DEBE384AA54C125382326225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193751&elqTrackId=9e015b3fe49e4d4db00fc106b7c3461b&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5F56BD7D09F5DEBE384AA54C125382326225885AAA4D4CA33CA6BC40CEE7F46AC"). Professor Paul Stevenson of Surrey University said the research published by Microsoft was a “significant step”, but admitted there were tough challenges ahead. “Until the next steps have been achieved, it is too soon to be anything more than cautiously optimistic,” he said.
+
+**Musk debuts AI chatbot to rival OpenAI**![Image 2](https://fticommunications.com/wp-content/uploads/2022/01/number-2.jpg)
+
+xAI, Elon Musk’s artificial intelligence startup, debuted an updated version of its Grok-3 model in a bid to challenge OpenAI. In a livestream, Grok-3 beat OpenAI’s GPT-4o, Alphabet’s Google Gemini, DeepSeek’s V3 model and Anthropic’s Claude across maths, science and coding benchmarks. Musk claimed that Grok-3 has “more than 10 times” the compute power of its previous versions and has already completed pre-training, [Bloomberg](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193750&elqTrackId=d70669c74ff746c2912e8924c980c81d&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5006C82296E30BDFB0700946B2ADC67D4225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193750&elqTrackId=d70669c74ff746c2912e8924c980c81d&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5006C82296E30BDFB0700946B2ADC67D4225885AAA4D4CA33CA6BC40CEE7F46AC") wrote. This news comes hot on the heels of OpenAI’s rejection of a $97.4 billion bid from a consortium led by Musk. The unsolicited approach was Musk’s latest attempt to block the startup he co-founded with OpenAI CEO Sam Altman — but later left — from becoming a for-profit firm, as it looks to secure more capital and stay ahead in the AI race.
+
+![Image 3](https://fticommunications.com/wp-content/uploads/2022/01/number-3.jpg)**Dating apps enlist AI to improve behaviour**
+
+Match Group, owner of Tinder and Hinge, is using AI to help curb bad behaviour on its dating platforms, reports the [Financial Times](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193749&elqTrackId=d9a3fccc0cd04cde9266a1fa9cb14c89&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF566D523118ABC00E1AC60CF7902C64112225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193749&elqTrackId=d9a3fccc0cd04cde9266a1fa9cb14c89&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF566D523118ABC00E1AC60CF7902C64112225885AAA4D4CA33CA6BC40CEE7F46AC"). AI detects potentially abusive or overly sexual messages and produces a prompt asking users if they’re sure they want to send the message. 20% of users reconsider their messages after the prompt. The move comes as dating apps like Tinder face a dip in users amid “dating app fatigue” among Gen Z. In response, Match is rolling out fresh features to make dating safer and more respectful. Yoel Roth, Match’s safety chief and former Twitter head, is also tackling the rise of romance scams, but warns that human scammers, not AI bots, remain the real threat.
+
+![Image 4](https://fticommunications.com/wp-content/uploads/2022/01/number-4.jpg)
+
+**European enterprise lags in embracing AI**
+
+In an interview with [Sifted](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193748&elqTrackId=d793b771a5074654b402bb6945d5ee5b&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5C7A3C207AF95F2625CD59BDA04E71D27225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193748&elqTrackId=d793b771a5074654b402bb6945d5ee5b&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5C7A3C207AF95F2625CD59BDA04E71D27225885AAA4D4CA33CA6BC40CEE7F46AC") this week, Andreessen Horowitz’s general partner Anjney Midha, who sits on the boards of European AI startups Mistral and Black Forest Labs, highlights a significant challenge for Europe’s AI sector: large enterprises’ slow adoption of AI. Despite the noise from some political figures last week, regulatory issues are not his primary concern. Instead, Midha points to the inaction of European CEOs and executives in embracing AI-driven productivity enhancements. While US companies have aggressively partnered with AI startups, European enterprises lag behind, which Midha attributes to cultural inertia. He said: “If you’re running some of Europe’s largest enterprises, it can be comfortable to keep doing things the way you always have, right? Until it’s too late.”
+
+*   [Freya Patty](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193745&elqTrackId=18791d7bb44b4656be09209d1bad5d13&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF514635418A85D3800946D6CD31562D787225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193745&elqTrackId=18791d7bb44b4656be09209d1bad5d13&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF514635418A85D3800946D6CD31562D787225885AAA4D4CA33CA6BC40CEE7F46AC"), Senior Reporter, Sifted: Scoop: An ex-Mistral employee is raising $80m for his new company, sources tell Sifted. “Genesis Robotics is the big round happening in Paris at the moment,” says one investor.
+*   [Jeff Bezos](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193744&elqTrackId=b1ee742fb1504de0b8d0d6f937629ecb&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF579E0E90310E4C55BF57C5D41F39E5442225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193744&elqTrackId=b1ee742fb1504de0b8d0d6f937629ecb&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF579E0E90310E4C55BF57C5D41F39E5442225885AAA4D4CA33CA6BC40CEE7F46AC"), Executive Chairman, Amazon: Who’d you pick as the next Bond?
+*   [Brent Hoberman](https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193743&elqTrackId=9a07deafccfb45839683fe713fbc5dde&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5FA951B18B96653605F46BAEAF7504EB7225885AAA4D4CA33CA6BC40CEE7F46AC "https://app.now.fticonsulting.com/e/er?s=2064197708&lid=193743&elqTrackId=9a07deafccfb45839683fe713fbc5dde&elq=829c8ba34d6648d5950d8d9131256ad7&elqaid=56748&elqat=1&elqak=8AF5FA951B18B96653605F46BAEAF7504EB7225885AAA4D4CA33CA6BC40CEE7F46AC"), former CEO of Lastminute.com: Hard to keep up with the pace of AI progress and the second/third order impacts. Who is best on those? OpenAI CEO Sam Altman, recently said that he expects the ChatGPT maker to build AI software that beats all human developers at competitive programming by the end of this year
 ----------------------------------------
