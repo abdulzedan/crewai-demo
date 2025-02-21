@@ -1,20 +1,17 @@
-generalist_task:
-  description: "Answer simple queries directly"
-  expected_output: "Final Answer: <response>"
-  agent: "generalist"
-  async_execution: false
-  output_file: "generalist_output.txt"
-
 research_task:
-  description: "Research complex queries using the Web Researcher agent"
-  expected_output: "Initial research findings"
+  description: >
+    Perform an exhaustive online search on the provided query using AISearchTool.
+    The Expert Web Researcher will leverage the Serper AI API to obtain live search result links and then use Jina Reader to extract clean content.
+  expected_output: "A comprehensive set of initial research findings."
   agent: "web_researcher"
   async_execution: false
   output_file: "research_output.txt"
 
 aggregate_task:
-  description: "Aggregate research findings"
-  expected_output: "Curated summary of key points"
+  description: >
+    Analyze and consolidate the raw research data.
+    The Analytical Aggregator will meticulously compile and organize the findings into a coherent summary that highlights key insights.
+  expected_output: "A curated summary of the research findings."
   agent: "aggregator"
   context:
     - "research_task"
@@ -22,8 +19,10 @@ aggregate_task:
   output_file: "aggregate_output.txt"
 
 synthesize_task:
-  description: "Synthesize final answer from aggregated research"
-  expected_output: "Final Answer: <comprehensive response>"
+  description: >
+    Integrate the aggregated insights into a final, comprehensive answer.
+    The Innovative Synthesizer will transform the curated summary into an articulate and actionable response.
+  expected_output: "Final Answer: <comprehensive, detailed response>"
   agent: "synthesizer"
   context:
     - "aggregate_task"

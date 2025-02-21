@@ -1,0 +1,1523 @@
+URL: https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2025/
+Content:
+Title: Five Trends in AI and Data Science for 2025 | Thomas H. Davenport and Randy Bean
+
+URL Source: https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2025/
+
+Markdown Content:
+#### Topics
+
+#### AI in Action
+
+This column series looks at the biggest data and analytics challenges facing modern companies and dives deep into successful use cases that can help other organizations accelerate their AI progress.
+
+[More in this series](https://sloanreview.mit.edu/series/ai-in-action/)
+
+![Image 1](blob:https://sloanreview.mit.edu/e8a57f4972516a1d3218894eabc89576)
+
+Carolyn Geason-Beissel/MIT SMR | Getty Images
+
+This is the time of year for predictions and trend analyses, and as data science and artificial intelligence become increasingly important to the global economy, it’s vital that leaders watch emerging AI trends.
+
+Nobody seems to _use_ AI to make these predictions, and we won’t either, as we share our list of AI trends that will matter in 2025. But we will incorporate the latest research whenever possible. Randy has just completed his annual survey of data, analytics, and AI executives, the [2025 AI & Data Leadership Executive Benchmark Survey](https://static1.squarespace.com/static/62adf3ca029a6808a6c5be30/t/67642c0d40b42a7d7e684f49/1734618125933/2025+AI+%26+Data+Leadership+Executive+Benchmark+Survey+120624.pdf), conducted by his educational firm, Data & AI Leadership Exchange; and Tom has worked on several surveys on generative AI and data, technology leadership structures, and, most recently, agentic AI.
+
+Here are the 2025 AI trends on our radar screens that leaders should understand and monitor.
+
+Get Updates on Leading With AI and Data
+
+
+-----------------------------------------
+
+Get monthly insights on how artificial intelligence impacts your organization and what it means for your company and customers.
+
+Please enter a valid email address
+
+Thank you for signing up
+
+[Privacy Policy](https://sloanreview.mit.edu/privacy-policy/)
+
+### 1\. Leaders will grapple with both the promise and hype around agentic AI.
+
+Let’s get agentic AI — the kind of AI that does tasks independently — out of the way first: It’s a sure bet for 2025’s “most trending AI trend.” Agentic AI seems to be on an inevitable rise: Everybody in the tech vendor and analyst worlds is excited about the prospect of having AI programs collaborate to do real work instead of just generating content, even though nobody is entirely sure how it will all work. Some IT leaders think they already have it (37%, in a forthcoming UiPath-sponsored survey of 252 U.S. IT leaders); most expect it soon and are ready to spend money on it (68% within six months or less); and a few skeptics (primarily encountered by us in interviews) think it’s mostly vendor hype.
+
+Most technology executives believe that these autonomous and collaborative AI programs will be primarily based on focused generative AI bots that will perform specific tasks. Most people believe that there will be a network of these agents, and many are hoping that the agent ecosystems will need less human intervention than AI has required in the past. Some believe that the technology will all be orchestrated by robotic process automation tools; some propose that agents will be fetched by enterprise transaction systems; and some posit the emergence of an “uber agent” that will control everything.
+
+The earliest agentic AI tools will be those for small, structured internal tasks with little money involved.
+
+Here’s what we think: There will be (and in some cases, already are) generative AI bots that will do people’s bidding on specific content creation tasks. It will require more than one of these agentic AI tools to do something significant, such as make a travel reservation or conduct a banking transaction. But these systems still work by predicting the next word, and sometimes that will lead to errors or inaccuracies. So there will still be a need for humans to check in on them every now and then.
+
+The earliest agents will be those for small, structured internal tasks with little money involved — for instance, helping change your password on the IT side, or reserving time off for vacations in HR systems. We don’t see much likelihood of companies turning these agents loose on real customers spending real money anytime soon, unless there’s the opportunity for human review or the reversal of a transaction. As a result, we don’t foresee a major impact on the human workforce from this technology in 2025, except for new jobs writing blog posts about agentic AI. (Wait, can agents do that?)
+
+### 2\. The time has come to measure results from generative AI experiments.
+
+One of the reasons why everybody is excited about agents is that as of 2024, it has still proved difficult to demonstrate economic value from generative AI. We argued in [last year’s AI trends article](https://sloanreview.mit.edu/article/five-key-trends-in-ai-and-data-science-for-2024/) that the value of GenAI still needed to be demonstrated. Data and AI leaders in Randy’s 2025 AI & Data Leadership Executive Benchmark Survey said they are confident that GenAI value is being generated: Fifty-eight percent said that their organization has achieved exponential productivity or efficiency gains from AI, presumably mostly from generative AI. Another 16% said that they have “liberated knowledge workers from mundane tasks” through the use of GenAI tools. Let’s hope that these highly positive beliefs are correct.
+
+But companies shouldn’t take such confidence on faith. Very few companies are actually measuring productivity gains carefully or figuring out what the liberated knowledge workers are doing with their freed-up time. Only a few academic studies have measured GenAI productivity gains, and when they have, they’ve generally found some improvements, but not exponential ones. Goldman Sachs is one of the rare companies that has [measured productivity gains in the area of programming](https://aiexpert.network/goldman-sachs-ai/). Developers there reported that their productivity increased by about 20%. Most similar studies have found contingent factors in productivity, where either inexperienced workers gain more (as in customer service and consulting) or experienced workers do better (as in code generation).
+
+In many cases, the best way to measure productivity gains will be to establish controlled experiments. For example, a company could have one group of marketers use generative AI to create content without human review, one use it with human review, and a control group not use it at all. Again, few companies are doing this, and this will need to change. Given that GenAI is primarily about content generation for many companies right now, if we want to really understand the benefits, we’ll also have to start measuring content quality. That’s notoriously difficult to do with knowledge work output. However, if GenAI helps write blog posts much faster but the posts are boring and inaccurate, that’s important to measure: There will be little benefit in that particular use case.
+
+The sad fact is that if many organizations are actually to achieve exponential productivity gains, those improvements may be measured in large-scale layoffs. But there is no sign of mass layoffs in the employment statistics. Additionally, a Nobel Prize winner in economics this year, MIT’s [Daron Acemoglu](https://www.goldmansachs.com/images/migrated/insights/pages/gs-research/gen-ai--too-much-spend%2C-too-little-benefit-/TOM_AI%202.0_ForRedaction.pdf), has commented that we haven’t seen real productivity gains from AI thus far, and he doesn’t expect to see anything dramatic over the next several years — perhaps a 0.5% increase over the next decade. In any case, if companies are really going to see and profit from GenAI, they’re going to need to measure and experiment to see the benefits.
+
+### 3\. Reality about data-driven culture sets in.
+
+We seem to be realizing that generative AI is very cool but doesn’t change everything, specifically long-term cultural attributes. In our trend article last year, we noted that Randy’s survey found that the percentage of company respondents who said that their organization had “created a data and AI-driven organization” and “established a data and AI-driven organizational culture” both doubled over the prior year (from 24% to 48% for creating data- and AI-driven organizations, and from 21% to 43% for establishing data-driven cultures). We were both somewhat astonished at this dramatic reported improvement, and we attributed the changes to generative AI, since it was very widely publicized and adopted rapidly by organizations.
+
+Our long-term prediction is that generative AI alone is not enough to make organizations and cultures data-driven.
+
+This year, the numbers have settled back to Earth a bit. Thirty-seven percent of those surveyed said they work in a data- and AI-driven organization, and 33% said they have a data- and AI-driven culture. It’s still a good thing that data and AI leaders feel that their organizations have improved in this regard over the distant past, but our long-term prediction is that generative AI alone is not enough to make organizations and cultures data-driven.
+
+In the same survey, 92% of the respondents said they feel that cultural and change management challenges are the primary barrier to becoming data- and AI-driven. This suggests that any technology alone is insufficient. It’s worth noting that most of the surveyed employees were from legacy organizations that were founded over a generation ago and have a history of transforming gradually. Many of these companies did more to execute on their digital strategies during the pandemic than they had in the previous two decades.
+
+### 4\. Unstructured data is important again.
+
+Generative AI has had another impact on organizations: It’s making unstructured data important again. In the 2025 AI & Data Leadership Executive Benchmark Survey, 94% of data and AI leaders said that interest in AI is leading to a greater focus on data. Since traditional analytical AI has been around for several decades, we think they were referring to GenAI’s impact. In [another survey](https://aws.amazon.com/data/cdo-report/) that we mentioned in last year’s AI trends article, there was substantial evidence that most companies hadn’t yet started to really manage data to get ready for generative AI.
+
+The great majority of the data that GenAI works with is relatively unstructured, in forms such as text, images, video, and the like. A leader at one large insurance organization recently shared with Randy that 97% of the company’s data was unstructured. Many companies are interested in using GenAI to help manage and provide access to their own data and documents, typically using an approach called retrieval-augmented generation, or RAG. But some companies haven’t worked on their unstructured data much since the days of knowledge management 20 or more years ago. They’ve been focused on structured data — typically rows and columns of numbers from transactional systems.
+
+To get unstructured data into shape, organizations need to pick the best examples of each document type, tag or graph the content, and get it loaded into the system. (Welcome to the arcane world of embeddings, vector databases, and similarity search algorithms.) These approaches do provide considerable knowledge-access benefits for employees, which is why many organizations are pursuing them. But this work is still human-intensive. At some point, perhaps, we’ll be able to just load tons of our internal documents into a GenAI prompt window, but 2025 is unlikely to be that time. Even when that’s possible, there will still be a need for considerable human curation of the data — because ChatGPT can’t tell which is the best of 20 different sales proposals.
+
+### 5\. Who should run data and AI? Expect continued struggle.
+
+It should perhaps come as no surprise that while data and attempts to exploit it with AI are receiving increasing amounts of organizational attention and investment, the data leadership function itself is continuing to struggle. The role is still relatively nascent — just 12% of organizations in Randy’s first annual executive survey back in 2012 had appointed a chief data officer. Progress is being made: Eighty-five percent of organizations in Randy’s newest survey have named a chief data officer, and increasing percentages of those data leaders are primarily focused on growth, innovation, and transformation (as opposed to avoiding risk or regulatory problems). More organizations have also named chief AI officers — a surprising 33%.
+
+While these roles continue to evolve, organizations continue to wrestle with their mandates, responsibilities, and reporting structures. Fewer than half of data leaders (mostly chief data officers) who responded to Randy’s AI & Data Leadership Executive Benchmark Survey said their function is very successful and well established, and only 51% said they feel that the job is well understood within their organizations. We are still not sure that the responsibilities of a chief AI officer and a chief data (and analytics/AI) officer demand separate roles, though some organizations, including Capital One and Cleveland Clinic, have established the chief AI officer role as a peer to the chief data officer.
+
+The one thing that we can say with confidence is that the demand for data and AI leadership will only grow, under whatever shape, form, and structure this demand entails.
+
+We’re of two minds about the broader [future of the chief data and AI officer](https://qstar.ai/chief-data-officers-are-in-trouble-part-iv-where-does-the-cdo-role-go-from-here/). Randy firmly believes that the role of CDAO should be a business role reporting into business leadership. He notes that 36% of data and AI leaders in his survey this year reported to either the CEO, president, or COO. Randy strongly believes that data and AI leaders need to deliver measurable business value, and to understand and speak the language of the business.
+
+Tom agrees that tech leaders need to be more focused on business value. But as we argued in last year’s trend report, he feels that there are [too many “tech chiefs,”](https://hbr.org/2024/09/why-companies-should-consolidate-tech-roles-in-the-c-suite) including CDAOs, in most organizations. Many of those CDAOs themselves feel that their internal customers are confused by all of the C-level tech executives and that the proliferation of such roles makes it both difficult to collaborate and unlikely that they will report to the CEO. Tom would prefer to see “supertech leaders,” with all of the tech roles reporting to them, as is the case in a growing number of companies that have promoted transformation-minded CIOs to fill the role. Whatever the right answer is, it’s clear that organizations must make some interventions and make those who lead data as respected as the data itself.
+
+In this short follow-up video, MIT SMR AI experts Thomas H. Davenport and Randy Bean break down the key trends already reshaping how organizations operate.
+
+#### Topics
+
+#### AI in Action
+
+This column series looks at the biggest data and analytics challenges facing modern companies and dives deep into successful use cases that can help other organizations accelerate their AI progress.
+
+[More in this series](https://sloanreview.mit.edu/series/ai-in-action/)
+
+#### About the Authors
+
+Thomas H. Davenport ([@tdav](https://x.com/tdav)) is the President’s Distinguished Professor of Information Technology and Management at Babson College, the Bodily Bicentennial Professor of Analytics at the University of Virginia Darden School of Business, a fellow of the MIT Initiative on the Digital Economy, and senior adviser to the Deloitte Chief Data and Analytics Officer Program. His latest book is All Hands on Tech: The AI-Powered Citizen Revolution (Wiley, 2024). Randy Bean ([@RandyBeanNVP](https://x.com/RandyBeanNVP)) is an adviser to Fortune 1000 organizations on data and AI leadership. He is the author of Fail Fast, Learn Faster: Lessons in Data-Driven Leadership in an Age of Disruption, Big Data, and AI (Wiley, 2021).
+
+----------------------------------------
+
+URL: https://www.technologyreview.com/2025/01/08/1109188/whats-next-for-ai-in-2025/
+Content:
+Title: What’s next for AI in 2025
+
+URL Source: https://www.technologyreview.com/2025/01/08/1109188/whats-next-for-ai-in-2025/
+
+Published Time: 2025-01-08T05:00:00-05:00
+
+Markdown Content:
+MIT Technology Review_’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them **[here](https://www.technologyreview.com/tag/whats-next-in-tech/?).**_
+
+For the last couple of years we’ve had a go at predicting what’s coming next in AI. A fool’s game given how fast this industry moves. But [we’re on](https://www.technologyreview.com/2022/12/23/1065852/whats-next-for-ai/) [a roll](https://www.technologyreview.com/2024/01/04/1086046/whats-next-for-ai-in-2024/), and we’re doing it again.
+
+How did we score last time round? Our [four hot trends to watch out for in 2024](https://www.technologyreview.com/2024/01/04/1086046/whats-next-for-ai-in-2024/) included what we called customized chatbots—interactive helper apps powered by multimodal large language models (check: we didn’t know it yet, but we were talking about what everyone now calls [agents](https://www.technologyreview.com/2024/07/05/1094711/what-are-ai-agents/), the hottest thing in AI right now); [generative video](https://www.technologyreview.com/2024/03/28/1090252/whats-next-for-generative-video/) (check: [few technologies have improved so fast in the last 12 months](https://www.technologyreview.com/2024/02/15/1088401/openai-amazing-new-generative-ai-video-model-sora/), with OpenAI and Google DeepMind releasing their flagship video generation models, [Sora](https://www.technologyreview.com/2024/12/09/1108309/how-to-use-sora-openais-new-video-generating-tool/) and Veo, within a week of each other this December); and more general-purpose robots that can do a wider range of tasks (check: the payoffs from large language models continue to trickle down to [other parts of the tech industry](https://www.technologyreview.com/2024/04/30/1091907/the-robot-race-is-fueling-a-fight-for-training-data/), and [robotics is top of the list](https://www.technologyreview.com/2024/04/11/1090718/household-robots-ai-data-robotics/)).
+
+We also said that AI-generated election disinformation would be everywhere, but here—happily—we got it wrong. There were many things to wring our hands over this year, but [political deepfakes were thin on the ground](https://www.technologyreview.com/2024/09/03/1103464/ai-impact-elections-overblown/).
+
+So what’s coming in 2025? We’re going to ignore the obvious here: You can bet that [agents](https://www.technologyreview.com/2024/07/05/1094711/what-are-ai-agents/) and [smaller, more efficient, language models](https://www.technologyreview.com/2025/01/03/1108800/small-language-models-ai-breakthrough-technologies-2025/) will continue to shape the industry. Instead, here are five alternative picks from our AI team.
+
+### 1\. Generative virtual playgrounds 
+
+If 2023 was the year of [generative images](https://www.technologyreview.com/2022/12/16/1065005/generative-ai-revolution-art/) and 2024 was the year of [generative video](https://www.technologyreview.com/2024/03/28/1090252/whats-next-for-generative-video/)—what comes next? If you guessed generative virtual worlds (a.k.a. video games), high fives all round.
+
+![Image 1: ""](https://wp.technologyreview.com/wp-content/uploads/2025/01/01-WN_1.jpg?w=1000)
+
+We got a tiny glimpse of this technology in February, when Google DeepMind revealed a [generative model called Genie](https://www.technologyreview.com/2024/02/29/1089317/google-deepminds-new-generative-model-makes-super-mario-like-games-from-scratch/#:~:text=%E2%80%9CGenie%20uses%20many%20of%20the,sideways%20faster%20than%20the%20background.) that could take a still image and turn it into a side-scrolling 2D platform game that players could interact with. In December, the firm revealed [Genie 2](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/), a model that can spin a starter image into an entire virtual world.
+
+Other companies are building similar tech. In October, the AI startups Decart and Etched revealed an unofficial Minecraft hack in which every frame of the game gets [generated on the fly as you play](https://www.technologyreview.com/2024/10/31/1106461/this-ai-generated-minecraft-may-represent-the-future-of-real-time-video-generation/). And World Labs, a startup cofounded by Fei-Fei Li—creator of ImageNet, the vast data set of photos that kick-started the deep-learning boom—is building what it calls large world models, or LWMs.
+
+One obvious application is video games. There’s a playful tone to these early experiments, and generative 3D simulations could be used to explore design concepts for new games, turning a sketch into a playable environment on the fly. This could lead to [entirely new types of games](https://www.technologyreview.com/2024/06/20/1093428/generative-ai-reinventing-video-games-immersive-npcs/).
+
+But they could also be used to train robots. World Labs wants to develop so-called spatial intelligence—the ability for machines to interpret and interact with the everyday world. But robotics researchers lack good data about real-world scenarios with which to train such technology. Spinning up countless virtual worlds and dropping [virtual robots](https://www.technologyreview.com/2024/11/27/1107377/a-minecraft-town-of-ai-characters-made-friends-invented-jobs-and-spread-religion/) into them to learn by trial and error could help make up for that.
+
+—_Will Douglas Heaven_
+
+### 2\. Large language models that “reason”
+
+![Image 2: ""](https://wp.technologyreview.com/wp-content/uploads/2025/01/02-WN.jpg?w=1000)
+
+The buzz was justified. When [OpenAI revealed o1](https://www.technologyreview.com/2024/09/17/1104004/why-openais-new-model-is-such-a-big-deal/) in September, it introduced a new paradigm in how large language models work. Two months later, the firm pushed that paradigm forward in almost every way with o3—a model that just might reshape this technology for good.
+
+Most models, including OpenAI’s flagship GPT-4, spit out the first response they come up with. Sometimes it’s correct; [sometimes it’s not](https://www.technologyreview.com/2024/06/18/1093440/what-causes-ai-hallucinate-chatbots/). But the firm's new models are trained to work through their answers step by step, breaking down tricky problems into a series of simpler ones. When one approach isn’t working, they try another. This technique, known as “reasoning” (yes—[we know exactly how loaded that term is](https://www.technologyreview.com/2024/07/10/1094475/what-is-artificial-intelligence-ai-definitive-guide/)), can make this technology more accurate, especially for math, physics, and logic problems.
+
+It’s also crucial for agents.
+
+In December, Google DeepMind revealed an experimental new web-browsing agent called Mariner. In the middle of a preview demo that the company gave to _MIT Technology Review_, Mariner seemed to get stuck. Megha Goel, a product manager at the company, had asked the agent to find her a recipe for Christmas cookies that looked like the ones in a photo she’d given it. Mariner found a recipe on the web and started adding the ingredients to Goel’s online grocery basket.
+
+Then it stalled; it couldn’t figure out what type of flour to pick. Goel watched as Mariner explained its steps in a chat window: “It says, ‘I will use the browser’s Back button to return to the recipe.’”
+
+It was a remarkable moment. Instead of hitting a wall, the agent had broken the task down into separate actions and picked one that might resolve the problem. Figuring out you need to click the Back button may sound basic, but for a mindless bot it’s akin to rocket science. And it worked: Mariner went back to the recipe, confirmed the type of flour, and carried on filling Goel’s basket.
+
+Google DeepMind is also building an experimental version of [Gemini 2.0](https://www.technologyreview.com/2024/12/11/1108493/googles-new-project-astra-could-be-generative-ais-killer-app/#:~:text=It%20was%20a%20stunning%20experience,Lens%20when%20it%20needs%20to.), its latest large language model, that uses this step-by-step approach to problem solving, called [Gemini 2.0 Flash Thinking](https://x.com/sundarpichai/status/1869792088356991253).
+
+But OpenAI and Google are just the tip of the iceberg. Many companies are building large language models that use similar techniques, making them better at a whole range of tasks, from cooking to coding. Expect a lot more buzz about reasoning ([we know, we know](https://www.technologyreview.com/2024/07/10/1094475/what-is-artificial-intelligence-ai-definitive-guide/)) this year.
+
+_—Will Douglas Heaven_
+
+### 3\. It’s boom time for AI in science 
+
+![Image 3: ""](https://wp.technologyreview.com/wp-content/uploads/2025/01/03-WN.jpg?w=1000)
+
+One of the most exciting uses for AI is speeding up discovery in the natural sciences. Perhaps the greatest vindication of AI’s potential on this front came last October, when the Royal Swedish Academy of Sciences [awarded the Nobel Prize for chemistry](https://www.technologyreview.com/2024/10/09/1105335/google-deepmind-wins-joint-nobel-prize-in-chemistry-for-protein-prediction-ai/) to Demis Hassabis and John M. Jumper from Google DeepMind for building the AlphaFold tool, which can solve protein folding, and to David Baker for building tools to help design new proteins.
+
+Expect this trend to continue next year, and to see more data sets and models that are aimed specifically at scientific discovery. Proteins were the perfect target for AI, because the field had excellent existing [data sets](https://www.technologyreview.com/2024/10/15/1105533/a-data-bottleneck-is-holding-ai-science-back-says-new-nobel-winner/) that AI models could be trained on.
+
+The hunt is on to find the next big thing. One potential area is materials science. Meta has released massive [data sets and models](https://www.technologyreview.com/2024/10/18/1105880/the-race-to-find-new-materials-with-ai-needs-more-data-meta-is-giving-massive-amounts-away-for-free/) that could help scientists use AI to discover new materials much faster, and in December, Hugging Face, together with the startup Entalpic, launched [LeMaterial](https://huggingface.co/blog/lematerial), an open-source project that aims to simplify and accelerate materials research. Their first project is a data set that unifies, cleans, and standardizes the most prominent material data sets.
+
+AI model makers are also keen to pitch their generative products as research tools for scientists. OpenAI let scientists test its latest o1 model and see how it might support them in research. The results were [encouraging.](https://www.nature.com/articles/d41586-024-03169-9)
+
+Having an AI tool that can operate in a similar way to a scientist is one of the fantasies of the tech sector. In a [manifesto](https://darioamodei.com/machines-of-loving-grace) published in October last year, Anthropic founder Dario Amodei highlighted science, especially biology, as one of the key areas where powerful AI could help. Amodei speculates that in the future, AI could be not only a method of data analysis but a “virtual biologist who performs all the tasks biologists do.” We’re still a long way away from this scenario. But next year, we might see important steps toward it.
+
+_—Melissa Heikkilä_
+
+### 4\. AI companies get cozier with national security
+
+![Image 4: ""](https://wp.technologyreview.com/wp-content/uploads/2025/01/04-WN.jpg?w=1000)
+
+There is a lot of money to be made by AI companies willing to lend their tools to border surveillance, intelligence gathering, and other national security tasks.
+
+The US military has launched a number of initiatives that show it’s eager to adopt AI, from the Replicator program—which, inspired by the war in Ukraine, promises to spend $1 billion on small drones—to the Artificial Intelligence Rapid Capabilities Cell, a unit bringing AI into everything from battlefield decision-making to logistics. European militaries are under pressure to up their tech investment, triggered by concerns that Donald Trump’s administration will cut spending to Ukraine. Rising tensions between Taiwan and China weigh heavily on the minds of military planners, too.
+
+In 2025, these trends will continue to be a boon for defense-tech companies like Palantir, Anduril, and others, which are now capitalizing on [classified military data](https://www.technologyreview.com/2024/12/10/1108354/we-saw-a-demo-of-the-new-ai-system-powering-andurils-vision-for-war/) to train AI models.
+
+The defense industry’s deep pockets will tempt mainstream AI companies into the fold too. OpenAI in December announced it is partnering with Anduril on a program to take down drones, completing a [year-long pivot](https://www.technologyreview.com/2024/12/04/1107897/openais-new-defense-contract-completes-its-military-pivot/) away from its policy of not working with the military. It joins the ranks of Microsoft, Amazon, and Google, which have worked with the Pentagon for years.
+
+Other AI competitors, which are spending billions to train and develop new models, will face more pressure in 2025 to think seriously about revenue. It’s possible that they’ll find enough non-defense customers who will pay handsomely for AI agents that can handle complex tasks, or creative industries willing to spend on image and video generators.
+
+But they’ll also be increasingly tempted to throw their hats in the ring for lucrative Pentagon contracts. Expect to see companies wrestle with whether working on defense projects will be seen as a contradiction to their values. OpenAI’s rationale for changing its stance was that “democracies should continue to take the lead in AI development,” the company [wrote](https://openai.com/global-affairs/openais-approach-to-ai-and-national-security/), reasoning that lending its models to the military would advance that goal. In 2025, we’ll be watching others follow its lead.
+
+—_James O’Donnell_
+
+### 5\. Nvidia sees legitimate competition
+
+![Image 5: ""](https://wp.technologyreview.com/wp-content/uploads/2025/01/05-WN.jpg?w=1000)
+
+For much of the current AI boom, if you were a tech startup looking to try your hand at making an AI model, Jensen Huang was your man. As CEO of Nvidia, the world’s most valuable corporation, Huang helped the company become the undisputed leader of chips used both to train AI models and to ping a model when anyone uses it, called “inferencing.”
+
+A number of forces could change that in 2025. For one, behemoth competitors like Amazon, Broadcom, AMD, and others have been investing heavily in new chips, and there are early indications that these could compete closely with Nvidia’s—particularly for inference, where Nvidia’s lead is less solid.
+
+A growing number of startups are also attacking Nvidia from a different angle. Rather than trying to marginally improve on Nvidia’s designs, startups like Groq are making riskier bets on entirely new chip architectures that, with enough time, promise to provide more efficient or effective training. In 2025 these experiments will still be in their early stages, but it’s possible that a standout competitor will change the assumption that top AI models rely exclusively on Nvidia chips.
+
+Underpinning this competition, the geopolitical chip war will continue. That war thus far has relied on two strategies. On one hand, the West seeks to limit exports to China of top chips and the [technologies](https://www.technologyreview.com/2024/04/01/1090393/how-asml-took-over-the-chipmaking-chessboard/) to make them. On the other, efforts like the US CHIPS Act aim to boost domestic production of semiconductors.
+
+Donald Trump may escalate those export controls and has promised massive tariffs on any goods imported from China. In 2025, such tariffs would put Taiwan—on which the US relies heavily because of the chip manufacturer TSMC—at the center of the trade wars. That’s because Taiwan has [said](https://www.reuters.com/world/asia-pacific/taiwan-will-help-companies-move-china-given-likely-trump-tariffs-2024-11-07/) it will help Taiwanese firms operating in China relocate back to the island to help them avoid the proposed tariffs. That could draw further criticism from Trump, who has expressed frustration with US spending to defend Taiwan from China.
+
+It’s unclear how these forces will play out, but it will only further incentivize chipmakers to reduce reliance on Taiwan, which is the entire purpose of the CHIPS Act. As spending from the bill begins to circulate, next year could bring the first evidence of whether it’s materially boosting domestic chip production.
+
+—_James O’Donnell_
+
+_Correction: we have clarified that Taiwan's Economy Minister was talking about Taiwanese firms being relocated back to Taiwan._
+
+----------------------------------------
+
+URL: https://blog.google/technology/ai/google-ai-updates-january-2025/
+Content:
+Title: The latest AI news we announced in January
+
+URL Source: https://blog.google/technology/ai/google-ai-updates-january-2025/
+
+Published Time: 2025-02-05T23:00:00+00:00
+
+Markdown Content:
+Feb 05, 2025
+
+\[\[read-time\]\] min read
+
+General summary
+---------------
+
+Google shared its latest AI advancements in January, focusing on making AI more accessible and beneficial. They released Gemini 2.0 Flash, a faster and more capable version of their AI assistant, and expanded Gemini Live's capabilities to include images, files, and YouTube videos. Google also highlighted how AI is being used in education, automotive, and retail, with new tools and initiatives to support educators, drivers, and businesses.
+
+Summaries were generated by Google AI. Generative AI is experimental.
+
+Bullet points
+-------------
+
+*   Google shared its latest AI news from January 2025, highlighting advancements in products, research, and more.
+*   Gemini 2.0 Flash, a performance upgrade to the Gemini app, delivers faster responses and more capable help.
+*   Gemini Live, Google's conversational assistant, now allows users to add images, files, and YouTube videos to conversations.
+*   Google AI is helping educators and students with tools to accelerate learning and improve educational outcomes.
+*   Google Cloud's Automotive AI Agent is arriving for Mercedes-Benz, allowing drivers to have natural conversations while driving.
+
+Summaries were generated by Google AI. Generative AI is experimental.
+
+#### Explore other styles:
+
+Sorry, your browser doesn't support embedded videos, but don't worry, you can [download it](https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/Hero_A_-_AI_Roundup_Jan.mp4) and watch it with your favorite video player!
+
+For more than 20 years, we’ve invested in machine learning and AI research, tools and infrastructure to build products that make everyday life better for more people. Teams across Google are working on ways to unlock AI’s benefits in fields as wide-ranging as healthcare, crisis response and education. To keep you posted on our progress, we're doing a regular roundup of Google's most recent AI news across products, research and more.
+
+Here’s a look back at just some of our AI announcements from January.
+
+![Image 1: a text card reading "The big picture"](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/TITLE_1.width-100.format-webp.webp)
+
+We spent our first month of 2025 focused on getting the benefits of AI into your hands — including some of our latest AI breakthroughs from 2024. In a big performance upgrade, we added [Gemini 2.0 Flash to the Gemini app](https://blog.google/feed/gemini-app-model-update-january-2025/), delivering fast responses, stronger performance and more capable help whether you’re brainstorming, learning or writing. And at [Galaxy Unpacked 2025](https://blog.google/products/android/galaxy-unpacked-2025/) we shared how our conversational assistant, Gemini Live, is becoming more versatile. Gemini Live users on the Samsung Galaxy S24 and S25 series and Pixel 9 devices can now [add images, files and YouTube videos to the conversation](https://blog.google/products/gemini/new-gemini-app-updates-android/) to help them brainstorm new ideas, organize their thoughts or gain new understandings of complex topics. And we made [Circle to Search](https://blog.google/feed/circle-to-search-new-features/) more helpful than ever, quite literally putting AI into the palm of your hand.
+
+![Image 2: a text card reading "Hands-on learning with AI"](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI-roundup_2.width-100.format-webp.webp)
+
+[We shared how Google AI can help educators and students in 2025](https://blog.google/outreach-initiatives/education/ai-tools-education-2025/). We recently joined thousands of educators and students at BETT in London, Europe’s biggest educational technology exhibition, and shared ways that students and teachers can use Google AI tools to accelerate education, learning and retention. This month, we also highlighted [how startups](https://blog.google/outreach-initiatives/entrepreneurs/startups-using-ai-to-help-learners-and-educators/) are using AI to tailor learning and improve educational outcomes.
+
+![Image 3: a text card reading "Putting AI at our customers' fingertips"](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI-roundup_3.width-100.format-webp.webp)
+
+[We announced that Google Cloud’s Automotive AI Agent is arriving for Mercedes-Benz](https://blog.google/feed/mercedes-google-cloud-automotive-ai-agent/). Google Cloud unveiled Automotive AI Agent, a new way for automakers to create helpful agentic experiences for drivers. Mercedes-Benz is among the first automakers planning to implement the product, which goes beyond current vehicle voice control to allow people to have natural conversations and ask queries while driving, like “Is there an Italian restaurant nearby?”
+
+[We shared five ways NotebookLM Plus can help your business](https://blog.google/technology/google-labs/notebooklm-business-tips/). NotebookLM is a tool for understanding anything — including synthesizing complex ideas buried in deep research. This month we made our premium NotebookLM Plus available in more Google Workspace plans to help businesses and their employees with everything from sharing team notebooks and centralizing projects, to streamlining onboarding and making learning more engaging with Audio Overviews.
+
+[We announced new AI tools to help retailers build gen AI search and agents](https://blog.google/products/google-cloud/google-cloud-ai-retailers-nrf-2025/). The National Retail Federation kicked off the year with their annual NRF conference, where Google Cloud showed how AI agents and AI-powered search are already helping retailers operate more efficiently, create personalized shopping experiences and use AI to get the latest products and experiences to their customers.
+
+![Image 4: a text card reading "Hands down our biggest year in AI yet"](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI-roundup_4.width-100.format-webp.webp)
+
+[Three Google leaders teamed up for a deep dive into Google’s AI progress in 2024](https://blog.google/technology/ai/2024-ai-extraordinary-progress-advancement/). In the past year, we accelerated our work to boldly and responsibly advance the frontiers of AI and all the ways it can benefit humanity. This month, [Demis Hassabis](https://blog.google/authors/demis-hassabis/), [James Manyika](https://blog.google/authors/james-manyika/) and [Jeff Dean](https://blog.google/authors/jeff-dean/) published their retrospective on a year that included major scientific advances (and a Nobel Prize!), AI-enabled product updates, progress in robotics and hardware, and new models built for the agentic era.
+
+![Image 5: a text card reading "Have a hand in AI for the greater good"](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI-roundup_5.width-100.format-webp.webp)
+
+[We issued an open call for applications to the next Google.org Accelerator: Generative AI](https://blog.google/outreach-initiatives/google-org/google-org-generative-ai-accelerator-2025/). Generative AI has the potential to help solve many of humanity's most pressing challenges — if people have the training, tools and resources to unlock its potential. That’s why [Google.org](http://google.org/) launched the six-month Generative AI Accelerator program for nonprofits and other organizations to get the support they need. The latest call for applications opened with $30 million in funding: Apply by February 10, 2025 at [g.co/Accelerator/GenAI](http://g.co/Accelerator/GenAI).
+
+POSTED IN:
+
+*   [AI](https://blog.google/technology/ai/)
+*   [Gemini App](https://blog.google/products/gemini/)
+*   [Research](https://blog.google/technology/research/)
+*   [Learning & Education](https://blog.google/outreach-initiatives/education/)
+*   [Google.org](https://blog.google/outreach-initiatives/google-org/)
+*   [Google Cloud](https://blog.google/products/google-cloud/)
+*   [Google Labs](https://blog.google/technology/google-labs/)
+*   [Android](https://blog.google/products/android/)
+*   [Google DeepMind](https://blog.google/technology/google-deepmind/)
+
+### Related stories
+
+*     [![Image 6: Lens blog header](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lens_blog_header_j9e4UZY.max-1200x416.format-webp.webp) Google Lens #### Use Lens to search your screen while you browse on iOS By Jenny Blair & Nick Kim Sexton Feb 19, 2025](https://blog.google/products/google-lens/lens-on-ios-ai-overviews/)
+*     [![Image 7: Human Generation_Banner_2-resize](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Human_Generation_Banner_2-resi.max-1200x416.format-webp.webp) Google Ads #### New creative updates to help advertisers generate lifestyle imagery By Pallavi Naresh Feb 19, 2025](https://blog.google/products/ads-commerce/new-creative-updates-advertisers-generate-lifestyle/)
+*     [![Image 8: FloodForecast_Hero-1](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FloodForecast_Hero-1.max-1200x416.format-webp.webp) AI #### Advanced Flood Hub features for aid organizations and governments By Alex Diaz & Moriah Royz Feb 18, 2025](https://blog.google/technology/ai/advanced-flood-hub-features-for-aid-organizations-and-governments/)
+*     [![Image 9: Screenshot 2025-02-14 6.51.13 AM](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Screenshot_2025-02-14_6.51.13_.max-1200x416.format-webp.webp) Google in Europe #### Taoiseach visits Google to celebrate the future of Ireland’s tech talent By Jessica McCarthy Feb 14, 2025](https://blog.google/around-the-globe/google-europe/taoiseach-visits-google-to-celebrate-the-future-of-irelands-tech-talent/)
+*     [![Image 10: IOGames](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOGames.max-1200x416.format-webp.webp) Developers #### How Gemini added a new dimension to our I/O 2025 save the date puzzle By Ari Marini Feb 12, 2025](https://blog.google/technology/developers/google-io-2025-puzzle-ai/)
+*     [![Image 11: Keyword-HeroImage (1)](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Keyword-HeroImage_1.max-1200x416.format-webp.webp) Families #### Google Family Link brings new supervision tools for parents By Wendi Rieb Feb 12, 2025](https://blog.google/technology/families/family-link-updates-february-2025/)
+*   .
+
+----------------------------------------
+
+URL: https://www.forbes.com/sites/robtoews/2024/12/22/10-ai-predictions-for-2025/
+Content:
+Title: 10 AI Predictions For 2025
+
+URL Source: https://www.forbes.com/sites/robtoews/2024/12/22/10-ai-predictions-for-2025/
+
+Markdown Content:
+Prediction #3: Donald Trump and Elon Musk will have a messy falling-out. This will have meaningful ... \[+\] consequences for the world of AI.
+
+Image Credit: New York Times
+
+Below are 10 predictions about what will unfold in the world of artificial intelligence in 2025, from technology to business to policy and beyond.
+
+* * *
+
+**1\. Meta will begin charging for use of its Llama models.**
+-------------------------------------------------------------
+
+Meta is the world’s standard bearer for open-weight AI. In a fascinating case study in corporate strategy, while rivals like OpenAI and Google have kept their frontier models closed source and charged for their use, Meta has chosen to give its state-of-the-art Llama models away for free.
+
+So it will come as a surprise to many next year when Meta begins charging companies to use Llama.
+
+To be clear: this is not to say that Meta will make Llama entirely closed source, nor that anyone who uses the Llama models will have to pay for them.
+
+Instead, expect to see Meta make the terms of Llama’s open-source license more restrictive, such that companies who use Llama in commercial settings above a certain scale will need to start paying to access the models.
+
+Technically, Meta already does a limited version of this today. The company does not allow the very largest companies—the cloud hyperscalers and other companies with more than 700 million monthly active users—to freely use its Llama models.
+
+[![Image 1: Graphic Best High-Yield Savings Accounts Of 2024](https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2020/12/getty_1-best-online-savings-thumbnail_101920pm.jpg)](https://www.forbes.com/advisor/banking/savings/best-high-yield-savings-accounts/?utm_source=forbes&utm_medium=recirc&utm_campaign=tiger-sept23)
+
+[![Image 2: Graphic Best 5% Interest Savings Accounts of 2024](https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/09/Saving-Rates-2.jpg)](https://www.forbes.com/advisor/banking/savings/best-5-percent-interest-savings-accounts/?utm_source=forbes&utm_medium=recirc&utm_campaign=tiger-sept23)
+
+Back in 2023, Meta CEO Mark Zuckerberg [said](https://www.bloomberg.com/news/articles/2023-07-26/meta-to-charge-cloud-providers-for-ai-tech-that-it-said-was-free "https://www.bloomberg.com/news/articles/2023-07-26/meta-to-charge-cloud-providers-for-ai-tech-that-it-said-was-free"): “If you’re someone like Microsoft, Amazon or Google, and you’re going to basically be reselling \[Llama\], that’s something that we think we should get some portion of the revenue for. I don’t think that that’s going to be a large amount of revenue in the near-term, but over the long term, hopefully that can be something.”
+
+Next year, Meta will substantially expand the set of organizations that must pay to use Llama to include many more large and mid-sized enterprises.
+
+Why would Meta make this strategic pivot?
+
+Keeping up with the LLM frontier is incredibly expensive. Meta will need to invest many billions of dollars every year if it wants Llama to stay at or near parity with the latest frontier models from OpenAI, Anthropic and others.
+
+Meta is one of the world’s largest and most deep-pocketed companies. But it is also a publicly traded company that is ultimately answerable to its shareholders. As the cost of building frontier models skyrockets, it is increasingly untenable for Meta to devote such vast sums to train next-generation Llama models with zero expectation of revenue.
+
+Hobbyists, academics, individual developers and startups will continue to be able to use the Llama models free of charge next year. But 2025 will be the year that Meta gets serious about monetizing Llama.
+
+**2\. Scaling laws will be discovered and exploited in areas beyond text—in particular, in robotics and biology.**
+------------------------------------------------------------------------------------------------------------------
+
+No topic in AI has generated more discussion in recent weeks than scaling laws—and the question of whether they are coming to an end.
+
+First introduced in a [2020 OpenAI paper](https://arxiv.org/pdf/2001.08361 "https://arxiv.org/pdf/2001.08361"), the basic concept behind scaling laws is straightforward: as the number of model parameters, the amount of training data, and the amount of compute increase when training an AI model, the model’s performance improves (technically, its test loss decreases) in a reliable and predictable way. Scaling laws are responsible for the breathtaking performance improvements from GPT-2 to GPT-3 to GPT-4.
+
+Much like Moore’s Law, scaling laws are not in fact laws but rather simply empirical observations. Over the past month, a series of [reports](https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai "https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai") have suggested that the major AI labs are seeing diminishing returns to continued scaling of large language models. This helps explain, for instance, why OpenAI’s GPT-5 release keeps getting delayed.
+
+The most common rebuttal to plateauing scaling laws is that the emergence of test-time compute opens up an entirely new dimension on which to pursue scaling. That is, rather than massively scaling compute during training, new reasoning models like OpenAI’s o3 make it possible to massively scale compute during _inference_, unlocking new AI capabilities by enabling models to “think for longer.”
+
+This is an important point. Test-time compute does indeed represent an exciting new avenue for scaling and for AI performance improvement.
+
+But another point about scaling laws is even more important and too little appreciated in today’s discourse. Nearly all discussions about scaling laws—starting with the original 2020 paper and extending all the way through to today’s focus on test-time compute—center on language. But language is not the only data modality that matters.
+
+Think of robotics, or biology, or world models, or web agents. For these data modalities, scaling laws have not been saturated; on the contrary, they are just getting started. Indeed, rigorous evidence of the _existence_ of scaling laws in these areas has not even been published to date.
+
+Startups building foundation models for these newer data modalities—for instance, EvolutionaryScale in biology, Physical Intelligence in robotics, World Labs in world models—are seeking to identify and ride scaling laws in these fields the way that OpenAI so successfully rode LLM scaling laws in the first half of the 2020s. Next year, expect to see tremendous advances here.
+
+Don’t believe the chatter. Scaling laws are not going away. They will be as important as ever in 2025. But the center of activity for scaling laws will shift from LLM pretraining to other modalities.
+
+3\. Donald Trump and Elon Musk will have a messy falling-out. This will have meaningful consequences for the world of AI.
+-------------------------------------------------------------------------------------------------------------------------
+
+A new administration in the U.S. will bring with it a number of policy and strategy shifts on AI. In order to predict where the AI winds will blow under President Trump, it might be tempting to focus on the president-elect’s close relationship with Elon Musk, given Musk’s central role in the AI world today.
+
+One can imagine a number of different ways in which Musk might influence AI-related developments in a Trump administration. Given Musk’s [deeply hostile](https://www.nytimes.com/2024/12/13/technology/openai-elon-musk-lawsuit.html "https://www.nytimes.com/2024/12/13/technology/openai-elon-musk-lawsuit.html") relationship with OpenAI, the new administration might take a less friendly stance toward OpenAI when engaging with industry, crafting AI regulation, awarding government contracts, and so forth. (This is a real risk that OpenAI is [worried about](https://www.ft.com/content/61a5f0b0-2633-4e27-813a-ac1a8ad29599 "https://www.ft.com/content/61a5f0b0-2633-4e27-813a-ac1a8ad29599") today.) On the flip side, the Trump administration might preferentially favor Musk’s own companies: for instance, slashing red tape to enable xAI to build data centers and get a leg up in the frontier model race; granting rapid regulatory approval for Tesla to deploy robotaxi fleets; and so forth.
+
+More fundamentally, Elon Musk—unlike many other technology leaders who have Trump’s ear—takes existential AI safety risks very seriously and is therefore an advocate for significant AI regulation. He [supported](https://www.politico.com/news/2024/08/26/elon-musk-supports-california-ai-bill-00176388 "https://www.politico.com/news/2024/08/26/elon-musk-supports-california-ai-bill-00176388") California’s controversial SB 1047 bill, which sought to impose meaningful restrictions on AI developers. Musk’s influence could thus lead to a more heavy-handed regulatory environment for AI in the U.S.
+
+There is one problem with all these speculations, though. Donald Trump and Elon Musk’s cozy relationship will inevitably fall apart.
+
+As we saw time and time again during the first Trump administration, the median tenure of a Trump ally, even the seemingly staunchest, is remarkably short—from Jeff Sessions to Rex Tillerson to James Mattis to John Bolton to Steve Bannon. (And, of course, who can forget Anthony Scaramucci’s 10-day stint in the White House?) Very few of Trump’s deputies from his first administration remain loyal to him today.
+
+Both Donald Trump and Elon Musk are complex, volatile, unpredictable personalities. They are not easy to work with. They burn people out. Their newfound friendship has proven mutually beneficial to this point, but it is still in its honeymoon phase. I predict that, before 2025 has come to an end, the relationship will have soured.
+
+What will this mean for the world of AI?
+
+It will be welcome news for OpenAI. It will be unfortunate news for Tesla shareholders. And it will be a disappointment for those concerned with AI safety, as it will all but ensure that the U.S. government will take a hands-off approach to AI regulation under Trump.
+
+4\. Web agents will go mainstream, becoming the next major killer application in consumer AI.
+---------------------------------------------------------------------------------------------
+
+Imagine a world in which you never have to directly interact with the web. Whenever you need to manage a subscription, pay a bill, schedule a doctor’s appointment, order something on Amazon, make a restaurant reservation, or complete any other tedious online task, you can simply instruct an AI assistant to do so on your behalf.
+
+This concept of a “web agent” has been around for years. If something like this existed and worked, there is little doubt that it would be a wildly successful product. Yet no functioning general-purpose web agent is available on the market today.
+
+Startups like Adept—which raised hundreds of millions of dollars with a highly pedigreed founding team but failed to deliver on its vision—have become cautionary tales in this category.
+
+Next year will be the year that web agents finally start working well enough to go mainstream. Continued advances in language and vision foundation models, paired with recent breakthroughs on “System 2 thinking” capabilities as a result of new reasoning models and inference-time compute, will mean that web agents will be ready for primetime.
+
+(In other words, Adept had the right idea; it was just too early. In startups, as in much in life, timing is everything.)
+
+Web agents will find all sorts of valuable enterprise use cases, but the biggest near-term market opportunity for web agents will be with consumers. Despite all the recent AI fervor, relatively few AI-native applications beyond ChatGPT have yet broken through to become mainstream consumer successes. Web agents will change that, becoming the next true “killer app” in consumer AI.
+
+**5\. Multiple serious efforts to put AI data centers in space will take shape.**
+---------------------------------------------------------------------------------
+
+In 2023, the critical physical resource that bottlenecked AI growth was GPU chips. In 2024, it has become power and data centers.
+
+Few storylines have gotten more play in 2024 than AI’s enormous and fast-growing energy needs amid the rush to build more AI data centers. After remaining flat for decades, global power demand from data centers is [projected](https://semianalysis.com/2024/03/13/ai-datacenter-energy-dilemma-race/ "https://semianalysis.com/2024/03/13/ai-datacenter-energy-dilemma-race/") to _double_ between 2023 and 2026 thanks to the AI boom. In the U.S., data centers are projected to consume [close to 10%](https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand "https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand") of all power by 2030, up from just 3% in 2022.
+
+The demand for energy to power AI data centers is skyrocketing. Our energy systems are not prepared.
+
+Image source: Semianalysis
+
+Today’s energy system is simply not equipped to handle the tremendous surge in demand coming from artificial intelligence workloads. A historic collision between these two multi-trillion-dollar systems—our energy grid and our computing infrastructure—is looming.
+
+Nuclear power has gained momentum this year as a possible solution to this Gordian knot. Nuclear represents an ideal energy source for AI in many ways: it is zero-carbon, available 24/7 and effectively inexhaustible. But realistically, new nuclear energy sources won’t be able to make a dent in this problem until the 2030s, given long research, project development and regulatory timelines. This goes for traditional nuclear fission power plants, for next-generation “small modular reactors” (SMRs) and certainly for nuclear fusion power plants.
+
+Next year, an unconventional new idea to tackle this challenge will emerge and attract real resources: putting AI data centers in space.
+
+_AI data centers in space_—at first blush, this sounds like a bad joke about a VC trying to combine too many startup buzzwords. But there may in fact be something here.
+
+The biggest bottleneck to rapidly building more data centers on Earth is accessing the requisite power. A computing cluster in orbit can enjoy free, limitless, zero-carbon power around the clock: the sun is always shining in space.
+
+Of course, plenty of practical challenges remain to be solved. One obvious issue is whether and how large volumes of data can be moved cost-efficiently between orbit and Earth. This is an open question, but it may prove solvable, with promising work underway using lasers and other high-bandwidth optical communications technology.
+
+A buzzy startup out of Y Combinator named Lumen Orbit [recently raised](https://techcrunch.com/2024/12/11/200-vcs-wanted-to-get-into-lumen-orbits-11m-seed-round/ "https://techcrunch.com/2024/12/11/200-vcs-wanted-to-get-into-lumen-orbits-11m-seed-round/") $11 million to pursue this exact vision: building a multi-gigawatt network of data centers in space to train AI models.
+
+As Lumen CEO Philip Johnston put it: “Instead of paying $140 million for electricity, you can pay $10 million for a launch and solar.”
+
+Lumen will not be the only organization taking this concept seriously in 2025.
+
+Other startup competitors will emerge. Don’t be surprised to see one or more of the cloud hyperscalers launch exploratory efforts along these lines as well. Amazon already has extensive experience putting assets into orbit via [Project Kuiper](https://www.aboutamazon.com/what-we-do/devices-services/project-kuiper "https://www.aboutamazon.com/what-we-do/devices-services/project-kuiper"); Google has a long history of funding moonshot ideas like this; even Microsoft is [no stranger](https://azure.microsoft.com/fr-fr/blog/accelerating-the-pace-of-innovation-with-azure-space-and-our-partners/ "https://azure.microsoft.com/fr-fr/blog/accelerating-the-pace-of-innovation-with-azure-space-and-our-partners/") to the space economy. Elon Musk’s SpaceX could conceivably make a play here, too.
+
+6\. An AI system will pass the Turing test for speech.
+------------------------------------------------------
+
+The Turing test is one of the oldest and most well-known benchmarks for AI performance.
+
+In order to “pass” the Turing test, an AI system must be able to communicate via written text such that the average human is not able to tell whether he or she is interacting with an AI or interacting with another human.
+
+Thanks to dramatic recent advances in large language models, the Turing test has become a solved problem in the 2020s.
+
+But written text is not the only way that humans communicate.
+
+As AI becomes increasingly multimodal, one can imagine a new, more challenging version of the Turing test—a “Turing test for speech”—in which an AI system must be able to interact with humans _via voice_ with a degree of skill and fluidity that make it indistinguishable from a human speaker.
+
+The Turing test for speech remains out of reach for today’s AI systems. Solving it will require meaningful additional technology advances.
+
+Latency (the lag between when a human speaks and when the AI responds) must be reduced to near-zero in order to match the experience of speaking with another human. Voice AI systems must get better at gracefully handling ambiguous inputs or misunderstandings in real-time—for instance, when they get interrupted mid-sentence. They must be able to engage in long, multiturn, open-ended conversations while holding in memory earlier parts of the discussion. And crucially, voice AI agents must learn to better understand non-verbal signal in speech—for instance, what it means if a human speaker sounds annoyed versus excited versus sarcastic—and to generate those non-verbal cues in their own speech.
+
+Voice AI is at an exciting inflection point as we near the end of 2024, driven by fundamental breakthroughs like the emergence of speech-to-speech models. Few areas of AI are advancing more rapidly today, both technologically and commercially. Expect to see the state of the art in voice AI leap forward in 2025.
+
+7\. Major progress will be made on building AI systems that can themselves autonomously build better AI systems.
+----------------------------------------------------------------------------------------------------------------
+
+The concept of recursively self-improving AI has been a frequent touchpoint in AI circles going back decades.
+
+Back in 1965, for instance, Alan Turing’s close collaborator I.J. Good wrote: “Let an ultraintelligent machine be defined as a machine that can far surpass all the intellectual activities of any man, however clever. Since the design of machines is one of these intellectual activities, an ultraintelligent machine could design even better machines; there would then unquestionably be an ‘intelligence explosion,’ and the intelligence of man would be left far behind.”
+
+The idea of AI that can invent better AI is an intellectually fascinating concept. But, even today, it retains a whiff of science fiction.
+
+However—while it is not yet widely appreciated—this concept is in fact starting to get [more real](https://www.forbes.com/sites/robtoews/2024/11/03/ai-that-can-invent-ai-is-coming-buckle-up/ "https://www.forbes.com/sites/robtoews/2024/11/03/ai-that-can-invent-ai-is-coming-buckle-up/"). Researchers at the frontiers of AI science have begun to make tangible progress toward building AI systems that can themselves build better AI systems.
+
+Next year, expect to see this vein of research burst into the mainstream.
+
+To date, the most notable public example of research along these lines is Sakana’s [AI Scientist.](https://sakana.ai/ai-scientist/ "https://sakana.ai/ai-scientist/") Published in August, the AI Scientist work represents a compelling proof of concept that AI systems can indeed carry out AI research entirely autonomously.
+
+Sakana’s AI Scientist executes the entire lifecycle of artificial intelligence research itself: reading the existing literature, generating novel research ideas, designing experiments to test those ideas, carrying out those experiments, writing up a research paper to report its findings, and then conducting a process of peer review on its work. It does this entirely autonomously, with no human input. Some of the research papers that the AI Scientist produced are [available online](https://sakana.ai/assets/ai-scientist/adaptive_dual_scale_denoising.pdf "https://sakana.ai/assets/ai-scientist/adaptive_dual_scale_denoising.pdf") to read.
+
+Rumors abound that OpenAI, Anthropic and other research labs are devoting resources to this idea of “automated AI researchers,” though nothing has yet been publicly acknowledged.
+
+Get ready for much more discussion, progress and startup activity in this field in 2025 as it becomes more widely appreciated that automating AI research is in fact becoming a real possibility.
+
+The most meaningful milestone, though, will be when a research paper written entirely by an AI agent is accepted into a top AI conference for the first time. (Because papers are blindly reviewed, conference reviewers won’t know that a paper was written by an AI until after it has been accepted.) Don’t be surprised to see research work produced by an AI get accepted at NeurIPS, CVPR or ICML next year. It will be a fascinating, controversial and historic moment for the field of AI.
+
+**8\. OpenAI, Anthropic and other frontier labs will begin ‘moving up the stack,’ increasingly shifting their strategic focus to building applications.**
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Building frontier models is a tough business to be in.
+
+It is staggeringly capital intensive. Frontier model labs burn historic amounts of cash. OpenAI raised a record $6.5 billion in funding just a few months ago—and it will likely have to raise even more before long. Anthropic, xAI and others are in similar positions.
+
+Switching costs and customer loyalty are low. AI applications are often built to be model-agnostic, with models from different providers frictionlessly swapped in and out based on changing cost and performance comparisons.
+
+And with the emergence of state-of-the-art open models like Meta’s Llama and Alibaba’s Qwen, the threat of technology commoditization constantly looms.
+
+AI leaders like OpenAI and Anthropic cannot and will not stop investing in building cutting-edge models. But next year, in an effort to develop business lines that are higher-margin, more differentiated and stickier, expect to see the frontier labs make a big push to roll out more of their own applications and products.
+
+Of course, one wildly successful example of an application from a frontier lab already exists: ChatGPT.
+
+What other kinds of first-party applications might we expect to see from the AI labs in the new year?
+
+One obvious answer is more sophisticated and feature-rich search applications. OpenAI’s [SearchGPT effort](https://openai.com/index/searchgpt-prototype/ "https://openai.com/index/searchgpt-prototype/") is a sign of things to come here.
+
+Coding is another obvious category. Again, initial productization efforts are already underway, with the debut of OpenAI’s [canvas](https://openai.com/index/introducing-canvas/ "https://openai.com/index/introducing-canvas/") product in October.
+
+Might OpenAI or Anthropic launch an enterprise search offering in 2025? Or a customer service product? How about a legal AI or a sales AI product? On the consumer side, one can imagine a “personal assistant” web agent product, or a travel planning application, or perhaps a generative music application.
+
+One of the most fascinating dynamics to track as frontier labs move up the stack to the application layer is that this move will bring them into direct competition with many of their most important customers: in search, Perplexity; in coding, Cursor; in customer service, Sierra; in legal AI, Harvey; in sales, Clay; and on and on.
+
+**9\. Robotaxi services will win double-digit market share in ride-hailing in at least 5 major U.S. cities.**
+-------------------------------------------------------------------------------------------------------------
+
+Autonomous vehicles have endured years of premature hype and unfulfilled promise. For nearly a decade, this technology has seemed right around the corner but not quite ready for primetime.
+
+This changed dramatically in 2024. Driverless Waymos are now ubiquitous on the streets of San Francisco, with thousands of residents taking Waymos to get around the city every day the way they used to take taxis or Ubers.
+
+Since its launch in August 2023, Waymo has grown to an incredible [22% of the ride-hailing market](https://x.com/aleximm/status/1867257473671082356 "https://x.com/aleximm/status/1867257473671082356") in San Francisco today, giving it the same market share as Lyft. (Uber is at 55%.)
+
+These figures will likely amaze readers who have not been in San Francisco in recent months. In the blink of an eye, robotaxis have gone from a research project to a large business.
+
+The next step: robotaxis’ rapid rollout will expand beyond the Bay Area, becoming an important part of the transportation system in several U.S. cities. This will happen faster than most people appreciate. By the end of next year, expect to see robotaxi services like Waymo win double-digit market share in at least five major markets.
+
+After San Francisco, which cities are most likely next?
+
+Waymo has already launched robotaxi operations in Los Angeles and in Phoenix; expect adoption to take off in those markets next year. Austin, Atlanta and Miami will soon follow for Waymo. Meanwhile, Waymo competitor Zoox is poised to launch its own commercial robotaxi service in Las Vegas.
+
+In 2025, after years of hype, autonomous vehicles will finally go mainstream.
+
+10\. The first real AI safety incident will occur.
+--------------------------------------------------
+
+As artificial intelligence has become more powerful in recent years, concerns have grown that AI systems might begin to act in ways that are misaligned with human interests and that humans might lose control of these systems. Imagine, for instance, an AI system that learns to deceive or manipulate humans in pursuit of its own goals, even when those goals cause harm to humans.
+
+This general set of concerns is often categorized under the umbrella term “AI safety.”
+
+(AI creates plenty of other societal challenges, from facilitating surveillance to perpetuating bias, but topics like these are distinct from the field of AI safety, which more specifically concerns itself with the risk that AI systems will begin to behave in misaligned ways that are outside of human control, perhaps even eventually posing an existential threat to humanity.)
+
+In recent years, AI safety has moved from a fringe, quasi-sci-fi topic to a mainstream field of activity. Every major AI player today, from Google to Microsoft to OpenAI, devotes real resources to AI safety efforts. AI icons like Geoff Hinton, Yoshua Bengio and Elon Musk have become vocal about AI safety risks.
+
+Yet to this point, AI safety concerns remain entirely theoretical. No actual AI safety incident has ever occurred in the real world (at least none that has been publicly reported).
+
+2025 will be the year that this changes.
+
+What should we expect this first AI safety event to look like?
+
+To be clear, it will not entail _Terminator_\-style killer robots. It most likely will not involve harm of any kind to any humans.
+
+Perhaps an AI model might attempt to covertly create copies of itself on another server in order to preserve itself (known as self-exfiltration). Perhaps an AI model might conclude that, in order to best advance whatever goals it has been given, it needs to conceal the true extent of its capabilities from humans, purposely sandbagging performance evaluations in order to evade stricter scrutiny.
+
+These examples are not far-fetched. Apollo Research published [important experiments](https://static1.squarespace.com/static/6593e7097565990e65c886fd/t/6751eb240ed3821a0161b45b/1733421863119/in_context_scheming_reasoning_paper.pdf "https://static1.squarespace.com/static/6593e7097565990e65c886fd/t/6751eb240ed3821a0161b45b/1733421863119/in_context_scheming_reasoning_paper.pdf") earlier this month demonstrating that, when prompted in certain ways, today’s frontier models are capable of engaging in just such deceptive behavior. Along similar lines, [recent research](https://www.anthropic.com/research/alignment-faking "https://www.anthropic.com/research/alignment-faking") from Anthropic showed that LLMs have the troubling ability to “fake alignment.”
+
+Transcripts from Apollo Research's experiments with frontier LLMs, demonstrating these models' ... \[+\] latent potential for deception and even attempted self-exfiltration.
+
+Apollo Research
+
+In all likelihood, this first AI safety incident will be detected and neutralized before any real harm is done. But it will be an eye-opening moment for the AI community and for society at large.
+
+It will make one thing clear: well before humanity faces an existential threat from all-powerful AI, we will need to come to terms with the more mundane reality that we now share our world with another form of intelligence that may at times be willful, unpredictable and deceptive—just like us.
+
+* * *
+
+_Take a look at my AI predictions from previous years, along with retrospective scorecards on how accurate those predictions turned out to be:_
+
+_2024_ [_predictions_](https://www.forbes.com/sites/robtoews/2023/12/21/10-ai-predictions-for-2024/ "https://www.forbes.com/sites/robtoews/2023/12/21/10-ai-predictions-for-2024/") _and_ [_retrospectives_](https://www.forbes.com/sites/robtoews/2024/12/08/what-we-got-right-and-wrong-in-our-2024-ai-predictions/ "https://www.forbes.com/sites/robtoews/2024/12/08/what-we-got-right-and-wrong-in-our-2024-ai-predictions/")
+
+_2023_ [_predictions_](https://www.forbes.com/sites/robtoews/2022/12/20/10-ai-predictions-for-2023/?sh=5a1b6b25fab7 "https://www.forbes.com/sites/robtoews/2022/12/20/10-ai-predictions-for-2023/?sh=5a1b6b25fab7") _and_ [_retrospectives_](https://www.forbes.com/sites/robtoews/2023/12/10/how-accurate-were-our-2023-ai-predictions/?sh=7ba044951397 "https://www.forbes.com/sites/robtoews/2023/12/10/how-accurate-were-our-2023-ai-predictions/?sh=7ba044951397")
+
+_2022_ [_predictions_](https://www.forbes.com/sites/robtoews/2021/12/22/10-ai-predictions-for-2022/?sh=367ea826482d "https://www.forbes.com/sites/robtoews/2021/12/22/10-ai-predictions-for-2022/?sh=367ea826482d") _and_ [_retrospectives_](https://www.forbes.com/sites/robtoews/2022/12/15/what-we-got-right-and-wrong-in-our-2022-ai-predictions/?sh=3be178d71654 "https://www.forbes.com/sites/robtoews/2022/12/15/what-we-got-right-and-wrong-in-our-2022-ai-predictions/?sh=3be178d71654")
+
+_2021_ [_predictions_](https://www.forbes.com/sites/robtoews/2020/12/22/10-ai-predictions-for-2021/?sh=3f259858d1a0 "https://www.forbes.com/sites/robtoews/2020/12/22/10-ai-predictions-for-2021/?sh=3f259858d1a0") _and_ [_retrospectives_](https://www.forbes.com/sites/robtoews/2021/12/05/2021-ai-predictions-what-we-got-right-and-wrong/?sh=1e55c8c31f8d "https://www.forbes.com/sites/robtoews/2021/12/05/2021-ai-predictions-what-we-got-right-and-wrong/?sh=1e55c8c31f8d")
+
+----------------------------------------
+
+URL: https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/
+Content:
+Title: Five AI and Data Science Trends That Matter for 2025
+
+URL Source: https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/
+
+Markdown Content:
+Five AI and Data Science Trends That Matter for 2025
+===============
+                          
+
+[![Image 2: MIT Sloan Management Review Logo](https://sloanreview.mit.edu/wp-content/themes/smr/assets/images/smr-logo-black.png)](https://sloanreview.mit.edu/ "MIT Sloan Management Review")
+
+ Menu
+
+Search 
+
+Topics
+
+< Back to Menu
+
+*   [Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
+*   [Innovation](https://sloanreview.mit.edu/topic/innovation-3/)
+*   [Leadership](https://sloanreview.mit.edu/topic/leadership/)
+*   [Managing Technology](https://sloanreview.mit.edu/topic/managing-technology/)
+*   [Marketing](https://sloanreview.mit.edu/topic/marketing/)
+*   [Operations](https://sloanreview.mit.edu/topic/operations/)
+*   [Social Responsibility](https://sloanreview.mit.edu/topic/social-responsibility/)
+*   [Strategy](https://sloanreview.mit.edu/topic/strategy/)
+*   [Workplace, Teams, & Culture](https://sloanreview.mit.edu/topic/workplace-teams-culture/)
+*   [All Topics](https://sloanreview.mit.edu/all-topics/)
+*   [Trending](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [AI & Machine Learning](https://sloanreview.mit.edu/topic/ai-machine-learning/)
+*   [Organizational Culture](https://sloanreview.mit.edu/topic/culture/)
+*   [Hybrid Work](https://sloanreview.mit.edu/tag/hybrid-work/)
+
+Our Research
+
+< Back to Menu
+
+*   [Big ideas Research Projects](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [Artificial Intelligence and Business Strategy](https://sloanreview.mit.edu/big-ideas/artificial-intelligence-business-strategy/)
+*   [Responsible AI](https://sloanreview.mit.edu/big-ideas/responsible-ai/)
+*   [Strategic Measurement](https://sloanreview.mit.edu/big-ideas/strategic-measurement/)
+*   [Future of Leadership](https://sloanreview.mit.edu/big-ideas/future-of-leadership)
+*   [All Research Projects](https://sloanreview.mit.edu/big-ideas)
+
+Spotlight
+
+< Back to Menu
+
+*   [Most Popular](https://sloanreview.mit.edu/most-popular/)
+*   [AI in Action](https://sloanreview.mit.edu/series/ai-in-action/)
+*   [Hybrid Work](https://sloanreview.mit.edu/tag/hybrid-work/)
+*   [Coaching for the Future-Forward Leader](https://sloanreview.mit.edu/series/coaching-for-the-future-forward-leader/)
+*   [Culture Champions](https://sloanreview.mit.edu/series/culture-champions/)
+*   [Measuring Culture](https://sloanreview.mit.edu/series/measuring-culture/)
+
+Magazine
+
+< Back to Menu
+
+[![Image 3: Winter 2025 Issue](blob:https://sloanreview.mit.edu/4474ada017c9b1a0fd121786efc28e83)](https://sloanreview.mit.edu/issue/2025-winter/)
+
+[Winter 2025 Issue](https://sloanreview.mit.edu/issue/2025-winter/)Our winter 2025 issue focuses on improving work design, implementing AI, increasing employee engagement, and more.
+
+*   [Past Issues](https://sloanreview.mit.edu/issue/)
+
+Webinars & Podcasts
+
+< Back to Menu
+
+*   [Upcoming Events](https://sloanreview.mit.edu/tag/webinar/)
+*   [Video Archive](https://sloanreview.mit.edu/tag/webinars-videos/)
+*   [Podcasts](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [Me, Myself, and AI](https://sloanreview.mit.edu/audio-series/me-myself-and-ai/)
+
+Subscribe Now  
+Save 22% on Unlimited Access.
+
+![Image 5](blob:https://sloanreview.mit.edu/e8a57f4972516a1d3218894eabc89576)[Subscribe](https://sloanreview.mit.edu/subscribe/?tpcc=Menu)
+
+Topics
+
+*   [Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
+*   [Innovation](https://sloanreview.mit.edu/topic/innovation-3/)
+*   [Leadership](https://sloanreview.mit.edu/topic/leadership/)
+*   [Managing Technology](https://sloanreview.mit.edu/topic/managing-technology/)
+*   [Marketing](https://sloanreview.mit.edu/topic/marketing/)
+*   [Operations](https://sloanreview.mit.edu/topic/operations/)
+*   [Social Responsibility](https://sloanreview.mit.edu/topic/social-responsibility/)
+*   [Strategy](https://sloanreview.mit.edu/topic/strategy/)
+*   [Workplace, Teams, & Culture](https://sloanreview.mit.edu/topic/workplace-teams-culture/)
+*   [All Topics](https://sloanreview.mit.edu/all-topics/)
+*   [Trending](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [AI & Machine Learning](https://sloanreview.mit.edu/topic/ai-machine-learning/)
+*   [Organizational Culture](https://sloanreview.mit.edu/topic/culture/)
+*   [Hybrid Work](https://sloanreview.mit.edu/tag/hybrid-work/)
+
+Our Research
+
+*   [Big ideas Research Projects](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [Artificial Intelligence and Business Strategy](https://sloanreview.mit.edu/big-ideas/artificial-intelligence-business-strategy/)
+*   [Responsible AI](https://sloanreview.mit.edu/big-ideas/responsible-ai/)
+*   [Strategic Measurement](https://sloanreview.mit.edu/big-ideas/strategic-measurement/)
+*   [Future of Leadership](https://sloanreview.mit.edu/big-ideas/future-of-leadership)
+*   [All Research Projects](https://sloanreview.mit.edu/big-ideas)
+
+Spotlight
+
+*   [Most Popular](https://sloanreview.mit.edu/most-popular/)
+*   [AI in Action](https://sloanreview.mit.edu/series/ai-in-action/)
+*   [Hybrid Work](https://sloanreview.mit.edu/tag/hybrid-work/)
+*   [Coaching for the Future-Forward Leader](https://sloanreview.mit.edu/series/coaching-for-the-future-forward-leader/)
+*   [Culture Champions](https://sloanreview.mit.edu/series/culture-champions/)
+*   [Measuring Culture](https://sloanreview.mit.edu/series/measuring-culture/)
+
+Magazine
+
+[![Image 7: Winter 2025 Issue](blob:https://sloanreview.mit.edu/4474ada017c9b1a0fd121786efc28e83)](https://sloanreview.mit.edu/issue/2025-winter/)
+
+[Winter 2025 Issue](https://sloanreview.mit.edu/issue/2025-winter/)Our winter 2025 issue focuses on improving work design, implementing AI, increasing employee engagement, and more.
+
+*   [Past Issues](https://sloanreview.mit.edu/issue/)
+
+Webinars & Podcasts
+
+*   [Upcoming Events](https://sloanreview.mit.edu/tag/webinar/)
+*   [Video Archive](https://sloanreview.mit.edu/tag/webinars-videos/)
+*   [Podcasts](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#)
+*   [Me, Myself, and AI](https://sloanreview.mit.edu/audio-series/me-myself-and-ai/)
+
+Search
+
+[Store](https://shop.sloanreview.mit.edu/) Sign In [Subscribe — _22% off_](https://sloanreview.mit.edu/subscribe/?tpcc=Nav-Site)
+
+![Image 9: MIT Sloan Management Review Logo](blob:https://sloanreview.mit.edu/e8a57f4972516a1d3218894eabc89576)
+
+Five AI and Data Science Trends That Matter for 2025
+====================================================
+
+[MIT Sloan Management Review](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#article-authors) February 13, 2025 Runtime 0:12:40
+
+[Subscribe](https://sloanreview.mit.edu/subscribe/?tpcc=header) Share
+
+Twitter Facebook Linkedin
+
+      [**Five AI and Data Science Trends That Matter for 2025**](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/)
+
+#### Topics
+
+*   [Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
+*   [AI & Machine Learning](https://sloanreview.mit.edu/topic/ai-machine-learning/)
+*   [Analytics & Business Intelligence](https://sloanreview.mit.edu/topic/analytics-business-intelligence/)
+
+Beyond the headlines about generative AI, what shifts should leaders be paying attention to? In this brief video, AI experts Thomas H. Davenport and Randy Bean break down the key trends already reshaping how organizations operate.
+
+What are the AI trends that will matter most in the year ahead? In this insightful conversation, two leading experts cut through the hype to identify the shifts that will reshape how organizations operate. Drawing from their latest research, Thomas H. Davenport and Randy Bean break down five key trends that leaders need to understand now.
+
+In this video, they discuss:
+
+*   How to grapple with both the promise and hype around agentic AI.
+*   Why organizations must measure the ROI of their AI investments.
+*   The ongoing challenges of building a data-driven culture.
+*   The renewed importance of managing unstructured data.
+*   The still-evolving roles and reporting structures for data and AI leadership.
+
+Their informed perspectives can help leaders separate genuine opportunities from hype and gain valuable insights on implementing AI responsibly and effectively.
+
+To learn more about the AI trends that will matter most in the year ahead, read the full article “[Five Trends in AI and Data Science for 2025](https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2025/).”
+
+##### Video Credits
+
+**Thomas H. Davenport** is the President’s Distinguished Professor of Information Technology and Management at Babson College, the Bodily Bicentennial Professor of Analytics at the University of Virginia Darden School of Business, and a fellow of the MIT Initiative on the Digital Economy.
+
+**Randy Bean** is an adviser to Fortune 1000 organizations on data and AI leadership and the author of Fail Fast, Learn Faster: Lessons in Data-Driven Leadership in an Age of Disruption, Big Data, and AI (Wiley, 2021).
+
+**M. Shawn Read** is the multimedia editor at MIT Sloan Management Review.
+
+#### Topics
+
+*   [Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
+*   [AI & Machine Learning](https://sloanreview.mit.edu/topic/ai-machine-learning/)
+*   [Analytics & Business Intelligence](https://sloanreview.mit.edu/topic/analytics-business-intelligence/)
+
+#### Tags:
+
+[AI Strategy](https://sloanreview.mit.edu/tag/ai-strategy/) [Analytics & Business Intelligence](https://sloanreview.mit.edu/tag/analytics-business-intelligence/) [Data Management](https://sloanreview.mit.edu/tag/data-management/) [Leadership Vision](https://sloanreview.mit.edu/tag/leadership-vision/) [Video](https://sloanreview.mit.edu/tag/video/) [Webinars & Videos](https://sloanreview.mit.edu/tag/webinars-videos/)
+
+#### More Like This
+
+### Add a comment [Cancel reply](https://sloanreview.mit.edu/video/five-ai-and-data-science-trends-that-matter-for-2025/#respond)
+
+You must [sign in](https://sloanreview.mit.edu/edit-profile/) to post a comment.  
+  
+First time here? [Sign up for a free account](https://sloanreview.mit.edu/sign-up): Comment on articles and get access to many more articles.
+
+ 
+
+[![Image 11: MIT Sloan Management Review Logo](blob:https://sloanreview.mit.edu/d00c65185324a0dc5fa923b24e7681b1)](https://sloanreview.mit.edu/ "MIT Sloan Management Review")
+
+###### Copyright © [Massachusetts Institute of Technology](http://web.mit.edu/), 1977–2025. All rights reserved.
+
+*   [Home](https://sloanreview.mit.edu/)
+*   [Organization Subscriptions](https://sloanreview.mit.edu/organization-subscription/)
+*   [About Us](https://sloanreview.mit.edu/about/)
+*   [Newsletters](https://sloanreview.mit.edu/mitsmr-newsletters/)
+*   [Store](https://shop.sloanreview.mit.edu/)
+*   [Advertise With Us](https://sloanreview.mit.edu/advertise/)
+*   [Contact Us](https://sloanreview.mit.edu/contact/)
+*   [Republishing](https://sloanreview.mit.edu/republishing/)
+*   [Help](https://sloanreview.mit.edu/help/)
+*   [Author Guidelines](https://sloanreview.mit.edu/authors/)
+
+Get free, timely updates from MIT SMR with new ideas, research, frameworks, and more.
+
+ sign up   
+
+Please enter a valid email address
+
+Thank you for signing up
+
+[Privacy Policy](https://sloanreview.mit.edu/privacy-policy/)
+
+###### Follow Us
+
+*   [Facebook](https://www.facebook.com/MITSloanManagementReview)
+*   [X](https://twitter.com/mitsmr)
+*   [Linkedin](https://www.linkedin.com/company/mit-sloan-management-review/)
+*   [Youtube](https://www.youtube.com/MITSMR)
+*   [Instagram](https://www.instagram.com/mitsmr/)
+
+ 
+
+Login Create an Account Business Access
+
+----------------------------------------
+
+URL: https://cloud.google.com/transform/2025-and-the-next-chapters-of-ai
+Content:
+Title: 2025 and the Next Chapter(s) of AI
+
+URL Source: https://cloud.google.com/transform/2025-and-the-next-chapters-of-ai
+
+Published Time: 2025-01-16
+
+Markdown Content:
+In many ways, the current state of AI feels like living in the space between what we can imagine and what tools we have available to us, at work and in our personal lives, to make those dreams a reality.
+
+But the gap is closing quickly.
+
+Remember in 2023 when we thought only humans could write software, design games, draft marketing content, create a video ad, resolve a customer service issue, or summarize a set of documents? Pick nearly any consumer or enterprise scenario, and it’s a pretty safe bet that AI is already playing a role in making it more efficient, improving quality, or completely redefining how it gets done.
+
+We’re only two years into the commercialization of generative AI, but it’s clear these technologies and capabilities will eventually form the frontend and possibly even the backend of nearly every application.
+
+As a CTO, I share predictions every year, knowing that I might be wrong, understate (or overstate) many things, and will likely get lucky a few times and even nail a couple. I do this — not because I believe I’m correct — but as a necessary exercise to share what I’ve learned from the actual implementations I work on with our customers and teams. My hope is that some of these reflections will spur your own creativity, skepticism, and thoughtfulness around AI.
+
+Last year, I shared [a few predictions](https://cloud.google.com/transform/2024-gen-ai-predictions-from-cto-will-grannis-three-pillars?e=48754805) on how gen AI adoption would increase business utility and ultimately drive innovation. My thinking was that ​​organizations should focus on sustainable costs, broad access, and trust and security to get gen AI right in 2024. These were largely based on the fact that many companies last year were developing the foundations for scaled experimentation, rigorous evaluation, and the constant refinement of AI. Nothing stops a promising project faster than runaway costs, siloed efforts, and a lack of trust in what’s being built.
+
+I’m happy to report that we saw a surge of companies moving their AI prototypes into production — a significant step, demonstrating the growing confidence in AI capabilities and their potential to deliver tangible value. I encourage you to check out this [list of over 300 real-world examples of AI in action](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders) to inspire your own efforts.
+
+As of January 2025, it’s still us humans writing the prompts, defining the reasoning flows, putting guardrails in place to manage agentic action, and supplying the policies and KPIs that will determine the success or failure of our AI projects. The more we can think and reason up front, the better we’ll design the requisite AI levers.
+
+Against this backdrop, let’s get to what I see as the four key trends emerging that will shape how we collectively move forward this year.
+
+### 1\. Multimodal AI as the new standard
+
+[Multimodal AI](https://cloud.google.com/use-cases/multimodal-ai), which integrates diverse data sources like images, video, code, and audio, alongside text, will become increasingly prevalent. This will enable organizations to provide more sophisticated and personalized customer experiences: Imagine searching for information using a combination of text, images, and voice commands. Or, interacting with AI-powered chatbots that can understand and respond to your visual cues, or accurately triage your health concerns based on shared audio, video, or images and immediately provide a personalized medical analysis. This is the power of multimodal AI and the new expectation for state-of-the-art models.
+
+One of my favorite stories from last year was how the world’s largest advertising holding company, WPP, expanded its [WPP Open](https://www.youtube.com/watch?v=5pAdxF95_iE) operating system by leveraging the native multimodality of Gemini. These capabilities empower creatives to take an idea expressed via voice, an image, or a web link and generate social media ad copy that includes draft images and video clips, in minutes.
+
+Another standout example is how Mercedes-Benz is implementing [Automotive AI Agent into its MBUX Virtual Assistant](https://blog.google/feed/mercedes-google-cloud-automotive-ai-agent/) to create a highly personalized multimodal experience for drivers and passengers alike. Riders will be able to use voice commands like, “Is there a good restaurant nearby?” "Does it have good reviews?" "Who is the chef?" and “Can you direct me there?” This is just the beginning of how multimodality and agentic capabilities can transform industries.
+
+### 2\. Agentic platforms for scale
+
+AI agents emerged in 2024 as an abstraction for the grounding, reasoning, and augmentation tasks necessary to convert models into value. As organizations gain more experience with combining AI tools with their own intellectual property, data, and expertise, they will want a way to scale the experimentation and deployment of their AI agents. This will generally follow a pattern of discovery, connection, and automation, with agents acting as the critical bridge between the promise of AI in workflows and the realization of that value.
+
+One of the first to put agentic platforms in action is Banco BV, one of Brazil’s largest private banks. Banco BV is using [Google Agentspace —](https://cloud.google.com/products/agentspace?e=48754805) which brings together Gemini’s advanced reasoning, Google-quality search, and enterprise data — to enable its employees to discover, connect, and automate with AI agents across its broad set of data and critical systems, in both a secure and compliant manner.
+
+At Deloitte, knowledge workers utilize Agentspace to bridge data sources quickly, fostering rapid experimentation and collaboration. In [one case](https://cloud.google.com/blog/products/ai-machine-learning/bringing-ai-agents-to-enterprises-with-google-agentspace?e=48754805), NotebookLM, available as an out-of-the-box agent in Agentspace, even found a connection between topics across uploaded reports that Deloitte employees hadn’t caught themselves, which would have been difficult to spot under traditional silos of analysis.
+
+### 3\. Optimization of the AI stack
+
+2025 will be the year of optimization. Companies will begin to shift their focus from simply experimenting with or implementing AI to optimizing its performance and maximizing its value. More than 70 percent of organizations are already seeing [return on investment (ROI) from gen AI](https://cloud.google.com/resources/roi-of-generative-ai?e=48754805) — and that number will only continue to rise as more companies move from production to optimization.
+
+This increased focus on optimization reflects a deeper level of understanding of AI and a growing emphasis on extracting maximum value from these technologies. While optimization will continue at the hardware level, organizations will also move up the technology stack with emergent intelligence that selects the right model for a given user query across a number of attributes including cost, quality, and other important [business value metrics](https://cloud.google.com/transform/gen-ai-kpis-measuring-ai-success-deep-dive). For instance, using a combination of our TPUs and GPUs, [LG AI Research](https://www.googlecloudpresscorner.com/2024-08-28-LG-AI-Research-Taps-Google-Cloud-to-Develop-EXAONE-3-0-and-ChatEXAONE-AI-Agent) was able to reduce inference processing time for its multimodal model by more than 50% and operating costs by 72%.
+
+For organizations to make the most of their AI investments in the future, they will need to invest in identifying [the best AI models for their specific use cases](https://cloud.google.com/transform/choosing-right-gen-ai-model-trade-offs-benefits-the-prompt), optimizing infrastructure for training and inference, and ensuring they have the ability to [measure and optimize models](https://cloud.google.com/transform/the-prompt-ai-platform-model-evaluation) for long-term relevance and effectiveness.
+
+### 4\. Silo busting
+
+The rise of gen AI is helping break down the walls between departments and democratize access to AI tools. This new paradigm is empowering a wider range of users within organizations to participate in AI-driven innovation, fostering collaboration and accelerating the creation of novel customer experiences like never before.
+
+As AI technologies and tools become more widely-adopted, they free up time previously dedicated to routine tasks, allowing individuals to focus on more creative and strategic endeavors. This increased capacity for creativity will most certainly drive innovation and lead to unexpected and unimagined breakthroughs.
+
+To help enable that innovation and breakthrough, [Workspace Business and Enterprise customers](https://workspace.google.com/blog/product-announcements/empowering-businesses-with-ai?e=48754805) will now have the best of Google AI embedded directly into the tools they use every day. With [Gemini for Google Workspace](https://blog.google/products/google-cloud/gemini-at-work-ai-agents/), teams around the world will be able to work faster and more efficiently right where they’re already spending their time — in Gmail, Docs, Sheets, Meet, Chat, Vids, and so much more.
+
+### Beyond 2025
+
+This year will be a big one for AI and for us as humans; perhaps, the biggest to date. Aside from the instances I’ve already mentioned, I expect we’ll see AI used to address some of the world’s most pressing problems in ways we can’t even imagine.
+
+Already, my colleagues at Google Deepmind shared how they are using AlphaFold to [predict the structure and interactions of all of life’s molecules](https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3-ai-model/), which has the potential to transform our understanding of the biological world and drug discovery. Another incredible source of inspiration is the work our partners at the [Asteroid Institute](https://b612foundation.org/asteroid-institute-and-google-cloud-identify-27500-new-asteroids/) are doing with Google’s AI technologies to take what would be 130 years of research down to just three months, bringing space that much closer to our fingertips. In 2025, I’m also excited to see what AI will do for students around the world, with the opportunity to [make education more personalized and accessible](https://cloud.google.com/transform/gen-ai-economic-opportunity-google-org-nonprofit-ai-incubator), bringing new possibilities to uplift an entire generation.
+
+On a more personal note, this year will also mark my ten-year anniversary at Google. Back in 2015, it would have been impossible to predict the nature and extent of the AI disruption we are experiencing today. Still, the safest prediction with the highest ROI now, as it was back then, is to surround yourself with people who are curious, humble, and action-oriented. If you do that, you’ll always be able to navigate ambiguity and complexity successfully and satisfyingly — regardless of your industry, role, or the technology at hand.
+
+Here’s to all our customers and Googlers building a future that we’ll sit in awe of a decade from now: Thanks for the last 10 years, and on to the next 10!
+
+Posted in
+
+*   [AI & Machine Learning](https://cloud.google.com/blog/products/ai-machine-learning)
+
+----------------------------------------
+
+URL: https://www.youtube.com/watch?v=5zuF4Ys1eAw
+Content:
+Title: - YouTube
+
+URL Source: https://www.youtube.com/watch?v=5zuF4Ys1eAw
+
+Warning: Target URL returned error 403: Forbidden
+
+Markdown Content:
+- YouTube
+===============
+ 
+
+Search
+
+Watch later
+
+Share
+
+Copy link
+
+Info
+
+Shopping
+
+Tap to unmute
+
+2x
+
+![Image 3](https://www.youtube.com/watch?v=5zuF4Ys1eAw)
+
+If playback doesn't begin shortly, try restarting your device.
+
+![Image 4](https://www.youtube.com/watch?v=5zuF4Ys1eAw)
+
+•
+
+You're signed out
+
+Videos you watch may be added to the TV's watch history and influence TV recommendations. To avoid this, cancel and sign in to YouTube on your computer.
+
+CancelConfirm
+
+Share
+
+Include playlist
+
+An error occurred while retrieving sharing information. Please try again later.
+
+![Image 5](https://www.youtube.com/watch?v=5zuF4Ys1eAw)
+
+0:00
+
+0:00 / 0:00•Live
+
+•
+
+•
+
+Scroll for details
+
+ 
+
+  •
+
+NaN / NaN
+
+Back [![Image 6](https://www.youtube.com/watch?v=5zuF4Ys1eAw)](https://www.youtube.com/)
+
+Search
+
+ [![Image 7](https://www.youtube.com/watch?v=5zuF4Ys1eAw)](https://www.youtube.com/)
+
+----------------------------------------
+
+URL: https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work
+Content:
+Title: Superagency in the workplace: Empowering people to unlock AI’s full potential
+
+URL Source: https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work
+
+Published Time: 2025-01-28T00:00:00Z
+
+Markdown Content:
+**Artificial intelligence has arrived in the workplace** and has the potential to be as transformative as the steam engine was to the 19th-century Industrial Revolution.1 With powerful and capable large language models (LLMs) developed by Anthropic, Cohere, Google, Meta, Mistral, OpenAI, and others, we have entered a new information technology era. McKinsey research sizes the long-term AI opportunity at $4.4 trillion in added productivity growth potential from corporate use cases.2
+
+Therein lies the challenge: the long-term potential of AI is great, but the short-term returns are unclear. Over the next three years, 92 percent of companies plan to increase their AI investments. But while nearly all companies are investing in AI, only 1 percent of leaders call their companies “mature” on the deployment spectrum, meaning that AI is fully integrated into workflows and drives substantial business outcomes. The big question is how business leaders can deploy capital and steer their organizations closer to AI maturity.
+
+This research report, prompted by Reid Hoffman’s book _Superagency: What Could Possibly Go Right with Our AI Future_,3 asks a similar question: How can companies harness AI to amplify human agency and unlock new levels of creativity and productivity in the workplace? AI could drive enormous positive and disruptive change. This transformation will take some time, but leaders must not be dissuaded. Instead, they must advance boldly today to avoid becoming uncompetitive tomorrow. The history of major economic and technological shifts shows that such moments can define the rise and fall of companies. Over 40 years ago, the internet was born. Since then, companies including Alphabet, Amazon, Apple, Meta, and Microsoft have attained trillion-dollar market capitalizations. Even more profoundly, the internet changed the anatomy of work and access to information. AI now is like the internet many years ago: The risk for business leaders is not thinking too big, but rather too small.
+
+![Image 1](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/infographic-01.svgz?cq=50&mw=767&cpy=Center)We strive to provide individuals with disabilities equal access to our website. If you would like information about this content we will be happy to work with you. Please email us at: [McKinsey\_Website\_Accessibility@mckinsey.com](mailto:McKinsey_Website_Accessibility@mckinsey.com)
+
+This report explores companies’ technology and business readiness for AI adoption (see sidebar “About the survey”). It concludes that employees are ready for AI. The biggest barrier to success is leadership.
+
+**Chapter 1** looks at the rapid advancement of technology over the past two years and its implications for business adoption of AI.
+
+**Chapter 2** delves into the attitudes and perceptions of employees and leaders. Our research shows that employees are more ready for AI than their leaders imagine. In fact, they are already using AI on a regular basis; are three times more likely than leaders realize to believe that AI will replace 30 percent of their work in the next year; and are eager to gain AI skills. Still, AI optimists are only a slight majority in the workplace; a large minority (41 percent) are more apprehensive and will need additional support. This is where millennials, who are the most familiar with AI and are often in managerial roles, can be strong advocates for change.
+
+**Chapter 3** looks at the need for speed and safety in AI deployment. While leaders and employees want to move faster, trust and safety are top concerns. About half of employees worry about AI inaccuracy and cybersecurity risks. That said, employees express greater confidence that their own companies, versus other organizations, will get AI right. The onus is on business leaders to prove them right, by making bold and responsible decisions.
+
+**Chapter 4** examines how companies risk losing ground in the AI race if leaders do not set bold goals. As the hype around AI subsides, companies should put a heightened focus on practical applications that empower employees in their daily jobs. These applications can create competitive moats and generate measurable ROI. Across industries, functions, and geographies, companies that invest strategically can go beyond using AI to drive incremental value and instead create transformative change.
+
+**Chapter 5** looks at what is required for leaders to set their teams up for success with AI. The challenge of AI in the workplace is not a technology challenge. It is a business challenge that calls upon leaders to align teams, address AI headwinds, and rewire their companies for change.
+
+Imagine a world where machines not only perform physical labor but also think, learn, and make autonomous decisions. This world includes humans in the loop, bringing people and machines together in a state of superagency that increases personal productivity and creativity (see sidebar “AI superagency”). This is the transformative potential of AI, a technology with a potential impact poised to surpass even the biggest innovations of the past, from the printing press to the automobile. AI does not just automate tasks but goes further by automating cognitive functions. Unlike any invention before, AI-powered software can adapt, plan, guide—and even make—decisions. That’s why AI can be a catalyst for unprecedented economic growth and societal change in virtually every aspect of life. It will reshape our interaction with technology and with one another.
+
+> Scientific discoveries and technological innovations are stones in the cathedral of human progress.
+> 
+> Reid Hoffman, cofounder of LinkedIn and Inflection AI, partner at Greylock Partners, and author
+
+Many breakthrough technologies, including the internet, smartphones, and cloud computing, have transformed the way we live and work. AI stands out from these inventions because it offers more than access to information. It can summarize, code, reason, engage in a dialogue, and make choices. AI can lower skill barriers, helping more people acquire proficiency in more fields, in any language and at any time. AI holds the potential to shift the way people access and use knowledge. The result will be more efficient and effective problem solving, enabling innovation that benefits everyone.
+
+Over the past two years, AI has advanced in leaps and bounds, and enterprise-level adoption has accelerated due to lower costs and greater access to capabilities. Many notable AI innovations have emerged (Exhibit 1). For example, we have seen a rapid expansion of context windows, or the short-term memory of LLMs. The larger a [context window](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-context-window), the more information an LLM can process at once. To illustrate, Google’s Gemini 1.5 could process one million tokens in February 2024, while its Gemini 1.5 Pro could process two million tokens by June of that same year.4 Overall, we see five big innovations for business that are driving the next wave of impact: enhanced intelligence and reasoning capabilities, agentic AI, multimodality, improved hardware innovation and computational power, and increased transparency.
+
+![Image 2: Gen AI capabilities have evolved rapidly over the past two years.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex1-v3.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The text-based exhibit illustrates the evolution of capabilities of several gen AI large language models, or LLMs, from select frontier labs between 2022 and 2025. The is presented as a table comparing two time periods: 2022-2023 and January 2025. For each of five LLMs—Anthropic's Claude, Google's Gemini, Meta's Llama, Microsoft's Phi, and OpenAI's GPT—the exhibit shows a list of capabilities for each time period. In 2022-2023, all five platforms lacked multimodal capabilities, functioning primarily with text only. Anthropic's Claude, for example, showed limited contextual understanding and no tool usage. Google's Gemini, similarly, had limited real-time data integration and low personalization. Meta's Llama 1 exhibited fair reasoning but had difficulty with complex conversations and lacked API access. Microsoft's Phi-1 had fair reasoning limited to coding tasks, with focused training on a smaller dataset. OpenAI's GPT-3.5 demonstrated fair reasoning, scoring well on the SAT but poorly on the bar examination, while also displaying limited contextual understanding in complex conversations, though it did offer standard API access for text generation.
+
+By January 2025, a significant shift is apparent. Claude 3.5, Gemini 2.0 Flash, Llama 3.3, Phi-4, and OpenAI's model o1 all gained multimodal capabilities, incorporating text, audio, and images. Advanced reasoning capabilities, capable of multistep problem-solving and nuanced analysis, became common across most of the platforms. Enhanced contextual understanding, maintaining coherence during long dialogues, is also highlighted as an improvement. Furthermore, real-time data integration and advanced personalization features were added to some platforms. Finally, several platforms highlight improved or advanced API access, allowing for tools related to model and agent development and multimodal inputs. Source: Company websites and press releases. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Intelligence and reasoning are improving
+
+AI is becoming far more intelligent. One indicator is the performance of LLMs on standardized tests. OpenAI’s Chat GPT-3.5, introduced in 2022, demonstrated strong performance on high-school-level exams (for example, scoring in the 70th percentile on the SAT math and the 87th percentile on the SAT verbal sections). However, it often struggled with broader reasoning. Today’s models are near the intelligence level of people who hold advanced degrees. GPT-4 can so easily pass the Uniform Bar Examination that it would rank in the top 10 percent of test takers,5 and it can answer 90 percent of questions correctly on the US Medical Licensing Examination.6
+
+The advent of reasoning capabilities represents the next big leap forward for AI. Reasoning enhances AI’s capacity for complex decision making, allowing models to move beyond basic comprehension to nuanced understanding and the ability to create step-by-step plans to achieve goals. For businesses, this means they can fine-tune reasoning models and integrate them with domain-specific knowledge to deliver actionable insights with greater accuracy. Models such as OpenAI’s o1 or Google’s Gemini 2.0 Flash Thinking Mode are capable of reasoning in their responses, which gives users a human-like thought partner for their interactions, not just an information retrieval and synthesis engine.7
+
+![Image 3](https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/ai%20in%20action/superagency-ai-in-action-0-thumb-1536x1536.jpg?cq=50&mh=145&car=16:9&cpy=Center)
+
+### Agentic AI is acting autonomously
+
+> I’ve always thought of AI as the most profound technology humanity is working on . . . more profound than fire or electricity or anything that we’ve done in the past.
+> 
+> Sundar Pichai, CEO of Alphabet
+
+The ability to reason is growing more and more, allowing models to autonomously take actions and complete complex tasks across workflows. This is a profound step forward. As an example, in 2023, an _AI bot_ could support call center representatives by synthesizing and summarizing large volumes of data—including voice messages, text, and technical specifications—to suggest responses to customer queries. In 2025, an _AI agent_ can converse with a customer and plan the actions it will take afterward—for example, processing a payment, checking for fraud, and completing a shipping action.
+
+Software companies are embedding agentic AI capabilities into their core products. For example, Salesforce’s Agentforce is a new layer on its existing platform that enables users to easily build and deploy autonomous AI agents to handle complex tasks across workflows, such as simulating product launches and orchestrating marketing campaigns.8 Marc Benioff, Salesforce cofounder, chair, and CEO, describes this as providing a “digital workforce” where humans and automated agents work together to achieve customer outcomes.9
+
+### Multimodality is bringing together text, audio, and video
+
+Today’s AI models are evolving toward more advanced and diverse data processing capabilities across text, audio, and video. Over the last two years, we have seen improvements in the quality of each modality. For example, Google’s Gemini Live has improved audio quality and latency and can now deliver a human-like conversation with emotional nuance and expressiveness.10 Also, demonstrations of Sora by OpenAI show its ability to translate text to video.11
+
+### Hardware innovation is enhancing performance
+
+Hardware innovation and the resulting increase in compute power continue to enhance AI performance. Specialized chips allow faster, larger, and more versatile models. Enterprises can now adopt AI solutions that require high processing power, enabling real-time applications and opportunities for scalability. For example, an e-commerce company could significantly improve customer service by implementing AI-driven chatbots that leverage advanced graphics processing units (GPUs) and tensor processing units (TPUs). Using distributed cloud computing, the company could ensure optimal performance during peak traffic periods. Integrating edge hardware, the company could deploy models that analyze photos of damaged products to more accurately process insurance claims.
+
+### Transparency is increasing
+
+> AI, like most transformative technologies, grows gradually, then arrives suddenly.
+> 
+> Reid Hoffman, cofounder of LinkedIn and Inflection AI, partner at Greylock Partners, and author
+
+AI is gradually becoming less risky, but it still lacks greater transparency and explainability. Both are critical for improving AI safety and reducing the potential for bias, which are imperative for widescale enterprise deployment. There is still a long way to go, but new models and iterations are rapidly improving. Stanford University’s Center for Research on Foundation Models (CRFM) reports significant advances in model performance. Its Transparency Index, which uses a scale of 1 to 100, shows that Anthropic’s transparency score increased by 15 points to 51 and Amazon’s more than tripled to 41 between October 2023 and May 2024.12
+
+Beyond LLMs, other forms of AI and machine learning (ML) are improving explainability, allowing the outputs of models that support consequential decisions (for example, credit risk assessment) to be traced back to the data that informed them. In this way, critical systems can be tested and monitored on a near-constant basis for bias and other everyday harms that arise from model drift and shifting data inputs, which happens even in systems that were well calibrated before deployment.
+
+All of this is crucial for detecting errors and ensuring compliance with regulations and company policies. Companies have improved [explainability practices](https://www.mckinsey.com/capabilities/quantumblack/our-insights/building-ai-trust-the-key-role-of-explainability) and built necessary checks and balances, but they must be prepared to evolve continuously to keep up with growing model capabilities.
+
+Achieving AI superagency in the workplace is not simply about mastering technology. It is every bit as much about supporting people, creating processes, and managing governance. The next chapters explore the nontechnological factors that will help shape the deployment of AI in the workplace.
+
+Employees will be the ones to make their organizations AI powerhouses. They are more ready to embrace AI in the workplace than business leaders imagine. They are more familiar with AI tools, they want more support and training, and they are more likely to believe AI will replace at least a third of their work in the near future. Now it’s imperative that leaders step up. They have more permission space than they realize, so it’s on them to be bold and capture the value of AI. Now.
+
+> People are using \[AI\] to create amazing things. If we could see what each of us can do 10 or 20 years in the future, it would astonish us today.
+> 
+> Sam Altman, cofounder and CEO of OpenAI
+
+### Beyond the tipping point
+
+In our survey, nearly all employees (94 percent) and C-suite leaders (99 percent) report having some level of familiarity with gen AI tools. Nevertheless, business leaders underestimate how extensively their employees are using gen AI. C-suite leaders estimate that only 4 percent of employees use gen AI for at least 30 percent of their daily work, when in fact that percentage is three times greater, as self-reported by employees (Exhibit 2). And while only a total of 20 percent of leaders believe employees will use gen AI for more than 30 percent of their daily tasks within a year, employees are twice as likely (47 percent) to believe they will (see sidebar “Who is using AI at work? Nearly everyone, even skeptical employees”).
+
+The good news is that our survey suggests three ways companies can accelerate AI adoption and move toward AI maturity.
+
+![Image 4: Employees are three times more likely to be using gen AI today than their leaders expect.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex2.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit shows the anticipated timeline for US employees' and business leaders’ use of gen AI for more than 30 percent of their daily work tasks, presented as two stacked bar charts, one for C-suite respondents and one for employees. The segments are broken down into five categories representing different timeframes: Already using, less than a year, 1-5 years, over 5 years, and don't anticipate it. A final category, not sure, is also included. A key finding highlighted in the chart is that employees are three times more likely to be using gen AI today than their leaders expect (4 percent of C-suite respondents estimate that employees are currently using gen AI for more than 30 percent of their daily tasks, while 13 percent of employees self-report they are currently doing so). For the C-suite, 16 percent expect employees to start using gen AI for more than 30 percent of their daily tasks within less than a year, 56 percent anticipate such adoption within 1-5 years, 11 percent expect it in over 5 years, and 10 percent don't anticipate employees will ever use gen AI for 30 percent of their work tasks. 3 percent of C-suite respondents are unsure. 34 percent of employees expect to use gen AI for more than 30 percent of their work tasks in less than a year, 37 percent within 1-5 years, 5 percent in over 5 years, and 7 percent don't anticipate ever using it in this way. 4 percent of employees are unsure. Source: McKinsey US CxO survey, Oct–Nov 2024; McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Leaders can invest more in their employees
+
+As noted at the beginning of this chapter, employees anticipate AI will have a dramatic impact on their work. Now they would like their companies to invest in the training that will help them succeed. Nearly half of employees in our survey say they want more formal training and believe it is the best way to boost AI adoption. They also would like access to AI tools in the form of betas or pilots, and they indicate that incentives such as financial rewards and recognition can improve uptake.
+
+Yet employees are not getting the training and support they need. More than a fifth report that they have received minimal to no support (Exhibit 3). Outside the United States, employees also want more training (see sidebar “Global perspectives on training”).
+
+![Image 5: Employees long for more support and training on gen AI.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex3-v2.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The first section of the exhibit is a horizontal bar chart showing the percentage of US employees who believe that specific company initiatives would increase their daily use of gen AI tools. Formal gen AI training from their organization scored highest at 48 percent, followed by seamless integration into existing workflows (45 percent), access to gen AI tools (41 percent), and incentives and rewards (40 percent). Lower percentages were observed for usage of gen AI being a requirement for a certification program (30 percent), explicit instructions from managers to use gen AI (30 percent), being involved in the development of the tools (29 percent), and OKRs/KPIs tied to gen AI usage (22 percent).
+
+The second section is a stacked pair of segmented bar charts illustrating the perceived level of support for gen AI capability building at their organizations, comparing current vs in three years. This chart shows the distribution of responses across four levels of support: not needed, none/minimal, moderate to significant, and fully supported. Currently, 6 percent of employees report that support for gen AI in their organizations is not needed, 22 percent report they receive none/minimal support, 44 percent report moderate to significant support, and 29 percent report they are fully supported. Looking ahead to three years in the future, these percentages are projected to shift considerably: gen AI support not needed drops to 4 percent, none/minimal support for gen AI usage decreases to 10 percent, moderate to significant support for gen AI usage increases to 56 percent, and fully supported increases to 31 percent. Source: McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+Sidebar
+
+Global perspectives on training
+-------------------------------
+
+**To get a clearer picture** of global AI adoption trends, we looked at trends across five countries: Australia, India, New Zealand, Singapore, and the United Kingdom. Broadly speaking, these employees and C-suite leaders—the “international” group in this report—have similar views of AI as their US peers. In some key areas, however, including the topic of training, their experiences differ.
+
+Many international employees are concerned about insufficient training, even though they report receiving far more support than US employees. Some 84 percent of international employees say they receive significant or full organizational support to learn AI skills, versus just over half of US employees. International employees also have more opportunities to participate in developing gen AI tools at work than their US counterparts, with differences of at least ten percentage points in activities such as providing feedback, beta testing, and requesting specific features (exhibit).
+
+![Image 6: International employees get more encouragement to use gen AI tools.](http://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex-box1-v2.svgz)
+
+### C-suite leaders can help millennials lead the way
+
+Many millennials aged 35 to 44 are managers and team leaders in their companies. In our survey, they self-report having the most experience and enthusiasm about AI, making them natural champions of transformational change. Millennials are the most active generation of AI users. Some 62 percent of 35- to 44-year-old employees report high levels of expertise with AI, compared with 50 percent of 18- to 24-year-old Gen Zers and 22 percent of baby boomers over 65 (Exhibit 4). By tapping into that enthusiasm and expertise, leaders can help millennials play a crucial role in AI adoption.
+
+![Image 7: Millennials aged 35 to 44 are AI optimists, with 90 percent indicating confidence in their gen AI abilities.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex4.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit is a grid of proportional area charts displaying US employee sentiment toward gen AI by age group. Each row represents a different sentiment, from top to bottom: has extensive familiarity with gen AI, is comfortable using gen AI at work, provides feedback on gen AI tools, and wants to participate in the design of gen AI tools. The columns represent age groups: 18-24, 25-34, 35-44, 45-54, 55-64, and 65+. The data is presented as percentages of respondents who agreed with each sentiment within each age group.
+
+The chart reveals that the 35-44 age group exhibits the most positive sentiment across most categories. For example, 90 percent of this group reports being comfortable using gen AI at work, the highest percentage among all age groups for this metric. This group also shows the highest percentage (62 percent) reporting extensive familiarity with gen AI. In contrast, the 55-64 and 65+ age groups consistently show lower percentages across all four metrics, with only 26 percent and 22 percent of employees in these age groups reporting extensive familiarity with gen AI respectively. The 18-24, 25-34, and 45-54 age groups show intermediate levels of positive sentiment, generally lower than the 35-44 group but higher than the 55-64 and 65+ age groups. Source: McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+Since many millennials are managers, they can support their teams to become more adept AI users. This helps push their companies toward AI maturity. Two-thirds of managers say they field questions from their team about how to use AI tools at least once a week, and a similar percentage say they recommend AI tools to their teams to solve problems (Exhibit 5).
+
+![Image 8: Two-thirds of managers regularly act as sounding boards for their teams on gen AI.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex5.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit examines US manager respondents and their experiences with gen AI tools. The exhibit is composed of two main sections.
+
+The top section of the exhibit examines the frequency of inquiries that managers field from their employees about using new gen AI tools at work. This is depicted as a horizontal bar chart showing percentages of respondents. 5 percent of managers report less than quarterly inquiries; 5 percent report quarterly inquiries; 12 percent report inquiries once a month; 15 percent report once a week; 28 percent report a few times a week; 9 percent report once a day; and 16 percent report multiple times a day. Finally, 10 percent of report not at all.
+
+The second section explores the use of gen AI tools to resolve team member challenges. This section uses two donut charts, each showing percentages of respondents. The first donut chart indicates that 68 percent of managers report recommending a gen AI tool to solve a team member's challenge in the past month. The second donut chart shows that 86 percent of managers who recommended a gen AI tool report that the tool was successful in resolving the team member’s challenge. Source: McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Since leaders have the permission space, they can be bolder
+
+In many transformations, employees are not ready for change, but AI is different. Employee readiness and familiarity are high, which gives business leaders the permission space to act. Leaders can listen to employees describe how they are using AI today and how they envision their work being transformed. They also can provide employees with much-needed training and empower managers to move AI use cases from pilot to scale.
+
+It’s critical that leaders meet this moment. It’s the only way to accelerate the probability that their companies will reach AI maturity. But they must move with alacrity, or they will fall behind.
+
+AI technology is advancing at record speed. ChatGPT was released about two years ago; OpenAI reports that usage now exceeds 300 million weekly users13 and that over 90 percent of Fortune 500 companies employ its technology.14 The internet did not reach this level of usage until the early 2000s, nearly a decade after its inception.
+
+> Soon after the first automobiles were on the road, there was the first car crash. But we didn’t ban cars—we adopted speed limits, safety standards, licensing requirements, drunk-driving laws, and other rules of the road.
+> 
+> Bill Gates, cofounder of Microsoft
+
+The majority of employees describe themselves as AI optimists; Zoomers and Bloomers make up 59 percent of the workplace. Even Gloomers, who are one of the two less-optimistic segments in our analysis, report high levels of gen AI familiarity, with over a quarter saying they plan to use AI more next year.
+
+Business leaders need to embrace this speed and optimism to ensure that their companies don’t get left behind. Yet despite all the excitement and early experimentation, 47 percent of C-suite leaders say their organizations are developing and releasing gen AI tools too slowly, citing talent skill gaps as a key reason for the delay (Exhibit 6).
+
+![Image 9: Half of business leaders believe the development and release of gen AI tools is too slow in their organizations.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex6.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit shows US C-suite executive sentiment toward the pace of development and release of gen AI tools within their organizations, in the form of two segmented bar charts.
+
+The first bar chart presents the overall perception of the pace, where 47 percent of respondents find the pace to be too slow, while 45 percent feel it is about right, and a smaller 9 percent consider it too fast. The second bar chart delves into the top reasons behind the perceived slow pace of gen AI tool development and release in executives’ organizations, focusing on the responses from those who indicated that development was too slow. The most prominent reason cited is talent skill gaps, accounting for 46 percent of these responses. Resourcing constraints followed closely, with 38 percent of respondents identifying this as a key factor. Complex approval process and technical complexity each receive 8 percent of the responses. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+Business leaders are trying to meet the need for speed by increasing investments in AI. Of the executives surveyed, 92 percent say they expect to boost spending on AI in the next three years, with 55 percent expecting investments to increase by at least 10 percent from current levels. But they can no longer just spend on AI without expecting results. As companies move on from the initial thrill of gen AI, business leaders face increasing pressure to generate ROI from their gen AI deployments.
+
+We are at a turning point. The initial AI excitement may be waning, but the technology is accelerating. Bold and purposeful strategies are needed to set the stage for future success. Leaders are taking the first step: One quarter of those executives we surveyed have defined a gen AI road map, while just over half have a draft that is being refined (Exhibit 7). With technology changing this fast, all road maps and plans will evolve constantly. For leaders, the key is to make some clear choices about what valuable opportunities they choose to pursue first—and how they will work together with peers, teams, and partners to deliver that value.
+
+![Image 10: Most C-suite respondents have road maps to guide their gen AI strategies and have begun identifying use cases.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex7.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit is comprised of two horizontal segmented bar charts. The first chart displays the share of US C-suite respondents who have a defined gen AI roadmap. 21 percent report not currently having a roadmap but one was in progress, 53 percent indicate having a roadmap that is still being refined, and 25 percent state that a comprehensive roadmap is already in place.
+
+The second bar chart illustrates the level to which US C-suite respondents have identified revenue-generating use cases for gen AI. 1 percent of respondents indicate they have not yet identified any such use cases, while 10 percent report they have minimally identified, 38 percent have partially identified, 39 percent have mostly identified, and 12 percent have fully identified such use cases. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends
+
+### The dilemma of speed versus safety
+
+There’s a spanner in the works: Regulation and safety often continue to be seen as insurmountable challenges rather than opportunities. Leaders want to increase AI investments and accelerate development, but they wrestle with how to make AI safe in the workplace. Data security, hallucinations, biased outputs, and misuse (for example, creating harmful content or enabling fraud) are challenges that cannot be ignored. Employees are well aware of AI’s safety challenges. Their top concerns are cybersecurity, privacy, and accuracy (Exhibit 8). But what will it take for leaders to address these concerns while also moving ahead at light speed?
+
+![Image 11: Employees have concerns about gen AI—namely cybersecurity risks, inaccuracies, and data leaks.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex8.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit shows the share of US employees with concerns regarding gen AI, through a series of proportional area charts, each representing a specific risk associated with gen AI. The size of each chart indicates the percentage of US employees who cite that risk as a concern. Cybersecurity risks are cited by 51 percent of respondents, inaccuracies by 50 percent, and concerns about personal privacy by 43 percent. Intellectual property infringement is a concern for 40 percent of respondents, followed by workforce displacement (35 percent), explainability (34 percent), and equity and fairness (30 percent). Less prominent but still significant concerns were regulatory compliance issues (28 percent), national security (24 percent), damage to organizational reputation (16 percent), environmental impact (15 percent), physical safety (14 percent), and political stability (13 percent). Source: McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Employees trust business leaders to get it right
+
+While employees acknowledge the risks and even the likelihood that AI may replace a considerable portion of their work, they place high trust in their own employers to deploy AI safely and ethically. Notably, 71 percent of employees trust their employers to act ethically as they develop AI. In fact, they trust their employers more than universities, large technology companies, and tech start-ups (Exhibit 9).
+
+![Image 12: Employees trust their employers most for a safe rollout of gen AI.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex9.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit depicts the share of US employees who highly trust different institutions to deploy gen AI tools responsibly, safely, and ethically. The data is presented as four separate unit charts, each representing a distinct institution: employer, universities, large tech companies, and start-ups. Each unit chart consists of a 10x10 matrix of squares. The number of light blue squares within each grid represents the percentage of employees who express high trust in each institution. The remaining squares are light gray. Employers receive the highest level of trust (71 percent), followed by universities (67 percent), large tech companies (61 percent), and start-ups (51 percent). Source: McKinsey US employee survey, Oct–Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+According to our research, this is in line with a broader trend in which employees show higher trust in their employers to do the right thing in general (73 percent) than in other institutions, including the government (45 percent). This trust should help leaders act with confidence as they tackle the speed-versus-safety dilemma. That confidence also applies outside the United States, even though employees in other regions may have more desire for regulation (see sidebar “Global perspectives on regulation”).
+
+Sidebar
+
+Global perspectives on regulation
+---------------------------------
+
+**A high percentage** of international C-suite leaders we surveyed across five regions (Australia, India, New Zealand, Singapore, and the United Kingdom) are Gloomers, who favor greater regulatory oversight. Between 37 to 50 percent of international C-suite leaders self-identify as Gloomers, versus 31 percent in the United States. This may be because top-down regulation is more accepted in many countries outside the United States. Of the global C-suite leaders surveyed, half or more worry that ethical use and data privacy issues are holding back their employees from adopting gen AI.
+
+However, our research shows that attitudes about regulation are not inhibiting the economic expectations of business leaders outside the United States. More than half of the international executives (versus 41 percent of US executives) indicate they want their companies to be among the first adopters of AI, with those in India and Singapore being especially bullish (exhibit). The desire of international business leaders to be AI first movers can be explained by the revenue they expect from their AI deployments. Some 31 percent of international C-suite leaders say they expect AI to deliver a revenue uplift of more than 10 percent in the next three years, versus just 17 percent of US leaders. Indian executives are the most optimistic, with 55 percent expecting a revenue uplift of 10 percent or more over the next three years.
+
+![Image 13: Half of international C-suite respondents want to be early adopters.](http://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex-box2-v3.svgz)
+
+### Risk management for gen AI
+
+### Most Popular Insights
+
+In _Superagency_, Hoffman argues that new risks naturally accompany new capabilities—meaning they should be managed but not necessarily eliminated.15 Leaders need to contend with external threats, such as infringement on intellectual property (IP), AI-enabled malware, and internal threats that arise from the AI adoption process. The first step in [building fit-for-purpose risk management](https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/implementing-generative-ai-with-speed-and-safety) is to launch a comprehensive assessment to identify potential vulnerabilities in each of a company’s businesses. Leaders can then establish a robust governance structure, implement real-time monitoring and control mechanisms, and ensure continuous training and adherence to regulatory requirements.
+
+One powerful control mechanism is respected third-party benchmarking that can increase AI safety and trust. Examples include Stanford CRFM’s Holistic Evaluation of Language Models (HELM) initiative—which offers comprehensive benchmarks to assess the fairness, accountability, transparency, and broader societal impact of a company’s AI systems—as well as MLCommons’s AILuminate tool kit on which researchers from Stanford collaborated.16 Other organizations such as the Data & Trust Alliance unite large companies to create cross-industry metadata standards that aim to bring more transparency to enterprise AI models.
+
+While benchmarks have significant potential to build trust, our survey shows that only 39 percent of C-suite leaders use them to evaluate their AI systems. Furthermore, when leaders do use benchmarks, they opt to measure operational metrics (for example, scalability, reliability, robustness, and cost efficiency) and performance-related metrics (including accuracy, precision, F1 score, latency, and throughput). These benchmarking efforts tend to be less focused on ethical and compliance concerns: Only 17 percent of C-suite leaders who benchmark say it’s most important to measure fairness, bias, transparency, privacy, and regulatory issues (Exhibit 10).
+
+![Image 14: More than a third of C-suite respondents use benchmarks for gen AI, but with less focus on ethical metrics.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex10.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit presents data on the utilization of benchmarks for gen AI tools among US C-suite executives. The exhibit is in two parts. The first part is a pie chart showing that 39 percent of respondents have benchmark standards for gen AI tools used by their employees. This indicates a significant minority of C-suite executives currently employ such standards. The second part of the exhibit is a horizontal bar chart displaying the benchmarks considered most important by the C-suite respondents. Performance-related benchmarks are deemed most important by 41 percent of respondents. Operational benchmarks follow closely behind, cited by 35 percent of participants. Ethical and compliance benchmarks are a lower priority, selected by 17 percent of the respondents, while other benchmarks account for only 7 percent of responses. This reveals a noteworthy disparity, suggesting C-suite leaders put a stronger emphasis on benchmarking the performance and operational aspects of AI rather than benchmarking ethical considerations. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+The focus on operational and performance metrics reflects the understandable desire to prioritize immediate technical and business outcomes. But ignoring ethical considerations can come back to haunt leaders. When employees don’t trust AI systems, they are less likely to accept them. Although benchmarks are not a panacea to eliminate all risk and can’t ensure that AI systems are fully efficient, ethical, and safe, they are a useful tool.
+
+Even companies that excel at all three categories of AI readiness—technology, employees, and safety—are not necessarily scaling or delivering the value expected. Nevertheless, leaders can harness the power of big ambitions to transform their companies with AI. The next chapter examines how.
+
+Most organizations that have invested in AI are not getting the returns they had hoped. They are not winning the full economic potential of AI. About half of C-suite leaders at companies that have deployed AI describe their initiatives as still developing or expanding (Exhibit 11). They have had the time to move further. Our research shows that more than two-thirds of leaders launched their first gen AI use cases over a year ago.
+
+> This is a time when you should be getting benefits \[from AI\] and hope that your competitors are just playing around and experimenting.
+> 
+> Erik Brynjolfsson, professor at Stanford University and director of the Digital Economy Lab at the Stanford Institute for Human-Centered Artificial Intelligence (HAI)
+
+![Image 15: Only 1 percent of C-suite respondents describe their gen AI rollouts as mature.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex11-v2.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit is a horizontally stacked bar graph that shows the percentage of C-suite respondents who describe their gen AI rollouts by maturity stages. 8 percent of respondents report their organizations are in the nascent stage, characterized by minimal gen AI initiatives with no significant impact on employee workflows. A significantly larger portion, 39 percent, describe their organizations as being in the emerging stage, where gen AI pilot projects are starting to show value. The developing stage, where gen AI implementation is changing certain workflows and increasing efficiency, accounts for 31 percent of respondents. 22 percent of respondents place their organizations in the expanding stage, indicating that gen AI is scaled across departments, transforming workflows, and enhancing operations. Finally, only 1 percent of C-suite respondents describe their gen AI rollouts as mature, meaning that gen AI is fundamentally changing how work is done and driving substantial business outcomes. The exhibit highlights that the figures might not add up to 100 percent due to rounding. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+Pilots fail to scale for many reasons. Common culprits are poorly designed or executed strategies, but a lack of bold ambitions can be just as crippling. This chapter looks at patterns governing today’s investments in AI across industries and suggests the potential awaiting those who can dream bigger.
+
+### AI investments vary by industry
+
+Different industries have different AI investment patterns. Within the top 25 percent of spenders, companies in healthcare, technology, media and telecom, advanced industries, and agriculture are ahead of the pack (Exhibit 12). Companies in financial services, energy and materials, consumer goods and retail, hardware engineering and construction, and travel, transport, and logistics are spending less. The consumer industry—despite boasting the second-highest potential for value realization from AI—seems least willing to invest, with only 7 percent of respondents qualifying in the top quartile, based on self-reported percentage of revenue spend on gen AI. That hesitation may be explained by the industry’s low average net margins in mass-market categories and thus higher confidence thresholds for adopting costly organization-wide technology upgrades.
+
+![Image 16: Companies’ gen AI spend does not match the economic potential in their industries.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex12-v2.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The scatterplot exhibit depicts how companies’ gen AI spend does not match the economic potential in their industries. The exhibit illustrates that several industries with a high economic potential from gen AI are not yet spending significantly on the technology. It shows the relationship between the industry share of overall survey respondents and the industry share of top-quartile gen AI spending. On both axes, the top value is set to 35 percent. The size of each circle represents the economic potential from gen AI in billions of dollars for each industry.
+
+Light blue circles represent industries where the share in the top quartile of gen AI spending is higher than their overall survey share. These include healthcare, which has a large circle indicating significant economic potential from gen AI, and technology, also with a substantial circle suggesting large economic potential. Media and telecom and advanced Industries are also shown in light blue to illustrate strong economic potential from gen AI, but with smaller circles indicating less economic potential than healthcare and technology. Agriculture is represented by a small light blue circle.
+
+Dark grey circles represent industries where the share in the top quartile of gen AI spending is lower than their overall survey share. These include financial services, which has a large circle showing high economic potential. Energy and materials, consumer goods and retail, hardware engineering and construction, and travel, transportation, and logistics are represented by overlapping circles of varying sizes, implying a range of economic potential.
+
+No industry scores higher than 20 percent on the share of overall survey respondents. Some industries such as media and telecom, advanced Industries, and agriculture account for around 5 percent or less of overall survey respondents. Industries that scored high percentages on the share of top-quartile gen AI spending include healthcare and technology.
+
+Source: The economic potential of gen AI: The next productivity frontier, McKinsey. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### In some industries, employees are cautious
+
+Employees in the public sector, as well as the aerospace and defense and semiconductor industries, are largely skeptical about the development of AI’s future. In the public sector and aerospace and defense, only 20 percent of employees anticipate that AI will have a significant impact on their daily tasks in the next year, versus roughly two-thirds in media and entertainment (65 percent) and telecom, at 67 percent (Exhibit 13). What’s more, our survey shows that just 31 percent of social sector employees trust that their employers will develop AI safely. That’s the least confidence in any industry; the cross-industry average is 71 percent.
+
+We strive to provide individuals with disabilities equal access to our website. If you would like information about this content we will be happy to work with you. Please email us at: [McKinsey\_Website\_Accessibility@mckinsey.com](mailto:McKinsey_Website_Accessibility@mckinsey.com)
+
+Employees’ relative caution about AI in these sectors likely reflects near-term challenges posed by external constraints such as rigorous regulatory oversight, outdated IT systems, and lengthy approval processes.
+
+### There’s a lot of headroom in some functions
+
+Our research finds that the functional areas where AI presents the greatest economic potential are also those where employee outlook is lukewarm. Employees in sales and marketing, software engineering, customer service, and R&D contribute roughly three-quarters of AI’s total economic potential, but the self-reported optimism of employees in these functions is middling (Exhibit 14). It may be the case that these functions have piloted AI projects, leading employees to be more realistic about AI’s benefits and limitations. Or perhaps the economic potential has made them worry that AI could replace their jobs. Whatever the reasons, leaders in these functions might consider investing more in employee support and elevating the change champions who can improve that sentiment.
+
+![Image 17: The employees most optimistic about gen AI do not represent the most economic value potential.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex14-v3.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The exhibit is made up of a scatter plot and a separate bar chart visualizing the relationship between the potential economic value from gen AI and the share of employees with a positive outlook on gen AI, categorized by business function. The exhibit illustrates that the functions with the employees most optimistic about gen AI are not the functions with the greatest potential economic value from gen AI.
+
+The scatter plot displays business functions: sales and marketing, software engineering, customer service, R&D, legal, risk, and compliance, operations, HR, strategy, supply chain, finance, procurement, and IT. Each function is represented by a data point, with its horizontal position indicating the percentage of employees expressing a positive outlook on gen AI, and its vertical position representing the potential economic value of gen AI in those functions, in trillions of dollars. Sales and marketing shows the highest potential economic value and around 50 percent of employees with a positive outlook. Software engineering is the function with second-highest economic potential from gen AI, with again about 50 percent of employees in that function reporting being optimistic about gen AI. Customer service and R&D also show about 50 percent of employees with a positive outlook on gen AI, but a much lower potential economic value. Several functions, such as operations, HR, Strategy, and IT, cluster together with low potential economic value and similarly middling employee optimism. Employes in IT, finance, and procurement are the most optimistic about gen AI, with about 70 percent of employees reporting positive sentiment, but these functions represent low economic potential from gen AI.
+
+The adjacent bar chart breaks down the share of the total potential economic value contributed by each function. Sales and marketing accounts for 28 percent of the total potential economic value from gen AI, followed by software engineering at 25 percent. Customer service contributes 11 percent, while R&D contributes 9 percent. The remaining 27 percent is attributed to other functions. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Gen AI has not delivered enterprise-wide ROI, but that can change
+
+Across all industries, surveyed C-level executives report limited returns on enterprise-wide AI investments. Only 19 percent say revenues have increased more than 5 percent, with another 39 percent seeing a moderate increase of 1 to 5 percent, and 36 percent reporting no change (Exhibit 15). And only 23 percent see AI delivering any favorable change in costs.
+
+![Image 18: Gen AI has not yet delivered significant return on investment for enterprises.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex15.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+In this exhibit, a pair of segmented bar charts displays US CxOs’ perceptions of whether gen AI has delivered significant return on investment for their enterprises, with details on whether they believe gen AI has impacted their revenues and costs. The data is divided into two bar graphs, one for revenues and one for costs, each presented as a stacked bar chart showing the percentage of respondents who report various levels of change.
+
+In the revenues section, 39 percent of respondents report that gen AI has delivered a revenue increase of 1–5 percent, 12 percent report an increase of 6–10 percent, and 7 percent report a revenue increase of more than 10 percent. A significant 36 percent report no change in revenue, while a small percentage (2 percent) report a decrease. An additional 3 percent are not tracking revenue related to gen AI, and 2 percent indicate they do not know.
+
+The costs section presents a similar breakdown. A substantial 31 percent of respondents report that gen AI has resulted in no change in their organizations’ costs, followed by 29 percent who report an increase of 1–10 percent. Furthermore, 17 percent report a cost decrease of 1–10 percent, while 6 percent report a decrease of 11–19 percent. A smaller percentage of 10 percent indicate a cost increase of 11–19 percent, while 4 percent report a cost increase of 20 percent or more. Similar to the revenue section, 2 percent of respondents are not tracking cost changes related to gen AI, and 3 percent indicate they do not know. The exhibit highlights that the figures might not add up to 100 percent due to rounding. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+Despite this, company leaders are optimistic about the value they can capture in the coming years. A full 87 percent of executives expect revenue growth from gen AI within the next three years, and about half say it could boost revenues by more than 5 percent in that time frame (Exhibit 16). That suggests quite a lot could change for the better over the next few years.
+
+![Image 19: Half of C-suite respondents expect gen AI to deliver more than 5 percent revenue growth in the next three years.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex16.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+In this exhibit, a segmented bar graph shows the extent to which C-suite executives perceive gen AI will affect their organizations’ revenues over the next three years, and the percentage of respondents who anticipate gen AI will result in different levels of revenue change. The bar graph shows that 36 percent of respondents anticipate that gen AI will deliver a 1-5 percent increase in revenue, 34 percent anticipate a 6-10 percent increase in revenue, and 17 percent anticipate a greater than 10 percent increase in revenue. In contrast, 10 percent of respondents anticipate that gen AI will deliver no change in revenue. A total of 51 percent of respondents anticipate that gen AI will deliver a revenue increase of over 5 percent. No respondents anticipate that gen AI will deliver a decrease in revenue, while 3 percent are not currently tracking revenue changes related to gen AI. Source: McKinsey US CxO survey, Oct-Nov 2024. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+### Big ambitions can help solve big problems
+
+To drive revenue growth and improve ROI, business leaders may need to commit to transformative AI possibilities. As the hype around AI subsides and the focus shifts to value, there is a heightened attention on practical applications that can create competitive moats.
+
+> \[It\] is critical to have a genuinely inspiring vision of the future \[with AI\] and not just a plan to fight fires.
+> 
+> Dario Amodei, cofounder and CEO of Anthropic
+
+To assess how far along companies are in this shift, we examined three categories of AI applications: personal use, business use, and societal use (see sidebar “AI’s potential to enhance our personal lives”). We mapped over 250 applications from our work and publicly shared examples to understand the spectrum of impact levels, from localized use cases to transformations with more universal impact. Our conclusion? Given that most companies are early in their AI journeys, most AI applications are localized use cases still in the pilot stages (Exhibit 17).
+
+![Image 20: Over the past two years, personal and business gen AI applications have often focused on localized impact.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex17.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+This text-based exhibit illustrates how gen AI use cases can be categorized by their impact levels, ranging from localized impact to universal impact. The text table presents three sections of gen AI deployments: use cases, domains, and transformations. Within each section, examples of gen AI applications are shown, with colored dots indicating whether the type of primary impact for each example is personal, business, or societal. The use cases section focuses on gen AI deployments that provide productivity boosts through automation of specific tasks or jobs. Examples include conducting smarter searches for everyday information (personal), planning events (personal), assessing candidate recruiting performance (business), accelerating contract generation (business), processing customer information faster (business), and identifying high-value consumers for tailored sales actions (business). These gen AI examples are all positioned on the more localized end of the impact spectrum.
+
+The domains section shows gen AI applications that reshape multiple roles across an area of operations. These are all classified as having a primary business impact and include developing and executing data-based campaigns, conducting synthetic customer research, conducting real-time supply chain monitoring, and accelerating coding processes. These use cases fall in the middle of the spectrum between more localized and more universal impact levels.
+
+Finally, the transformations section highlights use cases that fundamentally reshape industries, fields, and lives. These are positioned at the more universal end of the impact spectrum and include accelerating discovery and manufacturing in material science (business), predicting natural disasters and supporting crisis management strategy (societal), and accelerating drug development by reducing cost and time (societal). This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+In many cases, that’s perfectly appropriate. But creating AI applications that can revolutionize industries and create transformative value requires something more. Robotics in manufacturing, predictive AI in renewable energy, drug development in life sciences, and personalized AI tutors in education—these are the kinds of transformative efforts that can drive the greatest returns.17 These weren’t created from a reactive mindset. They are the result of inspirational leadership, a unique concept of the future, and a commitment to transformational impact. This is the kind of courage needed to develop AI applications that can revolutionize industries.
+
+> It is in \[the\] collaboration between people and algorithms that incredible scientific progress lies over the next few decades.
+> 
+> Demis Hassabis, cofounder and CEO of Google DeepMind
+
+To truly harness the potential of AI, companies must challenge themselves to envision and implement more breakthrough initiatives. Success in the era of AI hinges not just on technology deployment or employee willingness but also on visionary leadership. The ingredients are here. The technology is already highly capable and rapidly advancing, and employees are more ready than leaders think. Leaders have more permission space than they realize to deploy AI quickly in the workplace. To do so, leaders need to stretch their ambitions toward systematic change, laying the foundation for real competitive differentiation. If they want to be more ambitious about AI, companies must increase the proportion of transformational initiatives in their portfolios. The next chapter examines the headwinds that leaders must overcome—and how they can do so.
+
+Sidebar
+
+AI’s potential to enhance our personal lives
+--------------------------------------------
+
+**Outside of the business context,** individuals are increasingly using AI in their personal lives. In previous research, we analyzed the potential impact of AI across 77 personal activities and across age, gender, and working status in the United States. While individuals have limited desire to automate certain personal activities, including leisure, sleeping, and fitness, the data shows significant opportunity for AI combined with other technologies to help with chores or labor-intensive tasks. Already in 2024, our research identified about an hour of such daily activities with the technical potential to be automated. By 2030, expansion of use cases and continued improvements in AI safety could increase automation potential up to three hours per day. When people use AI-enabled tools—say, an autonomous vehicle for transportation or an interactive personal finance bot—they can repurpose time for personal fulfillment activities or being productive in other ways.
+
+Using human-centric design and tapping into gen AI’s potential for “emotional intelligence” are unlocking new personal AI applications that go beyond basic efficiencies. Individuals are beginning to use conversational and reasoning AI models for counseling, coaching, and creative expression. For example, people are using conversational AI for advice and emotional support or to bring their artistic visions to life with only verbal cues. Further, to the notion that AI superagency will advance society, AI has potential to become a democratizing force, making experiences that were previously expensive or exclusive—such as animation generation, career coaching, or tax advice—available to much wider audiences.
+
+There is no question: AI offers a rare and phenomenal opportunity. Almost 90 percent of leaders anticipate that deploying AI will drive revenue growth in the next three years. But securing that growth entails corporate transformation, and businesses have a poor track record in this area. Nearly [70 percent of transformations fail](https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson).
+
+> As we build this next generation of AI, we made a conscious design choice to put human agency both at a premium and at the center of the product. For the first time, we have the access to AI that is as empowering as it is powerful.
+> 
+> Satya Nadella, chairman and CEO of Microsoft
+
+To make their companies part of the minority that succeed, C-level executives must turn the mirror on themselves. They need to embrace the vital role their leadership plays. C-suite leaders participating in our survey are more than twice as likely to say employee readiness is a barrier to adoption as they are to blame their own role. But as previously noted, employees indicate that they are quite ready.
+
+This chapter looks at how leaders can take the reins, recognizing and owning the fact that the AI opportunity requires more than technology implementation. It demands a strategic transformation. There is no denying that companies face a set of AI headwinds. To tackle these challenges, leadership teams will need to commit to [rewiring their enterprises](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-rewired-enterprise-how-five-companies-built-to-outcompete).
+
+### The operational headwinds that slow execution
+
+Business adoption of AI faces several operational headwinds. Our interviews and research surfaced five that are most challenging: aligning leadership, addressing cost uncertainty, workforce planning, managing supply chain dependencies, and meeting the demand for explainability.
+
+#### Leadership alignment is a challenging but critical first step
+
+Securing consensus from senior leaders on a strategy-led gen AI road map is no simple task. The key to meeting this challenge is first recognizing that leadership alignment cannot be oversimplified or assumed. The process requires ongoing engagement from senior leaders across business domains, each of which may have distinct objectives and risk appetites. Together, leaders must clearly define where value lies, how AI will drive this value, and how risk will be mitigated. They must collectively establish metrics for performance evaluation and investment recalibration. To facilitate alignment, they may want to appoint a gen AI value and risk leader or institute an enterprise-wide leadership and orchestration function. These actions can enhance collaboration among business, technology, and risk teams. Although challenging, aligning leadership is a crucial step to ensure that AI projects are not disparate, avoid liability, and deliver transformative business outcomes.
+
+#### Cost uncertainty makes it difficult for enterprises to predict ROI
+
+Many companies are still determining if they can “take” AI solutions off the shelf from tech vendors or if they need to “shape” and customize them, which can be more costly but brings the potential for greater differentiation from competitors. Additionally, while leaders can budget for AI pilots, the full cost of building and managing AI applications at scale remains uncertain. Planning for a limited pilot is very different from assessing the costs of a mature solution that helps most employees multiple times a day. These factors lead to tough tradeoffs. But to move at the pace of AI, technology leaders must prioritize accelerated decision-making.
+
+#### Workforce planning is more difficult than ever
+
+There is still a world of uncertainty to manage. Employers do not know how many AI experts they will need with what type of skills, whether that talent bench even exists, how quickly they can source people, and how they can remain an attractive employer for in-demand hires after they come aboard. On the other hand, they do not know how fast AI may depress demand for other skills and thus require workforce rebalancing and retraining.
+
+#### Supply chain dependencies can wreak havoc
+
+Fragile supply chains can expose enterprises to disruptions and technical, regulatory, and legal challenges. The AI supply chain is global, with significant R&D concentrated in China, Europe, and North America and with semiconductor and hardware manufacturing concentrated in East Asia and the United States. Today’s geopolitics are complex. Furthermore, models and applications are increasingly created in open-source forums spanning many countries.
+
+#### Demand for greater explainability is a central challenge
+
+Safe AI deployment is increasingly a must-have. Yet most LLMs are often black boxes that do not reveal why or how they came to a certain response, nor what data was used to make it. If AI models cannot provide clear justifications for their responses, recommendations, decisions, or actions—showing the specific factors that led to a credit card application denial, for example—they will not be trusted for critical tasks.
+
+These AI-specific headwinds are formidable but addressable. Companies are pushing ahead. For example, they might use dynamic cost planning or look at procuring NVIDIA clusters to secure the infrastructure they expect to need.18 Chief HR officers (CHROs) are developing training programs to upskill their current workforces and support some employees in job transitions. But lasting success will take more than that.
+
+### To capture AI value, leaders must rewire their companies
+
+McKinsey’s [_Rewired_](https://www.mckinsey.com/featured-insights/mckinsey-on-books/rewired) framework includes six foundational elements to guide sustained digital transformation: road map, talent, operating model, technology, data, and scaling (Exhibit 18). When companies implement this playbook successfully, they cultivate a culture of autonomy, leverage modern cloud practices, and assemble multidisciplinary agile teams.
+
+![Image 21: Six enduring success factors enable tech-business transformations.](https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/superagency%20in%20the%20workplace%20empowering%20people%20to%20unlock%20ais%20full%20potential%20at%20work/superagency_ex18.svgz?cq=50&cpy=Center)
+
+Image description begins:
+
+The text-based exhibit is a framework outlining six key success factors for tech-business transformations. It's structured as a grid with a title, “Framework for the coordinated execution of value creation," and is further divided into six rectangular sections, each representing a different success factor. An overarching section, business-led digital road map, focuses on the importance of an organization aligning senior leadership to create a clear vision, value proposition, and roadmap for transformation, thereby improving the customer experience and competitiveness. The next four sections are categories representing the core operational aspects of a business-tech transformation. Talent emphasizes the importance of having employees with the right skills and capabilities to execute and innovate. Operating model highlights the need for organizations to relentlessly focus on value creation by integrating business, technology, and operations. Technology stresses the importance of using technology effectively through adoption of the right platforms, solutions, and practices to drive innovation. Finally, data and AI focuses on why it’s essential to provide people in the organization with easy access to high-quality data and to leverage AI insights to enhance customer experiences and business operations. The final section, underpinning the four category sections, is activation and scaling. This section underscores the need for organizations to maximize value capture by ensuring the activation and enterprise scaling of digital solutions, while carefully managing the transformation's progress and mitigating risks. This image description was completed with the assistance of Writer, a gen AI tool.
+
+Image description ends.
+
+While these six elements are universally applicable, AI has introduced a few important wrinkles for leaders to address:
+
+*   _Adaptability._ AI technology is advancing so rapidly that organizations must adopt new best practices quickly to stay ahead of the competition. Best practices may come in the form of new technologies, talent, business models, or products. For example, a modular approach helps future-proof tech stacks. As natural language becomes a medium for integration, AI systems are becoming more compatible, allowing businesses to swap, upgrade, and integrate models and tools with less friction. This modularity allows enterprises to avoid vendor lock-in and put new AI advancements to use quickly without constantly reinventing their tech stacks.
+*   _Federated governance models._ Managing data and models can give teams autonomy to develop new AI tools while centrally controlling risk. Leaders can directly oversee high-risk or high-visibility issues, such as setting policies and processes to monitor models and outputs for fairness, safety, and explainability. But they can set direction and delegate other monitoring to business units, including measuring performance-based criteria such as accuracy, speed, and scalability.
+*   _Budget agility._ Given technological advances across models, as well as the opportunity to curate an optimal mix of LLMs, small language models (SLMs), and agents, business leaders should keep their budgets flexible. This helps enterprises optimize their AI deployments simultaneously for costs and performance.
+*   _AI benchmarks._ These tools can serve as powerful means to quantitatively assess, compare, and improve the performance of different AI models, algorithms, and systems. If technologists come together to adopt standardized public benchmarks—and if more C-level executives start employing benchmarks, including ethical ones—model transparency and accountability will improve and AI adoption will increase, even among more skeptical employees.
+*   _AI-specific skill gaps._ Notably, 46 percent of leaders identify skill gaps in their workforces as a significant barrier to AI adoption. Leaders will need to attract and hire top-level talent, including AI/ML engineers, data scientists, and AI integration specialists. They will also need to commit to creating an environment that is attractive to technologists. For example, this can mean providing them with plenty of time to experiment, offering access to cutting-edge tools, creating opportunities to engage in open-source communities, and promoting a collaborative engineering culture. Upskilling existing employees is just as critical: [Research](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/upskilling-and-reskilling-priorities-for-the-gen-ai-era) from McKinsey’s People and Organizational Performance Practice underscores the importance of tailoring training to specific roles, such as offering technical team members bootcamps on library creation while offering prompt engineering classes to specific functional teams.19
+*   _Human centricity._ To guarantee both fairness and impartiality, it is important that business leaders incorporate diverse perspectives early and often in the AI development process and maintain transparent communication with their teams. As it stands, less than half of C-suite leaders (48 percent) say they would involve nontechnical employees in the early development stages of AI tools, specifically ideation and requirement gathering. Agile pods and human-centric development practices such as design-thinking and reinforcement learning from human feedback (RLHF) will help leaders and developers create AI solutions that _all_ people want to use. In agile pods, technical team members sit alongside employees from business functions such as HR, sales, and product, and from support functions such as legal and compliance. Further, leaders can empathize with employees’ uneasiness about AI’s impacts on potential job losses by being honest about new skill requirements and head count changes. Forums where employees can provide input on AI applications, voice concerns, and share ideas are valuable for maintaining a transparent, human-first culture.
+
+The pace at which AI has advanced over the last two years is stunning. Some react to that pace by seeing AI as a challenge to humanity. But what if we take the advice of Reid Hoffman and imagine what could possibly go _right_ with AI? Leaders might realize that all the pieces are in place for AI superagency in the workplace.
+
+> Learn from yesterday, live for today, hope for tomorrow.
+> 
+> Albert Einstein, theoretical physicist
+
+They might notice that their employees are already using AI and want to use it even more. They may find that millennial managers are powerful change champions ready to encourage their peers. Instead of focusing on the 92 million jobs expected to be displaced by 2030, leaders could plan for the projected 170 million new ones and the new skills those will require.20
+
+This is the moment for leaders to set bold AI commitments and to meet employee needs with on-the-job training and human-centric development. As leaders and employees work together to reimagine their businesses from the bottom up, AI can evolve from a productivity enhancer into a transformative superpower—an effective partner that increases human agency. Leaders who can replace fear of uncertainty with imagination of possibility will discover new applications for AI, not only as a tool to optimize existing workflows but also as a catalyst to solve bigger business and human challenges. Early stages of AI experimentation focused on proving technical feasibility through narrow use cases, such as automating routine tasks. Now the horizon has shifted: AI is poised to unlock unprecedented innovation and drive systemic change that delivers real value.
+
+To meet this more ambitious era, leaders and employees must ask themselves big questions. How should leaders define their strategic priorities and steer their companies effectively amid disruption? How can employees ensure they are ready for the AI transition coming to their workplaces? Questions like the following ones will shape a company’s AI future:
+
+For business leaders:
+
+*   _Is your strategy ambitious enough?_ Do you want to transform your whole business? How can you reimagine traditional cost centers as value-driven functions? How do you gain a competitive advantage by investing in AI?
+*   _What does successful AI adoption look like for your organization?_ What success indicators will you use to evaluate whether your investments are yielding desired ROI?
+*   _What skills define an AI-native workforce?_ How can you create opportunities for employees to develop these skills on the job?
+
+For employees:
+
+*   _What does achieving AI mastery mean for you?_ Does it extend to confidently using AI for personal productivity tasks such as research, planning, and brainstorming?
+*   _How do you plan to expand your understanding of AI?_ Which news sources, podcasts, and video channels can you follow to remain informed about the rapid evolution of AI?
+*   _How can you rethink your own work?_ Some of the most innovative ideas often emerge from within teams, rather than being handed down from leadership. How would you redesign your work to drive bottom-up innovation?
+
+These questions have no easy answers, but a consensus is emerging on how to best address them. For example, some companies deploy both bottom-up and top-down approaches to drive AI adoption. Bottom-up actions help employees experiment with AI tools through initiatives such as hackathons and learning sessions. Top-down techniques bring executives together to radically rethink how AI could improve major processes such as fraud management, customer experience, and product testing.
+
+These kinds of actions are critical as companies seek to move from AI pilots to AI maturity. Today only 1 percent of business leaders report that their companies have reached maturity. Over the next three years, as investments in the technology grow, leaders must drive that percentage way up. They should make the most of their employees’ readiness to increase the pace of AI implementation while ensuring trust, safety, and transparency. The goal is simple: capture the enormous potential of gen AI to drive innovation and create real business value.
+
+----------------------------------------
+
+URL: https://time.com/7204665/ai-predictions-2025/
+Content:
+Title: 5 Predictions for AI in 2025
+
+URL Source: https://time.com/7204665/ai-predictions-2025/
+
+Markdown Content:
+If 2023 was the year of AI fervor, following the late-2022 release of ChatGPT, [2024](https://time.com/collection/davos-2024-ideas-of-the-year/6551988/ai-predictions-2024/) was marked by a steady drumbeat of advances as systems got smarter, faster, and cheaper to run. AI also began to reason more deeply and interact via voice and video—trends that AI experts and leaders say will accelerate. Here’s what to expect from AI in 2025.
+
+**More and better AI agents**
+-----------------------------
+
+In 2025, we’ll begin to see a shift from chatbots and image generators toward “agentic” systems that can act autonomously to complete tasks, rather than simply answer questions, says AI futurist [Ray Kurzweil](https://time.com/7012871/ray-kurzweil/). In October, Anthropic gave its AI model Claude the ability to use computers—clicking, scrolling, and typing—but this may be just the start. Agents will be able to handle complex tasks like scheduling appointments and writing software, experts say. “These systems are going to get more and more sophisticated,” says Ahmad Al-Dahle, Meta’s VP of generative AI. Jaime Sevilla, director of AI forecasting nonprofit Epoch AI, envisions a future where AI agents function as virtual co-workers, but says that in 2025 AI agents will be mostly about their novelty. Melanie Mitchell, a professor at the Santa Fe Institute, warns that agents’ mistakes could have “big consequences,” particularly if they have access to personal or financial information.
+
+**Read More:** _[How the Rise of New Digital Workers Will Lead to an Unlimited Age](https://time.com/7178872/agents-unlimited-age/)_
+
+**A national-security priority**
+--------------------------------
+
+Governments will increasingly view AI through the lens of national security, says Dan Hendrycks, director of the Center for AI Safety: “It’s how many of the big decisions about AI will be made.” The U.S. has [curbed China’s access](https://time.com/7204164/china-ai-advances-chips/) to critical chips, while Meta and Anthropic have forged [closer ties](https://www.washingtonpost.com/technology/2024/11/08/anthropic-meta-pentagon-military-openai/) with U.S. intelligence agencies by allowing them to use their AI models. “Political developments around the world are pointing us in the direction of continued competition,” says the U.N. Secretary-General’s envoy on technology, Amandeep Singh Gill, emphasizing the need to preserve “pockets of collaboration” between the U.S. and China.
+
+**Read More:** _[How the Benefits—and Harms—of AI Grew in 2024](https://time.com/7200444/how-ai-benefits-harms-grew-in-2024/)_
+
+**Governance races to catch up**
+--------------------------------
+
+While developers compete to build ever-smarter systems, governments around the world are racing to regulate them. The E.U. leads with its [AI Act](https://artificialintelligenceact.eu/). Its Code of Practice, set to be finalized by April and enforced from August, is one of the first laws targeting frontier AI developers, and many of the E.U. requirements will likely have global impact on how companies operate, unless they opt to take distinct approaches in different markets, says Markus Anderljung at the Centre for the Governance of AI. In the U.S., where [more than 100 bills](https://www.technologyreview.com/2024/09/18/1104015/here-are-all-the-ai-bills-in-congress-right-now/#:~:text=More%20than%20120%20bills%20related,they%20use%20in%20their%20training.) have been brought to Congress, Anderljung predicts “very little will happen” federally this year, though states may act independently.
+
+**Facing the investment test**
+------------------------------
+
+The year ahead “will be a year of reckoning,” Rumman Chowdhury, CEO of Humane Intelligence, tells TIME in an email. “With billions invested, companies now have to show consumer value.” In health care, that value seems clear—for example, additional AI diagnostic tools are expected to gain FDA approval, and AI may also prove useful in discovering and monitoring the long-term impact of various drugs. But elsewhere, the pressure to demonstrate returns may create problems. “Because of the pressure to make money back from all these investments, there might be some imposition of flawed models on the Global South,” says Jai Vipra, an AI policy researcher, noting these markets face less scrutiny than Western ones. In India, she points to trends in automating already exploitative jobs like call-center work as a source of concern.
+
+**AI video goes mainstream**
+----------------------------
+
+In December, Google and OpenAI released impressive video models. [OpenAI’s Sora](https://time.com/6695938/sora-openai-video-generator-ai/) launch was plagued by access delay, while [Google’s Veo 2](https://www.businessinsider.com/google-ai-video-veo-openai-sora-comaprison-2024-12) was released to select users. Sevilla expects video-generation tools to become more widely accessible as developers find ways to make them cheaper to run. Meta’s Al-Dahle predicts video will also become a key input for AI, envisioning a not-too-distant future in which systems analyze video from smart glasses to offer real-time assistance across various tasks, like fixing a bike.
+
+----------------------------------------
+
+URL: https://www.weforum.org/stories/2025/01/ai-2025-workplace/
+Content:
+Title: 2025: the year companies prepare to disrupt how work gets done
+
+URL Source: https://www.weforum.org/stories/2025/01/ai-2025-workplace/
+
+Markdown Content:
+*   AI is accelerating work change – by 2030, 70% of the skills used in most jobs will change.
+*   80% of C-suite executives believe AI will kickstart a culture shift where teams are more innovative.
+*   Leaders must lead from the front as they embed AI into operations and processes.
+
+The world of work has changed enormously in the last two decades. Mobile devices, e-commerce, and social media have all impacted how and where we work. But what’s new now is how AI is starting to drive the next wave of change. It’s creating demand for new jobs and skills, transforming roles and careers, and spurring productivity and innovation.
+
+With this change, executives know they need to disrupt how their teams get work done. We are entering one of the largest change management exercises in history, and every business leader and professional will need to embrace it in order to unlock the value of AI. This will usher in a level of transformation that organizations and employees have never witnessed before.
+
+LinkedIn’s new [_Work Change Report: AI Is Coming To Work_](https://aka.ms/wc-report) highlights the fact that more than 10% of professionals hired today have job titles that didn’t even exist in 2000 – roles like AI Engineer and Head of AI. But AI is accelerating the pace of change, and by 2030 [70% of the skills used in most jobs will change](https://economicgraph.linkedin.com/). It’s clear that even if you’re not changing jobs, your job is changing on you.
+
+It’s therefore no surprise that the majority (88%) of [C-suite executives globally](https://economicgraph.linkedin.com/) say helping their business speed up adoption of AI will be important over the next year. Businesses have much to gain from leveraging the technology, from financial benefits to workforce productivity. According to our [research](https://economicgraph.linkedin.com/), 51% of SMBs that have adopted Generative AI reported a revenue increase of 10% or more from their efforts. At LinkedIn, we’ve been putting the technology into the hands of recruiters, marketers, and sellers over the past couple of years, and they are using it to spend less time on tedious administrative tasks and more on valuable, strategic work – like building relationships with candidates and customers.
+
+But productivity benefits are only part of the story – when implemented well, AI can serve as a powerful tool to unlock innovation across all aspects of a business or economy. In fact, 80% of C-suite executives globally believe AI will [kickstart a culture shift](https://economicgraph.linkedin.com/) where teams are more innovative.
+
+Getting employees to use AI is key to realizing these gains. So how do leaders balance preparing for this level of work disruption with navigating the necessary change management that needs to take place in order to unlock value with AI – particularly as nearly three-quarters (64%) of professionals globally [feel overwhelmed by the current pace of change at work](https://news.linkedin.com/2024/October/overwhelmed-by-workplace-change#:~:text=Nearly%20two%2Dthirds%20(64%25),worried%20about%20being%20left%20behind.)?
+
+**Lead from the front**
+-----------------------
+
+Just as every business has become a technology business, every executive must now become a technology executive – in order to fully understand and harness the potential of AI in their organization. They will also need to become an expert in managing workplace change, to bring their teams along on the journey.
+
+On a practical level, it’s often easiest to start small, by showing teams how to use AI for simple tasks to make their day-to-day work more effective. Small wins and consistent communication pave the way for the more disruptive changes that likely lie ahead. And it’s important to build a test-and-learn environment to drive innovation and growth. Encourage teams to experiment with AI, share how these tools are helpful, and celebrate the successes – and acknowledge the failures – that come with any technological advancement.
+
+AI has the potential to make tedious, monotonous tasks a thing of the past, making human ones more meaningful and strategic. It’s up to business leaders to model AI adoption and help their workforces realize that possibility.
+
+**Scale adoption with upskilling**
+----------------------------------
+
+Thanks in part to AI, the nature of jobs has shifted from being about mastering specific abilities to continuously acquiring new ones. To help workforces navigate this shift, leaders should prioritize developing the skills and habits their employees need to stay ahead. That means upskilling, but also reskilling.
+
+Only by giving employees the tools and understanding of how to maximize the technology will companies be able to accelerate AI adoption and reap the rewards. We can already see signs of this happening, with 37% of C-suite executives globally saying they intend to [invest in learning and development](https://economicgraph.linkedin.com/) to train employees on AI tools this year.
+
+**Embracing functional change with AI**
+---------------------------------------
+
+If 2023 was about experimenting with AI, and 2024 was about adopting AI, 2025 will be the year when companies prepare for a level of functional change in how we work with AI that is likely to feel disruptive.
+
+Because of this, we’ll see leaders increasingly prioritize integrating AI that’s easy to use. A good first step is identifying where you can bring the technology into existing processes and existing tools. This will be key to motivating employees to use AI in their day-to-day work, freeing up time that can be directed towards more strategic activities – like creating new products and services, and building deeper customer relationships.
+
+Take AMS, for example, which is using AI to increase candidate engagement throughout the recruiting process. [Janet Mertens](https://www.linkedin.com/in/janet-mertens/), Managing Director of Data, Insight and Analytics at AMS, said: “The Generative AI use case I love is constant engagement. With hiring global teams across different time zones, we can't always be on when the candidates have questions. But now, with Generative AI, agents, chatbots and large language models, we can actually feed all of that information into an assistant for the candidate to have on-demand, 24/7 engagement.”
+
+As organizations look to fully embed AI into operations and processes, it will be on leadership to lead from the front – and actively manage this change in order to drive business growth and innovation. By clearly aligning the work to the company's goals, building confidence among their teams working with AI, and proactively managing the shift in team responsibilities, leaders will create positive energy and excitement, while managing natural reluctance – and realize new value for their business.
+
+As leaders, it’s our responsibility to embrace change by taking proactive steps to lead our teams through this transformation, and foster a culture of growth where AI-driven innovation can thrive.
+
+----------------------------------------

@@ -6,7 +6,7 @@ app/admin.py
 app/apps.py
 app/models.py
 app/serializers.py
-app/tasks.py
+app/tasks_notneeded.py
 app/tests.py
 app/views.py
 app/migrations/0001_initial.py
@@ -35,3 +35,5 @@ tests/__init__.py
 tests/test_agent_configs.py
 tests/test_embedding_generation.py
 tests/test_views.py
+tests/testing_Crew.py
+tests/testing_llm.py

@@ -111,17 +111,17 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
-# Celery configuration
-# When running tests, force tasks to run eagerly with an in‑memory broker to avoid connection errors.
-if "test" in sys.argv:
-    CELERY_BROKER_URL = "memory://"
-    CELERY_RESULT_BACKEND = "cache+memory://"
-    CELERY_TASK_ALWAYS_EAGER = True
-else:
-    # Production (or development) Celery settings – adjust these if you have a Redis broker
-    CELERY_BROKER_URL = os.getenv("CELERY_BROKER", "redis://localhost:6379/0")
-    CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
-    CELERY_TASK_ALWAYS_EAGER = False
+# # Celery configuration
+# # When running tests, force tasks to run eagerly with an in‑memory broker to avoid connection errors.
+# if "test" in sys.argv:
+#     CELERY_BROKER_URL = "memory://"
+#     CELERY_RESULT_BACKEND = "cache+memory://"
+#     CELERY_TASK_ALWAYS_EAGER = True
+# else:
+#     # Production (or development) Celery settings – adjust these if you have a Redis broker
+#     CELERY_BROKER_URL = os.getenv("CELERY_BROKER", "redis://localhost:6379/0")
+#     CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
+#     CELERY_TASK_ALWAYS_EAGER = False
 
 # Azure OpenAI settings (using documented variable names)
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_API_KEY", "")

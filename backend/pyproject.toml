@@ -19,5 +19,8 @@ dependencies = [
   "uvicorn",
   "beautifulsoup4",
   "pillow",
-  "pyyaml"
+  "pyyaml",
+  "playwright", 
+  "dateparser",
+  "langchain-chroma"
 ]

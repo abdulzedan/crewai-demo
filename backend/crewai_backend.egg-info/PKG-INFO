@@ -15,3 +15,6 @@ Requires-Dist: uvicorn
 Requires-Dist: beautifulsoup4
 Requires-Dist: pillow
 Requires-Dist: pyyaml
+Requires-Dist: playwright
+Requires-Dist: dateparser
+Requires-Dist: langchain-chroma

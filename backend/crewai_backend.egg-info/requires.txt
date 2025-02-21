@@ -11,3 +11,6 @@ uvicorn
 beautifulsoup4
 pillow
 pyyaml
+playwright
+dateparser
+langchain-chroma
