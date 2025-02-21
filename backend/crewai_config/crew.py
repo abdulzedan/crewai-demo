@@ -22,6 +22,9 @@ with open(CONFIG_DIR / "tasks.yaml", "r", encoding="utf-8") as f:
 
 from crewai import Agent, Crew, Task, Process, LLM
 from crewai.project import CrewBase, agent, task, crew
+from crewai_tools import SerperDevTool
+from app.tools.summarize_tool import SummarizeTool
+from app.tools.aisearch_tool import AISearchTool
 
 # Create an LLM instance using Azure OpenAI credentials
 llm = LLM(
@@ -31,24 +34,19 @@ llm = LLM(
     api_version=os.getenv("AZURE_API_VERSION", "2024-06-01")
 )
 
-# Import AISearchTool (which uses Serper and Jina Reader)
-from app.tools.aisearch_tool import AISearchTool
-
 @CrewBase
 class LatestAIResearchCrew:
     """
     Crew for research agents.
-
+    
     Flow:
-      1. The Expert Web Researcher uses AISearchTool to fetch live search result links and extract content via Jina Reader.
-      2. The Analytical Aggregator consolidates these research findings into a structured summary.
-      3. The Innovative Synthesizer integrates the aggregated insights into a final, comprehensive answer.
+      1. The Expert Web Researcher uses AISearchTool to fetch live research data.
+      2. The Analytical Aggregator compiles and summarizes the research data.
+      3. The Innovative Synthesizer integrates the summarized insights into a final answer.
     """
     def __init__(self, inputs=None):
-        # Print inputs for debugging
         self.inputs = inputs or {}
         print(f"[DEBUG][Crew __init__] Received inputs: {self.inputs}")
-        # Deep copy the configurations so we can inspect them without side effects.
         self.agents_config = copy.deepcopy(loaded_agents_config)
         self.tasks_config = copy.deepcopy(loaded_tasks_config)
         print(f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}")
@@ -56,9 +54,6 @@ class LatestAIResearchCrew:
 
     @agent
     def manager(self) -> Agent:
-        """
-        Manager agent that routes all queries exclusively to the research process.
-        """
         cfg = self.agents_config.get("manager")
         if cfg is None:
             raise ValueError("Missing 'manager' key in agents.yaml")
@@ -70,10 +65,6 @@ class LatestAIResearchCrew:
 
     @agent
     def web_researcher(self) -> Agent:
-        """
-        Expert Web Researcher that conducts exhaustive online research.
-        Utilizes AISearchTool to fetch live search results and extract content.
-        """
         cfg = self.agents_config.get("web_researcher")
         if cfg is None:
             raise ValueError("Missing 'web_researcher' key in agents.yaml")
@@ -87,9 +78,6 @@ class LatestAIResearchCrew:
 
     @agent
     def aggregator(self) -> Agent:
-        """
-        Analytical Aggregator that compiles and organizes raw research data.
-        """
         cfg = self.agents_config.get("aggregator")
         if cfg is None:
             raise ValueError("Missing 'aggregator' key in agents.yaml")
@@ -102,9 +90,6 @@ class LatestAIResearchCrew:
 
     @agent
     def synthesizer(self) -> Agent:
-        """
-        Innovative Synthesizer that transforms aggregated insights into a final answer.
-        """
         cfg = self.agents_config.get("synthesizer")
         print(f"[DEBUG][synthesizer] Loaded configuration: {cfg}")
         if cfg is None:
@@ -116,17 +101,31 @@ class LatestAIResearchCrew:
             memory=True
         )
 
+    def aggregate_callback(self, task_output):
+        """
+        Callback for the aggregator task.
+        Uses SummarizeTool to summarize the research output.
+        """
+        raw_text = task_output.raw
+        summarized = SummarizeTool()._run(raw_text)
+        print("[DEBUG][aggregate_callback] Summarized output:", summarized)
+        return summarized
+
+    def synthesize_callback(self, task_output):
+        """
+        Callback for the synthesizer task.
+        Further processes the aggregated summary if needed.
+        """
+        final_answer = task_output.raw  # Currently a pass-through; refine if necessary.
+        print("[DEBUG][synthesize_callback] Final synthesized answer:", final_answer)
+        return final_answer
+
     @task
     def research_task(self) -> Task:
-        """
-        Task for the Expert Web Researcher: Perform an exhaustive online search using AISearchTool.
-        Uses the dynamic query provided by the user.
-        """
         cfg = self.tasks_config.get("research_task")
         if cfg is None:
             raise ValueError("Missing 'research_task' key in tasks.yaml")
-        # Updated: Use "message" from inputs instead of "query"
-        query_input = self.inputs.get("message", "")
+        query_input = self.inputs.get("query", "")
         print(f"[DEBUG][research_task] Using query: '{query_input}'")
         return Task(
             config=cfg,
@@ -138,10 +137,6 @@ class LatestAIResearchCrew:
 
     @task
     def aggregate_task(self) -> Task:
-        """
-        Task for the Analytical Aggregator: Consolidate raw research data into a structured summary.
-        Uses the output from the research task as context.
-        """
         cfg = self.tasks_config.get("aggregate_task")
         if cfg is None:
             raise ValueError("Missing 'aggregate_task' key in tasks.yaml")
@@ -150,14 +145,12 @@ class LatestAIResearchCrew:
             agent=self.aggregator(),
             context=[self.research_task()],
             async_execution=False,
-            output_file="aggregate_output.txt"
+            output_file="aggregate_output.txt",
+            callback=self.aggregate_callback  # Use callback to summarize output
         )
 
     @task
     def synthesize_task(self) -> Task:
-        """
-        Task for the Innovative Synthesizer: Integrate aggregated insights into a final comprehensive answer.
-        """
         cfg = self.tasks_config.get("synthesize_task")
         if cfg is None:
             raise ValueError("Missing 'synthesize_task' key in tasks.yaml")
@@ -166,14 +159,12 @@ class LatestAIResearchCrew:
             agent=self.synthesizer(),
             context=[self.aggregate_task()],
             async_execution=False,
-            output_file="synthesize_output.txt"
+            output_file="synthesize_output.txt",
+            callback=self.synthesize_callback  # Callback for final answer processing
         )
 
     @crew
     def crew(self) -> Crew:
-        """
-        Creates the crew with a sequential process.
-        """
         return Crew(
             agents=[
                 self.manager(),

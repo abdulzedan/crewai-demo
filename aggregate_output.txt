@@ -1,99 +1,15 @@
-Title: Five Trends in AI and Data Science for 2025 | Thomas H. Davenport and Randy Bean
+**Coherent Summary of Key AI Developments and Trends in 2025**
 
-URL Source: https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2025/
+1. **AI Legislation Across U.S. States**: State legislatures in the United States have introduced numerous AI-related bills in 2025. These bills primarily fall into six categories: consumer protection, sector-specific laws, chatbot regulations, generative AI transparency, data center energy requirements, and public safety for frontier models. The Virginia High-Risk AI Developer & Deployer Act is one notable example. Legislation aims to regulate automated decision-making, with Massachusetts and New York focusing on healthcare and financial sectors, respectively. The bills emphasize transparency, AI ethics, and safe AI usage.
 
-### Topics
+2. **AI Trends Influencing Startups**: In 2025, AI trends shaping startups include the rise of autonomous AI agents, generative AI tools for creativity, ethical AI, edge AI, AI's role in scientific discovery, and sustainable AI practices. Startups like DevRev are pioneering AI-driven CRM platforms, while Anthropic emphasizes ethical AI with its Claude model. Generative AI platforms like Writer and xAI also play significant roles.
 
-#### AI in Action
+3. **AI Integration in Various Sectors**: AI is reshaping software development, with AI tools significantly impacting the SDLC. The future sees AI reducing manual coding tasks, enhancing cybersecurity through machine learning, and integrated into project workflows like GitHub Copilot. Similarly, sectors like robotics, hybrid computing, and misinformation security are leveraging AI for higher productivity and safety.
 
-This column series looks at the biggest data and analytics challenges facing modern companies and dives deep into successful use cases that can help other organizations accelerate their AI progress.
+4. **Federal AI Policies and Changes**: AI policies in the U.S. have shifted under President Donald Trump’s administration, replacing former President Biden's directives to prioritize AI dominance and deregulation. The removal of key guidance documents signifies a federal shift focused on innovation over regulation, leaving states to independently legislate AI usage. This change signals continuity in state-driven AI regulation, affecting workplace discrimination laws and compliance.
 
-[More in this series](https://sloanreview.mit.edu/series/ai-in-action/)
+5. **AI in Travel Industry Developments**: The travel sector has integrated AI with key advancements like Microsoft's Bing chatbot for trip planning, Google's Bard AI, and OpenAI’s ChatGPT updates. Companies like Expedia, Priceline, and Tripadvisor are pioneering AI chatbots for enhanced customer experiences. AI models like DeepSeek provide cost-effective technological alternatives, while partnerships such as Tripadvisor’s with Perplexity AI optimize travel services.
 
-![Image 1](blob:https://sloanreview.mit.edu/e8a57f4972516a1d3218894eabc89576)
+6. **Governor Hochul's AI Initiative in New York**: New York advances AI research with Governor Kathy Hochul's Empire AI Consortium, a $90 million initiative in collaboration with universities like SUNY and the University of Rochester. This initiative aims to enhance computing capabilities and drive AI research for public good. With substantial state and private investment, the Empire AI Consortium is set to lead in AI innovation and research-focused development.
 
-Carolyn Geason-Beissel/MIT SMR | Getty Images
-
-This is the time of year for predictions and trend analyses, and as data science and artificial intelligence become increasingly important to the global economy, it’s vital that leaders watch emerging AI trends.
-
-Nobody seems to _use_ AI to make these predictions, and we won’t either, as we share our list of AI trends that will matter in 2025. But we will incorporate the latest research whenever possible. Randy has just completed his annual survey of data, analytics, and AI executives, the [2025 AI & Data Leadership Executive Benchmark Survey](https://static1.squarespace.com/static/62adf3ca029a6808a6c5be30/t/67642c0d40b42a7d7e684f49/1734618125933/2025+AI+%26+Data+Leadership+Executive+Benchmark+Survey+120624.pdf), conducted by his educational firm, Data & AI Leadership Exchange; and Tom has worked on several surveys on generative AI and data, technology leadership structures, and, most recently, agentic AI.
-
-Here are the 2025 AI trends on our radar screens that leaders should understand and monitor.
-
-Get Updates on Leading With AI and Data
-
------------------------------------------
-
-Get monthly insights on how artificial intelligence impacts your organization and what it means for your company and customers.
-
-Please enter a valid email address
-
-Thank you for signing up
-
-[Privacy Policy](https://sloanreview.mit.edu/privacy-policy/)
-
-### 1\. Leaders will grapple with both the promise and hype around agentic AI.
-
-Let’s get agentic AI — the kind of AI that does tasks independently — out of the way first: It’s a sure bet for 2025’s “most trending AI trend.” Agentic AI seems to be on an inevitable rise: Everybody in the tech vendor and analyst worlds is excited about the prospect of having AI programs collaborate to do real work instead of just generating content, even though nobody is entirely sure how it will all work. Some IT leaders think they already have it (37%, in a forthcoming UiPath-sponsored survey of 252 U.S. IT leaders); most expect it soon and are ready to spend money on it (68% within six months or less); and a few skeptics (primarily encountered by us in interviews) think it’s mostly vendor hype.
-
-Most technology executives believe that these autonomous and collaborative AI programs will be primarily based on focused generative AI bots that will perform specific tasks. Most people believe that there will be a network of these agents, and many are hoping that the agent ecosystems will need less human intervention than AI has required in the past. Some believe that the technology will all be orchestrated by robotic process automation tools; some propose that agents will be fetched by enterprise transaction systems; and some posit the emergence of an “uber agent” that will control everything.
-
-The earliest agentic AI tools will be those for small, structured internal tasks with little money involved.
-
-Here’s what we think: There will be (and in some cases, already are) generative AI bots that will do people’s bidding on specific content creation tasks. It will require more than one of these agentic AI tools to do something significant, such as make a travel reservation or conduct a banking transaction. But these systems still work by predicting the next word, and sometimes that will lead to errors or inaccuracies. So there will still be a need for humans to check in on them every now and then.
-
-The earliest agents will be those for small, structured internal tasks with little money involved — for instance, helping change your password on the IT side, or reserving time off for vacations in HR systems. We don’t see much likelihood of companies turning these agents loose on real customers spending real money anytime soon, unless there’s the opportunity for human review or the reversal of a transaction. As a result, we don’t foresee a major impact on the human workforce from this technology in 2025, except for new jobs writing blog posts about agentic AI. (Wait, can agents do that?)
-
-### 2\. The time has come to measure results from generative AI experiments.
-
-One of the reasons why everybody is excited about agents is that as of 2024, it has still proved difficult to demonstrate economic value from generative AI. We argued in [last year’s AI trends article](https://sloanreview.mit.edu/article/five-key-trends-in-ai-and-data-science-for-2024/) that the value of GenAI still needed to be demonstrated. Data and AI leaders in Randy’s 2025 AI & Data Leadership Executive Benchmark Survey said they are confident that GenAI value is being generated: Fifty-eight percent said that their organization has achieved exponential productivity or efficiency gains from AI, presumably mostly from generative AI. Another 16% said that they have “liberated knowledge workers from mundane tasks” through the use of GenAI tools. Let’s hope that these highly positive beliefs are correct.
-
-But companies shouldn’t take such confidence on faith. Very few companies are actually measuring productivity gains carefully or figuring out what the liberated knowledge workers are doing with their freed-up time. Only a few academic studies have measured GenAI productivity gains, and when they have, they’ve generally found some improvements, but not exponential ones. Goldman Sachs is one of the rare companies that has [measured productivity gains in the area of programming](https://aiexpert.network/goldman-sachs-ai/). Developers there reported that their productivity increased by about 20%. Most similar studies have found contingent factors in productivity, where either inexperienced workers gain more (as in customer service and consulting) or experienced workers do better (as in code generation).
-
-In many cases, the best way to measure productivity gains will be to establish controlled experiments. For example, a company could have one group of marketers use generative AI to create content without human review, one use it with human review, and a control group not use it at all. Again, few companies are doing this, and this will need to change. Given that GenAI is primarily about content generation for many companies right now, if we want to really understand the benefits, we’ll also have to start measuring content quality. That’s notoriously difficult to do with knowledge work output. However, if GenAI helps write blog posts much faster but the posts are boring and inaccurate, that’s important to measure: There will be little benefit in that particular use case.
-
-The sad fact is that if many organizations are actually to achieve exponential productivity gains, those improvements may be measured in large-scale layoffs. But there is no sign of mass layoffs in the employment statistics. Additionally, a Nobel Prize winner in economics this year, MIT’s [Daron Acemoglu](https://www.goldmansachs.com/images/migrated/insights/pages/gs-research/gen-ai--too-much-spend%2C-too-little-benefit-/TOM_AI%202.0_ForRedaction.pdf), has commented that we haven’t seen real productivity gains from AI thus far, and he doesn’t expect to see anything dramatic over the next several years — perhaps a 0.5% increase over the next decade. In any case, if companies are really going to see and profit from GenAI, they’re going to need to measure and experiment to see the benefits.
-
-### 3\. Reality about data-driven culture sets in.
-
-We seem to be realizing that generative AI is very cool but doesn’t change everything, specifically long-term cultural attributes. In our trend article last year, we noted that Randy’s survey found that the percentage of company respondents who said that their organization had “created a data and AI-driven organization” and “established a data and AI-driven organizational culture” both doubled over the prior year (from 24% to 48% for creating data- and AI-driven organizations, and from 21% to 43% for establishing data-driven cultures). We were both somewhat astonished at this dramatic reported improvement, and we attributed the changes to generative AI, since it was very widely publicized and adopted rapidly by organizations.
-
-Our long-term prediction is that generative AI alone is not enough to make organizations and cultures data-driven.
-
-This year, the numbers have settled back to Earth a bit. Thirty-seven percent of those surveyed said they work in a data- and AI-driven organization, and 33% said they have a data- and AI-driven culture. It’s still a good thing that data and AI leaders feel that their organizations have improved in this regard over the distant past, but our long-term prediction is that generative AI alone is not enough to make organizations and cultures data-driven.
-
-In the same survey, 92% of the respondents said they feel that cultural and change management challenges are the primary barrier to becoming data- and AI-driven. This suggests that any technology alone is insufficient. It’s worth noting that most of the surveyed employees were from legacy organizations that were founded over a generation ago and have a history of transforming gradually. Many of these companies did more to execute on their digital strategies during the pandemic than they had in the previous two decades.
-
-### 4\. Unstructured data is important again.
-
-Generative AI has had another impact on organizations: It’s making unstructured data important again. In the 2025 AI & Data Leadership Executive Benchmark Survey, 94% of data and AI leaders said that interest in AI is leading to a greater focus on data. Since traditional analytical AI has been around for several decades, we think they were referring to GenAI’s impact. In [another survey](https://aws.amazon.com/data/cdo-report/) that we mentioned in last year’s AI trends article, there was substantial evidence that most companies hadn’t yet started to really manage data to get ready for generative AI.
-
-The great majority of the data that GenAI works with is relatively unstructured, in forms such as text, images, video, and the like. A leader at one large insurance organization recently shared with Randy that 97% of the company’s data was unstructured. Many companies are interested in using GenAI to help manage and provide access to their own data and documents, typically using an approach called retrieval-augmented generation, or RAG. But some companies haven’t worked on their unstructured data much since the days of knowledge management 20 or more years ago. They’ve been focused on structured data — typically rows and columns of numbers from transactional systems.
-
-To get unstructured data into shape, organizations need to pick the best examples of each document type, tag or graph the content, and get it loaded into the system. (Welcome to the arcane world of embeddings, vector databases, and similarity search algorithms.) These approaches do provide considerable knowledge-access benefits for employees, which is why many organizations are pursuing them. But this work is still human-intensive. At some point, perhaps, we’ll be able to just load tons of our internal documents into a GenAI prompt window, but 2025 is unlikely to be that time. Even when that’s possible, there will still be a need for considerable human curation of the data — because ChatGPT can’t tell which is the best of 20 different sales proposals.
-
-### 5\. Who should run data and AI? Expect continued struggle.
-
-It should perhaps come as no surprise that while data and attempts to exploit it with AI are receiving increasing amounts of organizational attention and investment, the data leadership function itself is continuing to struggle. The role is still relatively nascent — just 12% of organizations in Randy’s first annual executive survey back in 2012 had appointed a chief data officer. Progress is being made: Eighty-five percent of organizations in Randy’s newest survey have named a chief data officer, and increasing percentages of those data leaders are primarily focused on growth, innovation, and transformation (as opposed to avoiding risk or regulatory problems). More organizations have also named chief AI officers — a surprising 33%.
-
-While these roles continue to evolve, organizations continue to wrestle with their mandates, responsibilities, and reporting structures. Fewer than half of data leaders (mostly chief data officers) who responded to Randy’s AI & Data Leadership Executive Benchmark Survey said their function is very successful and well established, and only 51% said they feel that the job is well understood within their organizations. We are still not sure that the responsibilities of a chief AI officer and a chief data (and analytics/AI) officer demand separate roles, though some organizations, including Capital One and Cleveland Clinic, have established the chief AI officer role as a peer to the chief data officer.
-
-The one thing that we can say with confidence is that the demand for data and AI leadership will only grow, under whatever shape, form, and structure this demand entails.
-
-We’re of two minds about the broader [future of the chief data and AI officer](https://qstar.ai/chief-data-officers-are-in-trouble-part-iv-where-does-the-cdo-role-go-from-here/). Randy firmly believes that the role of CDAO should be a business role reporting into business leadership. He notes that 36% of data and AI leaders in his survey this year reported to either the CEO, president, or COO. Randy strongly believes that data and AI leaders need to deliver measurable business value, and to understand and speak the language of the business.
-
-Tom agrees that tech leaders need to be more focused on business value. But as we argued in last year’s trend report, he feels that there are [too many “tech chiefs,”](https://hbr.org/2024/09/why-companies-should-consolidate-tech-roles-in-the-c-suite) including CDAOs, in most organizations. Many of those CDAOs themselves feel that their internal customers are confused by all of the C-level tech executives and that the proliferation of such roles makes it both difficult to collaborate and unlikely that they will report to the CEO. Tom would prefer to see “supertech leaders,” with all of the tech roles reporting to them, as is the case in a growing number of companies that have promoted transformation-minded CIOs to fill the role. Whatever the right answer is, it’s clear that organizations must make some interventions and make those who lead data as respected as the data itself.
-
-In this short follow-up video, MIT SMR AI experts Thomas H. Davenport and Randy Bean break down the key trends already reshaping how organizations operate.
-
-#### Topics
-
-#### AI in Action
-
-This column series looks at the biggest data and analytics challenges facing modern companies and dives deep into successful use cases that can help other organizations accelerate their AI progress.
-
-[More in this series](https://sloanreview.mit.edu/series/ai-in-action/)
-
-#### About the Authors
-
-Thomas H. Davenport ([@tdav](https://x.com/tdav)) is the President’s Distinguished Professor of Information Technology and Management at Babson College, the Bodily Bicentennial Professor of Analytics at the University of Virginia Darden School of Business, a fellow of the MIT Initiative on the Digital Economy, and senior adviser to the Deloitte Chief Data and Analytics Officer Program. His latest book is All Hands on Tech: The AI-Powered Citizen Revolution (Wiley, 2024). Randy Bean ([@RandyBeanNVP](https://x.com/RandyBeanNVP)) is an adviser to Fortune 1000 organizations on data and AI leadership. He is the author of Fail Fast, Learn Faster: Lessons in Data-Driven Leadership in an Age of Disruption, Big Data, and AI (Wiley, 2021).
+The various articles depict an evolving landscape where AI legislation, startup innovations, technological advancements in travel, software development, and state initiatives collectively forge the AI trajectory of 2025. As AI continues to pervade different sectors, balancing innovation with ethical oversight remains pivotal.
