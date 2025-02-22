@@ -30,9 +30,8 @@ jobs:
         run: |
           # Check for severe issues first
           ruff check . --select=E9,F63,F7,F82
-          # Then run full linting (exit-zero to treat warnings as warnings)
-          ruff check . --exit-zero
-
+          # Then run full linting (without --exit-zero so that lint errors fail the build)
+          ruff check .
 
       - name: Check formatting with Black
         uses: psf/black@stable

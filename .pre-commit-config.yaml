@@ -1,24 +1,25 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v5.0.0
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 
 -   repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 25.1.0
     hooks:
     -   id: black
-        # Tell black to use the configuration from pyproject.toml in the repository root.
+        # Tell black to use the configuration from pyproject.toml in the backend folder.
         args: ['--config=backend/pyproject.toml']
         # Only run on Python files in the backend folder.
         files: ^backend/.*\.py$
 
--   repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.116
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.0
     hooks:
-      - id: ruff
-        # Use the configuration from backend/pyproject.toml.
-        args: ["--config", "backend/pyproject.toml"]
+    -   id: ruff
+        # Run Ruff in auto‑fix mode on all files (not just the staged ones)
+        args: ["--fix", "--config", "backend/pyproject.toml"]
         files: ^backend/.*\.py$
+        pass_filenames: false

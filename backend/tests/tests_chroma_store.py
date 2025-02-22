@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import pytest
-
 from app.services.vector_store import ChromaVectorStore
 
 
@@ -22,9 +21,6 @@ def test_local_chroma_store():
 
     # Assert that the 'documents' key contains a list.
     assert isinstance(documents, list), "Expected 'documents' to be a list"
-
-    # Optionally, if you expect the list to contain at least one item:
-    # assert len(documents) > 0, "Expected at least one document in the local Chroma store"
 
 
 if __name__ == "__main__":
