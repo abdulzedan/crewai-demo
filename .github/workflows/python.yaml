@@ -25,19 +25,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r ../requirements-dev.txt
+          pip install -e .
 
       - name: Lint with ruff
         run: |
           # Check for severe issues first
           ruff check . --select=E9,F63,F7,F82
-          # Then run full linting (without --exit-zero so that lint errors fail the build)
+          # Then run full linting (fail on any errors)
           ruff check .
 
       - name: Check formatting with Black
-        uses: psf/black@stable
-        with:
-          src: "."
-          options: "--check --verbose --config=pyproject.toml"
+        # Override working directory so that we can reference the correct config path
+        working-directory: .
+        run: black --check --verbose --config=backend/pyproject.toml backend
 
       - name: Run unit tests
         run: pytest
