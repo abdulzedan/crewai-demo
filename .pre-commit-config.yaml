@@ -7,18 +7,18 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.7
+    rev: v0.1.0
     hooks:
       - id: ruff
-        # Pass the config file from the backend folder so that Ruff uses your custom settings.
+        # Use --fix so that auto‑fixes occur and point to the backend config.
         args: ["--fix", "--config", "backend/pyproject.toml"]
-        # Only run on Python files under backend/
+        # Only run on Python files under the backend folder.
         files: ^backend/.*\.py$
 
   - repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
       - id: black
-        # Run Black in check mode with your config from backend.
+        # Check formatting using the configuration in backend/pyproject.toml.
         args: ["--check", "--verbose", "--config", "backend/pyproject.toml"]
         files: ^backend/.*\.py$
