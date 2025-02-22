@@ -1,13 +1,14 @@
 import os
 import traceback
 
-from app.serializers import ChatSerializer
-from app.tools.current_date_tool import CurrentDateTool
-from crewai_config.crew import LatestAIResearchCrew
 from django.urls import path
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from app.serializers import ChatSerializer
+from app.tools.current_date_tool import CurrentDateTool
+from crewai_config.crew import LatestAIResearchCrew
 
 # Toggle authentication based on an environment variable.
 ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]

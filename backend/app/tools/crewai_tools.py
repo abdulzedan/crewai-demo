@@ -1,6 +1,7 @@
-from app.services.vector_store import ChromaVectorStore
 from crewai.tools import BaseTool, tool
 from pydantic import BaseModel, ConfigDict, Field
+
+from app.services.vector_store import ChromaVectorStore
 
 
 # Define input schema for storing text.

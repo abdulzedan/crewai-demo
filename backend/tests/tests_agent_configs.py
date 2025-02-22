@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 import pytest
+
 from crewai_config.crew import LatestAIResearchCrew
 
 # Set up the project root and update sys.path.

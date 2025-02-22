@@ -5,14 +5,14 @@ import os
 from pathlib import Path
 
 import yaml
+from crewai import LLM, Agent, Crew, Process, Task
+from crewai.project import CrewBase, agent, crew, task
+from dotenv import load_dotenv
 
 # Move these imports to the top to fix E402
 from app.tools.aisearch_tool import AISearchTool
 from app.tools.crewai_tools import store_text_tool
 from app.tools.summarize_tool import SummarizeTool
-from crewai import LLM, Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
-from dotenv import load_dotenv
 
 # Load .env from the project root (assumed to be three levels up)
 env_path = Path(__file__).resolve().parent.parent.parent / ".env"

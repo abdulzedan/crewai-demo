@@ -2,13 +2,14 @@
 
 import os
 
-from app.serializers import AnalysisSerializer
-from crewai_config.crew import RAGCrew
 from django.urls import path
 from drf_spectacular.utils import extend_schema
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from app.serializers import AnalysisSerializer
+from crewai_config.crew import RAGCrew
 
 ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]
 
