@@ -27,7 +27,9 @@ from crewai import LLM, Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
 from app.tools.aisearch_tool import AISearchTool
-from app.tools.crewai_tools import store_text_tool  # Import function wrapper to wrap the tools
+from app.tools.crewai_tools import (
+    store_text_tool,
+)  # Import function wrapper to wrap the tools
 from app.tools.summarize_tool import SummarizeTool
 
 # Create an LLM instance using Azure OpenAI credentials.

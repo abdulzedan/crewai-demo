@@ -6,9 +6,10 @@ repos:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.0
+    rev: v0.9.7  # or your current version
     hooks:
-    -   id: ruff
+      - id: ruff
+        args: ["--fix"]
 -   repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
