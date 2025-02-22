@@ -48,4 +48,3 @@ synthesizer:
   llm: "azure/gpt-4o"
   memory: true
   verbose: true
-
