@@ -29,7 +29,7 @@ from crewai.project import CrewBase, agent, task, crew
 from crewai_tools import SerperDevTool
 from app.tools.summarize_tool import SummarizeTool
 from app.tools.aisearch_tool import AISearchTool
-from app.tools.crewai_tools import store_text_tool  # Import function wrapper.
+from app.tools.crewai_tools import store_text_tool  # Import function wrapper to wrap the tools
 
 # Create an LLM instance using Azure OpenAI credentials.
 llm = LLM(
