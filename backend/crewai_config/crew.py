@@ -58,7 +58,8 @@ class LatestAIResearchCrew:
         print(f"[DEBUG][Crew __init__] Received inputs: {self.inputs}")
         self.agents_config = copy.deepcopy(loaded_agents_config)
         self.tasks_config = copy.deepcopy(loaded_tasks_config)
-        # soemtimes the keys of the tools are not registered. We make sure we do them in the class and create a debug statement
+        # soemtimes the keys of the tools are not registered. We make sure we do them in the
+        # class and create a debug statement
         # to make sure that they are loaded properly ... they are found in crewai_config/config/
         print(f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}")
         print(f"[DEBUG][Crew __init__] Loaded task keys: {list(self.tasks_config.keys())}")
