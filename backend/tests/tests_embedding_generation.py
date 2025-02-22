@@ -14,7 +14,7 @@ def test_embed_sample_sentence():
     embedding = store.embeddings.embed_query(sample_sentence)
 
     assert isinstance(embedding, list), "Embedding should be a list of floats"
-    assert len(embedding) > 0, "Embedding should not be empty"
+    assert len(embedding) > 0, "Embedding should not be empty, assserting value here"
     for value in embedding:
         assert isinstance(
             value, float
