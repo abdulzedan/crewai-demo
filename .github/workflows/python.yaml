@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,22 +20,17 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-        working-directory: backend
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
-        working-directory: backend
 
       - name: Lint with ruff
         run: ruff check .
-        working-directory: backend
 
-      - name: Check formatting with Black
+      - name: Check formatting with black
         run: black . --check --verbose
-        working-directory: backend
 
       - name: Run unit tests
         run: pytest
-        working-directory: backend
