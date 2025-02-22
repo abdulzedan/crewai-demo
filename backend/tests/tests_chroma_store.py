@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pytest
+
 from app.services.vector_store import ChromaVectorStore
 
 
