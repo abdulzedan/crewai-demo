@@ -1,20 +1,4 @@
 #!/usr/bin/env python
-import os
-
-# Set dummy Azure credentials so that the AzureOpenAIEmbeddings don't fail on instantiation.
-os.environ.setdefault("AZURE_OPENAI_API_KEY", "dummy")
-os.environ.setdefault("AZURE_OPENAI_ENDPOINT", "http://dummy")
-
-# Patch the embed_query method on AzureOpenAIEmbeddings to return a dummy embedding.
-from langchain_openai.embeddings.azure import AzureOpenAIEmbeddings
-
-
-def dummy_embed_query(self, text):
-    return [0.0, 0.1, 0.2]
-
-
-AzureOpenAIEmbeddings.embed_query = dummy_embed_query
-
 import pytest
 from app.services.vector_store import ChromaVectorStore
 
@@ -34,8 +18,7 @@ def test_local_chroma_store():
     assert "documents" in result, "Expected key 'documents' in result"
 
     documents = result["documents"]
-
-    # Assert that the 'documents' key contains a list.
+    # Assert that 'documents' is a list.
     assert isinstance(documents, list), "Expected 'documents' to be a list"
 
 
