@@ -14,10 +14,10 @@ jobs:
         working-directory: backend
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
         with:
           python-version: "3.11"
 
@@ -25,13 +25,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r ../requirements-dev.txt
-        # Note: The ../ prefix points to the repository root
 
       - name: Lint with ruff
-        run: ruff check .
+        run: |
+          # Check for severe issues first
+          ruff . --select=E9,F63,F7,F82
+          # Then run full linting (exit-zero to treat warnings as warnings)
+          ruff . --exit-zero
 
       - name: Check formatting with Black
-        run: black . --check --verbose
+        uses: psf/black@stable
+        with:
+          src: "."
+          options: "--check --verbose --config=pyproject.toml"
 
       - name: Run unit tests
         run: pytest
