@@ -48,7 +48,7 @@ class LatestAIResearchCrew:
 
     Flow:
       1. The Expert Web Researcher uses AISearchTool to fetch live research data.
-      2. The Analytical Aggregator compiles and summarizes the research data.
+      2. The Analytical Aggregator compiles and summarizes the research data..
       3. The Store Task saves the aggregated summary into the persistent Chroma vector store.
       4. The Innovative Synthesizer integrates the aggregated insights into a final answer.
     """
