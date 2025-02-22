@@ -1,4 +1,5 @@
 # Import storage tools early to register them.
+"""Sometimes, not doing this early on can cause the keys of the tools to not register...."""
 import app.tools.crewai_tools  # This registers store_text_tool and retrieve_text_tool.
 
 import os
