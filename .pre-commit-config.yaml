@@ -1,16 +1,24 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.7  # or your current version
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.7
     hooks:
       - id: ruff
-        args: ["--fix"]
--   repo: https://github.com/psf/black
+        # Pass the config file from the backend folder so that Ruff uses your custom settings.
+        args: ["--fix", "--config", "backend/pyproject.toml"]
+        # Only run on Python files under backend/
+        files: ^backend/.*\.py$
+
+  - repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
-    -   id: black
+      - id: black
+        # Run Black in check mode with your config from backend.
+        args: ["--check", "--verbose", "--config", "backend/pyproject.toml"]
+        files: ^backend/.*\.py$
