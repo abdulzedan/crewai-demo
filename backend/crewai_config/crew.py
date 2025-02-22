@@ -1,11 +1,17 @@
 # Import storage tools early to register them.
-"""Sometimes, not doing this early on can cause the keys of the tools to not register...."""
 
 import copy
 import os
 from pathlib import Path
 
 import yaml
+
+# Move these imports to the top to fix E402
+from app.tools.aisearch_tool import AISearchTool
+from app.tools.crewai_tools import store_text_tool
+from app.tools.summarize_tool import SummarizeTool
+from crewai import LLM, Agent, Crew, Process, Task
+from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 
 # Load .env from the project root (assumed to be three levels up)
@@ -23,15 +29,6 @@ with open(CONFIG_DIR / "agents.yaml", encoding="utf-8") as f:
 with open(CONFIG_DIR / "tasks.yaml", encoding="utf-8") as f:
     loaded_tasks_config = yaml.safe_load(f)
 
-from crewai import LLM, Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
-
-from app.tools.aisearch_tool import AISearchTool
-from app.tools.crewai_tools import (
-    store_text_tool,
-)  # Import function wrapper to wrap the tools
-from app.tools.summarize_tool import SummarizeTool
-
 # Create an LLM instance using Azure OpenAI credentials.
 llm = LLM(
     model="azure/gpt-4o",  # Adjust as needed.
@@ -48,7 +45,7 @@ class LatestAIResearchCrew:
 
     Flow:
       1. The Expert Web Researcher uses AISearchTool to fetch live research data.
-      2. The Analytical Aggregator compiles and summarizes the research data..
+      2. The Analytical Aggregator compiles and summarizes the research data.
       3. The Store Task saves the aggregated summary into the persistent Chroma vector store.
       4. The Innovative Synthesizer integrates the aggregated insights into a final answer.
     """
@@ -58,15 +55,8 @@ class LatestAIResearchCrew:
         print(f"[DEBUG][Crew __init__] Received inputs: {self.inputs}")
         self.agents_config = copy.deepcopy(loaded_agents_config)
         self.tasks_config = copy.deepcopy(loaded_tasks_config)
-        # soemtimes the keys of the tools are not registered. We make sure we do them in the
-        # class and create a debug statement
-        # to make sure that they are loaded properly ... they are found in crewai_config/config/
-        print(
-            f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}"
-        )
-        print(
-            f"[DEBUG][Crew __init__] Loaded task keys: {list(self.tasks_config.keys())}"
-        )
+        print(f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}")
+        print(f"[DEBUG][Crew __init__] Loaded task keys: {list(self.tasks_config.keys())}")
 
     @agent
     def manager(self) -> Agent:
@@ -80,9 +70,7 @@ class LatestAIResearchCrew:
         cfg = self.agents_config.get("web_researcher")
         if cfg is None:
             raise ValueError("Missing 'web_researcher' key in agents.yaml")
-        return Agent(
-            config=cfg, verbose=True, llm=llm, memory=True, tools=[AISearchTool()]
-        )
+        return Agent(config=cfg, verbose=True, llm=llm, memory=True, tools=[AISearchTool()])
 
     @agent
     def aggregator(self) -> Agent:
@@ -178,18 +166,8 @@ class LatestAIResearchCrew:
     @crew
     def crew(self) -> Crew:
         return Crew(
-            agents=[
-                self.manager(),
-                self.web_researcher(),
-                self.aggregator(),
-                self.synthesizer(),
-            ],
-            tasks=[
-                self.research_task(),
-                self.aggregate_task(),
-                self.store_task(),
-                self.synthesize_task(),
-            ],
+            agents=[self.manager(), self.web_researcher(), self.aggregator(), self.synthesizer()],
+            tasks=[self.research_task(), self.aggregate_task(), self.store_task(), self.synthesize_task()],
             process=Process.sequential,
             verbose=True,
             manager_llm=llm,

@@ -48,9 +48,7 @@ class StoreTextTool(BaseTool):
 
 
 class RetrieveTextInput(BaseModel):
-    query: str = Field(
-        ..., description="Search query to find relevant text in Chroma DB"
-    )
+    query: str = Field(..., description="Search query to find relevant text in Chroma DB")
 
 
 class RetrieveTextTool(BaseTool):

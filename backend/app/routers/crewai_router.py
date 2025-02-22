@@ -1,14 +1,13 @@
 import os
 import traceback
 
+from app.serializers import ChatSerializer
+from app.tools.current_date_tool import CurrentDateTool
+from crewai_config.crew import LatestAIResearchCrew
 from django.urls import path
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-from app.serializers import ChatSerializer
-from app.tools.current_date_tool import CurrentDateTool
-from crewai_config.crew import LatestAIResearchCrew
 
 # Toggle authentication based on an environment variable.
 ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]
@@ -20,9 +19,7 @@ class SafeDict(dict):
 
 
 class ResearchView(APIView):
-    permission_classes = (
-        [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
-    )
+    permission_classes = [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
     serializer_class = ChatSerializer
 
     def post(self, request):
@@ -35,9 +32,7 @@ class ResearchView(APIView):
 
         safe_inputs.setdefault("url", "")
         safe_inputs["query"] = safe_inputs.get("message", "")
-        safe_inputs["current_date"] = (
-            CurrentDateTool()._run().strip()
-        )  # Inject current date
+        safe_inputs["current_date"] = CurrentDateTool()._run().strip()  # Inject current date
 
         try:
             crew_instance = LatestAIResearchCrew(inputs=safe_inputs)

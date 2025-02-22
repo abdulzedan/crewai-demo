@@ -13,9 +13,7 @@ ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]
 
 class TaskStatusView(APIView):
     # Toggle auth: if ENABLE_AUTH is true, require authenticated access; else allow any.
-    permission_classes = (
-        [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
-    )
+    permission_classes = [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
 
     def get(self, request, task_id):
         result = AsyncResult(task_id)

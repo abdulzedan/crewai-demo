@@ -4,12 +4,11 @@ import urllib.parse
 
 import numpy as np
 import requests
+from app.tools.current_date_tool import CurrentDateTool
 from crewai.tools import BaseTool
 from openai import AzureOpenAI
 from pydantic import BaseModel, ConfigDict, Field
 from tenacity import retry, stop_after_attempt, wait_exponential
-
-from app.tools.current_date_tool import CurrentDateTool
 
 
 class AISearchInput(BaseModel):
@@ -55,9 +54,7 @@ def get_embedding(text: str) -> list[float]:
         api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
         azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
     )
-    embedding_model = os.getenv(
-        "AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"
-    )
+    embedding_model = os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
     response = client.embeddings.create(input=text, model=embedding_model)
     # Use attribute access instead of subscripting the response
     return response.data[0].embedding
@@ -92,14 +89,14 @@ class AISearchTool(BaseTool):
     name: str = "aisearch_tool"
     description: str = (
         "Search the web for the latest information relevant to the user's query. "
-        "This tool uses the Serper AI API to obtain live search result links and then feeds each link to Jina Reader "
-        "to extract content. The extracted text is filtered using embeddings (via Azure OpenAI) so that only the most relevant "
-        "portions are retained. The current date is appended to ensure up-to-date context."
+        "This tool uses the Serper AI API to obtain live search result links and then "
+        "feeds each link to Jina Reader to extract content. "
+        "The extracted text is filtered using embeddings (via Azure OpenAI) so that "
+        "only the most relevant portions are retained. "
+        "The current date is appended to ensure up-to-date context."
     )
     args_schema: type[BaseModel] = AISearchInput
-    model_config = ConfigDict(
-        check_fields=False, extra="allow", arbitrary_types_allowed=True
-    )
+    model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
     result_as_answer: bool = True
 
     def _run(self, query: str) -> str:
@@ -128,14 +125,10 @@ class AISearchTool(BaseTool):
                 full_content = fetch_reader_content(link)
                 # Filter the content: embed each paragraph and select only those relevant to the query.
                 relevant_content = filter_relevant_chunks(full_content, query)
-                combined_contents.append(
-                    f"URL: {link}\nContent:\n{relevant_content}\n{'-'*40}\n"
-                )
+                combined_contents.append(f"URL: {link}\nContent:\n{relevant_content}\n{'-'*40}\n")
                 print(f"[AISearchTool] Successfully processed content from: {link}")
             except Exception as e:
-                combined_contents.append(
-                    f"URL: {link}\nError fetching content: {e}\n{'-'*40}\n"
-                )
+                combined_contents.append(f"URL: {link}\nError fetching content: {e}\n{'-'*40}\n")
                 print(f"[AISearchTool] Error processing {link}: {e}")
 
         final_result = "\n".join(combined_contents)
