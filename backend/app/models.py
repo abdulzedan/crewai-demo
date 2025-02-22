@@ -14,7 +14,9 @@ class CustomUser(AbstractUser):
 
 
 class UserText(models.Model):
-    user = models.ForeignKey("app.CustomUser", on_delete=models.SET_NULL, null=True, blank=True)
+    user = models.ForeignKey(
+        "app.CustomUser", on_delete=models.SET_NULL, null=True, blank=True
+    )
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
 

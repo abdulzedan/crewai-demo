@@ -25,7 +25,9 @@ class ChromaVectorStore:
         )
         self.persist_directory = persist_directory or None
         # Persistence is automatic with the new Chroma
-        self.db = Chroma(collection_name="collab_writing", embedding_function=self.embeddings)
+        self.db = Chroma(
+            collection_name="collab_writing", embedding_function=self.embeddings
+        )
 
     def store_text(self, text: str) -> None:
         doc_id = str(uuid.uuid4())

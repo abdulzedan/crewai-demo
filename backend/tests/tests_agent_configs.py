@@ -2,6 +2,7 @@
 import os
 import sys
 from pathlib import Path
+
 import pytest
 
 # Set up the project root and update sys.path.
@@ -13,6 +14,7 @@ config_path = project_root / "backend" / "crewai_config" / "config"
 os.environ["CREWAI_CONFIG_PATH"] = str(config_path)
 
 from crewai_config.crew import LatestAIResearchCrew
+
 
 def test_agent_configs():
     """
@@ -29,10 +31,15 @@ def test_agent_configs():
         ("Manager", manager),
         ("Web Researcher", web_researcher),
         ("Aggregator", aggregator),
-        ("Synthesizer", synthesizer)
+        ("Synthesizer", synthesizer),
     ]:
-        assert isinstance(agent.role, str) and agent.role, f"{agent_name} role should be a non-empty string"
-        assert isinstance(agent.goal, str) and agent.goal, f"{agent_name} goal should be a non-empty string"
+        assert (
+            isinstance(agent.role, str) and agent.role
+        ), f"{agent_name} role should be a non-empty string"
+        assert (
+            isinstance(agent.goal, str) and agent.goal
+        ), f"{agent_name} goal should be a non-empty string"
+
 
 if __name__ == "__main__":
     pytest.main()

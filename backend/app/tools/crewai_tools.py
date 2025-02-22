@@ -14,7 +14,9 @@ class StoreTextTool(BaseTool):
     name: str = "store_text_tool"
     description: str = "Store user-provided text into Chroma DB for semantic retrieval"
     args_schema: type[BaseModel] = StoreTextInput
-    model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
+    model_config = ConfigDict(
+        check_fields=False, extra="allow", arbitrary_types_allowed=True
+    )
 
     def _run(self, text: str) -> str:
         try:
@@ -38,7 +40,9 @@ def store_text_tool(text: str) -> str:
 
 # Define input schema for retrieving text.
 class RetrieveTextInput(BaseModel):
-    query: str = Field(..., description="Search query to find relevant text in Chroma DB")
+    query: str = Field(
+        ..., description="Search query to find relevant text in Chroma DB"
+    )
 
 
 # Custom tool class to retrieve text.
@@ -46,7 +50,9 @@ class RetrieveTextTool(BaseTool):
     name: str = "retrieve_text_tool"
     description: str = "Retrieve relevant text from Chroma DB"
     args_schema: type[BaseModel] = RetrieveTextInput
-    model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
+    model_config = ConfigDict(
+        check_fields=False, extra="allow", arbitrary_types_allowed=True
+    )
 
     def _run(self, query: str) -> str:
         try:

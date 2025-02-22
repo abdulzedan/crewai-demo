@@ -61,8 +61,12 @@ class LatestAIResearchCrew:
         # soemtimes the keys of the tools are not registered. We make sure we do them in the
         # class and create a debug statement
         # to make sure that they are loaded properly ... they are found in crewai_config/config/
-        print(f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}")
-        print(f"[DEBUG][Crew __init__] Loaded task keys: {list(self.tasks_config.keys())}")
+        print(
+            f"[DEBUG][Crew __init__] Loaded agent keys: {list(self.agents_config.keys())}"
+        )
+        print(
+            f"[DEBUG][Crew __init__] Loaded task keys: {list(self.tasks_config.keys())}"
+        )
 
     @agent
     def manager(self) -> Agent:
@@ -76,7 +80,9 @@ class LatestAIResearchCrew:
         cfg = self.agents_config.get("web_researcher")
         if cfg is None:
             raise ValueError("Missing 'web_researcher' key in agents.yaml")
-        return Agent(config=cfg, verbose=True, llm=llm, memory=True, tools=[AISearchTool()])
+        return Agent(
+            config=cfg, verbose=True, llm=llm, memory=True, tools=[AISearchTool()]
+        )
 
     @agent
     def aggregator(self) -> Agent:

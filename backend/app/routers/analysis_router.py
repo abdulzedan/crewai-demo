@@ -16,7 +16,9 @@ ENABLE_AUTH = os.getenv("ENABLE_AUTH", "false").lower() in ["true", "1", "yes"]
 
 class AnalysisView(APIView):
     # Toggle authentication for analysis as well.
-    permission_classes = [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
+    permission_classes = (
+        [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
+    )
 
     @extend_schema(
         request=AnalysisSerializer,
@@ -44,9 +46,21 @@ class AnalysisView(APIView):
         web_query = data.get("web_query", "")
 
         crew = RAGCrew().crew()
-        document_summary = crew.agents[0].tools[0]._run(document_text) if document_text else "No document provided."
-        image_summary = crew.agents[1].tools[0]._run(image_url) if image_url else "No image provided."
-        web_results = crew.agents[2].tools[0]._run(web_query) if web_query else "No web query provided."
+        document_summary = (
+            crew.agents[0].tools[0]._run(document_text)
+            if document_text
+            else "No document provided."
+        )
+        image_summary = (
+            crew.agents[1].tools[0]._run(image_url)
+            if image_url
+            else "No image provided."
+        )
+        web_results = (
+            crew.agents[2].tools[0]._run(web_query)
+            if web_query
+            else "No web query provided."
+        )
 
         aggregated_report = (
             f"Document Analysis: {document_summary}\n\n"

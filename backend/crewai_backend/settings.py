@@ -104,7 +104,9 @@ if not DEBUG:
 # REST Framework and Schema
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
 }
 SPECTACULAR_SETTINGS = {
     "TITLE": "CrewAI API",
@@ -134,7 +136,9 @@ AZURE_OPENAI_API_KEY = os.getenv("AZURE_API_KEY", "")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_API_BASE", "")
 AZURE_OPENAI_VERSION = os.getenv("AZURE_API_VERSION", "2024-06-01")
 # Optional: For embedding model override
-AZURE_OPENAI_EMBEDDING_MODEL = os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-ada-002")
+AZURE_OPENAI_EMBEDDING_MODEL = os.getenv(
+    "AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-ada-002"
+)
 
 # import os
 # from pathlib import Path

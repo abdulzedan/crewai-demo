@@ -23,7 +23,9 @@ class ChatEndpointTests(APITestCase):
             task_always_eager=True,
             task_eager_propagates=True,
         )
-        self.user = User.objects.create_user(username="testuser", password="testpass123")
+        self.user = User.objects.create_user(
+            username="testuser", password="testpass123"
+        )
         self.client = APIClient()
 
     def test_authenticated_chat(self):

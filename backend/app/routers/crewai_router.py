@@ -20,7 +20,9 @@ class SafeDict(dict):
 
 
 class ResearchView(APIView):
-    permission_classes = [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
+    permission_classes = (
+        [permissions.IsAuthenticated] if ENABLE_AUTH else [permissions.AllowAny]
+    )
     serializer_class = ChatSerializer
 
     def post(self, request):
@@ -33,7 +35,9 @@ class ResearchView(APIView):
 
         safe_inputs.setdefault("url", "")
         safe_inputs["query"] = safe_inputs.get("message", "")
-        safe_inputs["current_date"] = CurrentDateTool()._run().strip()  # Inject current date
+        safe_inputs["current_date"] = (
+            CurrentDateTool()._run().strip()
+        )  # Inject current date
 
         try:
             crew_instance = LatestAIResearchCrew(inputs=safe_inputs)

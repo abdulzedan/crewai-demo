@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 import os
+from unittest.mock import MagicMock, patch
+
 import pytest
-from unittest.mock import patch, MagicMock
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 @patch("openai.AzureOpenAI")
 def test_llm_response(mock_AzureOpenAI):
@@ -25,6 +27,7 @@ def test_llm_response(mock_AzureOpenAI):
     instance.chat.completions.create.return_value = fake_response
 
     from openai import AzureOpenAI  # Re-import within the test context.
+
     client = AzureOpenAI(
         api_key=os.getenv("AZURE_API_KEY"),
         api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
@@ -46,6 +49,7 @@ def test_llm_response(mock_AzureOpenAI):
     )
 
     assert "Paris" in response.choices[0].message.content
+
 
 if __name__ == "__main__":
     pytest.main()
