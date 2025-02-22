@@ -2,6 +2,7 @@
 import os
 import sys
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Load the .env file from the project root (one level above this file's directory)
@@ -19,8 +20,9 @@ if not os.getenv("OPENAI_API_VERSION"):
 if not os.getenv("OPENAI_API_TYPE"):
     os.environ["OPENAI_API_TYPE"] = os.getenv("AZURE_API_TYPE", "azure")
 
+
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crewai_backend.settings')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "crewai_backend.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -30,5 +32,6 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

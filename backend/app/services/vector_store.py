@@ -1,5 +1,6 @@
 import os
 import uuid
+
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -7,13 +8,13 @@ load_dotenv()
 # Remove any legacy variable to avoid conflicts.
 os.environ.pop("OPENAI_API_BASE", None)
 
-from langchain_openai import AzureOpenAIEmbeddings
 from langchain_chroma import Chroma  # Updated package
-from langchain.docstore.document import Document
+from langchain_openai import AzureOpenAIEmbeddings
 
 # Determine the Azure endpoint using AZURE_OPENAI_ENDPOINT or AZURE_API_BASE.
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_API_BASE", "")
 azure_endpoint = endpoint.rstrip("/") if endpoint else None
+
 
 class ChromaVectorStore:
     def __init__(self, persist_directory: str = "") -> None:
@@ -24,10 +25,7 @@ class ChromaVectorStore:
         )
         self.persist_directory = persist_directory or None
         # Persistence is automatic with the new Chroma
-        self.db = Chroma(
-            collection_name="collab_writing",
-            embedding_function=self.embeddings
-        )
+        self.db = Chroma(collection_name="collab_writing", embedding_function=self.embeddings)
 
     def store_text(self, text: str) -> None:
         doc_id = str(uuid.uuid4())

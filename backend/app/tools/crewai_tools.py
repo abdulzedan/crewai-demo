@@ -1,17 +1,19 @@
-from typing import Type
-from pydantic import BaseModel, Field, ConfigDict
 from crewai.tools import BaseTool, tool
+from pydantic import BaseModel, ConfigDict, Field
+
 from app.services.vector_store import ChromaVectorStore
+
 
 # Define input schema for storing text.
 class StoreTextInput(BaseModel):
     text: str = Field(..., description="User text to store in Chroma DB")
 
+
 # Custom tool class to store text.
 class StoreTextTool(BaseTool):
     name: str = "store_text_tool"
     description: str = "Store user-provided text into Chroma DB for semantic retrieval"
-    args_schema: Type[BaseModel] = StoreTextInput
+    args_schema: type[BaseModel] = StoreTextInput
     model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
 
     def _run(self, text: str) -> str:
@@ -21,6 +23,7 @@ class StoreTextTool(BaseTool):
             return "Text stored successfully"
         except Exception as e:
             return f"Storage error: {str(e)}"
+
 
 # Function wrapper to register StoreTextTool with CrewAI.
 @tool("store_text_tool")
@@ -32,15 +35,17 @@ def store_text_tool(text: str) -> str:
     tool_instance = StoreTextTool()
     return tool_instance._run(text)
 
+
 # Define input schema for retrieving text.
 class RetrieveTextInput(BaseModel):
     query: str = Field(..., description="Search query to find relevant text in Chroma DB")
+
 
 # Custom tool class to retrieve text.
 class RetrieveTextTool(BaseTool):
     name: str = "retrieve_text_tool"
     description: str = "Retrieve relevant text from Chroma DB"
-    args_schema: Type[BaseModel] = RetrieveTextInput
+    args_schema: type[BaseModel] = RetrieveTextInput
     model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
 
     def _run(self, query: str) -> str:
@@ -52,6 +57,7 @@ class RetrieveTextTool(BaseTool):
             return "No similar text found."
         except Exception as e:
             return f"Retrieval error: {str(e)}"
+
 
 # Function wrapper to register RetrieveTextTool with CrewAI.
 @tool("retrieve_text_tool")

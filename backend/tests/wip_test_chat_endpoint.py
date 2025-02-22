@@ -1,11 +1,12 @@
-from django.test import override_settings
 from celery import current_app
-from django.urls import reverse
-from rest_framework.test import APITestCase, APIClient
-from rest_framework import status
 from django.contrib.auth import get_user_model
+from django.test import override_settings
+from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APIClient, APITestCase
 
 User = get_user_model()
+
 
 @override_settings(
     CELERY_BROKER_URL="memory://",
@@ -22,25 +23,27 @@ class ChatEndpointTests(APITestCase):
             task_always_eager=True,
             task_eager_propagates=True,
         )
-        self.user = User.objects.create_user(username='testuser', password='testpass123')
+        self.user = User.objects.create_user(username="testuser", password="testpass123")
         self.client = APIClient()
 
     def test_authenticated_chat(self):
         self.client.force_authenticate(user=self.user)
-        url = reverse('chat_view')
+        url = reverse("chat_view")
         data = {"message": "Test chat message"}
-        response = self.client.post(url, data, format='json')
+        response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
         self.assertIn("task_id", response.data)
 
     def test_unauthenticated_access(self):
         self.client.force_authenticate(user=None)
-        url = reverse('chat_view')
+        url = reverse("chat_view")
         data = {"message": "Test chat message"}
-        response = self.client.post(url, data, format='json')
+        response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
 
 if __name__ == "__main__":
     import django
+
     django.setup()
     ChatEndpointTests().run()

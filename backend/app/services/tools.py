@@ -6,15 +6,16 @@ This module defines custom Tools for CrewAI using Pydantic 2.x–friendly patter
 """
 
 import random
-from typing import Type
 
-from pydantic import BaseModel, Field, ConfigDict
 from crewai.tools import BaseTool
+from pydantic import BaseModel, ConfigDict, Field
+
 from .vector_store import ChromaVectorStore
 
 # --------------------------------------------------------------------------
 # 1) StoreTextTool
 # --------------------------------------------------------------------------
+
 
 class StoreTextInput(BaseModel):
     text: str = Field(..., description="User text to store in Chroma DB")
@@ -27,7 +28,7 @@ class StoreTextTool(BaseTool):
     # If BaseTool defines 'name' and 'description' as fields, we override them with the same types.
     name: str = "store_text_tool"
     description: str = "Store user-provided text into Chroma DB for semantic retrieval"
-    args_schema: Type[BaseModel] = StoreTextInput
+    args_schema: type[BaseModel] = StoreTextInput
 
     model_config = ConfigDict(
         check_fields=False,
@@ -45,6 +46,7 @@ class StoreTextTool(BaseTool):
 # 2) RetrieveTextTool
 # --------------------------------------------------------------------------
 
+
 class RetrieveTextInput(BaseModel):
     query: str = Field(..., description="Search query to find relevant text in Chroma DB")
 
@@ -54,7 +56,7 @@ class RetrieveTextTool(BaseTool):
 
     name: str = "retrieve_text_tool"
     description: str = "Retrieve relevant text from Chroma DB"
-    args_schema: Type[BaseModel] = RetrieveTextInput
+    args_schema: type[BaseModel] = RetrieveTextInput
 
     model_config = ConfigDict(
         check_fields=False,
@@ -75,6 +77,7 @@ class RetrieveTextTool(BaseTool):
 # 3) FindJobsTool
 # --------------------------------------------------------------------------
 
+
 class FindJobsInput(BaseModel):
     keyword: str = Field(..., description="Keyword for imaginary job listings")
 
@@ -87,7 +90,7 @@ class FindJobsTool(BaseTool):
 
     name: str = "find_jobs_tool"
     description: str = "Returns up to 3 imaginary jobs for a given keyword"
-    args_schema: Type[BaseModel] = FindJobsInput
+    args_schema: type[BaseModel] = FindJobsInput
 
     model_config = ConfigDict(
         check_fields=False,
@@ -103,4 +106,3 @@ class FindJobsTool(BaseTool):
         ]
         random.shuffle(sample_jobs)
         return "\n".join(sample_jobs)
-

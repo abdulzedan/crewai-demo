@@ -20,7 +20,42 @@ dependencies = [
   "beautifulsoup4",
   "pillow",
   "pyyaml",
-  "playwright", 
+  "playwright",
   "dateparser",
   "langchain-chroma"
 ]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+select = ["E", "F", "I", "UP", "A"]
+ignore = ["D203"]
+exclude = [
+    "frontend",
+    ".chroma-local",
+    "node_modules",
+    ".venv",
+    "build",
+    "dist"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"app/migrations/*.py" = ["E501"]
+"app/services/vector_store.py" = ["E402"]
+"app/tools/aisearch_tool.py" = ["E501"]
+"crewai_config/crew.py" = ["E402", "E501"]
+"manage.py" = ["E501"]
+"tests/tests_agent_configs.py" = ["E402"]
+
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --cov"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.coverage.report]
+show_missing = true

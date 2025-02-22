@@ -1,28 +1,28 @@
 import os
 import re
-import requests
 import urllib.parse
-from typing import List, Type
+
 import numpy as np
-from pydantic import BaseModel, Field, ConfigDict
+import requests
 from crewai.tools import BaseTool
-from tenacity import retry, stop_after_attempt, wait_exponential
-from app.tools.current_date_tool import CurrentDateTool
 from openai import AzureOpenAI
+from pydantic import BaseModel, ConfigDict, Field
+from tenacity import retry, stop_after_attempt, wait_exponential
+
+from app.tools.current_date_tool import CurrentDateTool
+
 
 class AISearchInput(BaseModel):
     query: str = Field(..., description="Search query for AI research or user topic")
 
-def serper_search(query: str) -> List[str]:
+
+def serper_search(query: str) -> list[str]:
     api_key = os.getenv("SERPER_API_KEY")
     if not api_key:
         raise ValueError("SERPER_API_KEY not set in environment.")
-    
+
     url = "https://google.serper.dev/search"
-    headers = {
-        "X-API-KEY": api_key,
-        "Content-Type": "application/json"
-    }
+    headers = {"X-API-KEY": api_key, "Content-Type": "application/json"}
     payload = {"q": query}
     response = requests.post(url, headers=headers, json=payload, timeout=10)
     response.raise_for_status()
@@ -30,6 +30,7 @@ def serper_search(query: str) -> List[str]:
     organic_results = data.get("organic", [])
     links = [result.get("link") for result in organic_results if result.get("link")]
     return links
+
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=6))
 def fetch_reader_content(link: str) -> str:
@@ -39,7 +40,8 @@ def fetch_reader_content(link: str) -> str:
     response.raise_for_status()
     return response.text
 
-def get_embedding(text: str) -> List[float]:
+
+def get_embedding(text: str) -> list[float]:
     """
     Uses Azure OpenAI's latest API via the AzureOpenAI client to generate text embeddings.
     Environment variables used:
@@ -51,27 +53,26 @@ def get_embedding(text: str) -> List[float]:
     client = AzureOpenAI(
         api_key=os.getenv("AZURE_OPENAI_API_KEY"),
         api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
-        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
     )
     embedding_model = os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
-    response = client.embeddings.create(
-        input=text,
-        model=embedding_model
-    )
+    response = client.embeddings.create(input=text, model=embedding_model)
     # Use attribute access instead of subscripting the response
     return response.data[0].embedding
 
-def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:
+
+def cosine_similarity(vec1: list[float], vec2: list[float]) -> float:
     a = np.array(vec1)
     b = np.array(vec2)
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
+
 
 def filter_relevant_chunks(content: str, query: str, threshold: float = 0.75) -> str:
     """
     Splits the document into paragraphs, embeds each one, and retains only those
     paragraphs that have cosine similarity above the threshold with the query embedding.
     """
-    paragraphs = re.split(r'\n\s*\n', content)
+    paragraphs = re.split(r"\n\s*\n", content)
     query_emb = get_embedding(query)
     relevant_chunks = []
     for para in paragraphs:
@@ -84,6 +85,7 @@ def filter_relevant_chunks(content: str, query: str, threshold: float = 0.75) ->
             relevant_chunks.append(para)
     return "\n\n".join(relevant_chunks) if relevant_chunks else content[:1000]
 
+
 class AISearchTool(BaseTool):
     name: str = "aisearch_tool"
     description: str = (
@@ -92,7 +94,7 @@ class AISearchTool(BaseTool):
         "to extract content. The extracted text is filtered using embeddings (via Azure OpenAI) so that only the most relevant "
         "portions are retained. The current date is appended to ensure up-to-date context."
     )
-    args_schema: Type[BaseModel] = AISearchInput
+    args_schema: type[BaseModel] = AISearchInput
     model_config = ConfigDict(check_fields=False, extra="allow", arbitrary_types_allowed=True)
     result_as_answer: bool = True
 
@@ -102,7 +104,7 @@ class AISearchTool(BaseTool):
         current_date = CurrentDateTool()._run().strip()
         query = f"{query} {current_date}"
         print(f"[AISearchTool] Final query after appending current date: '{query}'")
-        
+
         print(f"[AISearchTool] Querying Serper AI for: '{query}'")
         try:
             links = serper_search(query)
@@ -110,11 +112,11 @@ class AISearchTool(BaseTool):
                 return "No search results found from Serper AI."
         except Exception as e:
             return f"Error fetching search links from Serper AI: {e}"
-        
+
         # Limit to a maximum of 15 links.
         links = links[:15]
         print(f"[AISearchTool] Retrieved {len(links)} links from Serper AI.")
-        
+
         combined_contents = []
         print("[AISearchTool] Extracting content using Jina Reader for each link...")
         for link in links:
@@ -127,7 +129,7 @@ class AISearchTool(BaseTool):
             except Exception as e:
                 combined_contents.append(f"URL: {link}\nError fetching content: {e}\n{'-'*40}\n")
                 print(f"[AISearchTool] Error processing {link}: {e}")
-        
+
         final_result = "\n".join(combined_contents)
         return final_result
 

@@ -15,6 +15,7 @@ print(f"[TEST DEBUG] CREWAI_CONFIG_PATH is: {os.environ['CREWAI_CONFIG_PATH']}")
 
 from crewai_config.crew import LatestAIResearchCrew
 
+
 def test_agent_configs():
     """
     Test the configuration of agents.
@@ -25,7 +26,7 @@ def test_agent_configs():
     web_researcher = crew_instance.web_researcher()
     aggregator = crew_instance.aggregator()
     synthesizer = crew_instance.synthesizer()
-    
+
     print("Manager role:", manager.role)
     print("Manager goal:", manager.goal)
     print("Web Researcher role:", web_researcher.role)
@@ -34,6 +35,7 @@ def test_agent_configs():
     print("Aggregator goal:", aggregator.goal)
     print("Synthesizer role:", synthesizer.role)
     print("Synthesizer goal:", synthesizer.goal)
+
 
 if __name__ == "__main__":
     test_agent_configs()
