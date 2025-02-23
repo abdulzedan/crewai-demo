@@ -1,4 +1,4 @@
-# Import storage tools early to register them.
+# backend/crewai_config/crew.py
 
 import copy
 import os
@@ -9,10 +9,11 @@ from crewai import LLM, Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 
-# Move these imports to the top to fix E402
+# Import our tools (order matters to avoid E402 errors)
 from app.tools.aisearch_tool import AISearchTool
 from app.tools.crewai_tools import store_text_tool
 from app.tools.summarize_tool import SummarizeTool
+from app.tools.current_date_tool import CurrentDateTool
 
 # Load .env from the project root (assumed to be three levels up)
 env_path = Path(__file__).resolve().parent.parent.parent / ".env"
@@ -38,6 +39,27 @@ llm = LLM(
 )
 
 
+def format_config(cfg, inputs):
+    """
+    Recursively format strings in the configuration dictionary using the inputs.
+    This ensures that any placeholders like {query} or {current_date} are replaced.
+    """
+    if isinstance(cfg, dict):
+        formatted = {}
+        for key, value in cfg.items():
+            if isinstance(value, str):
+                try:
+                    formatted[key] = value.format(**inputs)
+                except Exception as e:
+                    formatted[key] = value
+            elif isinstance(value, dict):
+                formatted[key] = format_config(value, inputs)
+            else:
+                formatted[key] = value
+        return formatted
+    return cfg
+
+
 @CrewBase
 class LatestAIResearchCrew:
     """
@@ -52,6 +74,9 @@ class LatestAIResearchCrew:
 
     def __init__(self, inputs=None):
         self.inputs = inputs or {}
+        # Automatically set current_date if not provided.
+        if "current_date" not in self.inputs:
+            self.inputs["current_date"] = CurrentDateTool()._run().strip()
         print(f"[DEBUG][Crew __init__] Received inputs: {self.inputs}")
         self.agents_config = copy.deepcopy(loaded_agents_config)
         self.tasks_config = copy.deepcopy(loaded_tasks_config)
@@ -63,6 +88,7 @@ class LatestAIResearchCrew:
         cfg = self.agents_config.get("manager")
         if cfg is None:
             raise ValueError("Missing 'manager' key in agents.yaml")
+        cfg = format_config(cfg, self.inputs)
         return Agent(config=cfg, verbose=True, llm=llm)
 
     @agent
@@ -70,6 +96,7 @@ class LatestAIResearchCrew:
         cfg = self.agents_config.get("web_researcher")
         if cfg is None:
             raise ValueError("Missing 'web_researcher' key in agents.yaml")
+        cfg = format_config(cfg, self.inputs)
         return Agent(config=cfg, verbose=True, llm=llm, memory=True, tools=[AISearchTool()])
 
     @agent
@@ -77,6 +104,7 @@ class LatestAIResearchCrew:
         cfg = self.agents_config.get("aggregator")
         if cfg is None:
             raise ValueError("Missing 'aggregator' key in agents.yaml")
+        cfg = format_config(cfg, self.inputs)
         return Agent(config=cfg, verbose=True, llm=llm, memory=True)
 
     @agent
@@ -85,6 +113,7 @@ class LatestAIResearchCrew:
         print(f"[DEBUG][synthesizer] Loaded configuration: {cfg}")
         if cfg is None:
             raise ValueError("Missing 'synthesizer' key in agents.yaml")
+        cfg = format_config(cfg, self.inputs)
         return Agent(config=cfg, verbose=True, llm=llm, memory=True)
 
     def aggregate_callback(self, task_output):
@@ -181,5 +210,5 @@ class LatestAIResearchCrew:
                 },
             },
             memory=False,
-            full_output=False,
+            full_output=True,  # Return detailed logs and outputs.
         )

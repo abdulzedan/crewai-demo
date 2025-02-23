@@ -26,5 +26,9 @@ docs/
 
 # Next.js build
 .next/
-
 .cache/docs/
+
+#crewfiles
+research_output.txt
+aggregate_output.txt
+synthesize_output.txt
