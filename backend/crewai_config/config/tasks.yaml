@@ -11,7 +11,7 @@ aggregate_task:
   description: >
     Analyze and consolidate the raw research data.
     The Analytical Aggregator will compile and organize the findings into a coherent summary that highlights key insights.
-  expected_output: "A curated summary of the research findings."
+  expected_output: "A curated summary of the research findings in **Markdown** format."
   agent: "aggregator"
   context:
     - "research_task"
@@ -31,7 +31,7 @@ store_task:
 synthesize_task:
   description: >
     Integrate the aggregated insights into a final, comprehensive, and actionable answer.
-  expected_output: "Final synthesized answer."
+  expected_output: "Final synthesized answer in **Markdown** format."
   agent: "synthesizer"
   context:
     - "aggregate_task"

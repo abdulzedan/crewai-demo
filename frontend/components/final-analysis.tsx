@@ -1,74 +1,78 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2, Copy } from "lucide-react"
-import { useState, useEffect } from "react"
-import { useToast } from "@/components/ui/use-toast"
+import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2, Copy, ChevronDown } from "lucide-react";
+import { toast } from "sonner";
+import ReactMarkdown from "react-markdown";
+import { cn } from "@/lib/utils";
 
 export default function FinalAnalysis() {
-  const { toast } = useToast()
-  const [copied, setCopied] = useState(false)
-  const [analysis, setAnalysis] = useState<{ summary: string[]; confidence: number }>({
-    summary: [],
-    confidence: 0,
-  })
+  const [analysisMd, setAnalysisMd] = useState<string>("");
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Fetch final analysis from the analysis endpoint.
     fetch("/api/analysis", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: "What is the latest in AI" })
+      body: JSON.stringify({ query: "What is the latest in AI" }),
     })
-      .then(res => res.json())
-      .then(data => {
-        if (data.finalAnalysis) {
-          setAnalysis(data.finalAnalysis);
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.finalAnalysis && data.finalAnalysis.summary) {
+          // Suppose summary is an array of strings, each is Markdown
+          const [mdString] = data.finalAnalysis.summary;
+          setAnalysisMd(mdString || "");
         }
       })
-      .catch(err => console.error("Error fetching final analysis:", err));
+      .catch((err) => console.error("Error fetching final analysis:", err));
   }, []);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(analysis.summary.join("\n"))
-    setCopied(true)
-    toast({
-      title: "Analysis copied to clipboard",
-      duration: 2000,
-    })
-    setTimeout(() => setCopied(false), 2000)
-  }
+    await navigator.clipboard.writeText(analysisMd);
+    setCopied(true);
+    toast("Analysis copied to clipboard");
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <Card className="border-border/50 shadow-lg bg-card/50 backdrop-blur">
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <CardTitle className="flex items-center gap-2 text-lg font-medium">
+      <CardHeader
+        className="cursor-pointer select-none"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <CardTitle className="flex items-center justify-between text-lg font-medium">
+          <div className="flex items-center gap-2">
             <CheckCircle2 className="h-5 w-5 text-green-400" />
             Final Analysis
-          </CardTitle>
-          <Button variant="outline" size="sm" className="gap-2 border-border/50" onClick={handleCopy}>
-            {copied ? <CheckCircle2 className="h-4 w-4 text-green-400" /> : <Copy className="h-4 w-4" />}
-            {copied ? "Copied!" : "Copy"}
-          </Button>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <ul className="list-disc space-y-2 pl-5">
-            {analysis.summary.map((point, index) => (
-              <li key={index} className="text-muted-foreground">
-                {point}
-              </li>
-            ))}
-          </ul>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span className="font-medium">Confidence Score:</span>
-            <span className="font-mono">{(analysis.confidence * 100).toFixed(1)}%</span>
           </div>
-        </div>
-      </CardContent>
+          <ChevronDown
+            className={cn(
+              "h-4 w-4 text-muted-foreground transition-transform duration-200",
+              isExpanded && "transform rotate-180"
+            )}
+          />
+        </CardTitle>
+      </CardHeader>
+      {isExpanded && (
+        <CardContent className="space-y-4 transition-all duration-200">
+          {analysisMd ? (
+            <>
+              <div className="prose dark:prose-invert">
+                <ReactMarkdown>{analysisMd}</ReactMarkdown>
+              </div>
+              <Button variant="outline" size="sm" onClick={handleCopy}>
+                {copied ? <CheckCircle2 className="h-4 w-4 text-green-400" /> : <Copy className="h-4 w-4" />}
+                {copied ? "Copied!" : "Copy"}
+              </Button>
+            </>
+          ) : (
+            <p className="text-sm text-muted-foreground">No final analysis yet.</p>
+          )}
+        </CardContent>
+      )}
     </Card>
-  )
+  );
 }

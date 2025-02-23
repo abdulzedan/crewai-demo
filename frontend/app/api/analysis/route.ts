@@ -1,3 +1,4 @@
+// frontend/app/api/analysis/route.ts
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -10,7 +11,7 @@ export async function POST(req: Request) {
     const response = await fetch(`${backendUrl}/api/analysis/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query })
+      body: JSON.stringify({ query }),
     });
     if (!response.ok) {
       const errorData = await response.json();

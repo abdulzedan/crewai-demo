@@ -116,7 +116,7 @@ class AISearchTool(BaseTool):
             return f"Error fetching search links from Serper AI: {e}"
 
         # Limit to a maximum of 15 links.
-        links = links[:15]
+        links = links[:3]
         print(f"[AISearchTool] Retrieved {len(links)} links from Serper AI.")
 
         combined_contents = []

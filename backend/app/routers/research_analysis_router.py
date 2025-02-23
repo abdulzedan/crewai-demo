@@ -3,7 +3,6 @@ from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from drf_spectacular.utils import extend_schema
-from app.serializers import AnalysisQuerySerializer
 from crewai_config.crew import LatestAIResearchCrew
 
 
@@ -11,12 +10,12 @@ class ResearchAnalysisView(APIView):
     permission_classes = [permissions.AllowAny]
 
     @extend_schema(
-        request=AnalysisQuerySerializer,
+        request=None,
         responses={
             200: {
                 "type": "object",
                 "properties": {
-                    "agentWorkflow": {"type": "array", "items": {"type": "object"}},
+                    "agentWorkflow": {"type": "array", "items": {"type": "string"}},
                     "finalAnalysis": {
                         "type": "object",
                         "properties": {
@@ -27,27 +26,28 @@ class ResearchAnalysisView(APIView):
                 },
             }
         },
-        description="Run the CrewAI research workflow with the given query and return structured output including agent logs and final analysis.",
+        description="Run the CrewAI workflow and return Markdown logs + final answer.",
     )
     def post(self, request):
         query = request.data.get("query", "")
         if not query:
             return Response({"error": "Query is required."}, status=status.HTTP_400_BAD_REQUEST)
+
         try:
             crew_instance = LatestAIResearchCrew(inputs={"query": query})
             crew_obj = crew_instance.crew()
-            # Execute the CrewAI workflow; with full_output=True, kickoff() returns detailed logs and final result.
             final_output = crew_obj.kickoff()
 
-            final_analysis = {
-                "summary": final_output.get("result", "").split("\n") if "result" in final_output else [],
-                "confidence": final_output.get("confidence", 0.0),
-            }
+            # final_output.result or .final are often the final answer, but we store it in final_answer
+            final_answer = crew_instance.final_answer  # Markdown string
 
             return Response(
                 {
-                    "agentWorkflow": final_output.get("steps", []),
-                    "finalAnalysis": final_analysis,
+                    "agentWorkflow": crew_instance.collected_steps,  # array of Markdown strings
+                    "finalAnalysis": {
+                        "summary": [final_answer],  # or just final_answer
+                        "confidence": getattr(final_output, "confidence", 0.92),
+                    },
                 },
                 status=status.HTTP_200_OK,
             )

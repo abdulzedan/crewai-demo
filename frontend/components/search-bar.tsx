@@ -1,27 +1,68 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Search, Loader2 } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { useState, useRef, useEffect } from "react";
+import { Search, Loader2 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function SearchBar() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [query, setQuery] = useState("")
+  const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [progress, setProgress] = useState(0);
+  const [startTime, setStartTime] = useState<number | null>(null);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const controllerRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    let timer: number | null = null;
+    if (isLoading && startTime) {
+      timer = window.setInterval(() => {
+        setProgress((p) => (p < 95 ? p + 5 : p));
+        setElapsedSeconds(Math.floor((Date.now() - startTime) / 1000));
+      }, 500);
+    }
+    return () => {
+      if (timer !== null) clearInterval(timer);
+    };
+  }, [isLoading, startTime]);
 
   const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    // Here you would typically trigger an API call to your backend.
-    // For demonstration, we simulate a delay.
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsLoading(false)
-    // Optionally, save the query to a global state or context for use in other components.
-  }
+    e.preventDefault();
+    if (!query.trim()) return;
+
+    setIsLoading(true);
+    setProgress(0);
+    setElapsedSeconds(0);
+    setStartTime(Date.now());
+    controllerRef.current = new AbortController();
+
+    try {
+      const res = await fetch("/api/analysis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+        signal: controllerRef.current.signal,
+      });
+      // Optionally parse the result
+      await res.json();
+      setProgress(100);
+    } catch (err) {
+      console.error("Search aborted or failed:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleStop = () => {
+    if (controllerRef.current) {
+      controllerRef.current.abort();
+    }
+    setIsLoading(false);
+    setProgress(0);
+  };
 
   return (
-    <form onSubmit={handleSearch} className="relative">
+    <form onSubmit={handleSearch} className="relative space-y-2">
       <div className="relative flex w-full max-w-3xl mx-auto">
         <Input
           value={query}
@@ -40,13 +81,26 @@ export default function SearchBar() {
           <span className="sr-only">Search</span>
         </Button>
       </div>
+
       {isLoading && (
-        <div className="absolute bottom-0 left-0 h-0.5 w-full overflow-hidden">
-          <div className="w-full h-full bg-primary/10">
-            <div className="h-full w-1/3 bg-primary animate-[loading_1s_ease-in-out_infinite]" />
-          </div>
+        <div className="relative w-full bg-primary/20 rounded h-2 overflow-hidden">
+          <div
+            className="h-full bg-primary transition-all duration-200"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      )}
+
+      {isLoading && (
+        <div className="flex items-center gap-4">
+          <Button variant="destructive" onClick={handleStop}>
+            Stop
+          </Button>
+          <span className="text-sm text-muted-foreground">
+            Time elapsed: {elapsedSeconds}s
+          </span>
         </div>
       )}
     </form>
-  )
+  );
 }
