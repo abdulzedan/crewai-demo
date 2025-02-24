@@ -4,20 +4,20 @@ import copy
 import os
 import re
 from pathlib import Path
+
 import yaml
 from crewai import LLM, Agent, Crew, Process, Task
+from crewai.agents.crew_agent_executor import ToolResult
+
+# For logging step actions as Markdown
+from crewai.agents.parser import AgentAction, AgentFinish
 from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 
 # Tools
 from app.tools.aisearch_tool import AISearchTool
 from app.tools.crewai_tools import store_text_tool
-from app.tools.summarize_tool import SummarizeTool
 from app.tools.current_date_tool import CurrentDateTool
-
-# For logging step actions as Markdown
-from crewai.agents.parser import AgentAction, AgentFinish
-from crewai.agents.crew_agent_executor import ToolResult
 
 env_path = Path(__file__).resolve().parent.parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)

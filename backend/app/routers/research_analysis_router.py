@@ -1,14 +1,16 @@
 # backend/app/routers/research_analysis_router.py
 
 import os
+import re  # Import regex module for splitting log entries
+
 from django.urls import path
-from rest_framework import status, permissions
+from drf_spectacular.utils import extend_schema
+from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from drf_spectacular.utils import extend_schema
+
 from app.serializers import AnalysisQuerySerializer
 from crewai_config.crew import LatestAIResearchCrew
-import re  # Import regex module for splitting log entries
 
 
 class ResearchAnalysisView(APIView):
@@ -57,7 +59,7 @@ class ResearchAnalysisView(APIView):
             log_file = "output_log.txt"
             if os.path.exists(log_file):
                 # Explicitly use UTF-8 and ignore errors to handle problematic characters
-                with open(log_file, "r", encoding="utf-8", errors="ignore") as f:
+                with open(log_file, encoding="utf-8", errors="ignore") as f:
                     log_data = f.read()
                 # Split log data into entries using regex that looks for a timestamp at the start of each entry
                 agent_workflow = re.split(r"(?=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:)", log_data, flags=re.MULTILINE)

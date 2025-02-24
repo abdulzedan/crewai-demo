@@ -1,9 +1,8 @@
 # backend/app/tools/aisearch_tool.py
+import concurrent.futures
 import os
 import re
 import urllib.parse
-import concurrent.futures
-from typing import Union, List
 
 import numpy as np
 import requests
@@ -44,7 +43,7 @@ def fetch_reader_content(link: str) -> str:
     return response.text
 
 
-def get_embedding(text: Union[str, List[str]]) -> Union[List[float], List[List[float]]]:
+def get_embedding(text: str | list[str]) -> list[float] | list[list[float]]:
     """
     Uses Azure OpenAI's API via the AzureOpenAI client to generate text embeddings.
     Supports both single string and a list of strings.
