@@ -1,6 +1,9 @@
+# backend/app/tools/aisearch_tool.py
 import os
 import re
 import urllib.parse
+import concurrent.futures
+from typing import Union, List
 
 import numpy as np
 import requests
@@ -41,14 +44,10 @@ def fetch_reader_content(link: str) -> str:
     return response.text
 
 
-def get_embedding(text: str) -> list[float]:
+def get_embedding(text: Union[str, List[str]]) -> Union[List[float], List[List[float]]]:
     """
-    Uses Azure OpenAI's latest API via the AzureOpenAI client to generate text embeddings.
-    Environment variables used:
-      - AZURE_OPENAI_API_KEY
-      - AZURE_API_VERSION (default "2024-06-01")
-      - AZURE_OPENAI_ENDPOINT
-      - AZURE_OPENAI_EMBEDDING_MODEL (default "text-embedding-3-large")
+    Uses Azure OpenAI's API via the AzureOpenAI client to generate text embeddings.
+    Supports both single string and a list of strings.
     """
     client = AzureOpenAI(
         api_key=os.getenv("AZURE_OPENAI_API_KEY"),
@@ -56,9 +55,12 @@ def get_embedding(text: str) -> list[float]:
         azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
     )
     embedding_model = os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
-    response = client.embeddings.create(input=text, model=embedding_model)
-    # Use attribute access instead of subscripting the response
-    return response.data[0].embedding
+    if isinstance(text, list):
+        response = client.embeddings.create(input=text, model=embedding_model)
+        return [item.embedding for item in response.data]
+    else:
+        response = client.embeddings.create(input=[text], model=embedding_model)
+        return response.data[0].embedding
 
 
 def cosine_similarity(vec1: list[float], vec2: list[float]) -> float:
@@ -69,18 +71,15 @@ def cosine_similarity(vec1: list[float], vec2: list[float]) -> float:
 
 def filter_relevant_chunks(content: str, query: str, threshold: float = 0.75) -> str:
     """
-    Splits the document into paragraphs, embeds each one, and retains only those
+    Splits the document into paragraphs, batches embedding calls, and retains only those
     paragraphs that have cosine similarity above the threshold with the query embedding.
     """
-    paragraphs = re.split(r"\n\s*\n", content)
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", content) if p.strip()]
     query_emb = get_embedding(query)
+    para_embs = get_embedding(paragraphs)
     relevant_chunks = []
-    for para in paragraphs:
-        para = para.strip()
-        if not para:
-            continue
-        para_emb = get_embedding(para)
-        similarity = cosine_similarity(query_emb, para_emb)
+    for para, emb in zip(paragraphs, para_embs):
+        similarity = cosine_similarity(query_emb, emb)
         if similarity >= threshold:
             relevant_chunks.append(para)
     return "\n\n".join(relevant_chunks) if relevant_chunks else content[:1000]
@@ -115,22 +114,25 @@ class AISearchTool(BaseTool):
         except Exception as e:
             return f"Error fetching search links from Serper AI: {e}"
 
-        # Limit to a maximum of 15 links.
+        # Limit to a maximum of 3 links.
         links = links[:3]
         print(f"[AISearchTool] Retrieved {len(links)} links from Serper AI.")
 
         combined_contents = []
-        print("[AISearchTool] Extracting content using Jina Reader for each link...")
-        for link in links:
-            try:
-                full_content = fetch_reader_content(link)
-                # Filter the content: embed each paragraph and select only those relevant to the query.
-                relevant_content = filter_relevant_chunks(full_content, query)
-                combined_contents.append(f"URL: {link}\nContent:\n{relevant_content}\n{'-'*40}\n")
-                print(f"[AISearchTool] Successfully processed content from: {link}")
-            except Exception as e:
-                combined_contents.append(f"URL: {link}\nError fetching content: {e}\n{'-'*40}\n")
-                print(f"[AISearchTool] Error processing {link}: {e}")
+        print("[AISearchTool] Extracting content using Jina Reader for each link in parallel...")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(links)) as executor:
+            future_to_link = {executor.submit(fetch_reader_content, link): link for link in links}
+            for future in concurrent.futures.as_completed(future_to_link):
+                link = future_to_link[future]
+                try:
+                    full_content = future.result()
+                    # Filter the content: embed each paragraph and select only those relevant to the query.
+                    relevant_content = filter_relevant_chunks(full_content, query)
+                    combined_contents.append(f"URL: {link}\nContent:\n{relevant_content}\n{'-'*40}\n")
+                    print(f"[AISearchTool] Successfully processed content from: {link}")
+                except Exception as e:
+                    combined_contents.append(f"URL: {link}\nError fetching content: {e}\n{'-'*40}\n")
+                    print(f"[AISearchTool] Error processing {link}: {e}")
 
         final_result = "\n".join(combined_contents)
         return final_result
