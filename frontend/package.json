@@ -58,6 +58,8 @@
     "react-markdown": "^10.0.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",

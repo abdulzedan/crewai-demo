@@ -1,63 +1,132 @@
+// frontend/components/agent-workflow.tsx
 "use client";
 
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Activity, ChevronDown } from "lucide-react";
+import { ChevronDown, MessageSquareText, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-export default function AgentWorkflow() {
-  const [workflowLogs, setWorkflowLogs] = useState<string[]>([]);
+interface AgentMessage {
+  timestamp: string;
+  content: string;
+}
+
+interface Agent {
+  id: string;
+  role: string;
+  messages: AgentMessage[];
+}
+
+interface AgentWorkflowProps {
+  data: {
+    agentWorkflow: string[];
+  };
+}
+
+// Parser: For each log entry, extract timestamp and key-value pairs.
+function parseAgentLogs(logLines: string[]): Agent[] {
+  const agents: { [agentName: string]: Agent } = {};
+  const roleMap: { [key: string]: string } = {
+    "Expert Web Researcher": "Researcher",
+    "Analytical Aggregator": "Analyzer",
+    "Innovative Synthesizer": "Synthesizer",
+  };
+
+  // Capture the timestamp and the remainder (allowing multi-line content)
+  const logPattern = /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}):\s*([\s\S]+)$/;
+  // Updated to use [\s\S]*? so that field values spanning multiple lines are captured.
+  const fieldPattern = /(\w+)="([\s\S]*?)"/g;
+
+  for (const line of logLines) {
+    const trimmed = line.trim();
+    const match = trimmed.match(logPattern);
+    if (!match) continue;
+    const timestamp = match[1];
+    const fieldsStr = match[2];
+    const fields: { [key: string]: string } = {};
+    let fieldMatch;
+    while ((fieldMatch = fieldPattern.exec(fieldsStr)) !== null) {
+      fields[fieldMatch[1]] = fieldMatch[2];
+    }
+    const agentName = fields["agent"];
+    if (!agentName) continue;
+    if (!agents[agentName]) {
+      agents[agentName] = {
+        id: agentName,
+        role: roleMap[agentName] || agentName,
+        messages: [],
+      };
+    }
+    let content = fields["task"] || "";
+    if (fields["status"] === "completed" && fields["output"]) {
+      content += "\nOutput: " + fields["output"];
+    }
+    agents[agentName].messages.push({ timestamp, content });
+  }
+  return Object.values(agents);
+}
+
+export default function AgentWorkflow({ data }: AgentWorkflowProps) {
+  const [agents, setAgents] = useState<Agent[]>([]);
   const [isExpanded, setIsExpanded] = useState(true);
 
   useEffect(() => {
-    fetch("/api/analysis", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: "What is the latest in AI" }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.agentWorkflow) {
-          setWorkflowLogs(data.agentWorkflow);
-        }
-      })
-      .catch((err) => console.error("Error fetching agent workflow:", err));
-  }, []);
+    if (data.agentWorkflow && Array.isArray(data.agentWorkflow) && data.agentWorkflow.length > 0) {
+      const parsedAgents = parseAgentLogs(data.agentWorkflow);
+      setAgents(parsedAgents);
+    }
+  }, [data.agentWorkflow]);
 
   return (
     <Card className="border-border/50 shadow-lg bg-card/50 backdrop-blur">
-      <CardHeader
-        className="cursor-pointer select-none"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
+      <CardHeader className="cursor-pointer select-none" onClick={() => setIsExpanded(!isExpanded)}>
         <CardTitle className="flex items-center justify-between text-lg font-medium">
           <div className="flex items-center gap-2">
             <Activity className="h-5 w-5 text-primary" />
             Agent Workflow
             <Badge variant="secondary" className="ml-2 bg-secondary/50">
-              {workflowLogs.length} steps
+              {agents.length} agents
             </Badge>
           </div>
           <ChevronDown
-            className={cn(
-              "h-4 w-4 text-muted-foreground transition-transform duration-200",
-              isExpanded && "transform rotate-180"
-            )}
+            className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200", isExpanded && "rotate-180")}
           />
         </CardTitle>
       </CardHeader>
       {isExpanded && (
-        <CardContent className="space-y-4 transition-all duration-200">
-          {workflowLogs.length > 0 ? (
-            workflowLogs.map((md, idx) => (
-              <div key={idx} className="rounded-lg bg-muted/20 p-4 text-sm text-muted-foreground">
-                <ReactMarkdown>{md}</ReactMarkdown>
-              </div>
-            ))
+        <CardContent className="transition-all duration-200">
+          {agents.length === 0 ? (
+            <p className="text-sm text-muted-foreground">No logs available.</p>
           ) : (
-            <p className="text-sm text-muted-foreground">No workflow logs yet.</p>
+            agents.map((agent, idx) => (
+              <Accordion type="single" collapsible className="w-full mb-2" key={agent.id + idx}>
+                <AccordionItem value={agent.id}>
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-2 text-sm">
+                      <MessageSquareText className="h-4 w-4 text-primary" />
+                      <span>{agent.role}</span>
+                      <Badge variant="secondary" className="ml-2 bg-secondary/50">
+                        {agent.messages.length} messages
+                      </Badge>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pt-4 text-sm text-muted-foreground whitespace-pre-wrap">
+                      {agent.messages.map((msg, i) => (
+                        <div key={i}>
+                          <strong>{msg.timestamp}:</strong>{" "}
+                          <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
+                        </div>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ))
           )}
         </CardContent>
       )}
