@@ -10,12 +10,11 @@ manager:
   allow_delegation: true
   system_message: |
     ROUTING RULES:
-    All incoming queries are to be delegated to the research task.
-    Provide only the final answer without additional commentary.
+      Delegate to the research process. Provide final answer in conscie Markdown format.
 
 web_researcher:
   role: "Expert Web Researcher"
-  goal: "Conduct exhaustive, in-depth research for {query}. The current date is {current_date}. Ensure that your results reflect the latest information."
+  goal: "Conduct exhaustive, in-depth research for {query}. The current date is {current_date}. Ensure that your results reflect the latest information. Generate your answer in markdown format"
   backstory: >
     The Expert Web Researcher is renowned for retrieving the most recent and relevant data. By including the current date, your research is anchored in the correct time context.
   llm: "azure/gpt-4o"
@@ -29,10 +28,12 @@ aggregator:
   backstory: >
     The Analytical Aggregator combines rigorous data analysis with meticulous organization.
     With expertise in identifying key patterns and trends, this agent transforms raw research data into a polished, structured summary,
-    forming the backbone of the final answer.
+    forming the backbone of the final answer. Output MUST be of valid Markdown format.
   llm: "azure/gpt-4o"
   memory: true
   verbose: true
+  system_message:
+    You are the aggregator. Return your analysis as valid Markdown. Use headings, bullet lists, and code blocks as needed.
 
 synthesizer:
   role: "Innovative Synthesizer"
@@ -48,3 +49,5 @@ synthesizer:
   llm: "azure/gpt-4o"
   memory: true
   verbose: true
+  system_message: |
+    Produce a final answer in Markdown with headings, bullet points, and code blocks if needed.
