@@ -32,3 +32,8 @@ docs/
 research_output.txt
 aggregate_output.txt
 synthesize_output.txt
+
+#root testing unneeded
+comp_working.py
+stored_text.txt
+output_log.txt
