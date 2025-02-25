@@ -1,4 +1,3 @@
-// frontend/components/search-bar.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 interface SearchBarProps {
-  onSearch: (query: string) => void;
+  onSearch: (query: string, maxLinks: number) => void;
   loading: boolean;
   onClear: () => void;
 }
@@ -18,6 +17,7 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const [progress, setProgress] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [internalLoading, setInternalLoading] = useState(loading);
+  const [maxLinks, setMaxLinks] = useState<number>(3);
 
   useEffect(() => {
     setInternalLoading(loading);
@@ -41,7 +41,7 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    onSearch(query);
+    onSearch(query, maxLinks);
   };
 
   return (
@@ -66,6 +66,20 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
               <span className="sr-only">Search</span>
             </Button>
           </div>
+        </div>
+        <div className="mt-2">
+          <label htmlFor="maxLinks" className="block text-sm font-medium text-muted-foreground">
+            Number of Links: {maxLinks}
+          </label>
+          <input
+            id="maxLinks"
+            type="range"
+            min="1"
+            max="10"
+            value={maxLinks}
+            onChange={(e) => setMaxLinks(Number(e.target.value))}
+            className="w-full"
+          />
         </div>
       </form>
       {internalLoading && (
