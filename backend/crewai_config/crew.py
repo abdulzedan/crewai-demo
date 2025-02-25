@@ -4,12 +4,9 @@ import copy
 import os
 import re
 from pathlib import Path
-
 import yaml
 from crewai import LLM, Agent, Crew, Process, Task
 from crewai.agents.crew_agent_executor import ToolResult
-
-# For logging step actions as Markdown
 from crewai.agents.parser import AgentAction, AgentFinish
 from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
@@ -56,6 +53,20 @@ def format_config(cfg, inputs):
     return cfg
 
 
+def extract_search_links(text: str) -> list[dict]:
+    # Updated extraction: match lines with format:
+    # URL: {url} | Title: {title} | Snippet: {snippet}
+    pattern = re.compile(
+        r"URL:\s*(https?://[^\s|]+)\s*\|\s*Title:\s*([^|]+)\s*\|\s*Snippet:\s*([^\n]+)",
+        re.IGNORECASE,
+    )
+    links = []
+    for match in pattern.finditer(text):
+        url, title, snippet = match.groups()
+        links.append({"url": url.strip(), "title": title.strip(), "snippet": snippet.strip()})
+    return links
+
+
 @CrewBase
 class LatestAIResearchCrew:
     """
@@ -79,17 +90,21 @@ class LatestAIResearchCrew:
 
         self.collected_steps = []  # Logs in Markdown
         self.final_answer = ""  # Final answer in Markdown
-        self.aggregator_links = []  # Extracted links from aggregator
+        self.aggregator_links = []  # Will hold extracted search links
 
     def my_step_callback(self, step):
-        if isinstance(step, AgentAction):
-            log_entry = f"## **Agent Action**\n```\n{step.text}\n```"
-        elif isinstance(step, AgentFinish):
-            log_entry = f"## **Agent Finish**\n```\n{step.text}\n```"
-        elif isinstance(step, ToolResult):
-            log_entry = f"## **Tool Result**\n\n{step.result}"
+        if hasattr(step, "result"):
+            log_entry = f"Tool Result: {step.result}"
         else:
-            log_entry = f"## **Unknown Step**\n{str(step)}"
+            timestamp = getattr(step, "timestamp", "Unknown Time")
+            task_name = getattr(step, "task_name", "unknown")
+            text = getattr(step, "text", "")
+            status = getattr(step, "status", "unknown")
+            if status == "completed":
+                truncated = "\n".join(text.splitlines()[:3])
+                log_entry = f'{timestamp}: task_name="{task_name}", task="{truncated}...", status="{status}"'
+            else:
+                log_entry = f'{timestamp}: task_name="{task_name}", task="{text}", status="{status}"'
         self.collected_steps.append(log_entry)
 
     @agent
@@ -125,41 +140,22 @@ class LatestAIResearchCrew:
         return Agent(config=cfg, verbose=True, llm=llm, memory=True)
 
     def aggregate_callback(self, task_output):
-        """
-        1. Remove images from aggregator Markdown
-        2. Extract all URLs
-        3. Return cleaned aggregator Markdown
-        """
         raw_text = task_output.raw
-
-        # Remove lines with images:
-        # e.g. ![Image X](url) or lines containing "Image \d+"
+        # Remove image markdown and extraneous image lines.
         text_no_images = re.sub(r"!\[.*?\]\(.*?\)", "", raw_text)
         text_no_images = re.sub(r"Image\s+\d+.*", "", text_no_images)
-
-        # Extract lines that match "URL: <some url>"
-        # e.g. "URL: https://..."
-        # Then parse them into a link array
-        link_pattern = re.compile(r"URL:\s*(https?://[^\s]+)", re.IGNORECASE)
-        found_urls = link_pattern.findall(raw_text)
-        # We'll mark them as "NEWS" by default
-        aggregator_links = []
-        for url in found_urls:
-            aggregator_links.append(
-                {
-                    "url": url,
-                    "title": "Untitled",
-                    "snippet": "N/A",
-                    "credibility": "NEWS",
-                }
-            )
-
+        # Always read from research_output.txt to force extraction.
+        try:
+            with open("research_output.txt", encoding="utf-8", errors="ignore") as f:
+                research_text = f.read()
+            aggregator_links = extract_search_links(research_text)
+        except Exception as e:
+            aggregator_links = []
         self.aggregator_links = aggregator_links
         return text_no_images
 
     def synthesize_callback(self, task_output):
         final_markdown = task_output.raw
-        # Remove enclosing triple backticks if present.
         if final_markdown.startswith("```") and final_markdown.endswith("```"):
             final_markdown = final_markdown.replace(final_markdown.split("\n")[0] + "\n", "")
             final_markdown = final_markdown.rsplit("\n", 1)[0]
@@ -173,11 +169,12 @@ class LatestAIResearchCrew:
         if cfg is None:
             raise ValueError("Missing 'research_task' in tasks.yaml")
         query_input = self.inputs.get("query", "")
-        print(f"[DEBUG][research_task] Using query: '{query_input}'")
+        max_links = self.inputs.get("max_links", 3)
+        print(f"[DEBUG][research_task] Using query: '{query_input}', max_links: {max_links}")
         return Task(
             config=cfg,
             agent=self.web_researcher(),
-            inputs={"query": query_input},
+            inputs={"query": query_input, "max_links": max_links},
             async_execution=False,
             output_file="research_output.txt",
         )
