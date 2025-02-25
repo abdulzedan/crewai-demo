@@ -7,8 +7,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Badge } from "@/components/ui/badge";
 import { ChevronDown, MessageSquareText, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import CollapsibleMarkdown from "@/components/collapsible-markdown";
 
 interface AgentMessage {
   timestamp: string;
@@ -27,7 +26,7 @@ interface AgentWorkflowProps {
   };
 }
 
-// Parser: For each log entry, extract timestamp and key-value pairs.
+// Updated parser: deduplicate messages with the same content for an agent.
 function parseAgentLogs(logLines: string[]): Agent[] {
   const agents: { [agentName: string]: Agent } = {};
   const roleMap: { [key: string]: string } = {
@@ -36,9 +35,7 @@ function parseAgentLogs(logLines: string[]): Agent[] {
     "Innovative Synthesizer": "Synthesizer",
   };
 
-  // Capture the timestamp and the remainder (allowing multi-line content)
   const logPattern = /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}):\s*([\s\S]+)$/;
-  // Updated to use [\s\S]*? so that field values spanning multiple lines are captured.
   const fieldPattern = /(\w+)="([\s\S]*?)"/g;
 
   for (const line of logLines) {
@@ -65,7 +62,10 @@ function parseAgentLogs(logLines: string[]): Agent[] {
     if (fields["status"] === "completed" && fields["output"]) {
       content += "\nOutput: " + fields["output"];
     }
-    agents[agentName].messages.push({ timestamp, content });
+    // Deduplicate: only add if no existing message has the same content.
+    if (!agents[agentName].messages.some(msg => msg.content === content)) {
+      agents[agentName].messages.push({ timestamp, content });
+    }
   }
   return Object.values(agents);
 }
@@ -92,9 +92,7 @@ export default function AgentWorkflow({ data }: AgentWorkflowProps) {
               {agents.length} agents
             </Badge>
           </div>
-          <ChevronDown
-            className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200", isExpanded && "rotate-180")}
-          />
+          <ChevronDown className={cn("h-5 w-5 text-muted-foreground transition-transform duration-200", isExpanded && "rotate-180")} />
         </CardTitle>
       </CardHeader>
       {isExpanded && (
@@ -117,9 +115,9 @@ export default function AgentWorkflow({ data }: AgentWorkflowProps) {
                   <AccordionContent>
                     <div className="space-y-2 pt-4 text-sm text-muted-foreground whitespace-pre-wrap">
                       {agent.messages.map((msg, i) => (
-                        <div key={i}>
-                          <strong>{msg.timestamp}:</strong>{" "}
-                          <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
+                        <div key={i} className="space-y-1">
+                          <time className="block text-xs italic text-gray-400">{msg.timestamp}</time>
+                          <CollapsibleMarkdown content={msg.content} lineClamp={2} />
                         </div>
                       ))}
                     </div>

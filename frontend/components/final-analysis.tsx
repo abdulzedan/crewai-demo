@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Copy, ChevronDown, Trash2 } from "lucide-react";
+import { CheckCircle2, Copy, Trash2, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -22,17 +22,17 @@ interface FinalAnalysisProps {
 
 export default function FinalAnalysis({ data }: FinalAnalysisProps) {
   const [analysisMd, setAnalysisMd] = useState<string>("");
-  const [isExpanded, setIsExpanded] = useState(true);
   const [copied, setCopied] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false); // collapsed by default
 
   useEffect(() => {
     if (data.finalAnalysis && data.finalAnalysis.summary) {
       let [mdString] = data.finalAnalysis.summary;
-      // Remove enclosing triple backticks if present
       if (mdString.startsWith("```") && mdString.endsWith("```")) {
         mdString = mdString.replace(/^```[\s\S]*?\n/, "").replace(/\n```$/, "");
       }
       setAnalysisMd(mdString || "");
+      setIsExpanded(false); // Reset to collapsed when new data arrives.
     }
   }, [data.finalAnalysis]);
 
@@ -49,20 +49,18 @@ export default function FinalAnalysis({ data }: FinalAnalysisProps) {
 
   return (
     <Card className="border-border/50 shadow-lg bg-card/50 backdrop-blur">
-      <CardHeader className="cursor-pointer select-none" onClick={() => setIsExpanded(!isExpanded)}>
-        <CardTitle className="flex items-center justify-between text-lg font-medium">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-5 w-5 text-green-400" />
-            Final Analysis
-          </div>
-          <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200", isExpanded && "rotate-180")} />
+      <CardHeader className="flex items-center justify-between cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+        <CardTitle className="flex items-center gap-2 text-lg font-medium">
+          <CheckCircle2 className="h-5 w-5 text-green-400" />
+          Final Analysis
         </CardTitle>
+        <ChevronDown className={cn("h-5 w-5 text-muted-foreground transition-transform duration-200", isExpanded ? "rotate-180" : "rotate-0")} />
       </CardHeader>
       {isExpanded && (
-        <CardContent className="space-y-4 transition-all duration-200 p-4">
+        <CardContent className="space-y-4 p-4 text-left">
           {analysisMd ? (
             <>
-              <div className="prose dark:prose-invert max-w-none">
+              <div className="prose prose-lg dark:prose-invert max-w-prose p-6 rounded-lg border border-border bg-background shadow-lg">
                 <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                   {analysisMd}
                 </ReactMarkdown>

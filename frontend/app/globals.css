@@ -43,6 +43,20 @@
   }
 }
 
+/* Additional typography enhancements */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+  .text-highlight {
+    @apply text-primary font-semibold;
+  }
+}
+
+/* Keyframe for loading animation */
 @keyframes loading {
   50% {
     transform: translateX(200%);

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Loader2, X } from "lucide-react";
+import { Search, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -19,7 +19,6 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const [elapsedTime, setElapsedTime] = useState(0);
   const [internalLoading, setInternalLoading] = useState(loading);
 
-  // Sync internal loading with parent's loading prop.
   useEffect(() => {
     setInternalLoading(loading);
     if (!loading) {
@@ -42,46 +41,28 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    // Trigger parent's search; parent's loading state will drive internal state.
     onSearch(query);
   };
 
-  const handleClear = () => {
-    setQuery("");
-    onClear();
-  };
-
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 w-full max-w-4xl">
       <form onSubmit={handleSearch} className="relative">
-        <div className="relative flex w-full max-w-3xl mx-auto">
+        <div className="relative flex w-full">
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="pr-24 h-12 bg-background/50 shadow-lg border-border/50 rounded-full backdrop-blur"
+            className="pr-16 h-16 text-lg bg-background/50 shadow-lg border-border/50 rounded-full backdrop-blur transition-all duration-300"
             placeholder="Ask anything..."
             type="search"
           />
-          <div className="absolute right-1 top-1 flex gap-2">
-            {!internalLoading && (
-              <Button
-                type="button"
-                size="icon"
-                variant="ghost"
-                className="h-10 w-10 rounded-full hover:bg-muted/20"
-                onClick={handleClear}
-              >
-                <X className="h-4 w-4" />
-                <span className="sr-only">Clear</span>
-              </Button>
-            )}
+          <div className="absolute right-4 top-2">
             <Button
               size="icon"
               type="submit"
               disabled={internalLoading}
-              className="h-10 w-10 rounded-full"
+              className="h-12 w-12 rounded-full"
             >
-              {internalLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
+              {internalLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Search className="h-5 w-5" />}
               <span className="sr-only">Search</span>
             </Button>
           </div>

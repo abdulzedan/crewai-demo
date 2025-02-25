@@ -7,5 +7,7 @@ class ChatSerializer(serializers.Serializer):
 
 class AnalysisQuerySerializer(serializers.Serializer):
     query = serializers.CharField(
-        required=True, max_length=1024, help_text="The search query for the research workflow."
+        required=True,
+        max_length=1024,
+        help_text="The search query for the research workflow.",
     )

@@ -145,7 +145,14 @@ class LatestAIResearchCrew:
         # We'll mark them as "NEWS" by default
         aggregator_links = []
         for url in found_urls:
-            aggregator_links.append({"url": url, "title": "Untitled", "snippet": "N/A", "credibility": "NEWS"})
+            aggregator_links.append(
+                {
+                    "url": url,
+                    "title": "Untitled",
+                    "snippet": "N/A",
+                    "credibility": "NEWS",
+                }
+            )
 
         self.aggregator_links = aggregator_links
         return text_no_images
@@ -220,8 +227,18 @@ class LatestAIResearchCrew:
     @crew
     def crew(self) -> Crew:
         return Crew(
-            agents=[self.manager(), self.web_researcher(), self.aggregator(), self.synthesizer()],
-            tasks=[self.research_task(), self.aggregate_task(), self.store_task(), self.synthesize_task()],
+            agents=[
+                self.manager(),
+                self.web_researcher(),
+                self.aggregator(),
+                self.synthesizer(),
+            ],
+            tasks=[
+                self.research_task(),
+                self.aggregate_task(),
+                self.store_task(),
+                self.synthesize_task(),
+            ],
             process=Process.sequential,
             verbose=True,
             manager_llm=llm,

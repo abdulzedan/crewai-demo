@@ -62,7 +62,11 @@ class ResearchAnalysisView(APIView):
                 with open(log_file, encoding="utf-8", errors="ignore") as f:
                     log_data = f.read()
                 # Split log data into entries using regex that looks for a timestamp at the start of each entry
-                agent_workflow = re.split(r"(?=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:)", log_data, flags=re.MULTILINE)
+                agent_workflow = re.split(
+                    r"(?=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:)",
+                    log_data,
+                    flags=re.MULTILINE,
+                )
                 agent_workflow = [entry.strip() for entry in agent_workflow if entry.strip()]
             else:
                 agent_workflow = crew_instance.collected_steps

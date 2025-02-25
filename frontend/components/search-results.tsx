@@ -1,11 +1,11 @@
 // frontend/components/search-results.tsx
 "use client";
 
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SearchCheck, ExternalLink, Copy, CheckCircle2, ChevronDown } from "lucide-react";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface SearchLink {
@@ -22,12 +22,8 @@ interface SearchResultsProps {
   };
 }
 
-/**
- * Fallback parser: Extract search links from research_task logs.
- */
 function parseSearchLinksFromLogs(lines: string[]): SearchLink[] {
   const links: SearchLink[] = [];
-  // Updated regex to capture multi-line output
   const researchRegex = /task_name="research_task"[\s\S]*?status="completed"[\s\S]*?output="([\s\S]*?)"/i;
   for (const line of lines) {
     const match = line.match(researchRegex);
@@ -39,23 +35,26 @@ function parseSearchLinksFromLogs(lines: string[]): SearchLink[] {
         links.push({
           url: urlMatch[1],
           title: titleMatch ? titleMatch[1].trim() : "Untitled",
-          snippet: "", // Return empty snippet instead of "N/A"
+          snippet: "",
           credibility: "NEWS",
         });
       }
     }
   }
-  // Deduplicate links by URL
-  const uniqueLinksMap: { [url: string]: SearchLink } = {};
-  links.forEach(link => {
-    uniqueLinksMap[link.url] = link;
-  });
-  return Object.values(uniqueLinksMap);
+  // Deduplicate by URL
+  return Array.from(new Map(links.map(item => [item.url, item])).values());
 }
 
 export default function SearchResults({ data }: SearchResultsProps) {
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState(true);
+
+  let results = data.search_links || [];
+  if (results.length === 0 && data.agentWorkflow && data.agentWorkflow.length > 0) {
+    results = parseSearchLinksFromLogs(data.agentWorkflow);
+  }
+  // Ensure no duplicates by URL
+  results = Array.from(new Map(results.map(item => [item.url, item])).values());
 
   const handleCopyUrl = async (url: string) => {
     await navigator.clipboard.writeText(url);
@@ -76,15 +75,9 @@ export default function SearchResults({ data }: SearchResultsProps) {
     }
   };
 
-  let results = data.search_links || [];
-  // Fallback: If no search links provided, try to extract them from agentWorkflow logs.
-  if (results.length === 0 && data.agentWorkflow && data.agentWorkflow.length > 0) {
-    results = parseSearchLinksFromLogs(data.agentWorkflow);
-  }
-
   return (
     <Card className="border-border/50 shadow-lg bg-card/50 backdrop-blur">
-      <CardHeader className="cursor-pointer select-none" onClick={() => setIsExpanded(!isExpanded)}>
+      <CardHeader onClick={() => setIsExpanded(!isExpanded)} className="cursor-pointer select-none">
         <CardTitle className="flex items-center justify-between text-lg font-medium">
           <div className="flex items-center gap-2">
             <SearchCheck className="h-5 w-5 text-primary" />
@@ -94,12 +87,12 @@ export default function SearchResults({ data }: SearchResultsProps) {
             </Badge>
           </div>
           <ChevronDown
-            className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200", isExpanded && "rotate-180")}
+            className={cn("h-5 w-5 text-muted-foreground transition-transform duration-200", isExpanded ? "rotate-0" : "rotate-180")}
           />
         </CardTitle>
       </CardHeader>
       {isExpanded && (
-        <CardContent className="grid gap-4 transition-all duration-200 p-4">
+        <CardContent className="grid gap-4 p-4">
           {results.length === 0 ? (
             <p className="text-sm text-muted-foreground">No search results found.</p>
           ) : (
@@ -129,7 +122,9 @@ export default function SearchResults({ data }: SearchResultsProps) {
                     </Button>
                   </div>
                 </div>
-                <h3 className="font-semibold text-foreground">{r.title}</h3>
+                <h3 className="font-semibold text-foreground hover:text-primary transition-colors duration-200">
+                  {r.title}
+                </h3>
                 {r.snippet && r.snippet.trim() !== "" && (
                   <p className="text-sm text-muted-foreground line-clamp-2">{r.snippet}</p>
                 )}
