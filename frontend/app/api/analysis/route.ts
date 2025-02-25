@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { query } = await req.json();
+    const { query, linkCount } = await req.json();
     if (!query) {
       return NextResponse.json({ error: "Query is required" }, { status: 400 });
     }
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const response = await fetch(`${backendUrl}/api/analysis/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query, linkCount }),
     });
     if (!response.ok) {
       const errorData = await response.json();

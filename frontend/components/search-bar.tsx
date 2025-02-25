@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 interface SearchBarProps {
-  onSearch: (query: string, maxLinks: number) => void;
+  onSearch: (query: string) => void;
   loading: boolean;
   onClear: () => void;
 }
@@ -17,7 +17,6 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const [progress, setProgress] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [internalLoading, setInternalLoading] = useState(loading);
-  const [maxLinks, setMaxLinks] = useState<number>(3);
 
   useEffect(() => {
     setInternalLoading(loading);
@@ -38,48 +37,44 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
     return () => clearInterval(timer);
   }, [internalLoading]);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    onSearch(query, maxLinks);
+    document.getElementById("search-bar-container")?.classList.add("animate-slideOut");
+    setTimeout(() => {
+      onSearch(query);
+    }, 500);
   };
 
   return (
-    <div className="space-y-2 w-full max-w-4xl">
+    <div
+      id="search-bar-container"
+      className="w-full max-w-[900px] space-y-2 transition-all duration-500 mx-auto"
+    >
       <form onSubmit={handleSearch} className="relative">
         <div className="relative flex w-full">
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="pr-16 h-16 text-lg bg-background/50 shadow-lg border-border/50 rounded-full backdrop-blur transition-all duration-300"
+            className="w-full pr-20 h-16 text-lg bg-background/50 shadow-lg border-border/50 rounded-full backdrop-blur transition-all duration-300"
             placeholder="Ask anything..."
             type="search"
           />
-          <div className="absolute right-4 top-2">
+          <div className="absolute right-4 top-2 flex items-center gap-2">
             <Button
               size="icon"
               type="submit"
               disabled={internalLoading}
               className="h-12 w-12 rounded-full"
             >
-              {internalLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Search className="h-5 w-5" />}
+              {internalLoading ? (
+                <Loader2 className="h-5 w-5 animate-spin" />
+              ) : (
+                <Search className="h-5 w-5" />
+              )}
               <span className="sr-only">Search</span>
             </Button>
           </div>
-        </div>
-        <div className="mt-2">
-          <label htmlFor="maxLinks" className="block text-sm font-medium text-muted-foreground">
-            Number of Links: {maxLinks}
-          </label>
-          <input
-            id="maxLinks"
-            type="range"
-            min="1"
-            max="10"
-            value={maxLinks}
-            onChange={(e) => setMaxLinks(Number(e.target.value))}
-            className="w-full"
-          />
         </div>
       </form>
       {internalLoading && (
