@@ -1,7 +1,7 @@
 # backend/app/routers/research_analysis_router.py
 
 import os
-import re  # Import regex module for splitting log entries
+import re
 
 from django.urls import path
 from drf_spectacular.utils import extend_schema
@@ -47,27 +47,39 @@ class ResearchAnalysisView(APIView):
         },
     )
     def post(self, request):
-        query = request.data.get("query", "")
+        data = request.data
+        query = data.get("query", "")
+        max_links = data.get("max_links", 3)
         if not query:
             return Response({"error": "Query is required."}, status=status.HTTP_400_BAD_REQUEST)
         try:
-            crew_instance = LatestAIResearchCrew(inputs={"query": query})
+            # Pass the max_links parameter along with the query
+            crew_instance = LatestAIResearchCrew(inputs={"query": query, "max_links": max_links})
             crew_obj = crew_instance.crew()
             final_output = crew_obj.kickoff()
 
-            # Read the log file if it exists; fallback to collected_steps if not.
             log_file = "output_log.txt"
             if os.path.exists(log_file):
-                # Explicitly use UTF-8 and ignore errors to handle problematic characters
                 with open(log_file, encoding="utf-8", errors="ignore") as f:
                     log_data = f.read()
-                # Split log data into entries using regex that looks for a timestamp at the start of each entry
-                agent_workflow = re.split(
+                raw_entries = re.split(
                     r"(?=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:)",
                     log_data,
                     flags=re.MULTILINE,
                 )
-                agent_workflow = [entry.strip() for entry in agent_workflow if entry.strip()]
+                raw_entries = [entry.strip() for entry in raw_entries if entry.strip()]
+                seen = set()
+                agent_workflow = []
+                for entry in raw_entries:
+                    match = re.search(r'task_name="([^"]+)"', entry)
+                    content_match = re.search(r'task="([^"]+)"', entry)
+                    if match and content_match:
+                        key = (match.group(1), content_match.group(1))
+                        if key not in seen:
+                            seen.add(key)
+                            agent_workflow.append(entry)
+                    else:
+                        agent_workflow.append(entry)
             else:
                 agent_workflow = crew_instance.collected_steps
 
