@@ -4,10 +4,9 @@ import copy
 import os
 import re
 from pathlib import Path
+
 import yaml
 from crewai import LLM, Agent, Crew, Process, Task
-from crewai.agents.crew_agent_executor import ToolResult
-from crewai.agents.parser import AgentAction, AgentFinish
 from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 
@@ -149,7 +148,7 @@ class LatestAIResearchCrew:
             with open("research_output.txt", encoding="utf-8", errors="ignore") as f:
                 research_text = f.read()
             aggregator_links = extract_search_links(research_text)
-        except Exception as e:
+        except Exception:
             aggregator_links = []
         self.aggregator_links = aggregator_links
         return text_no_images

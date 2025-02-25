@@ -4,19 +4,19 @@ services:
   backend:
     build: ./backend
     container_name: crewai_backend
-    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    env_file: .env
     volumes:
       - ./backend:/app
     ports:
       - "8000:8000"
-    env_file:
-      - .env
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - chromadb
 
   frontend:
     build: ./frontend
     container_name: crewai_frontend
+    env_file: .env
     volumes:
       - ./frontend:/usr/src/app
     ports:
@@ -28,7 +28,7 @@ services:
     image: chromadb/chroma:0.3.22
     container_name: crewai_chromadb
     environment:
-      - CHROMA_DB_IMPL=disk
+      CHROMA_DB_IMPL: disk
     volumes:
       - chroma-data:/app/chroma
     ports:
