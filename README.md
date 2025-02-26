@@ -21,9 +21,7 @@ This repository demonstrates a multi-agent approach to web search, analysis, and
 
 ---
 
-## Video Demo
-
-https://github.com/user-attachments/assets/d59b82e5-2ec1-40cf-a522-e8cbc57e7877
+[![Video_demo](./video_demo/thumbnail.jpg)](https://github.com/user-attachments/assets/d59b82e5-2ec1-40cf-a522-e8cbc57e7877)
 
 ---
 
@@ -53,7 +51,7 @@ abdulzedan-crewai-demo/
 │   ├── Dockerfile                # Docker instructions for the Next.js frontend
 │   ├── package.json
 │   ├── tsconfig.json
-│   ├── app/                      # Next.js 13+ (App Router)
+│   ├── app/                      # Next.js 18+ (App Router)
 │   ├── components/
 │   ├── public/
 │   └── ... etc.
