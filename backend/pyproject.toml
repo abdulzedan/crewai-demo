@@ -22,7 +22,14 @@ dependencies = [
   "pyyaml",
   "playwright",
   "dateparser",
-  "langchain-chroma"
+  "langchain-chroma",
+  "numpy",
+  "tenacity",
+  "openai",
+  "celery",
+  "djangorestframework",
+  "djangorestframework-simplejwt",
+  "drf-spectacular"
 ]
 
 [tool.ruff]
