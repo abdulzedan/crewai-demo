@@ -3,18 +3,20 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install Python dependencies from requirements.txt
-COPY requirements.txt /app/
+# Copy the root-level requirements.txt into the container
+COPY requirements.txt /app/requirements.txt
+
+# Install production dependencies from requirements.txt
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Install the backend package in editable mode to pick up pyproject.toml configuration
-RUN pip install -e .
+# Install the backend package in editable mode from the 'backend' folder
+RUN pip install -e backend
 
-# Copy the backend source code
+# Copy the entire repository into the container
 COPY . /app/
 
 EXPOSE 8000
 
-# Run migrations and start the Django server
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+# Run migrations and start the Django server using the backend's manage.py
+CMD ["sh", "-c", "python backend/manage.py migrate && python backend/manage.py runserver 0.0.0.0:8000"]

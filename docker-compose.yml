@@ -2,19 +2,24 @@ version: "3.9"
 
 services:
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: crewai_backend
     env_file: .env
     volumes:
-      - ./backend:/app
+      - .:/app
     ports:
       - "8000:8000"
-    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    # The command here is optional if you rely on the CMD in the Dockerfilse.
+    command: sh -c "python backend/manage.py migrate && python backend/manage.py runserver 0.0.0.0:8000"
     depends_on:
       - chromadb
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: crewai_frontend
     env_file: .env
     volumes:
