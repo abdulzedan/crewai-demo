@@ -23,7 +23,8 @@ This repository demonstrates a multi-agent approach to web search, analysis, and
 
 ## Video Demo
 
-[![DemoVideo](video_demo/thumbnail.jpg)](https://github.com/abdulzedan/crewai-demo/blob/main/video_demo/demo.mp4)
+https://github.com/user-attachments/assets/d59b82e5-2ec1-40cf-a522-e8cbc57e7877
+
 ---
 
 ## Repository Structure
