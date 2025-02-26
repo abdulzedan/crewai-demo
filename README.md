@@ -42,7 +42,7 @@ crewai-demo/
 │   ├── MANIFEST.in
 │   ├── db.sqlite3                # Local dev database (SQLite)
 │   ├── manage.py
-│   ├── pyproject.toml            # Main Python dependencies (CrewAI backend)
+│   ├── pyproject.toml            # Main Python dependencies
 │   ├── pytest.ini
 │   ├── setup.cfg
 │   ├── app/                      # Main Django app code
@@ -57,8 +57,8 @@ crewai-demo/
 │   ├── components/
 │   ├── public/
 │   └── ... etc.
-├── video_demo/                   # Recorded video or placeholder for video demonstration
-├── .chroma-local/                # Local Chroma DB files
+├── video_demo/
+├── .chroma-local/
 ├── .devcontainer/                # Dev container config
 └── .github/workflows/            # GitHub Actions (CI/CD)
 ```
