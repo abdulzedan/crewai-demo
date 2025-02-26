@@ -1,6 +1,6 @@
 # Project
 
-**CrewAI** is an AI-driven platform combining a Django backend with advanced research tooling and a Next.js frontend.
+**CrewAI** is an Agentic Framework that is gaining popularity. In this demo, I use it in conjunction with a Django backend with advanced research tooling and a Next.js frontend.
 This repository demonstrates a multi-agent approach to web search, analysis, and final synthesis, built with custom CrewAI agents.
 
 ---
