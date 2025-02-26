@@ -40,10 +40,8 @@ export default function SearchBar({ onSearch, loading, onClear }: SearchBarProps
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    document.getElementById("search-bar-container")?.classList.add("animate-slideOut");
-    setTimeout(() => {
-      onSearch(query);
-    }, 500);
+    // Removed slideOut animation so the search bar remains visible.
+    onSearch(query);
   };
 
   return (

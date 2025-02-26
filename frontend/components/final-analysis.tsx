@@ -15,9 +15,9 @@ import { Progress } from "@/components/ui/progress";
 
 interface FinalAnalysisProps {
   data: {
-    finalAnalysis: {
-      summary: string[];
-      confidence: number;
+    finalAnalysis?: {
+      summary?: string[];
+      confidence?: number;
     };
   };
 }
@@ -28,13 +28,12 @@ export default function FinalAnalysis({ data }: FinalAnalysisProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    if (data.finalAnalysis && data.finalAnalysis.summary) {
-      // Keep triple backticks so if your text is wrapped in ``` it renders as a code block
+    if (data?.finalAnalysis?.summary && Array.isArray(data.finalAnalysis.summary)) {
       const [mdString] = data.finalAnalysis.summary;
       setAnalysisMd(mdString || "");
       setIsExpanded(false);
     }
-  }, [data.finalAnalysis]);
+  }, [data?.finalAnalysis]);
 
   const handleCopy = () => {
     if (!analysisMd) return;
@@ -48,14 +47,11 @@ export default function FinalAnalysis({ data }: FinalAnalysisProps) {
     setAnalysisMd("");
   };
 
-  const confidencePercent = Math.round(data.finalAnalysis.confidence * 100);
+  const confidence = data?.finalAnalysis?.confidence ?? 0;
+  const confidencePercent = Math.round(confidence * 100);
 
   return (
     <Card className="border-border/50 shadow-lg bg-card/50 backdrop-blur">
-      {/*
-        Header in the same style as Search Results & Agent Workflow:
-        Title + icon on the left, arrow on the right
-      */}
       <CardHeader
         onClick={() => setIsExpanded(!isExpanded)}
         className="cursor-pointer select-none"
@@ -86,39 +82,49 @@ export default function FinalAnalysis({ data }: FinalAnalysisProps) {
 
           {analysisMd ? (
             <>
-              {/*
-                Markdown container with extra padding and relaxed line-height.
-                No max-w constraints, so it aligns & sizes like the other cards.
-              */}
-              <div className="prose dark:prose-invert max-w-none text-left p-6 leading-relaxed space-y-2 rounded-lg border border-border bg-background shadow-lg">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeRaw]}
-                >
+              <div className="prose dark:prose-invert max-w-none text-left p-6 leading-relaxed space-y-2 rounded-lg border border-border bg-background shadow-lg whitespace-pre-wrap break-words">
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                   {analysisMd}
                 </ReactMarkdown>
               </div>
 
-              {/* Copy & Clear buttons */}
               <div className="flex gap-2">
-                <Button variant="outline" size="sm" onClick={handleCopy}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCopy();
+                  }}
+                >
                   {copied ? (
-                    <CheckCircle2 className="h-4 w-4 text-green-400" />
+                    <>
+                      <CheckCircle2 className="h-4 w-4 text-green-400" />
+                      Copied!
+                    </>
                   ) : (
-                    <Copy className="h-4 w-4" />
+                    <>
+                      <Copy className="h-4 w-4" />
+                      Copy
+                    </>
                   )}
-                  {copied ? "Copied!" : "Copy"}
                 </Button>
-                <Button variant="outline" size="sm" onClick={handleClear}>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleClear();
+                  }}
+                >
                   <Trash2 className="h-4 w-4" />
                   Clear
                 </Button>
               </div>
             </>
           ) : (
-            <p className="text-sm text-muted-foreground">
-              No final analysis yet.
-            </p>
+            <p className="text-sm text-muted-foreground">No final analysis yet.</p>
           )}
         </CardContent>
       )}

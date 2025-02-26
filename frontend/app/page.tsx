@@ -47,37 +47,12 @@ export default function Page() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background/50 to-background transition-all duration-500">
-      <div
-        className={cn(
-          "transition-all duration-500 w-full px-4",
-          !data
-            ? "flex flex-col items-center justify-center h-screen"
-            : "container max-w-4xl mx-auto py-8",
-          animateOut && "animate-fadeOut"
-        )}
-      >
-        {!data && (
-          <div className="text-center w-full">
-            <div className="flex flex-col items-center gap-2 mb-4">
-              <Sparkles className="h-10 w-10 text-primary" />
-              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-fadeIn">
-                CrewAI Analysis
-              </h1>
-            </div>
-            {/* Search bar container with max width 900px */}
-            <div className="w-full flex justify-center">
-              <div className="w-full max-w-[900px]">
-                <SearchBar onSearch={handleSearch} loading={loading} onClear={() => setData(null)} />
-              </div>
-            </div>
-            {/* Render LinkSlider separately; it controls its own width */}
-            <LinkSlider value={linkCount} onValueChange={setLinkCount} />
-            <p className="mt-4 text-muted-foreground">
-              Enter your query to start the analysis.
-            </p>
+      {data ? (
+        <div className="container max-w-4xl mx-auto py-4 transition-all duration-500">
+          {/* Search bar always visible at the top with slideIn animation */}
+          <div id="search-bar-container" className="transition-all duration-500 animate-slideIn">
+            <SearchBar onSearch={handleSearch} loading={loading} onClear={() => {}} />
           </div>
-        )}
-        {data && (
           <div className="space-y-4 mt-8 transition-all duration-500">
             <SearchResults data={data} />
             <AgentWorkflow data={data} />
@@ -88,8 +63,24 @@ export default function Page() {
               </Button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center h-screen text-center transition-all duration-500">
+          <div id="search-bar-container" className="w-full max-w-[900px] transition-all duration-500">
+            <div className="flex flex-col items-center gap-2 mb-4">
+              <Sparkles className="h-10 w-10 text-primary" />
+              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-fadeIn">
+                CrewAI Analysis
+              </h1>
+            </div>
+            <SearchBar onSearch={handleSearch} loading={loading} onClear={() => {}} />
+          </div>
+          <LinkSlider value={linkCount} onValueChange={setLinkCount} />
+          <p className="mt-4 text-muted-foreground">
+            Enter your query to start the analysis.
+          </p>
+        </div>
+      )}
       <Toaster />
     </main>
   );
