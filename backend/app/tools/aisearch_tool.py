@@ -75,9 +75,9 @@ def filter_relevant_chunks(content: str, query: str, threshold: float = 0.75, ma
 
 def get_embedding(text: str | list[str]) -> list[float] | list[list[float]]:
     client = AzureOpenAI(
-        api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+        api_key=os.getenv("AZURE_API_KEY"),
         api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
-        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+        azure_endpoint=os.getenv("AZURE_API_BASE"),
     )
     embedding_model = os.getenv("AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
     if isinstance(text, list):

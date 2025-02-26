@@ -11,20 +11,20 @@ load_dotenv()
 os.environ.pop("OPENAI_API_BASE", None)
 
 # Determine the Azure endpoint using AZURE_OPENAI_ENDPOINT or AZURE_API_BASE.
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_API_BASE", "")
+endpoint = os.getenv("AZURE_API_BASE", "")
 azure_endpoint = endpoint.rstrip("/") if endpoint else None
 
 
 class ChromaVectorStore:
     def __init__(self, persist_directory: str = "") -> None:
         self.embeddings = AzureOpenAIEmbeddings(
-            azure_endpoint=azure_endpoint,
-            api_key=os.getenv("AZURE_OPENAI_API_KEY", ""),
+            azure_endpoint=endpoint.rstrip("/") if endpoint else None,
+            api_key=os.getenv("AZURE_API_KEY", ""),
             api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
         )
         self.persist_directory = persist_directory or None
         # Persistence is automatic with the new Chroma
-        self.db = Chroma(collection_name="collab_writing", embedding_function=self.embeddings)
+        self.db = Chroma(collection_name="crew-ai", embedding_function=self.embeddings)
 
     def store_text(self, text: str) -> None:
         doc_id = str(uuid.uuid4())

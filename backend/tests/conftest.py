@@ -1,7 +1,8 @@
 import os
 
-os.environ.setdefault("AZURE_OPENAI_API_KEY", "dummy")
-os.environ.setdefault("AZURE_OPENAI_ENDPOINT", "http://dummy")
+os.environ.setdefault("AZURE_API_KEY", "dummy")
+os.environ.setdefault("AZURE_API_BASE", "http://dummy")
+
 
 import pytest
 from langchain_openai.embeddings.azure import AzureOpenAIEmbeddings

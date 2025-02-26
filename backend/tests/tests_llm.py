@@ -31,7 +31,7 @@ def test_llm_response(mock_AzureOpenAI):
     client = AzureOpenAI(
         api_key=os.getenv("AZURE_API_KEY"),
         api_version=os.getenv("AZURE_API_VERSION", "2024-06-01"),
-        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+        azure_endpoint=os.getenv("AZURE_API_BASE"),
         max_retries=3,
     )
 
